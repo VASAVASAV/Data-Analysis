@@ -260,6 +260,10 @@ namespace thing_2._1
         private DataGridViewTextBoxColumn Column13;
         private DataGridViewTextBoxColumn Column15;
         private ToolStripMenuItem зберегтиБагатовимірнуВибіркуToolStripMenuItem;
+        private ToolStripMenuItem оновитиToolStripMenuItem;
+        private ToolStripMenuItem крокНазаддвовимірніToolStripMenuItem;
+        private ToolStripMenuItem крокНазадбагатовимірніToolStripMenuItem;
+        private Button button33;
         private DataGridView[] DataGridForChkk;
     
         public BodyOfForm()
@@ -384,11 +388,14 @@ namespace thing_2._1
             this.відмінитиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.крокНазадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.доПочатковихЗначеньToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.крокНазаддвовимірніToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.крокНазадбагатовимірніToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.додатковоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.включитивиключитиМаштабуванняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.включитивиключитиПобудовуВаріаційногоРядуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.включитивиключитиОбрахуавнняМедіаниСередніхToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.задатиКількістьЗнаківПісляКомиДляІнтерфейсівToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оновитиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.довідкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ProgressBar = new System.Windows.Forms.ToolStripProgressBar();
@@ -591,6 +598,7 @@ namespace thing_2._1
             this.dataGridView11 = new System.Windows.Forms.DataGridView();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button33 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -918,7 +926,9 @@ namespace thing_2._1
             // 
             this.відмінитиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.крокНазадToolStripMenuItem,
-            this.доПочатковихЗначеньToolStripMenuItem});
+            this.доПочатковихЗначеньToolStripMenuItem,
+            this.крокНазаддвовимірніToolStripMenuItem,
+            this.крокНазадбагатовимірніToolStripMenuItem});
             this.відмінитиToolStripMenuItem.Name = "відмінитиToolStripMenuItem";
             this.відмінитиToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.відмінитиToolStripMenuItem.Text = "Відмінити";
@@ -926,16 +936,28 @@ namespace thing_2._1
             // крокНазадToolStripMenuItem
             // 
             this.крокНазадToolStripMenuItem.Name = "крокНазадToolStripMenuItem";
-            this.крокНазадToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.крокНазадToolStripMenuItem.Text = "Крок назад";
+            this.крокНазадToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.крокНазадToolStripMenuItem.Text = "Крок назад (одновимірні)";
             this.крокНазадToolStripMenuItem.Click += new System.EventHandler(this.крокНазадToolStripMenuItem_Click);
             // 
             // доПочатковихЗначеньToolStripMenuItem
             // 
             this.доПочатковихЗначеньToolStripMenuItem.Name = "доПочатковихЗначеньToolStripMenuItem";
-            this.доПочатковихЗначеньToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.доПочатковихЗначеньToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
             this.доПочатковихЗначеньToolStripMenuItem.Text = "До початкових значень";
             this.доПочатковихЗначеньToolStripMenuItem.Click += new System.EventHandler(this.доПочатковихЗначеньToolStripMenuItem_Click);
+            // 
+            // крокНазаддвовимірніToolStripMenuItem
+            // 
+            this.крокНазаддвовимірніToolStripMenuItem.Name = "крокНазаддвовимірніToolStripMenuItem";
+            this.крокНазаддвовимірніToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.крокНазаддвовимірніToolStripMenuItem.Text = "Крок назад (двовимірні)";
+            // 
+            // крокНазадбагатовимірніToolStripMenuItem
+            // 
+            this.крокНазадбагатовимірніToolStripMenuItem.Name = "крокНазадбагатовимірніToolStripMenuItem";
+            this.крокНазадбагатовимірніToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.крокНазадбагатовимірніToolStripMenuItem.Text = "Крок назад (багатовимірні)";
             // 
             // додатковоToolStripMenuItem
             // 
@@ -943,7 +965,8 @@ namespace thing_2._1
             this.включитивиключитиМаштабуванняToolStripMenuItem,
             this.включитивиключитиПобудовуВаріаційногоРядуToolStripMenuItem,
             this.включитивиключитиОбрахуавнняМедіаниСередніхToolStripMenuItem,
-            this.задатиКількістьЗнаківПісляКомиДляІнтерфейсівToolStripMenuItem});
+            this.задатиКількістьЗнаківПісляКомиДляІнтерфейсівToolStripMenuItem,
+            this.оновитиToolStripMenuItem});
             this.додатковоToolStripMenuItem.Name = "додатковоToolStripMenuItem";
             this.додатковоToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.додатковоToolStripMenuItem.Text = "Додатково";
@@ -975,6 +998,13 @@ namespace thing_2._1
             this.задатиКількістьЗнаківПісляКомиДляІнтерфейсівToolStripMenuItem.Size = new System.Drawing.Size(366, 22);
             this.задатиКількістьЗнаківПісляКомиДляІнтерфейсівToolStripMenuItem.Text = "Задати кількість знаків після коми для відображення";
             this.задатиКількістьЗнаківПісляКомиДляІнтерфейсівToolStripMenuItem.Click += new System.EventHandler(this.задатиКількістьЗнаківПісляКомиДляІнтерфейсівToolStripMenuItem_Click);
+            // 
+            // оновитиToolStripMenuItem
+            // 
+            this.оновитиToolStripMenuItem.Name = "оновитиToolStripMenuItem";
+            this.оновитиToolStripMenuItem.Size = new System.Drawing.Size(366, 22);
+            this.оновитиToolStripMenuItem.Text = "Оновити";
+            this.оновитиToolStripMenuItem.Click += new System.EventHandler(this.оновитиToolStripMenuItem_Click);
             // 
             // довідкаToolStripMenuItem
             // 
@@ -1504,6 +1534,7 @@ namespace thing_2._1
             // 
             // tabPage15
             // 
+            this.tabPage15.Controls.Add(this.button33);
             this.tabPage15.Controls.Add(this.button32);
             this.tabPage15.Controls.Add(this.label21);
             this.tabPage15.Controls.Add(this.button30);
@@ -1518,7 +1549,7 @@ namespace thing_2._1
             // 
             // button32
             // 
-            this.button32.Location = new System.Drawing.Point(1032, 79);
+            this.button32.Location = new System.Drawing.Point(977, 79);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(121, 52);
             this.button32.TabIndex = 8;
@@ -2705,7 +2736,8 @@ namespace thing_2._1
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.ReadOnly = true;
             this.dataGridView6.Size = new System.Drawing.Size(940, 397);
-            this.dataGridView6.TabIndex = 0;            // 
+            this.dataGridView6.TabIndex = 0;
+            // 
             // tabPage13
             // 
             this.tabPage13.Controls.Add(this.dataGridView7);
@@ -3163,6 +3195,16 @@ namespace thing_2._1
             this.Column15.Name = "Column15";
             this.Column15.ReadOnly = true;
             this.Column15.Width = 150;
+            // 
+            // button33
+            // 
+            this.button33.Location = new System.Drawing.Point(1121, 79);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(121, 52);
+            this.button33.TabIndex = 9;
+            this.button33.Text = "Стандартизувати усе";
+            this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
             // 
             // BodyOfForm
             // 
@@ -4461,7 +4503,7 @@ namespace thing_2._1
                     result = Math.Sqrt(1 - Matrixes.GetDet(TempR) / Matrixes.GetDet(Matrixes.GetMinor(TempR,i,i)));
                     dataGridView11.Rows.Add();
                     dataGridView11.Rows[i].Cells[0].Value = "" + Math.Round(result, Data.NumberOfNum);
-                    Hip = ((Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count - Data.MultiDemSamples[Data.MultiDemCurrentSample].Length - 1)/(Data.MultiDemSamples[Data.MultiDemCurrentSample].Length))*((result*result)/(1-result*result));
+                    Hip = ((Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count - Data.MultiDemSamples[Data.MultiDemCurrentSample].Length - 1d)/(Data.MultiDemSamples[Data.MultiDemCurrentSample].Length))*((result*result)/(1-result*result));
                     if (Hip <= Quantile.FishQuan(0.95, Data.MultiDemSamples[Data.MultiDemCurrentSample].Length, Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count - Data.MultiDemSamples[Data.MultiDemCurrentSample].Length - 1))
                     {
                         dataGridView11.Rows[i].Cells[1].Style.BackColor = Color.DarkGray;
@@ -4782,7 +4824,7 @@ namespace thing_2._1
                 double temp1 = 0, temp2 = 0;
                 for (i = 0; i < Count1; i++)
                 {
-                    if (expys[i] == Double.NaN)
+                    if (double.IsNaN(expys[i]))
                         continue;
                     temp1 += Tx[i].Count * Math.Pow(Yexp - expys[i], 2);
                     for (j = 0; j < Tx[i].Count; j++)
@@ -4822,7 +4864,7 @@ namespace thing_2._1
                 temp1 = 0; temp2 = 0;
                 for (i = 0; i < Count2; i++)
                 {
-                    if (expxs[i] == Double.NaN)
+                    if (double.IsNaN(expxs[i]))
                         continue;
                     temp1 += Ty[i].Count * Math.Pow(Xexp - expxs[i], 2);
                     for (j = 0; j < Ty[i].Count; j++)
@@ -5881,7 +5923,7 @@ namespace thing_2._1
             }
             Data.StepBack[Data.CurrentSample].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.deleted, FW));
             Data.DistrCreated = false;
-            Build();
+            UpdateForm(Data.CurrentSample);
         }
 
         private void MakeStepBack()
@@ -5994,8 +6036,7 @@ namespace thing_2._1
             }
             MakeStepBack();
             Data.DistrCreated = false;
-            Build();
-            BuildTwoDem();
+            UpdateForm(Data.CurrentSample);
         }
 
         private void доПочатковихЗначеньToolStripMenuItem_Click(object sender, EventArgs e)
@@ -6041,8 +6082,7 @@ namespace thing_2._1
             if(LogCheckBox.Checked)
                 LogOutputTextBox.Text += "Було проведено стандартизацію " + Environment.NewLine;
             Data.DistrCreated = false;
-            Build();
-            BuildTwoDem();
+            UpdateForm(Data.CurrentSample);
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -6153,8 +6193,7 @@ namespace thing_2._1
 
                 }
                 Data.DistrCreated = false;
-                Build();
-                BuildTwoDem();
+                UpdateForm(Data.CurrentSample);
             }
         }
 
@@ -6346,7 +6385,7 @@ namespace thing_2._1
                 ForW[1] = 0;
                 Data.StepBack[Data.CurrentSample].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.massivedelete, ForW));
                 Data.DistrCreated = false;
-                Build();
+                UpdateForm(Data.CurrentSample);
             }
         }
 
@@ -6420,7 +6459,7 @@ namespace thing_2._1
             ForW[1] = 0;
             Data.StepBack[Data.CurrentSample].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.massivedelete, ForW));
             Data.DistrCreated = false;
-            Build();
+            UpdateForm(Data.CurrentSample);
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -6493,7 +6532,7 @@ namespace thing_2._1
             ForW[1] = 0;
             Data.StepBack[Data.CurrentSample].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.massivedelete, ForW));
             Data.DistrCreated = false;
-            Build();
+            UpdateForm(Data.CurrentSample);
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -6537,7 +6576,7 @@ namespace thing_2._1
             ForW[1] = 0;
             Data.StepBack[Data.CurrentSample].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.massivedelete, ForW));
             Data.DistrCreated = false;
-            Build();
+            UpdateForm(Data.CurrentSample);
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -6568,7 +6607,7 @@ namespace thing_2._1
                 }
             }
             Data.DataForWork[Data.CurrentSample].Sort();
-            if (Data.DataForWork.Count <= 0 || Data.DataForWork[Data.CurrentSample].Count == 0)
+            if ( Data.DataForWork[Data.CurrentSample].Count == 0)
             {
                 return;
             }
@@ -6605,7 +6644,7 @@ namespace thing_2._1
             ForW[1] = 0;
             Data.StepBack[Data.CurrentSample].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.massivedelete, ForW));
             Data.DistrCreated = false;
-            Build();
+            UpdateForm(Data.CurrentSample);
 
         }
 
@@ -6860,7 +6899,7 @@ namespace thing_2._1
                             this.DistrFun.Series[4].Points.Clear();
                             double Mu = Data.EvalData.ExpValues;
                             double dispmu = (Data.EvalData.StandDevNeZ * Data.EvalData.StandDevNeZ) / Temp.Count;
-                            double sigma = (Temp.Count / (Temp.Count - 1)) * Data.EvalData.StandDevZ;//(0.344*σ^2)/N
+                            double sigma = ((double)Temp.Count / (Temp.Count - 1)) * Data.EvalData.StandDevZ;//(0.344*σ^2)/N
                             double dispsigma = (Data.EvalData.StandDevNeZ * Data.EvalData.StandDevNeZ) / (2 * Temp.Count);
                             //double lol = 
                             if (CalledByUser)
@@ -6897,7 +6936,7 @@ namespace thing_2._1
                             double lambda = Math.Sqrt(2) / (1.32 * Data.EvalData.StandDevZ);//(0.344*σ^2)/N
                             double dispmu = 2.0 / (Temp.Count * lambda * lambda);
                             double displambda = (5 * lambda * lambda) / (Temp.Count);
-                            double cov = (-3) / (2 * Temp.Count);
+                            double cov = (-3d) / (2 * Temp.Count);
                             //double lol =  
                             if (CalledByUser)
                             {
@@ -7244,10 +7283,10 @@ namespace thing_2._1
         private void BuildBubble()
         {
             int i,j;
-            uint AxiX, AxiY, AxiZ;
+            int AxiX, AxiY, AxiZ;
             try
             {
-                AxiX = Convert.ToUInt16(textBox24.Text);
+                AxiX = Convert.ToInt16(textBox24.Text);
                 AxiX--;
             }
             catch
@@ -7257,7 +7296,7 @@ namespace thing_2._1
             }
             try
             {
-                AxiY = Convert.ToUInt16(textBox25.Text);
+                AxiY = Convert.ToInt16(textBox25.Text);
                 AxiY--;
             }
             catch
@@ -7267,7 +7306,7 @@ namespace thing_2._1
             }
              try
             {
-                AxiZ = Convert.ToUInt16(textBox26.Text);
+                AxiZ = Convert.ToInt16(textBox26.Text);
                 AxiZ--;
             }
             catch
@@ -7637,6 +7676,18 @@ namespace thing_2._1
                     return;
                 }
             }
+            int j;
+            for (int i = 0; i < Data.MultiDemSamples.Count; i++)
+            {
+                for (j = 0; j < Data.MultiDemSamples[i].Length; j++)
+                {
+                    if (Data.CurrentSample == Data.MultiDemSamples[i][j])
+                    {
+                        LogOutputTextBox.Text += "U shall use special multi-dem button to delete anomalies from two-dem samples" + Environment.NewLine;
+                        return;
+                    }
+                }
+            }
             ArgFloatMM Parameter = new ArgFloatMM(0, "", "Нове значення", "Значення, яке буде додане до вибірки", "<Size>");
             OkCancelDlg it = new OkCancelDlg("Додайте елемент", null, Parameter);
             DialogResult rc = it.ShowDialog();
@@ -7653,7 +7704,7 @@ namespace thing_2._1
                 //Data.DataForWork[Data.CurrentSample].Sort();
             }
             Data.DistrCreated = false;
-            Build();
+            UpdateForm(Data.CurrentSample);
 
         }
 
@@ -7925,7 +7976,7 @@ namespace thing_2._1
                 double S2x = (FirStD * FirStD) / Num1;
                 double S2y = (SecStD * SecStD) / Num2;
                 double S2 = ((Num1 - 1) * S2x + (Num2 - 1) * S2y) / (Num1 + Num2 - 2);
-                double result = ((FirstExpV - SecondExpV) / S2) * Math.Sqrt((Num1 * Num2) / (Num1 + Num2));
+                double result = ((FirstExpV - SecondExpV) / S2) * Math.Sqrt(((double)Num1 * Num2) / (Num1 + Num2));
                 if (Math.Abs(result) > Quantile.StudQuan(1 - alfa / 2, Num1+Num2 - 2))
                 {
                     LogOutputTextBox.Text += "Значення статистики = " + Math.Round(result, Data.NumberOfNum) + ", що по модулю перевищує значення квантилю " + Math.Round(Quantile.StudQuan(1 - alfa / 2, Num1 + Num2 - 2), Data.NumberOfNum) + ", а отже, гіпотеза про збіг середніх має бути відхилена " + Environment.NewLine;
@@ -8143,7 +8194,7 @@ namespace thing_2._1
             }
             d2 = d2 / (Num - 1);
             double q = (d2) / (2 * zetStD);
-            double result = (q - 1) * Math.Sqrt((Num*Num-1)/(Num-2));
+            double result = (q - 1) * Math.Sqrt((Num*Num-1d)/(Num-2));
             //double result = -1 * (1 - q) * Math.Sqrt((2*Num+1)/(2-Math.Pow(1-q,2)));
             if (Math.Abs(result) > Quantile.StanQuanDv(1-Alfa/2))
             {
@@ -8173,8 +8224,8 @@ namespace thing_2._1
                     }
                 }
             }
-            double ExpVal = (Num1 * Num2) / 2;
-            double dispU = (Num1 * Num2 * (Num1 + Num2 + 1)) / 12;
+            double ExpVal = ((double)Num1 * Num2) / 2;
+            double dispU = ((double)Num1 * Num2 * (Num1 + Num2 + 1)) / 12;
             double result = (Sum - ExpVal) / Math.Sqrt(dispU);
             double lol = Quantile.StanQuanDv(1 - Alfa / 2);
             double lil = Quantile.StanQuanDv(1 - Alfa );
@@ -8293,8 +8344,8 @@ namespace thing_2._1
                     crit += zetK[i];
                 }
             }
-            double expcrit = (Num1 * (zet.Count + 1)) / 2;
-            double devcrit = (Num1 * Num2 * (zet.Count + 1)) / 12;
+            double expcrit = (Num1 * (zet.Count + 1d)) / 2;
+            double devcrit = (Num1 * Num2 * (zet.Count + 1d)) / 12;
             double result = (crit - expcrit) /Math.Sqrt( devcrit);
             if (Math.Abs(result) > Quantile.StanQuanOdn(1 - Alfa / 2))
             {
@@ -8993,7 +9044,7 @@ namespace thing_2._1
                             }
                             double Mu = Data.EvalData.ExpValues;
                             double dispmu = (Data.EvalData.StandDevNeZ * Data.EvalData.StandDevNeZ) / Data.DataForWork[Data.CurrentSample].Count;
-                            double sigma = (Data.DataForWork[Data.CurrentSample].Count / (Data.DataForWork[Data.CurrentSample].Count - 1)) * Data.EvalData.StandDevZ;//(0.344*σ^2)/N
+                            double sigma = ((double)Data.DataForWork[Data.CurrentSample].Count / (Data.DataForWork[Data.CurrentSample].Count - 1)) * Data.EvalData.StandDevZ;//(0.344*σ^2)/N
                             double dispsigma = (Data.EvalData.StandDevNeZ * Data.EvalData.StandDevNeZ) / (2 * Data.DataForWork[Data.CurrentSample].Count);
                             double quan = Quantile.StudQuan(1 - alfa / 2, Data.DataForWork[Data.CurrentSample].Count);
                             double result = 0;
@@ -9058,7 +9109,7 @@ namespace thing_2._1
                             double lambda = Math.Sqrt(2) / (1.32 * Data.EvalData.StandDevZ);//(0.344*σ^2)/N
                             double dispmu = 2.0 / (Data.DataForWork[Data.CurrentSample].Count * lambda * lambda);
                             double displambda = (5 * lambda * lambda) / (Data.DataForWork[Data.CurrentSample].Count);
-                            double cov = (-3) / (2 * Data.DataForWork[Data.CurrentSample].Count);
+                            double cov = (-3d) / (2 * Data.DataForWork[Data.CurrentSample].Count);
                             double quan = Quantile.StudQuan(1 - alfa / 2, Data.DataForWork[Data.CurrentSample].Count);
                             double result = 0;
                             switch (parametes)
@@ -9854,7 +9905,7 @@ namespace thing_2._1
                 double temp1 = 0, temp2 = 0;
                 for (i = 0; i < Count1; i++)
                 {
-                    if (expys[i] == Double.NaN)
+                    if (double.IsNaN(expys[i]))
                         continue;
                     temp1 += Tx[i].Count * Math.Pow(Yexp - expys[i], 2);
                     for (j = 0; j < Tx[i].Count; j++)
@@ -9894,7 +9945,7 @@ namespace thing_2._1
                 temp1 = 0; temp2 = 0;
                 for (i = 0; i < Count2; i++)
                 {
-                    if (expxs[i] == Double.NaN)
+                    if (double.IsNaN(expxs[i]))
                         continue;
                     temp1 += Ty[i].Count * Math.Pow(Xexp - expxs[i], 2);
                     for (j = 0; j < Ty[i].Count; j++)
@@ -10340,7 +10391,7 @@ namespace thing_2._1
             double temp1 = 0, temp2 = 0;
             for (i = 0; i < Count1; i++)
             {
-                if (expys[i] == Double.NaN)
+                if (double.IsNaN(expys[i]))
                     continue;
                 temp1 += Tx[i].Count * Math.Pow(Yexp - expys[i], 2);
                 for (j = 0; j < Tx[i].Count; j++)
@@ -10379,7 +10430,7 @@ namespace thing_2._1
             temp1 = 0; temp2 = 0;
             for (i = 0; i < Count2; i++)
             {
-                if (expxs[i] == Double.NaN)
+                if (double.IsNaN(expxs[i]))
                     continue;
                 temp1 += Ty[i].Count * Math.Pow(Xexp - expxs[i], 2);
                 for (j = 0; j < Ty[i].Count; j++)
@@ -10623,7 +10674,7 @@ namespace thing_2._1
                 LogOutputTextBox.Text += "Гіпотеза про значущість кореляційного відношення по y є вірною (для великої кількості даних)" + Environment.NewLine;
             }
             ////
-            temp = ((Kvx * Kvx) / (1 - Kvx * Kvx)) * ((Temp1.Count - Count1) / (Count1 - 1));
+            temp = ((Kvx * Kvx) / (1 - Kvx * Kvx)) * (((double)Temp1.Count - Count1) / (Count1 - 1));
             if (Math.Abs(temp) < Quantile.FishQuan(1 - alfa, Count1-1, Temp1.Count-Count1))
             {
                 LogOutputTextBox.Text += "Гіпотеза про значущість кореляційного відношення по х є невірною (для довільної кількості даних)" + Environment.NewLine;
@@ -10632,7 +10683,7 @@ namespace thing_2._1
             {
                 LogOutputTextBox.Text += "Гіпотеза про значущість кореляційного відношення по х є вірною (для довільної кількості даних)" + Environment.NewLine;
             }
-            temp = ((Kvy* Kvy) / (1 - Kvy * Kvy)) * ((Temp1.Count - Count2) / (Count1 - 1));
+            temp = ((Kvy* Kvy) / (1 - Kvy * Kvy)) * (((double)Temp1.Count - Count2) / (Count1 - 1));
             if (Math.Abs(temp) < Quantile.FishQuan(1 - alfa, Count2 - 1, Temp1.Count - Count2))
             {
                 LogOutputTextBox.Text += "Гіпотеза про значущість кореляційного відношення по y є невірною (для довільної кількості даних)" + Environment.NewLine;
@@ -11264,8 +11315,7 @@ namespace thing_2._1
             int Num = Convert.ToInt32(e.Row.Cells[4].Value);
             Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]].RemoveAt(Num);
             Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][1]].RemoveAt(Num);
-            Build();
-            BuildTwoDem();
+            UpdateForm();
         }
 
         private void button22_Click_1(object sender, EventArgs e)
@@ -11367,8 +11417,7 @@ namespace thing_2._1
                     //Hist[i, j].Top = (int)chart2.ChartAreas[0].InnerPlotPosition.Y + (int)(j * ((chart2.ChartAreas[0].InnerPlotPosition.Height) / CountY));
                 }
             }
-            Build();
-            BuildTwoDem();
+            UpdateForm();
         }
 
         private void button25_Click(object sender, EventArgs e)
@@ -11726,7 +11775,7 @@ namespace thing_2._1
             double temp1 = 0, temp2 = 0;
             for (i = 0; i < Count1; i++)
             {
-                if (expys[i] == Double.NaN)
+                if (double.IsNaN(expys[i]))
                     continue;
                 temp1 += Tx[i].Count * Math.Pow(Yexp - expys[i], 2);
                 for (j = 0; j < Tx[i].Count; j++)
@@ -13253,7 +13302,7 @@ namespace thing_2._1
             }
         }
 
-        private void FillDeepList(int iterator, object target, int Length)
+        /*private void FillDeepList(int iterator, object target, int Length)
         {
             if (iterator == 0)
             {
@@ -13269,9 +13318,9 @@ namespace thing_2._1
                     FillDeepList(iterator-1, (target as List<object>)[l],  Length);
                 }
             }
-        }
+        }*/
 
-        private void IncValueInDeepList(object target, int[] Counters)
+       /* private void IncValueInDeepList(object target, int[] Counters)
         {
             if (Counters.Length == 0)
             {
@@ -13286,9 +13335,9 @@ namespace thing_2._1
                 }
                 IncValueInDeepList((target as List<object>)[Counters[0]], TempArr);
             }
-        }
+        }*/
 
-        private void SetValueInDeepList(object target, int[] Counters, double Value)
+      /*  private void SetValueInDeepList(object target, int[] Counters, double Value)
         {
             if (Counters.Length == 0)
             {
@@ -13303,9 +13352,9 @@ namespace thing_2._1
                 }
                 SetValueInDeepList((target as List<object>)[Counters[0]], TempArr, Value);
             }
-        }
+        }*/
 
-        private double GetValueInDeepList(object target, int[] Counters)
+       /* private double GetValueInDeepList(object target, int[] Counters)
         {
             if (Counters.Length == 0)
             {
@@ -13320,7 +13369,7 @@ namespace thing_2._1
                 }
                 return GetValueInDeepList((target as List<object>)[Counters[0]], TempArr);
             }
-        }
+        }*/
 
         private void button30_Click(object sender, EventArgs e)
         {
@@ -13507,7 +13556,7 @@ namespace thing_2._1
                 Build();
                 double Mu = Data.EvalData.ExpValues;
                 double dispmu = (Data.EvalData.StandDevNeZ * Data.EvalData.StandDevNeZ) / Temp.Count;
-                double sigma = (Temp.Count / (Temp.Count - 1)) * Data.EvalData.StandDevZ;//(0.344*σ^2)/N
+                double sigma = ((double)Temp.Count / (Temp.Count - 1)) * Data.EvalData.StandDevZ;//(0.344*σ^2)/N
                 double dispsigma = (Data.EvalData.StandDevNeZ * Data.EvalData.StandDevNeZ) / (2 * Temp.Count);
                 //double lol = 
                 Data.Parameters = new double[] { Mu, sigma };
@@ -13567,9 +13616,7 @@ namespace thing_2._1
             {
                 Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]].RemoveAt(Num);
             }
-            Build();
-            BuildTwoDem();
-            BuildMultiDem();
+            UpdateForm();
         }
 
         private void dataGridView8_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
@@ -13698,7 +13745,6 @@ namespace thing_2._1
                         S1[i,j]+=tempsum1;
                         tempsum1=0; 
                         tempsum2=0;
-                        tempsum3 = 0;
                         for (l = 0; l < Len1; l++)
                         {
                             tempsum1 += Data.DataForWork[Data.MultiDemSamples[Number1][i]][l];
@@ -13708,7 +13754,6 @@ namespace thing_2._1
                         S1[i, j] -= tempsum3;
                         tempsum1 = 0;
                         tempsum2 = 0;
-                        tempsum3 = 0;
                         for (l = 0; l < Len2; l++)
                         {
                             tempsum1 += Data.DataForWork[Data.MultiDemSamples[Number2][i]][l];
@@ -13842,6 +13887,43 @@ namespace thing_2._1
                     }
                 }
             }
+        }
+
+        private void UpdateForm(int NumberOfTarget)
+        {
+            int i;
+            if (NumberOfTarget == Data.CurrentSample)
+            {
+                Build();
+            }
+            if (Data.TwoDemSamples.Count > 0 && (Data.TwoDemSamples[Data.TwoDemCurrentSample][0] == NumberOfTarget || Data.TwoDemSamples[Data.TwoDemCurrentSample][1] == NumberOfTarget))
+            {
+                BuildTwoDem();
+            }
+            for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+            {
+                if (Data.MultiDemSamples[Data.MultiDemCurrentSample][i] == NumberOfTarget)
+                {
+                    BuildMultiDem();
+                }
+            }
+        }
+
+        private void UpdateForm()
+        {
+            Build();
+            BuildTwoDem();
+            BuildMultiDem();
+        }
+
+        private void оновитиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateForm();
+        }
+
+        private void button33_Click(object sender, EventArgs e)
+        {
+
         }
 
 
