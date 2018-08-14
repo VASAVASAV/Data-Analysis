@@ -12700,6 +12700,8 @@ namespace thing_2._1
                             }
                             Data.MultiDemSamples.Add(temp);
                             Data.CurrentSample.set(Data.DataForWork.Count - NumberOfDimentions);
+                            Data.TwoDemCurrentSample.set(Data.TwoDemSamples.Count-1);
+                            Data.MultiDemCurrentSample.set(Data.MultiDemSamples.Count - 1);
                             Build();
                             BuildMultiDem();
                         }
@@ -13923,7 +13925,41 @@ namespace thing_2._1
 
         private void button33_Click(object sender, EventArgs e)
         {
+            if (Data.DataForWork.Count == 0 || Data.MultiDemSamples.Count == 0)
+            {
+                LogOutputTextBox.Text += "Nothing to work with";
+                return;
+            }
+            int i, j;
+            double Summ;
+            double[] tempExp = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
+            double[] Temps = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
+            int NumOfPoints = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count;//Number of points in each sample
+            for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+            {
+                Summ = 0;
+                for (j = 0; j < NumOfPoints; j++)
+                {
+                    Summ += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][j];
+                }
+                tempExp[i] = Summ / NumOfPoints;
+                Temps[i] = 0;
+                for (j = 0; j < NumOfPoints; j++)
+                {
+                    Temps[i] += Math.Pow((Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][j] - tempExp[i]), 2);
+                }
+                Temps[i] *= (1.0) / (NumOfPoints - 1);
+                Temps[i] = (Math.Sqrt(Temps[i]));
+                if(Temps[i]==0)
+                    continue;
 
+                for (j = 0; j < NumOfPoints; j++)
+                {
+                    Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][j] = ((double)Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][j] - tempExp[i]) / (Temps[i]);
+                }
+            }
+            
+            UpdateForm();
         }
 
 
