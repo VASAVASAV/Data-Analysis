@@ -451,6 +451,7 @@ namespace thing_2._1
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.button33 = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.button30 = new System.Windows.Forms.Button();
@@ -598,7 +599,6 @@ namespace thing_2._1
             this.dataGridView11 = new System.Windows.Forms.DataGridView();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button33 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -1547,6 +1547,16 @@ namespace thing_2._1
             this.tabPage15.Text = "Робота з багатовимірними аномаліями";
             this.tabPage15.UseVisualStyleBackColor = true;
             // 
+            // button33
+            // 
+            this.button33.Location = new System.Drawing.Point(1121, 79);
+            this.button33.Name = "button33";
+            this.button33.Size = new System.Drawing.Size(121, 52);
+            this.button33.TabIndex = 9;
+            this.button33.Text = "Стандартизувати усе";
+            this.button33.UseVisualStyleBackColor = true;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
+            // 
             // button32
             // 
             this.button32.Location = new System.Drawing.Point(977, 79);
@@ -1945,6 +1955,7 @@ namespace thing_2._1
             this.button29.TabIndex = 13;
             this.button29.Text = "Перевірити збіг поточної регресії з заданою користувачем";
             this.button29.UseVisualStyleBackColor = true;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // button28
             // 
@@ -3195,16 +3206,6 @@ namespace thing_2._1
             this.Column15.Name = "Column15";
             this.Column15.ReadOnly = true;
             this.Column15.Width = 150;
-            // 
-            // button33
-            // 
-            this.button33.Location = new System.Drawing.Point(1121, 79);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(121, 52);
-            this.button33.TabIndex = 9;
-            this.button33.Text = "Стандартизувати усе";
-            this.button33.UseVisualStyleBackColor = true;
-            this.button33.Click += new System.EventHandler(this.button33_Click);
             // 
             // BodyOfForm
             // 
@@ -13960,6 +13961,11 @@ namespace thing_2._1
             }
             
             UpdateForm();
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+
         }
 
 
