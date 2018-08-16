@@ -952,6 +952,7 @@ namespace thing_2._1
             this.крокНазаддвовимірніToolStripMenuItem.Name = "крокНазаддвовимірніToolStripMenuItem";
             this.крокНазаддвовимірніToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
             this.крокНазаддвовимірніToolStripMenuItem.Text = "Крок назад (двовимірні)";
+            this.крокНазаддвовимірніToolStripMenuItem.Click += new System.EventHandler(this.крокНазаддвовимірніToolStripMenuItem_Click);
             // 
             // крокНазадбагатовимірніToolStripMenuItem
             // 
@@ -9378,7 +9379,7 @@ namespace thing_2._1
                     //this thing is needed but later
                     //Data.DataForWork[Data.CurrentSample].Sort();
                     //Data.NamesOfFiles.Add(OpeningDialog.FileName);
-                    Data.StepBack.Add(new List<ToolsForWork.Changing>());
+                    Data.TwoDemStepBack.Add(new List<ToolsForWork.Changing>());
                     StatusLabelNameOfFile.Text = Data.NamesOfFiles[Data.CurrentSample];
                     HistData.NumberOfClassesChangedByUser = false;
                     DistrFuncData.NumberOfClassesChangedByUser = false;
@@ -11314,6 +11315,9 @@ namespace thing_2._1
         private void dataGridView3_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
         {
             int Num = Convert.ToInt32(e.Row.Cells[4].Value);
+            double[] FW = new double[2];
+            FW[0] = Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]][Num];
+            FW[1] = Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]][Num];
             Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]].RemoveAt(Num);
             Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][1]].RemoveAt(Num);
             UpdateForm();
@@ -13958,6 +13962,10 @@ namespace thing_2._1
                 {
                     Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][j] = ((double)Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][j] - tempExp[i]) / (Temps[i]);
                 }
+                double[] FW = new double[2];
+                FW[0] = tempExp[i];
+                FW[1] = Temps[i];
+                Data.StepBack[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.standardized, FW));
             }
             
             UpdateForm();
@@ -13966,6 +13974,23 @@ namespace thing_2._1
         private void button29_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void крокНазаддвовимірніToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Data.TwoDemStepBack[Data.TwoDemCurrentSample].Count == 0)
+            {
+                return;
+            }
+            ToolsForWork.Changing FW = Data.StepBack[Data.CurrentSample][Data.StepBack[Data.CurrentSample].Count - 1];
+            Data.StepBack[Data.CurrentSample].RemoveAt(Data.StepBack[Data.CurrentSample].Count - 1);
+            switch (FW.ChangeStyle)
+            {
+                case (ToolsForWork.TypeOfCHange.twodemdeleted):
+                    {
+                        break;
+                    }
+            }
         }
 
 
