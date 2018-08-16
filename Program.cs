@@ -4098,13 +4098,12 @@ namespace thing_2._1
                 dataGridView8.Columns.Clear();
                 dataGridView9.Rows.Clear();
                 dataGridView9.Columns.Clear();
-                dataGridView1.Rows.Clear();
-                dataGridView1.Columns.Clear();
                 tableLayoutPanel1.ColumnStyles.Clear();
                 tableLayoutPanel1.RowStyles.Clear();
                 tableLayoutPanel1.Controls.Clear();
                 comboBox4.Items.Clear();
                 DataGridForChkk = null;
+                return;
             }
             dataGridView8.Rows.Clear();
             dataGridView8.Columns.Clear();
@@ -4617,45 +4616,8 @@ namespace thing_2._1
 
         private void BuildTwoDem()
         {
-            if (Data.TwoDemSamples.Count <= 0)
-            {
-                this.chart1.Series[0].Points.Clear();
-                this.chart2.Series[10].Points.Clear();
-                this.chart1.Series[1].Points.Clear();
-                this.chart1.Series[2].Points.Clear();
-                this.chart1.Series[3].Points.Clear();
-                this.chart1.Series[4].Points.Clear();
-                this.chart1.Series[5].Points.Clear();
-                this.chart1.Series[6].Points.Clear();
-                this.chart1.Series[7].Points.Clear();
-                this.chart1.Series[8].Points.Clear();
-                this.dataGridView1.Rows.Clear();
-                this.dataGridView2.Rows.Clear();
-                this.dataGridView4.Rows.Clear();
-                this.dataGridView3.Rows.Clear();
-                chart2.Controls.Clear();
-                LogOutputTextBox.Text += "Theres nothing to do" + Environment.NewLine;
-                dataGridView1.Rows.Add("Мат. сподівання X", "", "", "", "", "---");
-                dataGridView1.Rows.Add("Мат. сподівання Y", "", "", "", "", "---");
-                dataGridView1.Rows.Add("Стандартне відхилення X", "", "", "", "", "");
-                dataGridView1.Rows.Add("Стандартне відхилення Y", "", "", "", "", "");
-                dataGridView1.Rows.Add("Оцінка адекватності відтворення нормального розподілу", "---", "", "---", "", "");
-                dataGridView1.Rows.Add("Коефіціент кореляції", "", "", "", "", "");
-                dataGridView1.Rows.Add("Кореляційне відношення по X", "", "", "", "", "---");
-                dataGridView1.Rows.Add("Кореляційне відношення по Y", "", "", "", "", "---");
-                dataGridView1.Rows.Add("Р.к.к. Спірмена", "", "", "", "", "---");
-                dataGridView1.Rows.Add("Р.к.к. Кендалла", "", "", "", "", "---");
-                dataGridView2.Rows.Add("Індекс Фехнера","","---","---");
-                dataGridView2.Rows.Add("Коефіціент сполучень Φ", "", "", "");
-                dataGridView2.Rows.Add("Коефіціент зв'язку Юла Q", "", "", "");
-                dataGridView2.Rows.Add("Коефіціент зв'язку Юла Y", "", "", "");
-                dataGridView4.Rows.Add("Коефіціент сполучень Пірсона", "");
-                dataGridView4.Rows.Add("Мір звяззку Кендалла", "");
-                dataGridView4.Rows.Add("Статистика Стюарда", "");
-                return;
-            }
-            chart2.Controls.Clear();
             this.chart1.Series[0].Points.Clear();
+            this.chart2.Series[10].Points.Clear();
             this.chart1.Series[1].Points.Clear();
             this.chart1.Series[2].Points.Clear();
             this.chart1.Series[3].Points.Clear();
@@ -4664,7 +4626,34 @@ namespace thing_2._1
             this.chart1.Series[6].Points.Clear();
             this.chart1.Series[7].Points.Clear();
             this.chart1.Series[8].Points.Clear();
-            this.chart2.Series[10].Points.Clear();
+            this.dataGridView1.Rows.Clear();
+            this.dataGridView2.Rows.Clear();
+            this.dataGridView4.Rows.Clear();
+            this.dataGridView3.Rows.Clear();
+            chart2.Controls.Clear();
+            LogOutputTextBox.Text += "Theres nothing to do" + Environment.NewLine;
+            dataGridView1.Rows.Add("Мат. сподівання X", "", "", "", "", "---");
+            dataGridView1.Rows.Add("Мат. сподівання Y", "", "", "", "", "---");
+            dataGridView1.Rows.Add("Стандартне відхилення X", "", "", "", "", "");
+            dataGridView1.Rows.Add("Стандартне відхилення Y", "", "", "", "", "");
+            dataGridView1.Rows.Add("Оцінка адекватності відтворення нормального розподілу", "---", "", "---", "", "");
+            dataGridView1.Rows.Add("Коефіціент кореляції", "", "", "", "", "");
+            dataGridView1.Rows.Add("Кореляційне відношення по X", "", "", "", "", "---");
+            dataGridView1.Rows.Add("Кореляційне відношення по Y", "", "", "", "", "---");
+            dataGridView1.Rows.Add("Р.к.к. Спірмена", "", "", "", "", "---");
+            dataGridView1.Rows.Add("Р.к.к. Кендалла", "", "", "", "", "---");
+            dataGridView2.Rows.Add("Індекс Фехнера", "", "---", "---");
+            dataGridView2.Rows.Add("Коефіціент сполучень Φ", "", "", "");
+            dataGridView2.Rows.Add("Коефіціент зв'язку Юла Q", "", "", "");
+            dataGridView2.Rows.Add("Коефіціент зв'язку Юла Y", "", "", "");
+            dataGridView4.Rows.Add("Коефіціент сполучень Пірсона", "");
+            dataGridView4.Rows.Add("Мір звяззку Кендалла", "");
+            dataGridView4.Rows.Add("Статистика Стюарда", "");
+            if (Data.TwoDemSamples.Count <= 0)
+            {
+                return;
+            }
+            chart2.Controls.Clear();
             int i, j, k;
             List<double> Temp1 = new List<double>(), Temp2 = new List<double>();
             dataGridView3.Rows.Clear();
@@ -5988,7 +5977,7 @@ namespace thing_2._1
                             {
                                 if (Data.CurrentSample == Data.MultiDemSamples[i][j])
                                 {
-                                    LogOutputTextBox.Text += "Returning values to multidim samples currently isnt supported" + Environment.NewLine;
+                                    LogOutputTextBox.Text += "Returning values to multidim samples shall be done by specialised button" + Environment.NewLine;
                                     return;
                                 }
                             }
@@ -9386,7 +9375,6 @@ namespace thing_2._1
                     Data.DistrCreated = false;
                     Data.TwoDemDistrCreated = false;
                     Data.TwoDemNamesOfFiles.Add(OpeningDialog.FileName);
-                    Data.TwoDemStepBack.Add(new List<ToolsForWork.Changing>());
                     if (Data.DataForWork.Count != 0)
                     {
                         Data.TwoDemSamples.Add(new int[] { Data.DataForWork.Count - 2, Data.DataForWork.Count - 1 });
@@ -11317,7 +11305,8 @@ namespace thing_2._1
             int Num = Convert.ToInt32(e.Row.Cells[4].Value);
             double[] FW = new double[2];
             FW[0] = Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]][Num];
-            FW[1] = Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]][Num];
+            FW[1] = Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][1]][Num];
+            Data.TwoDemStepBack[Data.TwoDemCurrentSample].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.twodemdeleted, FW));
             Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]].RemoveAt(Num);
             Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][1]].RemoveAt(Num);
             UpdateForm();
@@ -12963,9 +12952,7 @@ namespace thing_2._1
                     dataGridView8.Rows.Clear();
                     dataGridView8.Columns.Clear();
                     dataGridView9.Rows.Clear();
-                    dataGridView9.Columns.Clear();
-                    dataGridView1.Rows.Clear();
-                    dataGridView1.Columns.Clear(); 
+                    dataGridView9.Columns.Clear(); 
                     tableLayoutPanel1.ColumnStyles.Clear();
                     tableLayoutPanel1.RowStyles.Clear();
                     tableLayoutPanel1.Controls.Clear();
@@ -13907,11 +13894,14 @@ namespace thing_2._1
             {
                 BuildTwoDem();
             }
-            for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+            if (Data.MultiDemSamples.Count > 0)
             {
-                if (Data.MultiDemSamples[Data.MultiDemCurrentSample][i] == NumberOfTarget)
+                for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
                 {
-                    BuildMultiDem();
+                    if (Data.MultiDemSamples[Data.MultiDemCurrentSample][i] == NumberOfTarget)
+                    {
+                        BuildMultiDem();
+                    }
                 }
             }
         }
@@ -13980,17 +13970,35 @@ namespace thing_2._1
         {
             if (Data.TwoDemStepBack[Data.TwoDemCurrentSample].Count == 0)
             {
+                LogOutputTextBox.Text += "Нема з чим працювати " + Environment.NewLine;
                 return;
             }
-            ToolsForWork.Changing FW = Data.StepBack[Data.CurrentSample][Data.StepBack[Data.CurrentSample].Count - 1];
-            Data.StepBack[Data.CurrentSample].RemoveAt(Data.StepBack[Data.CurrentSample].Count - 1);
+            ToolsForWork.Changing FW = Data.TwoDemStepBack[Data.TwoDemCurrentSample][Data.TwoDemStepBack[Data.TwoDemCurrentSample].Count - 1];
+            Data.TwoDemStepBack[Data.TwoDemCurrentSample].RemoveAt(Data.TwoDemStepBack[Data.TwoDemCurrentSample].Count - 1);
+            int i,j;
             switch (FW.ChangeStyle)
             {
                 case (ToolsForWork.TypeOfCHange.twodemdeleted):
                     {
+                        for (i = 0; i < Data.MultiDemSamples.Count; i++)
+                        {
+                            for (j = 0; j < Data.MultiDemSamples[i].Length; j++)
+                            {
+                                if (Data.TwoDemSamples[Data.TwoDemCurrentSample][0] == Data.MultiDemSamples[i][j] || Data.TwoDemSamples[Data.TwoDemCurrentSample][1] == Data.MultiDemSamples[i][j])
+                                {
+                                    LogOutputTextBox.Text += "Returning values to multidim samples shall be done by specialised button" + Environment.NewLine;
+                                    return;
+                                }
+                            }
+                        }
+                        //Console.WriteLine("" + FW.paramsOfChange[0] );
+                        Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]].Add(FW.paramsOfChange[0]);
+                        Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][1]].Add(FW.paramsOfChange[1]);
+                        //Data.DataForWork[Data.CurrentSample].Sort();
                         break;
                     }
             }
+            UpdateForm(Data.CurrentSample);
         }
 
 
