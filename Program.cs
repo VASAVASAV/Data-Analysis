@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -264,6 +264,9 @@ namespace thing_2._1
         private ToolStripMenuItem крокНазаддвовимірніToolStripMenuItem;
         private ToolStripMenuItem крокНазадбагатовимірніToolStripMenuItem;
         private Button button33;
+        private ToolStripMenuItem доПочатковихЗначеньДвовимірніToolStripMenuItem;
+        private ToolStripMenuItem доПочатковихЗначеньБагатовимірніToolStripMenuItem;
+        private CheckBox checkBox7;
         private DataGridView[] DataGridForChkk;
     
         public BodyOfForm()
@@ -389,7 +392,9 @@ namespace thing_2._1
             this.крокНазадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.доПочатковихЗначеньToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.крокНазаддвовимірніToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.доПочатковихЗначеньДвовимірніToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.крокНазадбагатовимірніToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.доПочатковихЗначеньБагатовимірніToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.додатковоToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.включитивиключитиМаштабуванняToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.включитивиключитиПобудовуВаріаційногоРядуToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -560,6 +565,7 @@ namespace thing_2._1
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -928,7 +934,9 @@ namespace thing_2._1
             this.крокНазадToolStripMenuItem,
             this.доПочатковихЗначеньToolStripMenuItem,
             this.крокНазаддвовимірніToolStripMenuItem,
-            this.крокНазадбагатовимірніToolStripMenuItem});
+            this.доПочатковихЗначеньДвовимірніToolStripMenuItem,
+            this.крокНазадбагатовимірніToolStripMenuItem,
+            this.доПочатковихЗначеньБагатовимірніToolStripMenuItem});
             this.відмінитиToolStripMenuItem.Name = "відмінитиToolStripMenuItem";
             this.відмінитиToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.відмінитиToolStripMenuItem.Text = "Відмінити";
@@ -936,29 +944,44 @@ namespace thing_2._1
             // крокНазадToolStripMenuItem
             // 
             this.крокНазадToolStripMenuItem.Name = "крокНазадToolStripMenuItem";
-            this.крокНазадToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.крокНазадToolStripMenuItem.Size = new System.Drawing.Size(291, 22);
             this.крокНазадToolStripMenuItem.Text = "Крок назад (одновимірні)";
             this.крокНазадToolStripMenuItem.Click += new System.EventHandler(this.крокНазадToolStripMenuItem_Click);
             // 
             // доПочатковихЗначеньToolStripMenuItem
             // 
             this.доПочатковихЗначеньToolStripMenuItem.Name = "доПочатковихЗначеньToolStripMenuItem";
-            this.доПочатковихЗначеньToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.доПочатковихЗначеньToolStripMenuItem.Size = new System.Drawing.Size(291, 22);
             this.доПочатковихЗначеньToolStripMenuItem.Text = "До початкових значень";
             this.доПочатковихЗначеньToolStripMenuItem.Click += new System.EventHandler(this.доПочатковихЗначеньToolStripMenuItem_Click);
             // 
             // крокНазаддвовимірніToolStripMenuItem
             // 
             this.крокНазаддвовимірніToolStripMenuItem.Name = "крокНазаддвовимірніToolStripMenuItem";
-            this.крокНазаддвовимірніToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.крокНазаддвовимірніToolStripMenuItem.Size = new System.Drawing.Size(291, 22);
             this.крокНазаддвовимірніToolStripMenuItem.Text = "Крок назад (двовимірні)";
             this.крокНазаддвовимірніToolStripMenuItem.Click += new System.EventHandler(this.крокНазаддвовимірніToolStripMenuItem_Click);
+            // 
+            // доПочатковихЗначеньДвовимірніToolStripMenuItem
+            // 
+            this.доПочатковихЗначеньДвовимірніToolStripMenuItem.Name = "доПочатковихЗначеньДвовимірніToolStripMenuItem";
+            this.доПочатковихЗначеньДвовимірніToolStripMenuItem.Size = new System.Drawing.Size(291, 22);
+            this.доПочатковихЗначеньДвовимірніToolStripMenuItem.Text = "До початкових значень (Двовимірні)";
+            this.доПочатковихЗначеньДвовимірніToolStripMenuItem.Click += new System.EventHandler(this.доПочатковихЗначеньДвовимірніToolStripMenuItem_Click);
             // 
             // крокНазадбагатовимірніToolStripMenuItem
             // 
             this.крокНазадбагатовимірніToolStripMenuItem.Name = "крокНазадбагатовимірніToolStripMenuItem";
-            this.крокНазадбагатовимірніToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.крокНазадбагатовимірніToolStripMenuItem.Size = new System.Drawing.Size(291, 22);
             this.крокНазадбагатовимірніToolStripMenuItem.Text = "Крок назад (багатовимірні)";
+            this.крокНазадбагатовимірніToolStripMenuItem.Click += new System.EventHandler(this.крокНазадбагатовимірніToolStripMenuItem_Click);
+            // 
+            // доПочатковихЗначеньБагатовимірніToolStripMenuItem
+            // 
+            this.доПочатковихЗначеньБагатовимірніToolStripMenuItem.Name = "доПочатковихЗначеньБагатовимірніToolStripMenuItem";
+            this.доПочатковихЗначеньБагатовимірніToolStripMenuItem.Size = new System.Drawing.Size(291, 22);
+            this.доПочатковихЗначеньБагатовимірніToolStripMenuItem.Text = "До початкових значень (Багатовимірні)";
+            this.доПочатковихЗначеньБагатовимірніToolStripMenuItem.Click += new System.EventHandler(this.доПочатковихЗначеньБагатовимірніToolStripMenuItem_Click);
             // 
             // додатковоToolStripMenuItem
             // 
@@ -2795,6 +2818,7 @@ namespace thing_2._1
             // 
             // tabPage16
             // 
+            this.tabPage16.Controls.Add(this.checkBox7);
             this.tabPage16.Controls.Add(this.checkBox4);
             this.tabPage16.Controls.Add(this.checkBox3);
             this.tabPage16.Controls.Add(this.tableLayoutPanel1);
@@ -2805,6 +2829,18 @@ namespace thing_2._1
             this.tabPage16.TabIndex = 0;
             this.tabPage16.Text = "Матриця діаграм розкиду";
             this.tabPage16.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Checked = true;
+            this.checkBox7.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox7.Location = new System.Drawing.Point(462, 3);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(177, 17);
+            this.checkBox7.TabIndex = 3;
+            this.checkBox7.Text = "Показувати значення на осях";
+            this.checkBox7.UseVisualStyleBackColor = true;
             // 
             // checkBox4
             // 
@@ -4233,6 +4269,16 @@ namespace thing_2._1
                                 TempSer.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
                                 TempSer.MarkerSize = 4;
                                 System.Windows.Forms.DataVisualization.Charting.ChartArea TempCA = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+                                if (checkBox7.Checked == false)
+                                {
+                                    TempCA.Axes[0].LabelStyle.Enabled = false;
+                                    TempCA.Axes[1].LabelStyle.Enabled = false;
+                                }
+                                else
+                                {
+                                    TempCA.Axes[0].LabelStyle.Enabled = true;
+                                    TempCA.Axes[1].LabelStyle.Enabled = true;
+                                }
                                 TempChart.Series.Add(TempSer);
                                 TempChart.ChartAreas.Add(TempCA);
                                 /////
@@ -4327,6 +4373,16 @@ namespace thing_2._1
                                 TempSer.BorderColor = Color.Black;
                                 TempSer.MarkerSize = 4;
                                 System.Windows.Forms.DataVisualization.Charting.ChartArea TempCA = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+                                if (checkBox7.Checked == false)
+                                {
+                                    TempCA.Axes[0].LabelStyle.Enabled = false;
+                                    TempCA.Axes[1].LabelStyle.Enabled = false;
+                                }
+                                else
+                                {
+                                    TempCA.Axes[0].LabelStyle.Enabled = true;
+                                    TempCA.Axes[1].LabelStyle.Enabled = true;
+                                }
                                 TempChart.Series.Add(TempSer);
                                 TempChart.ChartAreas.Add(TempCA);
                                 /////
@@ -6043,8 +6099,7 @@ namespace thing_2._1
                 MakeStepBack();
             }
             Data.DistrCreated = false;
-            Build();
-            BuildTwoDem();
+            UpdateForm();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -7213,6 +7268,7 @@ namespace thing_2._1
                 BuildTwoDem();
                 return;
             }
+            int temp = Data.TwoDemCurrentSample;
             Data.TwoDemCurrentSample.set(Data.TwoDemCurrentSample + 1); 
             OkCancelDlg it = new OkCancelDlg("Виберіть вибірку для видалення", null, Data.TwoDemCurrentSample);
             DialogResult rc = it.ShowDialog();
@@ -7264,8 +7320,12 @@ namespace thing_2._1
                 }
                 else
                 {
-                    if (Data.TwoDemCurrentSample < 0 || Data.TwoDemCurrentSample >= Data.TwoDemSamples.Count)
+                    if (Data.TwoDemCurrentSample == temp)
                         Data.TwoDemCurrentSample.set(0);
+                    else
+                    {
+                        Data.TwoDemCurrentSample.set(temp);
+                    }
                     BuildTwoDem();
                 }
             }
@@ -11403,6 +11463,10 @@ namespace thing_2._1
                        
                         if ((Temp1[k] >= MinX + i * ((MaxX - MinX) / CountX)) && (Temp1[k] < MinX + (i + 1) * ((MaxX - MinX) / CountX)) && (Temp2[k] >= MinY + (j) * ((MaxY - MinY) / CountY)) && (Temp2[k] < MinY + (j + 1) * ((MaxY - MinY) / CountY)) && (Ps[i, j] < alfa) && (Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]].Count >= 5))
                         {
+                            double[] FW = new double[2];
+                            FW[0] = Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]][k];
+                            FW[1] = Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][1]][k];
+                            Data.TwoDemStepBack[Data.TwoDemCurrentSample].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.twodemdeleted, FW));
                             Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]].RemoveAt(k);
                             Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][1]].RemoveAt(k);
                         }
@@ -12680,7 +12744,7 @@ namespace thing_2._1
                         }
                         //Data.DataForWork[Data.CurrentSample].Sort();
                         //Data.NamesOfFiles.Add(OpeningDialog.FileName);
-                        Data.StepBack.Add(new List<ToolsForWork.Changing>());
+                       // Data.StepBack.Add(new List<ToolsForWork.Changing>());
                         StatusLabelNameOfFile.Text = Data.NamesOfFiles[Data.CurrentSample];
                         HistData.NumberOfClassesChangedByUser = false;
                         DistrFuncData.NumberOfClassesChangedByUser = false;
@@ -12693,6 +12757,7 @@ namespace thing_2._1
                                 temp[j] = Data.DataForWork.Count - NumberOfDimentions + j;
                             }
                             Data.MultiDemSamples.Add(temp);
+                            Data.MultiDemStepBack.Add(new List<ToolsForWork.Changing>());
                             Data.CurrentSample.set(Data.DataForWork.Count - NumberOfDimentions);
                             Data.TwoDemCurrentSample.set(Data.TwoDemSamples.Count-1);
                             Data.MultiDemCurrentSample.set(Data.MultiDemSamples.Count - 1);
@@ -12810,6 +12875,7 @@ namespace thing_2._1
                     Data.StepBack.Add(new List<ToolsForWork.Changing>());
                 }
                 Data.CurrentSample.set(Data.DataForWork.Count-NumberOfDimentions);
+                Data.MultiDemStepBack.Add(new List<ToolsForWork.Changing>());
                 Data.MultiDemSamples.Add(TempAr);
                 for (k = 0; k < NumberOfElements; k++)
                 {
@@ -12928,6 +12994,7 @@ namespace thing_2._1
                     LogOutputTextBox.Text += "Нема з чим працювати " + Environment.NewLine;
                 return;
             }
+            int temp = Data.MultiDemCurrentSample;
             Data.MultiDemCurrentSample.set(Data.MultiDemCurrentSample + 1);
             OkCancelDlg it = new OkCancelDlg("Виберіть вибірку для видалення", null, Data.MultiDemCurrentSample);
             DialogResult rc = it.ShowDialog();
@@ -12941,6 +13008,7 @@ namespace thing_2._1
                 }
                 //Data.TwoDemNamesOfFiles.RemoveAt(Data.TwoDemCurrentSample);
                 Data.MultiDemSamples.RemoveAt(Data.MultiDemCurrentSample);
+                Data.MultiDemStepBack.RemoveAt(Data.MultiDemCurrentSample);
                 if (Data.MultiDemSamples.Count == 0)
                 {
                     dataGridView5.Rows.Clear();
@@ -12961,8 +13029,12 @@ namespace thing_2._1
                 }
                 else
                 {
-                    if (Data.MultiDemCurrentSample < 0 || Data.MultiDemCurrentSample >= Data.MultiDemSamples.Count)
+                    if (Data.MultiDemCurrentSample == temp)
                         Data.MultiDemCurrentSample.set(0);
+                    else
+                    {
+                        Data.MultiDemCurrentSample.set(temp);
+                    }
                     BuildMultiDem();
                 }
             }
@@ -12999,6 +13071,7 @@ namespace thing_2._1
                         }
                         Targ[i] = (ArrayOfNumbers[i] as ArgInt)-1;
                     }
+                    Data.MultiDemStepBack.Add(new List<ToolsForWork.Changing>());
                     Data.MultiDemSamples.Add(Targ);
                     Data.MultiDemCurrentSample.set(Data.MultiDemSamples.Count - 1);
                     BuildMultiDem();
@@ -13606,10 +13679,13 @@ namespace thing_2._1
         private void dataGridView8_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
         {
             int Num = Convert.ToInt32(e.Row.Cells[e.Row.Cells.Count - 1].Value);
+            double[] FW = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
             for (int i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
             {
+                FW[i] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][Num];
                 Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]].RemoveAt(Num);
             }
+            Data.MultiDemStepBack[Data.MultiDemCurrentSample].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.multidemdeleted, FW));
             UpdateForm();
         }
 
@@ -13930,6 +14006,7 @@ namespace thing_2._1
             double[] tempExp = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
             double[] Temps = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
             int NumOfPoints = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count;//Number of points in each sample
+            double[] FW = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length * 2];
             for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
             {
                 Summ = 0;
@@ -13952,12 +14029,10 @@ namespace thing_2._1
                 {
                     Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][j] = ((double)Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][j] - tempExp[i]) / (Temps[i]);
                 }
-                double[] FW = new double[2];
-                FW[0] = tempExp[i];
-                FW[1] = Temps[i];
-                Data.StepBack[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.standardized, FW));
+                FW[i*2] = tempExp[i];
+                FW[i*2+1] = Temps[i];
             }
-            
+            Data.MultiDemStepBack[Data.MultiDemCurrentSample].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.multidemstand, FW));
             UpdateForm();
         }
 
@@ -13966,16 +14041,11 @@ namespace thing_2._1
 
         }
 
-        private void крокНазаддвовимірніToolStripMenuItem_Click(object sender, EventArgs e)
+        private void MakeStepBackTwo()
         {
-            if (Data.TwoDemStepBack[Data.TwoDemCurrentSample].Count == 0)
-            {
-                LogOutputTextBox.Text += "Нема з чим працювати " + Environment.NewLine;
-                return;
-            }
             ToolsForWork.Changing FW = Data.TwoDemStepBack[Data.TwoDemCurrentSample][Data.TwoDemStepBack[Data.TwoDemCurrentSample].Count - 1];
             Data.TwoDemStepBack[Data.TwoDemCurrentSample].RemoveAt(Data.TwoDemStepBack[Data.TwoDemCurrentSample].Count - 1);
-            int i,j;
+            int i, j;
             switch (FW.ChangeStyle)
             {
                 case (ToolsForWork.TypeOfCHange.twodemdeleted):
@@ -13998,7 +14068,98 @@ namespace thing_2._1
                         break;
                     }
             }
-            UpdateForm(Data.CurrentSample);
+        }
+
+        private void крокНазаддвовимірніToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Data.TwoDemStepBack[Data.TwoDemCurrentSample].Count == 0)
+            {
+                LogOutputTextBox.Text += "Нема з чим працювати " + Environment.NewLine;
+                return;
+            }
+            MakeStepBackTwo();
+            UpdateForm();
+        }
+
+        private void MakeStepBackMulti()
+        {
+            ToolsForWork.Changing FW = Data.MultiDemStepBack[Data.MultiDemCurrentSample][Data.MultiDemStepBack[Data.MultiDemCurrentSample].Count - 1];
+            Data.MultiDemStepBack[Data.MultiDemCurrentSample].RemoveAt(Data.MultiDemStepBack[Data.MultiDemCurrentSample].Count - 1);
+            int i, j;
+            switch (FW.ChangeStyle)
+            {
+                case (ToolsForWork.TypeOfCHange.multidemdeleted):
+                    {
+                        ////
+                        double[] Param = FW.paramsOfChange;
+                        //Console.WriteLine("" + FW.paramsOfChange[0] );
+                        for (i = 0; i < Param.Length; i++)
+                        {
+                            Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]].Add(FW.paramsOfChange[i]);
+                        }
+                        //Data.DataForWork[Data.CurrentSample].Sort();
+                        break;
+                    }
+                case (ToolsForWork.TypeOfCHange.multidemstand):
+                    {
+                        ////
+                        int len = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count;
+                        double[] Param = FW.paramsOfChange;
+                        //Console.WriteLine("" + FW.paramsOfChange[0] );
+                        for (i = 0; i < Param.Length; i+=2)
+                        {
+                            for (j = 0; j < len; j++)
+                            {
+                                Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][(int)(i / 2)]][j] *= Param[i + 1];
+                                Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][(int)(i / 2)]][j] += Param[i];
+                            }
+                        }
+                        //Data.DataForWork[Data.CurrentSample].Sort();
+                        break;
+                    }
+
+            }
+        }
+
+        private void крокНазадбагатовимірніToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Data.MultiDemStepBack[Data.MultiDemCurrentSample].Count == 0)
+            {
+                LogOutputTextBox.Text += "Нема з чим працювати " + Environment.NewLine;
+                return;
+            }
+            MakeStepBackMulti();
+            UpdateForm();
+        }
+
+        private void доПочатковихЗначеньДвовимірніToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Data.TwoDemSamples.Count <= 0)
+            {
+                if (LogCheckBox.Checked)
+                    LogOutputTextBox.Text += "Нема з чим працювати " + Environment.NewLine;
+                return;
+            }
+            while (Data.TwoDemStepBack[Data.TwoDemCurrentSample].Count != 0)
+            {
+                MakeStepBackTwo();
+            }
+            UpdateForm();
+        }
+
+        private void доПочатковихЗначеньБагатовимірніToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Data.MultiDemSamples.Count <= 0)
+            {
+                if (LogCheckBox.Checked)
+                    LogOutputTextBox.Text += "Нема з чим працювати " + Environment.NewLine;
+                return;
+            }
+            while (Data.MultiDemStepBack[Data.MultiDemCurrentSample].Count != 0)
+            {
+                MakeStepBackMulti();
+            }
+            UpdateForm();
         }
 
 

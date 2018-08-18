@@ -252,6 +252,7 @@ namespace thing_2._1
             EvalData = new Evaletions();
             TDEvalData = new TwoDemEvaletions();
             TwoDemStepBack = new List<List<ToolsForWork.Changing>>();
+            MultiDemStepBack = new List<List<ToolsForWork.Changing>>();
         }
     }
     /// 
@@ -468,7 +469,10 @@ namespace thing_2._1
             standardized,
             multiplyed,
             massivedelete,
-            added
+            added,
+            twodemdeleted,
+            multidemdeleted,
+            multidemstand
         }
         public class Changing
         {
