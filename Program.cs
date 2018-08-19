@@ -5578,6 +5578,7 @@ namespace thing_2._1
 
         private void вибратиДвомірнуВибіркуToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            int temp = Data.TwoDemCurrentSample;
             Data.TwoDemCurrentSample.set(Data.TwoDemCurrentSample + 1);
             OkCancelDlg it = new OkCancelDlg("Виберіть вибірку", null, Data.TwoDemCurrentSample);
             DialogResult rc = it.ShowDialog();
@@ -5587,6 +5588,7 @@ namespace thing_2._1
                 if ((Data.TwoDemCurrentSample < 0) || (Data.TwoDemCurrentSample >= Data.TwoDemSamples.Count))
                 {
                     LogOutputTextBox.Text += "Вибірки з таким номером не існує " + Environment.NewLine;
+                    Data.TwoDemCurrentSample.set(temp);
                     return;
                 }
                // StatusLabelNameOfFile.Text = Data.NamesOfFiles[Data.CurrentSample];
@@ -5599,6 +5601,7 @@ namespace thing_2._1
 
         private void вибратиВибіркуToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            int temp = Data.CurrentSample;
             Data.CurrentSample.set(Data.CurrentSample + 1);
             OkCancelDlg it = new OkCancelDlg("Виберіть вибірку", null, Data.CurrentSample);
             DialogResult rc = it.ShowDialog();
@@ -5608,6 +5611,7 @@ namespace thing_2._1
                 if ((Data.CurrentSample < 0) || (Data.CurrentSample >= Data.DataForWork.Count))
                 {
                     LogOutputTextBox.Text += "Вибірки з таким номером не існує " + Environment.NewLine;
+                    Data.CurrentSample.set(temp);
                     return;
                 }
                 StatusLabelNameOfFile.Text = Data.NamesOfFiles[Data.CurrentSample];
@@ -7324,7 +7328,14 @@ namespace thing_2._1
                         Data.TwoDemCurrentSample.set(0);
                     else
                     {
-                        Data.TwoDemCurrentSample.set(temp);
+                        if (Data.TwoDemCurrentSample > temp)
+                        {
+                            Data.TwoDemCurrentSample.set(temp);
+                        }
+                        else
+                        {
+                            Data.TwoDemCurrentSample.set(temp-1);
+                        }
                     }
                     BuildTwoDem();
                 }
@@ -12967,6 +12978,7 @@ namespace thing_2._1
 
         private void вибратиБагатовимірнуВибіркуToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            int temp = Data.MultiDemCurrentSample;
             Data.MultiDemCurrentSample.set(Data.MultiDemCurrentSample + 1);
             OkCancelDlg it = new OkCancelDlg("Виберіть вибірку", null, Data.MultiDemCurrentSample);
             DialogResult rc = it.ShowDialog();
@@ -12976,6 +12988,7 @@ namespace thing_2._1
                 if ((Data.MultiDemCurrentSample < 0) || (Data.MultiDemCurrentSample >= Data.MultiDemSamples.Count))
                 {
                     LogOutputTextBox.Text += "Вибірки з таким номером не існує " + Environment.NewLine;
+                    Data.MultiDemCurrentSample.set(temp);
                     return;
                 }
                 // StatusLabelNameOfFile.Text = Data.NamesOfFiles[Data.CurrentSample];
@@ -13033,7 +13046,14 @@ namespace thing_2._1
                         Data.MultiDemCurrentSample.set(0);
                     else
                     {
-                        Data.MultiDemCurrentSample.set(temp);
+                        if (temp < Data.MultiDemCurrentSample)
+                        {
+                            Data.MultiDemCurrentSample.set(temp);
+                        }
+                        else
+                        {
+                            Data.MultiDemCurrentSample.set(temp-1);
+                        }
                     }
                     BuildMultiDem();
                 }
@@ -13851,14 +13871,14 @@ namespace thing_2._1
                 }
                 double det1 = Matrixes.GetDet(Temp2), det2 = Matrixes.GetDet(Temp1);
                 double V = -1 * (Len1 + Len2 - 2 - ((double)Data.MultiDemSamples[Number1].Length) / 2) * Math.Log(Matrixes.GetDet(Temp2) / Matrixes.GetDet(Temp1));
-                double quan = Quantile.HirsQuan(Alfa, Data.MultiDemSamples[Number1].Length);
+                double quan = Quantile.HirsQuan(1-Alfa, Data.MultiDemSamples[Number1].Length);
                 if (V <= quan)
                 {
-                    LogOutputTextBox.Text += "Вітаємо! Була доведена гіпотеза про збіг середніх двох багатовимірних вибірок: " + (int)Number1 + "-ої та " + (int)Number2 + "-ої" + Environment.NewLine;
+                    LogOutputTextBox.Text += "Вітаємо! Була доведена гіпотеза про збіг середніх двох багатовимірних вибірок: " + (int)Number1 + "-ої та " + (int)Number2 + "-ої; значення квантилю - " + Math.Round(quan, Data.NumberOfNum) + "; значення статистики - " + Math.Round(V, Data.NumberOfNum) + Environment.NewLine;
                 }
                 else
                 {
-                    LogOutputTextBox.Text += "Гіпотеза про збіг середніх двох багатовимірних вибірок: " + (int)Number1 + "-ої та " + (int)Number2 + "-ої була спростована" + Environment.NewLine;
+                    LogOutputTextBox.Text += "Гіпотеза про збіг середніх двох багатовимірних вибірок: " + (int)Number1 + "-ої та " + (int)Number2 + "-ої була спростована; значення квантилю - " + Math.Round(quan, Data.NumberOfNum) + "; значення статистики - " + Math.Round(V, Data.NumberOfNum) + Environment.NewLine;
                 }
             }
         }
@@ -13866,17 +13886,24 @@ namespace thing_2._1
         private void CallKExpComp()
         {
             ArgInt Number = new ArgInt(2, "", "Кількість вибірок для звірки", "...", "<Size>");
-            OkCancelDlg it = new OkCancelDlg("Уточнення деталей", null, Number);
+            ArgFloat Alfa = new ArgFloat(0.05, "", "Критичне значення", "Критичне значення", "<Size>");
+            OkCancelDlg it = new OkCancelDlg("Уточнення деталей", null, Number, Alfa);
             DialogResult rc = it.ShowDialog();
+            int i,j,k;
             if (rc == DialogResult.OK)
             {
-                if ((Number < 2) || (Number > Data.DataForWork.Count))
+                if ((Number < 2) || (Number > Data.MultiDemSamples.Count))
                 {
                     LogOutputTextBox.Text += "На жаль, безсенсно" + Environment.NewLine;
                     return;
                 }
+                if ((Alfa <= 0) || (Alfa >= 1))
+                {
+                    LogOutputTextBox.Text += "Безсенсно" + Environment.NewLine;
+                    return;
+                }
                 Arg[] ArrayOfNumbers = new Arg[Number];
-                for (int i = 0; i < Number; i++)
+                for (i = 0; i < Number; i++)
                 {
                     ArrayOfNumbers[i] = new ArgInt(i + 1, "", "Номер вибірки", "Номер вибірки, яка буде частиною гіпотези про рівність...", "<Size>");
                 }
@@ -13884,20 +13911,110 @@ namespace thing_2._1
                 rc = it.ShowDialog();
                 if (rc == DialogResult.OK)
                 {
-                    if ((ArrayOfNumbers[0] as ArgInt)<= 0 || (ArrayOfNumbers[0] as ArgInt) > Data.MultiDemSamples.Count)
+                    for (i = 0; i < Number; i++)
                     {
-                        LogOutputTextBox.Text += "Безсенсно" + Environment.NewLine;
-                        return;
+                        (ArrayOfNumbers[i] as ArgInt).set((ArrayOfNumbers[i] as ArgInt)-1);
                     }
-                    for (int i = 0; i < Number - 1; i++)
+                    for (i = 0; i < Number; i++)
                     {
-                        if ((int)(ArrayOfNumbers[i] as ArgInt) == (int)(ArrayOfNumbers[i + 1] as ArgInt))
+                        if ((ArrayOfNumbers[i] as ArgInt) < 0 || (ArrayOfNumbers[i] as ArgInt) >= Data.MultiDemSamples.Count)
                         {
                             LogOutputTextBox.Text += "Безсенсно" + Environment.NewLine;
                             return;
                         }
                     }
-
+                    int NumDim = Data.MultiDemSamples[ArrayOfNumbers[0] as ArgInt].Length;
+                    int[] Lens = new int[Number];
+                    for(i=0; i < Number-1; i++)
+                    {
+                        for (j = i+1; j < Number; j++)
+                        {
+                            if ((int)(ArrayOfNumbers[i] as ArgInt) == (int)(ArrayOfNumbers[j] as ArgInt))
+                            {
+                                LogOutputTextBox.Text += "Безсенсно порівнювати між собою одну і ту ж саму вибірку" + Environment.NewLine;
+                                return;
+                            }
+                        }
+                        if (NumDim != Data.MultiDemSamples[ArrayOfNumbers[i] as ArgInt].Length)
+                        {
+                            LogOutputTextBox.Text += "Розмірність вибірок не співпадає" + Environment.NewLine;
+                            return;
+                        }
+                        Lens[i] = Data.DataForWork[Data.MultiDemSamples[ArrayOfNumbers[i] as ArgInt][0]].Count;
+                    }
+                    if (NumDim != Data.MultiDemSamples[ArrayOfNumbers[Number-1] as ArgInt].Length)
+                    {
+                        LogOutputTextBox.Text += "Розмірність вибірок не співпадає" + Environment.NewLine;
+                        return;
+                    }
+                    Lens[Number-1] = Data.DataForWork[Data.MultiDemSamples[ArrayOfNumbers[Number-1] as ArgInt][0]].Count;
+                    double[][] ExpD = new double[Number][];
+                    double temp, temp1=0,temp2=0 ;
+                    double[] tempar;
+                    double[] SD = new double[Number];
+                    double[] ExpAll = new double[NumDim];
+                    for (i = 0; i < Number; i++)
+                    {
+                        ExpD[i] = new double[NumDim];
+                        for(k=0; k < NumDim;k++)
+                        {
+                             temp = 0;
+                            for (j = 0; j < Lens[i]; j++)
+                            {
+                                temp += Data.DataForWork[Data.MultiDemSamples[ArrayOfNumbers[i] as ArgInt][k]][j];
+                            }
+                            ExpD[i][k] = temp / Lens[i];
+                        }
+                    }
+                    for (i = 0; i < Number; i++)
+                    {
+                        temp = 0;
+                        tempar = new double[NumDim];
+                        for (j = 0; j < Lens[i]; j++)
+                        {
+                            tempar = new double[NumDim];
+                            for (k = 0; k < NumDim; k++)
+                            {
+                                tempar[k] += Data.DataForWork[Data.MultiDemSamples[ArrayOfNumbers[i] as ArgInt][k]][j]-ExpD[i][k];
+                                temp += tempar[k] * tempar[k];
+                            }
+                        }
+                        temp /= Lens[i] - 1;
+                        SD[i] = temp;
+                    }
+                    tempar = new double[NumDim];
+                    for (i = 0; i < Number; i++)
+                    {
+                        temp1 += Lens[i] * (1d / SD[i]);
+                        for (j = 0; j < NumDim; j++)
+                        {
+                            tempar[j] += Lens[i] * (1d / SD[i]) * ExpD[i][j];
+                        }
+                    }
+                    temp1 = 1d / temp1;
+                    for (j = 0; j < NumDim; j++)
+                    {
+                        ExpAll[j] = tempar[j] * temp1;
+                    }
+                    double V=0;
+                    for (i = 0; i < Number; i++)
+                    {
+                        temp=0;
+                        for (j = 0; j < NumDim; j++)
+                        {
+                            temp+=(ExpD[i][j]-ExpAll[j])*(1d/SD[i])*(ExpD[i][j]-ExpAll[j]);
+                        }
+                        V += Lens[i] * temp;
+                    }
+                    double quan = Quantile.HirsQuan(1 - Alfa, (Number-1)*NumDim);
+                    if (V <= quan)
+                    {
+                        LogOutputTextBox.Text += "Вітаємо! Була доведена гіпотеза про збіг середніх " + (int)Number + " багатовимірних вибірок; значення квантилю - " + Math.Round(quan, Data.NumberOfNum) + "; значення статистики - " + Math.Round(V, Data.NumberOfNum) + Environment.NewLine;
+                    }
+                    else
+                    {
+                        LogOutputTextBox.Text += "Гіпотеза про збіг середніх  " + (int)Number + " багатовимірних вибірок була спростована; значення квантилю - " + Math.Round(quan, Data.NumberOfNum) + "; значення статистики - " + Math.Round(V, Data.NumberOfNum) + Environment.NewLine;
+                    }
                 }
             }
         }
@@ -13905,8 +14022,10 @@ namespace thing_2._1
         private void CallTwoDCComp()
         {
             ArgInt Number = new ArgInt(2, "", "Кількість вибірок для звірки", "...", "<Size>");
-            OkCancelDlg it = new OkCancelDlg("Уточнення деталей", null, Number);
+            ArgFloat Alfa = new ArgFloat(0.05, "", "Критичне значення", "Критичне значення", "<Size>");
+            OkCancelDlg it = new OkCancelDlg("Уточнення деталей", null, Number,Alfa);
             DialogResult rc = it.ShowDialog();
+            int i, j, k;
             if (rc == DialogResult.OK)
             {
                 if ((Number < 2) || (Number > Data.DataForWork.Count))
@@ -13914,8 +14033,13 @@ namespace thing_2._1
                     LogOutputTextBox.Text += "На жаль, безсенсно" + Environment.NewLine;
                     return;
                 }
+                if ((Alfa <= 0) || (Alfa >= 1))
+                {
+                    LogOutputTextBox.Text += "Безсенсно" + Environment.NewLine;
+                    return;
+                }
                 Arg[] ArrayOfNumbers = new Arg[Number];
-                for (int i = 0; i < Number; i++)
+                for (i = 0; i < Number; i++)
                 {
                     ArrayOfNumbers[i] = new ArgInt(i + 1, "", "Номер вибірки", "Номер вибірки, яка буде частиною гіпотези про рівність...", "<Size>");
                 }
@@ -13923,7 +14047,99 @@ namespace thing_2._1
                 rc = it.ShowDialog();
                 if (rc == DialogResult.OK)
                 {
-
+                    for (i = 0; i < Number; i++)
+                    {
+                        (ArrayOfNumbers[i] as ArgInt).set((ArrayOfNumbers[i] as ArgInt) - 1);
+                    }
+                    for (i = 0; i < Number; i++)
+                    {
+                        if ((ArrayOfNumbers[i] as ArgInt) < 0 || (ArrayOfNumbers[i] as ArgInt) >= Data.MultiDemSamples.Count)
+                        {
+                            LogOutputTextBox.Text += "Безсенсно" + Environment.NewLine;
+                            return;
+                        }
+                    }
+                    int NumDim = Data.MultiDemSamples[ArrayOfNumbers[0] as ArgInt].Length;
+                    int[] Lens = new int[Number];
+                    int AllNum = 0;
+                    for (i = 0; i < Number - 1; i++)
+                    {
+                        for (j = i + 1; j < Number; j++)
+                        {
+                            if ((int)(ArrayOfNumbers[i] as ArgInt) == (int)(ArrayOfNumbers[j] as ArgInt))
+                            {
+                                LogOutputTextBox.Text += "Безсенсно порівнювати між собою одну і ту ж саму вибірку" + Environment.NewLine;
+                                return;
+                            }
+                        }
+                        if (NumDim != Data.MultiDemSamples[ArrayOfNumbers[i] as ArgInt].Length)
+                        {
+                            LogOutputTextBox.Text += "Розмірність вибірок не співпадає" + Environment.NewLine;
+                            return;
+                        }
+                        Lens[i] = Data.DataForWork[Data.MultiDemSamples[ArrayOfNumbers[i] as ArgInt][0]].Count;
+                        AllNum += Lens[i];
+                    }
+                    if (NumDim != Data.MultiDemSamples[ArrayOfNumbers[Number - 1] as ArgInt].Length)
+                    {
+                        LogOutputTextBox.Text += "Розмірність вибірок не співпадає" + Environment.NewLine;
+                        return;
+                    }
+                    Lens[Number - 1] = Data.DataForWork[Data.MultiDemSamples[ArrayOfNumbers[Number - 1] as ArgInt][0]].Count;
+                    AllNum += Lens[Number - 1];
+                    double[][] ExpD = new double[Number][];
+                    double temp;
+                    double[] tempar;
+                    double[] SD = new double[Number];
+                    for (i = 0; i < Number; i++)
+                    {
+                        ExpD[i] = new double[NumDim];
+                        for (k = 0; k < NumDim; k++)
+                        {
+                            temp = 0;
+                            for (j = 0; j < Lens[i]; j++)
+                            {
+                                temp += Data.DataForWork[Data.MultiDemSamples[ArrayOfNumbers[i] as ArgInt][k]][j];
+                            }
+                            ExpD[i][k] = temp / Lens[i];
+                        }
+                    }
+                    for (i = 0; i < Number; i++)
+                    {
+                        temp = 0;
+                        tempar = new double[NumDim];
+                        for (j = 0; j < Lens[i]; j++)
+                        {
+                            tempar = new double[NumDim];
+                            for (k = 0; k < NumDim; k++)
+                            {
+                                tempar[k] += Data.DataForWork[Data.MultiDemSamples[ArrayOfNumbers[i] as ArgInt][k]][j] - ExpD[i][k];
+                                temp += tempar[k] * tempar[k];
+                            }
+                        }
+                        temp /= Lens[i] - 1;
+                        SD[i] = temp;
+                    }
+                    temp = 0;
+                    for (i = 0; i < Number; i++)
+                    {
+                        temp += (Lens[i] - 1) * SD[i];
+                    }
+                    double S = (temp) / (AllNum - Number);
+                    double V = 0;
+                    for (i = 0; i < Number; i++)
+                    {
+                        V += ((-1d + Lens[i]) / 2) * Math.Log(Math.Abs(S)/Math.Abs(SD[i]));
+                    }
+                    double quan = Quantile.HirsQuan(1 - Alfa, (int)((double)(Number-1)*NumDim*(NumDim+1))/2);
+                    if (V <= quan)
+                    {
+                        LogOutputTextBox.Text += "Вітаємо! Була доведена гіпотеза про збіг DC " + (int)Number + " багатовимірних вибірок; значення квантилю - " + Math.Round(quan, Data.NumberOfNum) + "; значення статистики - " + Math.Round(V, Data.NumberOfNum) + Environment.NewLine;
+                    }
+                    else
+                    {
+                        LogOutputTextBox.Text += "Гіпотеза про збіг DC  " + (int)Number + " багатовимірних вибірок була спростована; значення квантилю - " + Math.Round(quan, Data.NumberOfNum) + "; значення статистики - " + Math.Round(V, Data.NumberOfNum) + Environment.NewLine;
+                    }
                 }
             }
         }
