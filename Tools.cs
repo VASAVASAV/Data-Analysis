@@ -197,6 +197,7 @@ namespace thing_2._1
 
     class DataOfForm
     {
+        public int PictureNumber;
         public List<int[]> TwoDemSamples;
         public List<int[]> MultiDemSamples;
         public ArgIntMM NumberOfNum;
@@ -227,6 +228,7 @@ namespace thing_2._1
         public string NameOfFile;
         public DataOfForm()
         {
+            PictureNumber = 0;
             MultiDemSamples = new List<int[]>();
             TwoDemSamples = new List<int[]>();
             Parameters = new double[] {0,0};

@@ -267,6 +267,16 @@ namespace thing_2._1
         private ToolStripMenuItem доПочатковихЗначеньДвовимірніToolStripMenuItem;
         private ToolStripMenuItem доПочатковихЗначеньБагатовимірніToolStripMenuItem;
         private CheckBox checkBox7;
+        private Button button34;
+        private TabPage tabPage22;
+        private TabControl tabControl5;
+        private TabPage tabPage23;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
+        private TabPage tabPage24;
+        private PictureBox pictureBox1;
+        private CheckBox checkBox9;
+        private CheckBox checkBox8;
+        private Panel panel2;
         private DataGridView[] DataGridForChkk;
     
         public BodyOfForm()
@@ -356,6 +366,9 @@ namespace thing_2._1
             System.Windows.Forms.DataVisualization.Charting.Series series28 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series29 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series30 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.створитиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -456,6 +469,7 @@ namespace thing_2._1
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.button34 = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
@@ -570,6 +584,7 @@ namespace thing_2._1
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tabPage17 = new System.Windows.Forms.TabPage();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
             this.textBox26 = new System.Windows.Forms.TextBox();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
@@ -579,6 +594,9 @@ namespace thing_2._1
             this.label22 = new System.Windows.Forms.Label();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage18 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.tabPage19 = new System.Windows.Forms.TabPage();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
@@ -605,6 +623,11 @@ namespace thing_2._1
             this.dataGridView11 = new System.Windows.Forms.DataGridView();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage22 = new System.Windows.Forms.TabPage();
+            this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.tabPage23 = new System.Windows.Forms.TabPage();
+            this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tabPage24 = new System.Windows.Forms.TabPage();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -657,6 +680,9 @@ namespace thing_2._1
             this.tabPage16.SuspendLayout();
             this.tabPage17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
+            this.tabPage18.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage19.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).BeginInit();
             this.tabPage20.SuspendLayout();
@@ -666,6 +692,10 @@ namespace thing_2._1
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             this.tabPage21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
+            this.tabPage22.SuspendLayout();
+            this.tabControl5.SuspendLayout();
+            this.tabPage23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -1457,6 +1487,7 @@ namespace thing_2._1
             // 
             // tabPage6
             // 
+            this.tabPage6.BackColor = System.Drawing.SystemColors.ControlLight;
             this.tabPage6.Controls.Add(this.groupBox8);
             this.tabPage6.Controls.Add(this.dataGridView3);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
@@ -1464,7 +1495,6 @@ namespace thing_2._1
             this.tabPage6.Size = new System.Drawing.Size(1269, 224);
             this.tabPage6.TabIndex = 3;
             this.tabPage6.Text = "Робота з аномаліями двовимірної вибірки";
-            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // groupBox8
             // 
@@ -1558,6 +1588,8 @@ namespace thing_2._1
             // 
             // tabPage15
             // 
+            this.tabPage15.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage15.Controls.Add(this.button34);
             this.tabPage15.Controls.Add(this.button33);
             this.tabPage15.Controls.Add(this.button32);
             this.tabPage15.Controls.Add(this.label21);
@@ -1569,13 +1601,22 @@ namespace thing_2._1
             this.tabPage15.Size = new System.Drawing.Size(1269, 224);
             this.tabPage15.TabIndex = 4;
             this.tabPage15.Text = "Робота з багатовимірними аномаліями";
-            this.tabPage15.UseVisualStyleBackColor = true;
+            // 
+            // button34
+            // 
+            this.button34.Location = new System.Drawing.Point(1061, 110);
+            this.button34.Name = "button34";
+            this.button34.Size = new System.Drawing.Size(142, 52);
+            this.button34.TabIndex = 10;
+            this.button34.Text = "Вивести варіаційний ряд";
+            this.button34.UseVisualStyleBackColor = true;
+            this.button34.Click += new System.EventHandler(this.button34_Click);
             // 
             // button33
             // 
-            this.button33.Location = new System.Drawing.Point(1121, 79);
+            this.button33.Location = new System.Drawing.Point(1061, 52);
             this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(121, 52);
+            this.button33.Size = new System.Drawing.Size(142, 52);
             this.button33.TabIndex = 9;
             this.button33.Text = "Стандартизувати усе";
             this.button33.UseVisualStyleBackColor = true;
@@ -1583,7 +1624,7 @@ namespace thing_2._1
             // 
             // button32
             // 
-            this.button32.Location = new System.Drawing.Point(977, 79);
+            this.button32.Location = new System.Drawing.Point(825, 52);
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(121, 52);
             this.button32.TabIndex = 8;
@@ -1602,7 +1643,7 @@ namespace thing_2._1
             // 
             // button30
             // 
-            this.button30.Location = new System.Drawing.Point(822, 79);
+            this.button30.Location = new System.Drawing.Point(825, 110);
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(121, 52);
             this.button30.TabIndex = 5;
@@ -1887,6 +1928,7 @@ namespace thing_2._1
             this.tabControl1.Controls.Add(this.tabPage14);
             this.tabControl1.Controls.Add(this.tabPage20);
             this.tabControl1.Controls.Add(this.tabPage21);
+            this.tabControl1.Controls.Add(this.tabPage22);
             this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -2356,6 +2398,8 @@ namespace thing_2._1
             // 
             // chart2
             // 
+            chartArea4.AxisX.MajorGrid.Enabled = false;
+            chartArea4.AxisY.MajorGrid.Enabled = false;
             chartArea4.InnerPlotPosition.Auto = false;
             chartArea4.InnerPlotPosition.Height = 85F;
             chartArea4.InnerPlotPosition.Width = 85F;
@@ -2417,6 +2461,7 @@ namespace thing_2._1
             series27.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
             series27.Color = System.Drawing.Color.White;
             series27.Legend = "Legend1";
+            series27.MarkerSize = 3;
             series27.Name = "   ";
             this.chart2.Series.Add(series17);
             this.chart2.Series.Add(series18);
@@ -2878,6 +2923,7 @@ namespace thing_2._1
             // 
             // tabPage17
             // 
+            this.tabPage17.Controls.Add(this.checkBox9);
             this.tabPage17.Controls.Add(this.textBox26);
             this.tabPage17.Controls.Add(this.textBox25);
             this.tabPage17.Controls.Add(this.textBox24);
@@ -2893,6 +2939,18 @@ namespace thing_2._1
             this.tabPage17.TabIndex = 1;
             this.tabPage17.Text = "Бульбашкова діаграма ";
             this.tabPage17.UseVisualStyleBackColor = true;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.Checked = true;
+            this.checkBox9.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox9.Location = new System.Drawing.Point(6, 6);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(190, 17);
+            this.checkBox9.TabIndex = 11;
+            this.checkBox9.Text = "Виводити бульбашкову діаграму";
+            this.checkBox9.UseVisualStyleBackColor = true;
             // 
             // textBox26
             // 
@@ -2958,7 +3016,7 @@ namespace thing_2._1
             // 
             chartArea5.Name = "ChartArea1";
             this.chart3.ChartAreas.Add(chartArea5);
-            this.chart3.Location = new System.Drawing.Point(7, 7);
+            this.chart3.Location = new System.Drawing.Point(7, 29);
             this.chart3.Name = "chart3";
             series28.BorderColor = System.Drawing.Color.Black;
             series28.BorderWidth = 3;
@@ -2970,18 +3028,50 @@ namespace thing_2._1
             series28.Name = "Series1";
             series28.YValuesPerPoint = 2;
             this.chart3.Series.Add(series28);
-            this.chart3.Size = new System.Drawing.Size(750, 378);
+            this.chart3.Size = new System.Drawing.Size(750, 356);
             this.chart3.TabIndex = 0;
             this.chart3.Text = "chart3";
             // 
             // tabPage18
             // 
+            this.tabPage18.Controls.Add(this.panel2);
+            this.tabPage18.Controls.Add(this.checkBox8);
             this.tabPage18.Location = new System.Drawing.Point(4, 22);
             this.tabPage18.Name = "tabPage18";
             this.tabPage18.Size = new System.Drawing.Size(932, 388);
             this.tabPage18.TabIndex = 2;
             this.tabPage18.Text = "Теплова карта";
             this.tabPage18.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(4, 27);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(925, 350);
+            this.panel2.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(3, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(919, 315);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.Checked = true;
+            this.checkBox8.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox8.Location = new System.Drawing.Point(3, 3);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(148, 17);
+            this.checkBox8.TabIndex = 2;
+            this.checkBox8.Text = "Виводити теплову карту";
+            this.checkBox8.UseVisualStyleBackColor = true;
             // 
             // tabPage19
             // 
@@ -3244,6 +3334,63 @@ namespace thing_2._1
             this.Column15.ReadOnly = true;
             this.Column15.Width = 150;
             // 
+            // tabPage22
+            // 
+            this.tabPage22.Controls.Add(this.tabControl5);
+            this.tabPage22.Location = new System.Drawing.Point(4, 22);
+            this.tabPage22.Name = "tabPage22";
+            this.tabPage22.Size = new System.Drawing.Size(949, 423);
+            this.tabPage22.TabIndex = 14;
+            this.tabPage22.Text = "Багатовимірна регрессія";
+            this.tabPage22.UseVisualStyleBackColor = true;
+            // 
+            // tabControl5
+            // 
+            this.tabControl5.Controls.Add(this.tabPage23);
+            this.tabControl5.Controls.Add(this.tabPage24);
+            this.tabControl5.Location = new System.Drawing.Point(4, 4);
+            this.tabControl5.Name = "tabControl5";
+            this.tabControl5.SelectedIndex = 0;
+            this.tabControl5.Size = new System.Drawing.Size(942, 416);
+            this.tabControl5.TabIndex = 0;
+            // 
+            // tabPage23
+            // 
+            this.tabPage23.Controls.Add(this.chart5);
+            this.tabPage23.Location = new System.Drawing.Point(4, 22);
+            this.tabPage23.Name = "tabPage23";
+            this.tabPage23.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage23.Size = new System.Drawing.Size(934, 390);
+            this.tabPage23.TabIndex = 0;
+            this.tabPage23.Text = "tabPage23";
+            this.tabPage23.UseVisualStyleBackColor = true;
+            // 
+            // chart5
+            // 
+            chartArea7.Name = "ChartArea1";
+            this.chart5.ChartAreas.Add(chartArea7);
+            legend3.Name = "Legend1";
+            this.chart5.Legends.Add(legend3);
+            this.chart5.Location = new System.Drawing.Point(7, 7);
+            this.chart5.Name = "chart5";
+            series30.ChartArea = "ChartArea1";
+            series30.Legend = "Legend1";
+            series30.Name = "Series1";
+            this.chart5.Series.Add(series30);
+            this.chart5.Size = new System.Drawing.Size(806, 380);
+            this.chart5.TabIndex = 0;
+            this.chart5.Text = "chart5";
+            // 
+            // tabPage24
+            // 
+            this.tabPage24.Location = new System.Drawing.Point(4, 22);
+            this.tabPage24.Name = "tabPage24";
+            this.tabPage24.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage24.Size = new System.Drawing.Size(934, 390);
+            this.tabPage24.TabIndex = 1;
+            this.tabPage24.Text = "tabPage24";
+            this.tabPage24.UseVisualStyleBackColor = true;
+            // 
             // BodyOfForm
             // 
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -3325,6 +3472,10 @@ namespace thing_2._1
             this.tabPage17.ResumeLayout(false);
             this.tabPage17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
+            this.tabPage18.ResumeLayout(false);
+            this.tabPage18.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage19.ResumeLayout(false);
             this.tabPage19.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart4)).EndInit();
@@ -3337,6 +3488,10 @@ namespace thing_2._1
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             this.tabPage21.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
+            this.tabPage22.ResumeLayout(false);
+            this.tabControl5.ResumeLayout(false);
+            this.tabPage23.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4138,6 +4293,7 @@ namespace thing_2._1
                 tableLayoutPanel1.RowStyles.Clear();
                 tableLayoutPanel1.Controls.Clear();
                 comboBox4.Items.Clear();
+                pictureBox1.Image = null;
                 DataGridForChkk = null;
                 return;
             }
@@ -4147,9 +4303,10 @@ namespace thing_2._1
             dataGridView9.Columns.Clear();
             comboBox4.Items.Clear();
             DataGridForChkk = null;
+            pictureBox1.Image = null;
             dataGridView7.Rows.Clear();
             dataGridView7.Columns.Clear();
-            int i, j,k;
+            int i, j, k;
             dataGridView7.Columns.Add(new DataGridViewTextBoxColumn());
             dataGridView7.Columns.Add(new DataGridViewTextBoxColumn());
             dataGridView7.Columns[0].ReadOnly = true;
@@ -4173,9 +4330,9 @@ namespace thing_2._1
                 Summ = 0;
                 for (j = 0; j < NumOfPoints; j++)
                 {
-                    Summ +=  Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][j];
+                    Summ += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][j];
                 }
-                dataGridView7.Rows[i].Cells[0].Value = Math.Round((tempExp[i] = Summ / NumOfPoints), Data.NumberOfNum); 
+                dataGridView7.Rows[i].Cells[0].Value = Math.Round((tempExp[i] = Summ / NumOfPoints), Data.NumberOfNum);
                 Temps[i] = 0;
                 for (j = 0; j < NumOfPoints; j++)
                 {
@@ -4197,24 +4354,26 @@ namespace thing_2._1
                 KK = ((double)Temp1.Count / (Temp1.Count - 1)) * ((CrosSum - Xexp * Yexp) / (StX * StY));
                 dataGridView1.Rows[5].Cells[2].Value = "" + Math.Round(KK, Data.NumberOfNum);
              * */
+
             dataGridView5.Columns.Clear();
             dataGridView6.Columns.Clear();
             dataGridView5.Rows.Clear();
             dataGridView6.Rows.Clear();
-            for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+            int DimNumber = Data.MultiDemSamples[Data.MultiDemCurrentSample].Length;
+            for (i = 0; i < DimNumber; i++)
             {
                 dataGridView5.Columns.Add(new DataGridViewTextBoxColumn());
                 dataGridView6.Columns.Add(new DataGridViewTextBoxColumn());
             }
-            for (j = 0; j < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; j++)
+            for (j = 0; j < DimNumber; j++)
             {
                 dataGridView5.Rows.Add();
                 dataGridView6.Rows.Add();
             }
             double TempSum = 0;
-            for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+            for (i = 0; i < DimNumber; i++)
             {
-                for (j = 0; j < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; j++)
+                for (j = 0; j < DimNumber; j++)
                 {
                     if (i == j)
                     {
@@ -4231,35 +4390,35 @@ namespace thing_2._1
                 }
             }
 
-            for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+            for (i = 0; i < DimNumber; i++)
             {
-                for (j = 0; j < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; j++)
+                for (j = 0; j < DimNumber; j++)
                 {
-                    dataGridView6.Rows[i].Cells[j].Value = Math.Round(Tempkk[i, j],Data.NumberOfNum);
+                    dataGridView6.Rows[i].Cells[j].Value = Math.Round(Tempkk[i, j], Data.NumberOfNum);
                     dataGridView5.Rows[i].Cells[j].Value = Math.Round(Tempkk[i, j] * Temps[i] * Temps[j], Data.NumberOfNum);
                 }
             }
-            
+
             ///////Visualization chart matrix
             tableLayoutPanel1.RowStyles.Clear();
             tableLayoutPanel1.ColumnStyles.Clear();
             tableLayoutPanel1.Controls.Clear();
-           // tableLayoutPanel1.RowCount = 0;
+            // tableLayoutPanel1.RowCount = 0;
             //tableLayoutPanel1.ColumnCount = 0;
             if (checkBox3.Checked)
             {
-                if ((Data.MultiDemSamples[Data.MultiDemCurrentSample].Length < 15) && (checkBox4.Checked || Data.MultiDemSamples[Data.MultiDemCurrentSample].Length < 7))
+                if ((DimNumber < 15) && (checkBox4.Checked || DimNumber < 7))
                 {
-                    tableLayoutPanel1.RowCount = Data.MultiDemSamples[Data.MultiDemCurrentSample].Length;
-                    tableLayoutPanel1.ColumnCount = Data.MultiDemSamples[Data.MultiDemCurrentSample].Length;
-                    for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+                    tableLayoutPanel1.RowCount = DimNumber;
+                    tableLayoutPanel1.ColumnCount = DimNumber;
+                    for (i = 0; i < DimNumber; i++)
                     {
-                        tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f / (Data.MultiDemSamples[Data.MultiDemCurrentSample].Length)));
-                        tableLayoutPanel1.RowStyles.Add(new ColumnStyle(SizeType.Percent, 100f / (Data.MultiDemSamples[Data.MultiDemCurrentSample].Length)));
+                        tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f / (DimNumber)));
+                        tableLayoutPanel1.RowStyles.Add(new ColumnStyle(SizeType.Percent, 100f / (DimNumber)));
                     }
-                    for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+                    for (i = 0; i < DimNumber; i++)
                     {
-                        for (j = 0; j < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; j++)
+                        for (j = 0; j < DimNumber; j++)
                         {
                             System.Windows.Forms.DataVisualization.Charting.Chart TempChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
                             if (i == j)
@@ -4287,7 +4446,7 @@ namespace thing_2._1
                                 //this.chart1.ChartAreas[0].AxisX.Minimum = HistData.MinLimit;
                                 //this.chart1.ChartAreas[0].AxisY.Interval = HistData.Step;
                                 //this.chart1.ChartAreas[0].AxisY.Minimum = HistData.MinLimit;
-                                if (Data.MultiDemSamples[Data.MultiDemCurrentSample].Length >= 4)
+                                if (DimNumber >= 4)
                                 {
                                     TempChart.ChartAreas[0].AxisX.LabelStyle.Enabled = false;
                                     TempChart.ChartAreas[0].AxisY.LabelStyle.Enabled = false;
@@ -4328,7 +4487,7 @@ namespace thing_2._1
                                 int IndOfRang = 0;
                                 for (k = 0; k < Temp.Count; k++)
                                 {
-                                    while (Temp[k] > (MinL+ (IndOfRang + 1) * ((MaxL - MinL) / HistData.NumberOfClasses)))
+                                    while (Temp[k] > (MinL + (IndOfRang + 1) * ((MaxL - MinL) / HistData.NumberOfClasses)))
                                     {
                                         IndOfRang++;
                                     }
@@ -4343,7 +4502,7 @@ namespace thing_2._1
                                 }
                                 /////
                                 TempSer.CustomProperties = "PointWidth=1";
-                               double Lstep = (MaxL - MinL) / (int)HistData.NumberOfClasses;
+                                double Lstep = (MaxL - MinL) / (int)HistData.NumberOfClasses;
 
                                 TempSer.Color = Color.FromName((string)HistData.ColorOfHist);
                                 //////
@@ -4391,7 +4550,7 @@ namespace thing_2._1
                                 //this.chart1.ChartAreas[0].AxisX.Minimum = HistData.MinLimit;
                                 //this.chart1.ChartAreas[0].AxisY.Interval = HistData.Step;
                                 //this.chart1.ChartAreas[0].AxisY.Minimum = HistData.MinLimit;
-                                if (Data.MultiDemSamples[Data.MultiDemCurrentSample].Length >= 4)
+                                if (DimNumber >= 4)
                                 {
                                     TempChart.ChartAreas[0].AxisX.LabelStyle.Enabled = false;
                                     TempChart.ChartAreas[0].AxisY.LabelStyle.Enabled = false;
@@ -4446,50 +4605,50 @@ namespace thing_2._1
             dataGridView8.Rows.Clear();
             if (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count <= 9999)
             {
-                for (i = 0; i <= Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+                for (i = 0; i <= DimNumber; i++)
                 {
                     dataGridView8.Columns.Add(new DataGridViewTextBoxColumn());
 
                 }
-                dataGridView8.Columns[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length].Visible = false;
-                dataGridView8.Columns[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length].ReadOnly = true;
+                dataGridView8.Columns[DimNumber].Visible = false;
+                dataGridView8.Columns[DimNumber].ReadOnly = true;
                 for (i = 0; i < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; i++)
                 {
                     dataGridView8.Rows.Add();
-                    for (j = 0; j < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; j++)
+                    for (j = 0; j < DimNumber; j++)
                     {
                         dataGridView8.Rows[i].Cells[j].Value = Math.Round(Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][i], Data.NumberOfNum);
                     }
-                    dataGridView8.Rows[i].Cells[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length].Value = i;
+                    dataGridView8.Rows[i].Cells[DimNumber].Value = i;
                 }
             }
 
             ///////was working with kk
 
-            double[, ,] Chkk = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length, Data.MultiDemSamples[Data.MultiDemCurrentSample].Length, Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
-            DataGridForChkk = new DataGridView[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
+            double[, ,] Chkk = new double[DimNumber, DimNumber, DimNumber];
+            DataGridForChkk = new DataGridView[DimNumber];
             double Hip;
-            double result,quan;
+            double result, quan;
             comboBox4.Items.Clear();
-            for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+            for (i = 0; i < DimNumber; i++)
             {
                 DataGridForChkk[i] = new DataGridView();
                 DataGridForChkk[i].AllowUserToAddRows = false;
                 DataGridForChkk[i].AllowUserToDeleteRows = false;
                 DataGridForChkk[i].AllowUserToOrderColumns = false;
-                for (j = 0; j < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; j++)
+                for (j = 0; j < DimNumber; j++)
                 {
                     DataGridForChkk[i].Columns.Add(new DataGridViewTextBoxColumn());
                     DataGridForChkk[i].Columns[j].HeaderCell.Value = "" + j;
                     DataGridForChkk[i].Columns[j].ReadOnly = true;
                 }
-                for (j = 0; j < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; j++)
+                for (j = 0; j < DimNumber; j++)
                 {
                     DataGridForChkk[i].Rows.Add();
                 }
-                for (k = 0; k < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; k++)
+                for (k = 0; k < DimNumber; k++)
                 {
-                    for (j = 0; j < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; j++)
+                    for (j = 0; j < DimNumber; j++)
                     {
                         if (k == i || j == i)
                         {
@@ -4506,7 +4665,7 @@ namespace thing_2._1
                             List<int> Temp = new List<int>();
                             Temp.Add(i);
                             result = FindChkk(j, k, Temp);
-                            DataGridForChkk[i].Rows[k].Cells[j].Value = "" + Math.Round(result,Data.NumberOfNum);
+                            DataGridForChkk[i].Rows[k].Cells[j].Value = "" + Math.Round(result, Data.NumberOfNum);
                             quan = Quantile.StudQuan(0.95, Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count - Temp.Count - 2);
                             if (radioButton7.Checked)
                             {
@@ -4534,7 +4693,7 @@ namespace thing_2._1
                             }
 
                         }
-                    } 
+                    }
                 }
                 comboBox4.Items.Add("" + (i + 1));
 
@@ -4543,42 +4702,42 @@ namespace thing_2._1
             this.Invalidate();
             /////// MKK
             dataGridView11.Rows.Clear();
-            double[][] TempR = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length][];
-            for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+            double[][] TempR = new double[DimNumber][];
+            for (i = 0; i < DimNumber; i++)
             {
-                TempR[i] = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
+                TempR[i] = new double[DimNumber];
             }
-            for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+            for (i = 0; i < DimNumber; i++)
             {
-                for (j = 0; j < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; j++)
+                for (j = 0; j < DimNumber; j++)
                 {
                     TempR[i][j] = Tempkk[i, j];
                 }
             }
-                for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+            for (i = 0; i < DimNumber; i++)
+            {
+                result = Math.Sqrt(1 - Matrixes.GetDet(TempR) / Matrixes.GetDet(Matrixes.GetMinor(TempR, i, i)));
+                dataGridView11.Rows.Add();
+                dataGridView11.Rows[i].Cells[0].Value = "" + Math.Round(result, Data.NumberOfNum);
+                Hip = ((Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count - DimNumber - 1d) / (DimNumber)) * ((result * result) / (1 - result * result));
+                if (Hip <= Quantile.FishQuan(0.95, DimNumber, Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count - DimNumber - 1))
                 {
-                    result = Math.Sqrt(1 - Matrixes.GetDet(TempR) / Matrixes.GetDet(Matrixes.GetMinor(TempR,i,i)));
-                    dataGridView11.Rows.Add();
-                    dataGridView11.Rows[i].Cells[0].Value = "" + Math.Round(result, Data.NumberOfNum);
-                    Hip = ((Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count - Data.MultiDemSamples[Data.MultiDemCurrentSample].Length - 1d)/(Data.MultiDemSamples[Data.MultiDemCurrentSample].Length))*((result*result)/(1-result*result));
-                    if (Hip <= Quantile.FishQuan(0.95, Data.MultiDemSamples[Data.MultiDemCurrentSample].Length, Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count - Data.MultiDemSamples[Data.MultiDemCurrentSample].Length - 1))
-                    {
-                        dataGridView11.Rows[i].Cells[1].Style.BackColor = Color.DarkGray;
-                        dataGridView11.Rows[i].Cells[1].Value = "ні";
-                    }
-                    else
-                    {
-                        dataGridView11.Rows[i].Cells[1].Style.BackColor = Color.LightGreen;
-                        dataGridView11.Rows[i].Cells[1].Value = "так";
-                    }
-
+                    dataGridView11.Rows[i].Cells[1].Style.BackColor = Color.DarkGray;
+                    dataGridView11.Rows[i].Cells[1].Value = "ні";
                 }
-                ///////
-                //dataGridView9.Rows.Add();
-                //  dataGridView9.Rows[0].Cells[0];
+                else
+                {
+                    dataGridView11.Rows[i].Cells[1].Style.BackColor = Color.LightGreen;
+                    dataGridView11.Rows[i].Cells[1].Value = "так";
+                }
 
-                ////////Parallel coor
-                chart4.Series.Clear();
+            }
+            ///////
+            //dataGridView9.Rows.Add();
+            //  dataGridView9.Rows[0].Cells[0];
+
+            ////////Parallel coor
+            chart4.Series.Clear();
             if (checkBox5.Checked)
             {
                 if (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count > 4000)
@@ -4586,36 +4745,36 @@ namespace thing_2._1
                     return;
 
                 }
-                if (Data.MultiDemSamples[Data.MultiDemCurrentSample].Length > 2000 && !checkBox6.Checked)
+                if (DimNumber > 2000 && !checkBox6.Checked)
                 {
                     return;
                 }
-                chart4.ChartAreas[0].AxisX.Maximum = Data.MultiDemSamples[Data.MultiDemCurrentSample].Length;
+                chart4.ChartAreas[0].AxisX.Maximum = DimNumber;
                 chart4.ChartAreas[0].AxisX.Minimum = 1;
                 chart4.ChartAreas[0].AxisY.Maximum = 1;
                 chart4.ChartAreas[0].AxisY.Minimum = -1;
-                List<double>[] TempLists = new List<double>[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
-                int[,] Lims = new int[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length, 2];
-                for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+                List<double>[] TempLists = new List<double>[DimNumber];
+                int[,] Lims = new int[DimNumber, 2];
+                for (i = 0; i < DimNumber; i++)
                 {
                     TempLists[i] = new List<double>();
                 }
                 for (i = 0; i < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; i++)
                 {
-                    for (j = 0; j < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; j++)
+                    for (j = 0; j < DimNumber; j++)
                     {
                         TempLists[j].Add(Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][i]);
                     }
                 }
-                double[,] MinMaxVals = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length, 2];
-                for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+                double[,] MinMaxVals = new double[DimNumber, 2];
+                for (i = 0; i < DimNumber; i++)
                 {
                     MinMaxVals[i, 0] = double.MaxValue;
                     MinMaxVals[i, 1] = double.MinValue;
                 }
                 for (i = 0; i < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; i++)
                 {
-                    for (j = 0; j < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; j++)
+                    for (j = 0; j < DimNumber; j++)
                     {
                         if (TempLists[j][i] < MinMaxVals[j, 0])
                         {
@@ -4629,7 +4788,7 @@ namespace thing_2._1
                 }
                 for (i = 0; i < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; i++)
                 {
-                    for (j = 0; j < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; j++)
+                    for (j = 0; j < DimNumber; j++)
                     {
                         TempLists[j][i] -= (MinMaxVals[j, 0] + MinMaxVals[j, 1]) / 2;
                         TempLists[j][i] /= (MinMaxVals[j, 0] - MinMaxVals[j, 1]) / (-2);
@@ -4642,7 +4801,7 @@ namespace thing_2._1
                     temp.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
                     temp.Color = System.Drawing.Color.Black;
                     temp.CustomProperties = "LabelStyle=Top";
-                    for (j = 0; j < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; j++)
+                    for (j = 0; j < DimNumber; j++)
                     {
                         temp.Points.Add(TempLists[j][i]);
                     }
@@ -4650,7 +4809,82 @@ namespace thing_2._1
                 }
             }
             /////bubble
-            BuildBubble();
+            if (checkBox9.Checked)
+            {
+                BuildBubble();
+            }
+            ////heatmap
+            if (checkBox8.Checked)
+            {
+                List<double>[] TempLists = new List<double>[DimNumber];
+                int[,] Lims = new int[DimNumber, 2];
+                for (i = 0; i < DimNumber; i++)
+                {
+                    TempLists[i] = new List<double>();
+                }
+                for (i = 0; i < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; i++)
+                {
+                    for (j = 0; j < DimNumber; j++)
+                    {
+                        TempLists[j].Add(Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][i]);
+                    }
+                }
+                double[,] MinMaxVals = new double[DimNumber, 2];
+                for (i = 0; i < DimNumber; i++)
+                {
+                    MinMaxVals[i, 0] = double.MaxValue;
+                    MinMaxVals[i, 1] = double.MinValue;
+                }
+                for (i = 0; i < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; i++)
+                {
+                    for (j = 0; j < DimNumber; j++)
+                    {
+                        if (TempLists[j][i] < MinMaxVals[j, 0])
+                        {
+                            MinMaxVals[j, 0] = TempLists[j][i];
+                        }
+                        if (TempLists[j][i] > MinMaxVals[j, 1])
+                        {
+                            MinMaxVals[j, 1] = TempLists[j][i];
+                        }
+                    }
+                }
+                for (i = 0; i < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; i++)
+                {
+                    for (j = 0; j < DimNumber; j++)
+                    {
+                        TempLists[j][i] -= (MinMaxVals[j, 0] + MinMaxVals[j, 1]) / 2;
+                        TempLists[j][i] /= (MinMaxVals[j, 0] - MinMaxVals[j, 1]) / (-2);
+                    }
+                }
+                //////
+                Bitmap MyMap = new Bitmap(NumOfPoints * 32, DimNumber * 64, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+                Bitmap TempIm = new Bitmap(32, 64, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+                Graphics G = Graphics.FromImage(MyMap);
+                Graphics TempG = Graphics.FromImage(TempIm);
+                Pen BlackPen = new Pen(Color.Black, 1);
+                int TempRead = 0;
+                for (i = 0; i < DimNumber; i++)
+                {
+                    for (j = 0; j < NumOfPoints; j++)
+                    {
+                        TempRead = (int)(((TempLists[i][j] + 1) * 255d) / 2);
+                        TempG.Clear(Color.FromArgb(TempRead, TempRead, 0));
+                        TempG.DrawRectangle(BlackPen, 0, 0, TempIm.Width, TempIm.Height);
+                        G.DrawImage(TempIm, j * 32, i * 64);
+                    }
+                }
+                if (NumOfPoints > 150)
+                {
+                    pictureBox1.Width = (int)(919 * (1 + 0.01 * Math.Pow(NumOfPoints - 150, 2d / 3)));
+                }
+                else
+                {
+                    pictureBox1.Width = 919;
+                }
+                pictureBox1.Image = MyMap;
+
+            }
         }
 
         double FindChkk(int r1, int r2, List<int> Vals)
@@ -4686,7 +4920,14 @@ namespace thing_2._1
             this.dataGridView2.Rows.Clear();
             this.dataGridView4.Rows.Clear();
             this.dataGridView3.Rows.Clear();
-            chart2.Controls.Clear();
+            chart2.ChartAreas[0].BackImage = "";
+         /*   if (File.Exists(Application.StartupPath + "\\" + "TempFileDontTouch.png"))
+            {
+                FileStream MFS = File.OpenRead(Application.StartupPath + "\\" + "TempFileDontTouch.png");
+                MFS.Dispose();
+                MFS.Close();
+                //File.Delete(Application.StartupPath + "\\" + "TempFileDontTouch.png");
+            }*/
             LogOutputTextBox.Text += "Theres nothing to do" + Environment.NewLine;
             dataGridView1.Rows.Add("Мат. сподівання X", "", "", "", "", "---");
             dataGridView1.Rows.Add("Мат. сподівання Y", "", "", "", "", "---");
@@ -4709,7 +4950,14 @@ namespace thing_2._1
             {
                 return;
             }
-            chart2.Controls.Clear();
+            chart2.ChartAreas[0].BackImage = "";
+            /*if (File.Exists(Application.StartupPath + "\\" + "TempFileDontTouch.png"))
+            {
+              FileStream MFS = File.OpenRead(Application.StartupPath + "\\" + "TempFileDontTouch.png");
+              MFS.Dispose();
+              MFS.Close();
+             // File.Delete(Application.StartupPath + "\\" + "TempFileDontTouch.png");
+            }*/
             int i, j, k;
             List<double> Temp1 = new List<double>(), Temp2 = new List<double>();
             dataGridView3.Rows.Clear();
@@ -5029,7 +5277,7 @@ namespace thing_2._1
                 }
                 try
                 {
-                    gamma2 = Convert.ToDouble(dataGridView1.Rows[32].Cells[4].EditedFormattedValue);
+                    gamma2 = Convert.ToDouble(dataGridView1.Rows[3].Cells[4].EditedFormattedValue);
                     alfa2 = 1 - gamma2;
                 }
                 catch (Exception)
@@ -5155,7 +5403,7 @@ namespace thing_2._1
                         }
                     }
                     Ps[i, j] = ((double)Ns[i, j]) / Temp1.Count;
-                    Hist[i, j] = new PictureBox();
+                    //Hist[i, j] = new PictureBox();
                     //  Hist[i, j].Left = (int)chart2.ChartAreas[0].InnerPlotPosition.X + (int)(i * ((chart2.ChartAreas[0].InnerPlotPosition.Width) / CountX));
                     //Hist[i, j].Top = (int)chart2.ChartAreas[0].InnerPlotPosition.Y + (int)(j * ((chart2.ChartAreas[0].InnerPlotPosition.Height) / CountY));
                     if (Ps[i, j] > maxP)
@@ -5164,18 +5412,48 @@ namespace thing_2._1
                     }
                 }
             }
+            /////TwoDemShit
+            Bitmap OuTwoDemGliph = new Bitmap(64 * CountX, 64 * CountY, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+            Bitmap Temp = new Bitmap(64, 64, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
+            Graphics G = Graphics.FromImage(OuTwoDemGliph);
+            Graphics TempG = Graphics.FromImage(Temp);
+            Pen BlackPen = new Pen(Color.Black, 1);
+            int TempRead = 0;
             for (i = 0; i < CountX; i++)
             {
                 for (j = 0; j < CountY; j++)
                 {
-                    Hist[i, j].Left = 81 + (int)chart2.ChartAreas[0].InnerPlotPosition.X + (int)(i * ((chart2.Width - 300) / CountX));
-                    Hist[i, j].Top = 22 + (int)chart2.ChartAreas[0].InnerPlotPosition.Y + (int)((CountY - 1 - j) * ((chart2.Height - 76) / CountY));
-                    Hist[i, j].BackColor = Color.FromArgb((Ps[i, j] == 0) ? 0 : 255, 255 - (int)((Ps[i, j] * 255) / maxP), 255 - (int)((Ps[i, j] * 255) / maxP), 255 - (int)((Ps[i, j] * 255) / maxP));//(Ps[i, j] == 0) ? 0 : 255
-                    Hist[i, j].Height = ((chart2.Height - 76) / CountY) - 2;
-                    Hist[i, j].Width = ((chart2.Width - 300) / CountX) - 2;
-                    chart2.Controls.Add(Hist[i, j]);
+                    TempRead = 255 - (int)((Ps[i,  CountY-j-1] * 255) / maxP);
+                    TempG.Clear(Color.FromArgb(TempRead, TempRead, TempRead));
+                    TempG.DrawRectangle(BlackPen, 0, 0, Temp.Width, Temp.Height);
+
+                    G.DrawImage(Temp, i * 64, j * 64);
+                   // Hist[i, j].Left = 81 + (int)chart2.ChartAreas[0].InnerPlotPosition.X + (int)(i * ((chart2.Width - 300) / CountX));
+                   // Hist[i, j].Top = 22 + (int)chart2.ChartAreas[0].InnerPlotPosition.Y + (int)((CountY - 1 - j) * ((chart2.Height - 76) / CountY));
+                   // Hist[i, j].BackColor = Color.FromArgb((Ps[i, j] == 0) ? 0 : 255, 255 - (int)((Ps[i, j] * 255) / maxP), 255 - (int)((Ps[i, j] * 255) / maxP), 255 - (int)((Ps[i, j] * 255) / maxP));//(Ps[i, j] == 0) ? 0 : 255
+                    //Hist[i, j].Height = ((chart2.Height - 76) / CountY) - 2;
+                    //Hist[i, j].Width = ((chart2.Width - 300) / CountX) - 2;
+                   // chart2.Controls.Add(Hist[i, j]);
                 }
             }
+            //chart2  = OuTwoDemGliph;
+            //////ask lol
+            chart2.ChartAreas[0].BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
+            chart2.ChartAreas[0].BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
+           // using (
+            {
+               // File.WriteAllText(Application.StartupPath + "\\" + "TempFileDontTouch.png",
+                //    OuTwoDemGliph.ToString(),
+                //    Encoding.Default);
+                FileStream MFS = File.Create(Application.StartupPath + "\\PersonalOnly\\TempFileDontTouch"+Data.PictureNumber+".png");
+                OuTwoDemGliph.Save(MFS,System.Drawing.Imaging.ImageFormat.Bmp);
+                chart2.ChartAreas[0].BackImage = (Application.StartupPath + "\\PersonalOnly\\TempFileDontTouch" + Data.PictureNumber + ".png");
+                Data.PictureNumber++;
+                MFS.Dispose();
+                MFS.Close();
+                //File.Delete(Application.StartupPath + "\\" + "TempFileDontTouch.png");
+            }
+            /////
             for (i = 0; i < 10; i++)
             {
                 chart2.Series[i].Name = "" + i;
@@ -7249,7 +7527,14 @@ namespace thing_2._1
                 this.dataGridView2.Rows.Clear();
                 this.dataGridView3.Rows.Clear();
                 this.dataGridView4.Rows.Clear();
-                chart2.Controls.Clear();
+                chart2.ChartAreas[0].BackImage = "";
+               /* if (File.Exists(Application.StartupPath + "\\" + "TempFileDontTouch.png"))
+                {
+                    FileStream MFS = File.OpenRead(Application.StartupPath + "\\" + "TempFileDontTouch.png");
+                    MFS.Dispose();
+                    MFS.Close();
+                  //  File.Delete(Application.StartupPath + "\\" + "TempFileDontTouch.png");
+                }*/
                 dataGridView1.Rows.Add("Мат. сподівання X", "", "", "", "", "---");
                 dataGridView1.Rows.Add("Мат. сподівання Y", "", "", "", "", "---");
                 dataGridView1.Rows.Add("Стандартне відхилення X", "", "", "", "", "");
@@ -7303,7 +7588,14 @@ namespace thing_2._1
                     this.dataGridView2.Rows.Clear();
                     this.dataGridView3.Rows.Clear();
                     this.dataGridView4.Rows.Clear();
-                    chart2.Controls.Clear();    
+                    chart2.ChartAreas[0].BackImage = "";
+                   /* if (File.Exists(Application.StartupPath + "\\" + "TempFileDontTouch.png"))
+                    {
+                        FileStream MFS = File.OpenRead(Application.StartupPath + "\\" + "TempFileDontTouch.png");
+                        MFS.Dispose();
+                        MFS.Close();
+                       // File.Delete(Application.StartupPath + "\\" + "TempFileDontTouch.png");
+                    }*/
                     dataGridView1.Rows.Add("Мат. сподівання X", "", "", "", "", "---");
                     dataGridView1.Rows.Add("Мат. сподівання Y", "", "", "", "", "---");
                     dataGridView1.Rows.Add("Стандартне відхилення X", "", "", "", "", "");
@@ -13038,6 +13330,7 @@ namespace thing_2._1
                     tableLayoutPanel1.RowStyles.Clear();
                     tableLayoutPanel1.Controls.Clear();
                     comboBox4.Items.Clear();
+                    pictureBox1.Image = null;
                     DataGridForChkk = null;
                 }
                 else
@@ -13460,214 +13753,170 @@ namespace thing_2._1
 
         private void button30_Click(object sender, EventArgs e)
         {
-            LogOutputTextBox.Text += "This part is currently unaviable. Please try later" + Environment.NewLine;
-            return;
-            /*
-            int j, i, k;
-            double alfa;
+            if (Data.DataForWork.Count == 0 || Data.MultiDemSamples.Count == 0)
+            {
+                LogOutputTextBox.Text += "Nothing to work with" + Environment.NewLine;
+                return;
+            }
+            int i, j, k;
+            double[] ExpVals = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
+            double Alfa;
             try
             {
-                alfa = Convert.ToDouble(textBox20.Text);
+                Alfa = Convert.ToDouble(textBox20.Text);
             }
             catch
             {
-                textBox20.Text = "" + 0.05;
-                alfa = 0.05;
+                Alfa = 0.05;
+                textBox20.Text = "0,01";
             }
-            if (alfa <= 0 || alfa >= 1)
+            if (Alfa <= 0 || Alfa >= 1)
             {
-                textBox20.Text = "" + 0.05;
-                alfa = 0.05;
+                Alfa = 0.05;
+                textBox20.Text = "0,01";
             }
-            if (Data.DataForWork.Count == 0 || Data.MultiDemSamples.Count == 0)
+            /////
+            int DimNum = Data.MultiDemSamples[Data.MultiDemCurrentSample].Length;
+            int[] temp = new int[DimNum];
+            int NumberOfPoints = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count;
+            int ClassNumber = ToolsForWork.CompNumOfClasses(NumberOfPoints);
+            for (i = 0; i < DimNum; i++)
             {
-                LogOutputTextBox.Text += "Nothing to work with";
-                return;
+                temp[i] = ClassNumber;
             }
-            if (Data.MultiDemSamples[Data.MultiDemCurrentSample].Length > 5)
+            var VarR = Array.CreateInstance(typeof(int), temp);
+            ////
+            int Sum = 0;
+            i = 0;
+            string temps;
+            double[] Maxs = new double[DimNum];
+            double[] Mins = new double[DimNum];
+            for (j = 0; j < DimNum; j++)
             {
-                LogOutputTextBox.Text += "Обрахування багатовимірного варіаційного ряду при такій кількості вимірів є небажаним, операція не буде виконана";
-                return;
+                Maxs[j] = double.MinValue;
+                Mins[j] = double.MaxValue;
             }
-            //List<double> Temp1 = new List<double>(), Temp2 = new List<double>();
-            List<double>[] Temp = new List<double>[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
-            for(i=0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length;i++)
+            for (j = 0; j < NumberOfPoints; j++)
             {
-                Temp[i] = new List<double>();
-                for (i = 0; i < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; i++)
+                for (k = 0; k < DimNum; k++)
                 {
-                    Temp[i].Add(Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]][i]);
-                }
-            }
-
-            //List<double> Temp1 = Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]], Temp2 = Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][1]];
-            /*for (i = 0; i < Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]].Count; i++)
-            {
-                Temp1.Add(Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]][i]);
-                Temp2.Add(Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][1]][i]);
-            }*/
-
-
-            /* here
-            int Count = ToolsForWork.CompNumOfClasses(Temp[0].Count);
-            double[,] Lims = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length, 2];
-            for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
-            {
-                Lims[i,0] = double.MaxValue; 
-                Lims[i,1] = double.MinValue;
-            }
-            for (i = 0; i < Temp[0].Count; i++)
-            {
-                for (j = 0; j < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; j++)
-                {
-                    if (Temp[j][i] < Lims[j, 0])
+                    if (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] > Maxs[k])
                     {
-                        Lims[j, 0] = Temp[j][i];
+                        Maxs[k] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j];
                     }
-                    if (Temp[j][i] > Lims[j, 1])
+                    if (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] < Mins[k])
                     {
-                        Lims[j, 1] = Temp[j][i];
+                        Mins[k] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j];
                     }
                 }
             }
-            for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+            for (k = 0; k < DimNum; k++)
             {
-                Lims[i, 0] -= 0.00001;
-                Lims[i, 1] += 0.00001;
+                Maxs[k] += ((double)Maxs[k] - Mins[k]) / 10000;
             }
-
-
-            i=5;
-            object Ns = new object();
-            FillDeepList(i, Ns, Count);
-            object Ps = new object();
-            FillDeepList(i, Ps, Count);
-           // int[,] Ns = new int[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length, Count];
-            //double[,]Ps = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length, Count];
-            int[] Counter = new int[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
-
-            
-
-            for (k = 0; k < Temp[0].Count; k++)
+            List<int> ToDelete = new List<int>();
+            int Counter;
+            int Deleted = 0;
+            foreach (int item in VarR)
             {
-                for(i=0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length;i++)
+                int[] coor = ComputeIndex(i++, VarR);
+                temps = "";
+                for (j = coor.Length - 1; j > 0; j--)
                 {
-                    Counter[i]=0;
+                    temps += coor[j] + "|";
                 }
-
-                for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
-                {   
-                    while(Temp[i][k]>Lims[i,0]+Counter[i]*((Lims[i,1]-Lims[i,0])/Count))
+                temps += coor[0];
+                VarR.SetValue(0, coor);
+                for (j = 0; j < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; j++)
+                {
+                    Counter = 0;
+                    for (k = 0; k < DimNum; k++)
                     {
-                        Counter[i]++;
-                    }
-                    Counter[i]--;
-                    IncValueInDeepList(Ns,Counter);
-                }
-                
-            }
-            for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
-            {
-                Counter[i] = 0;
-            }
-            for (i = 1; i < Counter.Length; i++)
-            {
-                for (j = 0; j < Count; j++)
-                {
-                    SetValueInDeepList(Ps, Counter, GetValueInDeepList(Ns, Counter) / Temp[0].Count);
-                }
-            }
-
-            /*
-            for (i = 0; i < Count; i++)
-            {
-                for (j = 0; j < CountY; j++)
-                {
-                    Ns[i, j] = 0;
-                    for (k = 0; k < Temp1.Count; k++)
-                    {
-                        if ((Temp1[k] >= MinX + i * ((MaxX - MinX) / CountX)) && (Temp1[k] < MinX + (i + 1) * ((MaxX - MinX) / CountX)) && (Temp2[k] >= MinY + (j) * ((MaxY - MinY) / CountY)) && (Temp2[k] < MinY + (j + 1) * ((MaxY - MinY) / CountY)))
+                        if ((Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] >= (Mins[k] + ((Maxs[k] - Mins[k]) / ClassNumber) * coor[k])) && (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] < (Mins[k] + ((Maxs[k] - Mins[k]) / ClassNumber) * (coor[k] + 1))))
                         {
-                            Ns[i, j]++;
+                            Counter++;
                         }
                     }
-                    Ps[i, j] = ((double)Ns[i, j]) / Temp1.Count;
-                    //  Hist[i, j].Left = (int)chart2.ChartAreas[0].InnerPlotPosition.X + (int)(i * ((chart2.ChartAreas[0].InnerPlotPosition.Width) / CountX));
-                    //Hist[i, j].Top = (int)chart2.ChartAreas[0].InnerPlotPosition.Y + (int)(j * ((chart2.ChartAreas[0].InnerPlotPosition.Height) / CountY));
-                }
-            }
-            int alrDel = 0;
-            for (i = 0; i < CountX; i++)
-            {
-                for (j = 0; j < CountY; j++)
-                {
-                    for (k = 0; k < Temp1.Count; k++)
+                    if (Counter == DimNum)
                     {
-
-                        if ((Temp1[k] >= MinX + i * ((MaxX - MinX) / CountX)) && (Temp1[k] < MinX + (i + 1) * ((MaxX - MinX) / CountX)) && (Temp2[k] >= MinY + (j) * ((MaxY - MinY) / CountY)) && (Temp2[k] < MinY + (j + 1) * ((MaxY - MinY) / CountY)) && (Ps[i, j] < alfa) && (Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]].Count >= 5))
+                        Sum++;
+                        VarR.SetValue(1 + Convert.ToInt32(VarR.GetValue(coor)), coor);
+                    }
+                }
+                if ((Convert.ToDouble(VarR.GetValue(coor)) / NumberOfPoints) < Alfa)
+                {
+                    for (j = 0; j < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; j++)
+                    {
+                        Counter = 0;
+                        for (k = 0; k < DimNum; k++)
                         {
-                            Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]].RemoveAt(k);
-                            Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][1]].RemoveAt(k);
+                            if ((Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] >= (Mins[k] + ((Maxs[k] - Mins[k]) / ClassNumber) * coor[k])) && (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] < (Mins[k] + ((Maxs[k] - Mins[k]) / ClassNumber) * (coor[k] + 1))))
+                            {
+                                Counter++;
+                            }
+                        }
+                        if (Counter == DimNum)
+                        {
+                            ToDelete.Add(j);
                         }
                     }
-                    //  Hist[i, j].Left = (int)chart2.ChartAreas[0].InnerPlotPosition.X + (int)(i * ((chart2.ChartAreas[0].InnerPlotPosition.Width) / CountX));
-                    //Hist[i, j].Top = (int)chart2.ChartAreas[0].InnerPlotPosition.Y + (int)(j * ((chart2.ChartAreas[0].InnerPlotPosition.Height) / CountY));
                 }
+                //////////
+                for (k = ToDelete.Count - 1; k >= 0; k--)
+                {
+                    double[] FW = new double[DimNum];
+                    for (j = 0; j < DimNum; j++)
+                    {
+                        FW[j] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][ToDelete[k]];
+                        Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]].RemoveAt(ToDelete[k]);
+                    }
+                    ToDelete.RemoveAt(k);
+                    Deleted++;
+                    Data.MultiDemStepBack[Data.MultiDemCurrentSample].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.multidemdeleted, FW));
+                }
+                //////////
             }
-            Build();
-            BuildTwoDem();
-
-            */
+            if (Sum != NumberOfPoints)
+            {
+                LogOutputTextBox.Text += " Something bad happned. Weve counted only" + Sum + " elements" +Environment.NewLine;
+            }
+            LogOutputTextBox.Text+=  "Успішно відилалено " + Deleted + " елементів" +Environment.NewLine;
+            ////
+            UpdateForm();
         }
 
         private void button32_Click(object sender, EventArgs e)
         {
             if (Data.DataForWork.Count == 0 || Data.MultiDemSamples.Count == 0)
             {
-                LogOutputTextBox.Text += "Nothing to work with";
+                LogOutputTextBox.Text += "Nothing to work with" + Environment.NewLine;
                 return;
             }
             int i,j,k;
-            int TempVal = Data.CurrentSample;
-            ArgStr Tempstr = Data.TypeOfDistr;
-            Data.TypeOfDistr.set(PossibleDistributions.Distributions[1]);
-            for (k = 0; k < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; k++)
+            double[] ExpVals = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
+            double Alfa;
+            try
             {
-                List<double> Temp = new List<double>();
-                for (j = 0; j < Data.DataForWork[Data.CurrentSample].Count; j++)
-                {
-                    Temp.Add(Data.DataForWork[Data.CurrentSample][j]);
-                }
-                Temp.Sort();
-                Data.CurrentSample.set( Data.MultiDemSamples[Data.MultiDemCurrentSample][k]);
-                Build();
-                double Mu = Data.EvalData.ExpValues;
-                double dispmu = (Data.EvalData.StandDevNeZ * Data.EvalData.StandDevNeZ) / Temp.Count;
-                double sigma = ((double)Temp.Count / (Temp.Count - 1)) * Data.EvalData.StandDevZ;//(0.344*σ^2)/N
-                double dispsigma = (Data.EvalData.StandDevNeZ * Data.EvalData.StandDevNeZ) / (2 * Temp.Count);
-                //double lol = 
-                Data.Parameters = new double[] { Mu, sigma };
-               ///////////////
-                double answer = CheckPirs();
-                double quan = Quantile.HirsQuan(0.05, HistData.NumberOfClasses - 1);
-
-                if (answer <= quan)
-                {
-                        LogOutputTextBox.Text += "Вибірка номер " + k + " пройшла тест на нормальність" + Environment.NewLine;
-                }
-                else
-                {
-                    LogOutputTextBox.Text += "Вибірка номер " + k + " не пройшла тест на нормальність" + Environment.NewLine;
-                }
+                Alfa = Convert.ToDouble(textBox20.Text);
             }
-            Data.TypeOfDistr = Tempstr;
-            Data.CurrentSample.set(TempVal);
-            Build();
-            LogOutputTextBox.Text += "This part is currently unaviable. Please try later" + Environment.NewLine;
-            return;
+            catch
+            {
+                Alfa = 0.05;
+                textBox20.Text = "0,05";
+            }
+            if(Alfa<=0||Alfa>=1)
+            {
+                Alfa = 0.05;
+                textBox20.Text = "0,05";
+            }
+
+            /////////////////
+           // LogOutputTextBox.Text += "This part is currently unaviable. Please try later" + Environment.NewLine;
+            //return;
             double[][] R = new double[dataGridView6.Rows.Count][];
             for (i = 0; i < dataGridView6.Rows.Count; i++)
             {
+                ExpVals[i] = Convert.ToDouble(dataGridView7.Rows[i].Cells[0].Value);
                 R[i] = new double[dataGridView6.Rows.Count];
             }
             for (i = 0; i < dataGridView6.Rows.Count; i++)
@@ -13693,7 +13942,108 @@ namespace thing_2._1
             }
             double Multiplier = 1.0 / (Math.Pow(2 * Math.PI, ((double)dataGridView6.Rows.Count) / 2) * Math.Sqrt(Math.Abs(det)));
             double[,] RevR = Matrixes.GetReverse(RT, dataGridView6.Rows.Count);
-            
+            /////
+            int DimNum = Data.MultiDemSamples[Data.MultiDemCurrentSample].Length;
+            int[] temp = new int[DimNum];
+            int NumberOfPoints = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count;
+            int ClassNumber = ToolsForWork.CompNumOfClasses(NumberOfPoints);
+            for (i = 0; i < DimNum; i++)
+            {
+                temp[i] = ClassNumber;
+            }
+            var VarR = Array.CreateInstance(typeof(int), temp);
+            ////
+            int Sum = 0;
+            double funval;
+            double Hi = 0;
+            i = 0;
+            string temps;
+            double[] Maxs = new double[DimNum];
+            double[] Mins = new double[DimNum];
+            for (j = 0; j < DimNum; j++)
+            {
+                Maxs[j] = double.MinValue;
+                Mins[j] = double.MaxValue;
+            }
+            for (j = 0; j < NumberOfPoints; j++)
+            {
+                for (k = 0; k < DimNum; k++)
+                {
+                    if (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] > Maxs[k])
+                    {
+                        Maxs[k] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j];
+                    }
+                    if (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] < Mins[k])
+                    {
+                        Mins[k] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j];
+                    }
+                }
+            }
+            for (k = 0; k < DimNum; k++)
+            {
+                Maxs[k] += ((double)Maxs[k] - Mins[k]) / 10000;
+            }
+            int Counter;
+            foreach (int item in VarR)
+            {
+                int[] coor = ComputeIndex(i++, VarR);
+                temps = "";
+                for (j = coor.Length - 1; j > 0; j--)
+                {
+                    temps += coor[j] + "|";
+                }
+                temps += coor[0];
+                VarR.SetValue(0, coor);
+                for (j = 0; j < NumberOfPoints; j++)
+                {
+                    Counter = 0;
+                    for (k = 0; k < DimNum; k++)
+                    {
+                        if ((Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] >= (Mins[k] + ((Maxs[k] - Mins[k]) / ClassNumber) * coor[k])) && (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] < (Mins[k] + ((Maxs[k] - Mins[k]) / ClassNumber) * (coor[k] + 1))))
+                        {
+                            Counter++;
+                        }
+                    }
+                    if (Counter == DimNum)
+                    {
+                        Sum++;
+                        VarR.SetValue(1 + Convert.ToInt32(VarR.GetValue(coor)), coor);
+                    }
+                }
+                funval = 0;
+                for (k = 0; k < DimNum; k++)
+                {
+                    for (j = 0; j < DimNum; j++)
+                    {
+                        funval += (((Mins[k] + ((Maxs[k] - Mins[k]) / ClassNumber)) * (coor[k] + 0.5)) - ExpVals[k]) * RevR[k, j] * (((Mins[j] + ((Maxs[j] - Mins[j]) / ClassNumber)) * (coor[j] + 0.5)) - ExpVals[j]);
+                    }
+                }
+                funval = Multiplier * Math.Exp(funval * -0.5);
+                if (Math.Abs(funval) < 0.00001)
+                {
+                    funval = 0.00001;
+                }
+                Hi += (Math.Pow((((double)Convert.ToInt32(VarR.GetValue(coor))) / NumberOfPoints) - funval, 2)) / (funval);
+                if (double.IsInfinity(Hi) || double.IsNaN(Hi))
+                {
+
+                    LogOutputTextBox.Text += " Something bad happned. Weve counted only";
+                }
+            }
+            if (Sum != NumberOfPoints)
+            {
+                LogOutputTextBox.Text += " Something bad happned. Weve counted only" + Sum + " elements" + Environment.NewLine;
+            }
+            ////
+            double quan = Quantile.HirsQuan(1 - Alfa,NumberOfPoints-DimNum);
+            if (Hi <= quan)
+            {
+                LogOutputTextBox.Text += "Вітаємо! Гіпотеза про нормальність багатовимірного розподілу була доведена. Значення квантилю - " + Math.Round(quan, Data.NumberOfNum) + "; значення статистики - " + Math.Round(Hi, Data.NumberOfNum) + Environment.NewLine;
+            }
+            else
+            {
+                LogOutputTextBox.Text += "Гіпотеза про збіг нормальність багатовимірної вибірки була спростована; значення квантилю - " + Math.Round(quan, Data.NumberOfNum) + "; значення статистики - " + Math.Round(Hi, Data.NumberOfNum) + Environment.NewLine;
+            }
         }
 
         private void dataGridView8_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
@@ -14293,6 +14643,12 @@ namespace thing_2._1
                 LogOutputTextBox.Text += "Нема з чим працювати " + Environment.NewLine;
                 return;
             }
+            if (Data.TwoDemSamples.Count <= 0)
+            {
+                if (LogCheckBox.Checked)
+                    LogOutputTextBox.Text += "Нема з чим працювати " + Environment.NewLine;
+                return;
+            }
             MakeStepBackTwo();
             UpdateForm();
         }
@@ -14339,6 +14695,12 @@ namespace thing_2._1
 
         private void крокНазадбагатовимірніToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (Data.MultiDemSamples.Count <= 0)
+            {
+                if (LogCheckBox.Checked)
+                    LogOutputTextBox.Text += "Нема з чим працювати " + Environment.NewLine;
+                return;
+            }
             if (Data.MultiDemStepBack[Data.MultiDemCurrentSample].Count == 0)
             {
                 LogOutputTextBox.Text += "Нема з чим працювати " + Environment.NewLine;
@@ -14378,7 +14740,106 @@ namespace thing_2._1
             UpdateForm();
         }
 
+        private void button34_Click(object sender, EventArgs e)
+        {
+            if (Data.MultiDemSamples.Count <= 0)
+            {
+                if (LogCheckBox.Checked)
+                    LogOutputTextBox.Text += "Нема з чим працювати " + Environment.NewLine;
+                return;
+            }
+            int DimNum = Data.MultiDemSamples[Data.MultiDemCurrentSample].Length;
+            int i, j, k;
+            int[] temp = new int[DimNum];
+            int NumberOfPoints = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count;
+            int ClassNumber = ToolsForWork.CompNumOfClasses(NumberOfPoints);
+            for (i = 0; i < DimNum; i++)
+            {
+                temp[i] = ClassNumber;
+            }
+            var VarR = Array.CreateInstance(typeof(int), temp);
+            OutputArray(VarR, NumberOfPoints,DimNum, ClassNumber);
+            
 
+        }
+
+        
+        int[] ComputeIndex(int i, Array arr)
+        {
+            var dims = Enumerable.Range(0, arr.Rank)
+                .Select(arr.GetLength)
+                .ToArray();
+
+            Func<int, int, int> product = (i1, i2) => i1 * i2;
+
+            return dims.Select((d, n) => (i / dims.Take(n).Aggregate(1, product)) % d).ToArray();
+        }
+
+        void OutputArray(Array arr, int NumOfPoints, int DimNumber, int NumOfClasses)
+        {
+            int Sum = 0;
+            var i = 0;
+            int j,k;
+            string temp;
+            double[] Maxs = new double[DimNumber];
+            double[] Mins = new double[DimNumber];
+            for (j = 0; j < DimNumber; j++)
+            {
+                Maxs[j] = double.MinValue;
+                Mins[j] = double.MaxValue;
+            }
+            for (j = 0; j < NumOfPoints; j++)
+            {
+                for (k = 0; k < DimNumber; k++)
+                {
+                    if(Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j]>Maxs[k])
+                    {
+                        Maxs[k] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j];
+                    }
+                    if(Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j]<Mins[k])
+                    {
+                        Mins[k] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j];
+                    }
+                }
+            }
+            for (k = 0; k < DimNumber; k++)
+            {
+                Maxs[k]+=((double)Maxs[k]-Mins[k])/10000;
+            }
+           int Counter;
+            foreach (int item in arr)
+            {
+                int[] coor = ComputeIndex(i++, arr);
+                temp = "";
+                for (j = coor.Length - 1; j > 0; j--)
+                {
+                    temp += coor[j] + "|";
+                }
+                temp += coor[0];
+                arr.SetValue(0, coor);
+                for (j = 0; j < NumOfPoints; j++)
+                {
+                    Counter = 0;
+                    for (k = 0; k < DimNumber; k++)
+                    {
+                        if ((Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] >= (Mins[k] + ((Maxs[k] - Mins[k]) / NumOfClasses) * coor[k])) && (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] < (Mins[k] + ((Maxs[k] - Mins[k]) / NumOfClasses) * (coor[k] + 1))))
+                        {
+                            Counter++;
+                        }
+                    }
+                    if (Counter == DimNumber)
+                    {
+                        Sum++;
+                        arr.SetValue(1+Convert.ToInt32(arr.GetValue(coor)), coor);
+                    }
+                }
+                LogOutputTextBox.Text += temp + " " + arr.GetValue(coor) + "  , p=" + ((double)Convert.ToInt32(arr.GetValue(coor))) / NumOfPoints + Environment.NewLine;
+            }
+            if (Sum != NumOfPoints)
+            {
+                LogOutputTextBox.Text += " Something bad happened. Weve counted only"+ Sum + " elements"+ Environment.NewLine;
+            }
+        }
     }
 
     class PointOfStart
