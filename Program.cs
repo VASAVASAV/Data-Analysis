@@ -277,6 +277,23 @@ namespace thing_2._1
         private CheckBox checkBox9;
         private CheckBox checkBox8;
         private Panel panel2;
+        private CheckBox checkBox10;
+        private GroupBox groupBox11;
+        private Button button35;
+        private RadioButton radioButton10;
+        private RadioButton radioButton9;
+        private RadioButton radioButton11;
+        private TextBox textBox28;
+        private Label label30;
+        private TextBox textBox29;
+        private Label label31;
+        private TabControl tabControl6;
+        private TabPage tabPage25;
+        private DataGridView dataGridView12;
+        private TabPage tabPage26;
+        private DataGridView dataGridView13;
+        private DataGridViewTextBoxColumn Column16;
+        private DataGridViewTextBoxColumn Column17;
         private DataGridView[] DataGridForChkk;
     
         public BodyOfForm()
@@ -536,6 +553,7 @@ namespace thing_2._1
             this.button24 = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -626,8 +644,24 @@ namespace thing_2._1
             this.tabPage22 = new System.Windows.Forms.TabPage();
             this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage23 = new System.Windows.Forms.TabPage();
+            this.tabControl6 = new System.Windows.Forms.TabControl();
+            this.tabPage25 = new System.Windows.Forms.TabPage();
+            this.dataGridView12 = new System.Windows.Forms.DataGridView();
+            this.tabPage26 = new System.Windows.Forms.TabPage();
+            this.dataGridView13 = new System.Windows.Forms.DataGridView();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.textBox29 = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.radioButton11 = new System.Windows.Forms.RadioButton();
+            this.button35 = new System.Windows.Forms.Button();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage24 = new System.Windows.Forms.TabPage();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -695,6 +729,12 @@ namespace thing_2._1
             this.tabPage22.SuspendLayout();
             this.tabControl5.SuspendLayout();
             this.tabPage23.SuspendLayout();
+            this.tabControl6.SuspendLayout();
+            this.tabPage25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
+            this.tabPage26.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).BeginInit();
+            this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1077,7 +1117,7 @@ namespace thing_2._1
             this.StatusLabelNameOfFile,
             this.toolStripStatusLabel2,
             this.toolStripforNumber});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 720);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 740);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1301, 22);
             this.statusStrip1.TabIndex = 1;
@@ -1126,10 +1166,10 @@ namespace thing_2._1
             this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Controls.Add(this.tabPage6);
             this.tabControl2.Controls.Add(this.tabPage15);
-            this.tabControl2.Location = new System.Drawing.Point(12, 482);
+            this.tabControl2.Location = new System.Drawing.Point(12, 500);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1277, 250);
+            this.tabControl2.Size = new System.Drawing.Size(1277, 232);
             this.tabControl2.TabIndex = 3;
             // 
             // PageData
@@ -1140,7 +1180,7 @@ namespace thing_2._1
             this.PageData.Location = new System.Drawing.Point(4, 22);
             this.PageData.Name = "PageData";
             this.PageData.Padding = new System.Windows.Forms.Padding(3);
-            this.PageData.Size = new System.Drawing.Size(1269, 224);
+            this.PageData.Size = new System.Drawing.Size(1269, 206);
             this.PageData.TabIndex = 0;
             this.PageData.Text = "Дані";
             // 
@@ -1154,7 +1194,7 @@ namespace thing_2._1
             this.groupBox3.Controls.Add(this.TextBoxForPos);
             this.groupBox3.Location = new System.Drawing.Point(480, 8);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(783, 210);
+            this.groupBox3.Size = new System.Drawing.Size(783, 192);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Видалення аномальних данних";
@@ -1210,7 +1250,7 @@ namespace thing_2._1
             // 
             // TextBoxForPos
             // 
-            this.TextBoxForPos.Location = new System.Drawing.Point(302, 165);
+            this.TextBoxForPos.Location = new System.Drawing.Point(301, 166);
             this.TextBoxForPos.Name = "TextBoxForPos";
             this.TextBoxForPos.Size = new System.Drawing.Size(85, 20);
             this.TextBoxForPos.TabIndex = 0;
@@ -1221,7 +1261,7 @@ namespace thing_2._1
             this.DataGridForData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridForData.Location = new System.Drawing.Point(6, 6);
             this.DataGridForData.Name = "DataGridForData";
-            this.DataGridForData.Size = new System.Drawing.Size(468, 212);
+            this.DataGridForData.Size = new System.Drawing.Size(468, 194);
             this.DataGridForData.TabIndex = 0;
             this.DataGridForData.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.DataGridForData_UserDeletedRow);
             this.DataGridForData.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.DataGridForData_UserDeletingRow);
@@ -1235,7 +1275,7 @@ namespace thing_2._1
             this.PafeChange.Location = new System.Drawing.Point(4, 22);
             this.PafeChange.Name = "PafeChange";
             this.PafeChange.Padding = new System.Windows.Forms.Padding(3);
-            this.PafeChange.Size = new System.Drawing.Size(1269, 224);
+            this.PafeChange.Size = new System.Drawing.Size(1269, 206);
             this.PafeChange.TabIndex = 1;
             this.PafeChange.Text = "Перетворення і дії над даними";
             // 
@@ -1244,7 +1284,7 @@ namespace thing_2._1
             this.groupBox7.Controls.Add(this.button19);
             this.groupBox7.Location = new System.Drawing.Point(463, 6);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(310, 205);
+            this.groupBox7.Size = new System.Drawing.Size(310, 194);
             this.groupBox7.TabIndex = 2;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Додавання елементів";
@@ -1269,7 +1309,7 @@ namespace thing_2._1
             this.groupBox2.Controls.Add(this.button6);
             this.groupBox2.Location = new System.Drawing.Point(779, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(484, 205);
+            this.groupBox2.Size = new System.Drawing.Size(484, 194);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Видалення елементів";
@@ -1334,7 +1374,7 @@ namespace thing_2._1
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(451, 205);
+            this.groupBox1.Size = new System.Drawing.Size(451, 194);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Перетворення над елементами";
@@ -1370,13 +1410,13 @@ namespace thing_2._1
             this.tabPage7.Controls.Add(this.textBox3);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1269, 224);
+            this.tabPage7.Size = new System.Drawing.Size(1269, 206);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Визначення типу розподілу";
             // 
             // button18
             // 
-            this.button18.Location = new System.Drawing.Point(616, 192);
+            this.button18.Location = new System.Drawing.Point(616, 170);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(208, 29);
             this.button18.TabIndex = 5;
@@ -1388,16 +1428,16 @@ namespace thing_2._1
             // 
             this.groupBox6.Controls.Add(this.button14);
             this.groupBox6.Controls.Add(this.button13);
-            this.groupBox6.Location = new System.Drawing.Point(6, 150);
+            this.groupBox6.Location = new System.Drawing.Point(6, 139);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(604, 71);
+            this.groupBox6.Size = new System.Drawing.Size(604, 64);
             this.groupBox6.TabIndex = 10;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Оцінка відтворення";
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(375, 19);
+            this.button14.Location = new System.Drawing.Point(375, 18);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(129, 42);
             this.button14.TabIndex = 7;
@@ -1407,7 +1447,7 @@ namespace thing_2._1
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(240, 19);
+            this.button13.Location = new System.Drawing.Point(240, 17);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(129, 43);
             this.button13.TabIndex = 6;
@@ -1421,14 +1461,14 @@ namespace thing_2._1
             this.groupBox5.Controls.Add(this.button15);
             this.groupBox5.Location = new System.Drawing.Point(6, 71);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(604, 73);
+            this.groupBox5.Size = new System.Drawing.Size(604, 62);
             this.groupBox5.TabIndex = 9;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Відтворення розподілів";
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(240, 19);
+            this.button12.Location = new System.Drawing.Point(240, 10);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(129, 43);
             this.button12.TabIndex = 2;
@@ -1438,7 +1478,7 @@ namespace thing_2._1
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(375, 19);
+            this.button15.Location = new System.Drawing.Point(375, 10);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(129, 43);
             this.button15.TabIndex = 5;
@@ -1460,7 +1500,7 @@ namespace thing_2._1
             // 
             this.button11.Location = new System.Drawing.Point(307, 14);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(129, 42);
+            this.button11.Size = new System.Drawing.Size(129, 34);
             this.button11.TabIndex = 1;
             this.button11.Text = "Отримати поради щодо вибірки";
             this.button11.UseVisualStyleBackColor = true;
@@ -1482,7 +1522,7 @@ namespace thing_2._1
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox3.Size = new System.Drawing.Size(641, 165);
+            this.textBox3.Size = new System.Drawing.Size(641, 143);
             this.textBox3.TabIndex = 0;
             // 
             // tabPage6
@@ -1492,7 +1532,7 @@ namespace thing_2._1
             this.tabPage6.Controls.Add(this.dataGridView3);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1269, 224);
+            this.tabPage6.Size = new System.Drawing.Size(1269, 206);
             this.tabPage6.TabIndex = 3;
             this.tabPage6.Text = "Робота з аномаліями двовимірної вибірки";
             // 
@@ -1503,7 +1543,7 @@ namespace thing_2._1
             this.groupBox8.Controls.Add(this.textBox10);
             this.groupBox8.Location = new System.Drawing.Point(515, 3);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(751, 218);
+            this.groupBox8.Size = new System.Drawing.Size(751, 200);
             this.groupBox8.TabIndex = 5;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Видалити аномалії за гістограмною оцінкою";
@@ -1546,7 +1586,7 @@ namespace thing_2._1
             this.Column12});
             this.dataGridView3.Location = new System.Drawing.Point(6, 3);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(503, 212);
+            this.dataGridView3.Size = new System.Drawing.Size(503, 200);
             this.dataGridView3.TabIndex = 1;
             this.dataGridView3.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView3_UserDeletedRow);
             this.dataGridView3.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView3_UserDeletingRow);
@@ -1598,7 +1638,7 @@ namespace thing_2._1
             this.tabPage15.Controls.Add(this.dataGridView8);
             this.tabPage15.Location = new System.Drawing.Point(4, 22);
             this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Size = new System.Drawing.Size(1269, 224);
+            this.tabPage15.Size = new System.Drawing.Size(1269, 206);
             this.tabPage15.TabIndex = 4;
             this.tabPage15.Text = "Робота з багатовимірними аномаліями";
             // 
@@ -1664,7 +1704,7 @@ namespace thing_2._1
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView8.Location = new System.Drawing.Point(9, 3);
             this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.Size = new System.Drawing.Size(423, 210);
+            this.dataGridView8.Size = new System.Drawing.Size(423, 200);
             this.dataGridView8.TabIndex = 0;
             this.dataGridView8.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dataGridView8_UserDeletedRow);
             this.dataGridView8.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView8_UserDeletingRow);
@@ -1680,12 +1720,12 @@ namespace thing_2._1
             this.panel1.Controls.Add(this.LogOutputTextBox);
             this.panel1.Location = new System.Drawing.Point(975, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(314, 449);
+            this.panel1.Size = new System.Drawing.Size(314, 467);
             this.panel1.TabIndex = 4;
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(175, 401);
+            this.button16.Location = new System.Drawing.Point(177, 421);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(130, 39);
             this.button16.TabIndex = 4;
@@ -1695,7 +1735,7 @@ namespace thing_2._1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(3, 401);
+            this.button1.Location = new System.Drawing.Point(3, 421);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 39);
             this.button1.TabIndex = 3;
@@ -1729,7 +1769,7 @@ namespace thing_2._1
             this.LogOutputTextBox.Multiline = true;
             this.LogOutputTextBox.Name = "LogOutputTextBox";
             this.LogOutputTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.LogOutputTextBox.Size = new System.Drawing.Size(302, 352);
+            this.LogOutputTextBox.Size = new System.Drawing.Size(302, 372);
             this.LogOutputTextBox.TabIndex = 0;
             // 
             // PageEval
@@ -1739,13 +1779,13 @@ namespace thing_2._1
             this.PageEval.Controls.Add(this.DataGridForEval);
             this.PageEval.Location = new System.Drawing.Point(4, 22);
             this.PageEval.Name = "PageEval";
-            this.PageEval.Size = new System.Drawing.Size(949, 423);
+            this.PageEval.Size = new System.Drawing.Size(949, 441);
             this.PageEval.TabIndex = 2;
             this.PageEval.Text = "Оцінки статистик";
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(756, 391);
+            this.button17.Location = new System.Drawing.Point(756, 401);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(190, 29);
             this.button17.TabIndex = 3;
@@ -1766,7 +1806,7 @@ namespace thing_2._1
             this.ColumnPosib});
             this.DataGridForEval.Location = new System.Drawing.Point(3, 3);
             this.DataGridForEval.Name = "DataGridForEval";
-            this.DataGridForEval.Size = new System.Drawing.Size(943, 382);
+            this.DataGridForEval.Size = new System.Drawing.Size(943, 392);
             this.DataGridForEval.TabIndex = 0;
             this.DataGridForEval.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridForEval_CellEndEdit);
             // 
@@ -1818,15 +1858,15 @@ namespace thing_2._1
             this.PageFunc.Location = new System.Drawing.Point(4, 22);
             this.PageFunc.Name = "PageFunc";
             this.PageFunc.Padding = new System.Windows.Forms.Padding(3);
-            this.PageFunc.Size = new System.Drawing.Size(949, 423);
+            this.PageFunc.Size = new System.Drawing.Size(949, 441);
             this.PageFunc.TabIndex = 1;
             this.PageFunc.Text = "Функція розподілу";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(829, 391);
+            this.button3.Location = new System.Drawing.Point(829, 401);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 29);
+            this.button3.Size = new System.Drawing.Size(114, 34);
             this.button3.TabIndex = 2;
             this.button3.Text = "Деталі";
             this.button3.UseVisualStyleBackColor = true;
@@ -1863,7 +1903,7 @@ namespace thing_2._1
             this.DistrFun.Series.Add(series3);
             this.DistrFun.Series.Add(series4);
             this.DistrFun.Series.Add(series5);
-            this.DistrFun.Size = new System.Drawing.Size(937, 379);
+            this.DistrFun.Size = new System.Drawing.Size(937, 389);
             this.DistrFun.TabIndex = 0;
             this.DistrFun.Text = "chart2";
             // 
@@ -1875,15 +1915,15 @@ namespace thing_2._1
             this.PageHist.Location = new System.Drawing.Point(4, 22);
             this.PageHist.Name = "PageHist";
             this.PageHist.Padding = new System.Windows.Forms.Padding(3);
-            this.PageHist.Size = new System.Drawing.Size(949, 423);
+            this.PageHist.Size = new System.Drawing.Size(949, 441);
             this.PageHist.TabIndex = 0;
             this.PageHist.Text = "Гістограмма";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(829, 389);
+            this.button2.Location = new System.Drawing.Point(829, 401);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 28);
+            this.button2.Size = new System.Drawing.Size(114, 33);
             this.button2.TabIndex = 1;
             this.button2.Text = "Деталі";
             this.button2.UseVisualStyleBackColor = true;
@@ -1908,7 +1948,7 @@ namespace thing_2._1
             series7.Name = "DensFunc";
             this.Histogramme.Series.Add(series6);
             this.Histogramme.Series.Add(series7);
-            this.Histogramme.Size = new System.Drawing.Size(937, 380);
+            this.Histogramme.Size = new System.Drawing.Size(937, 400);
             this.Histogramme.TabIndex = 0;
             this.Histogramme.Text = "chart1";
             // 
@@ -1932,7 +1972,7 @@ namespace thing_2._1
             this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(957, 449);
+            this.tabControl1.Size = new System.Drawing.Size(957, 467);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -1946,14 +1986,14 @@ namespace thing_2._1
             this.tabPage1.Controls.Add(this.chart1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(949, 423);
+            this.tabPage1.Size = new System.Drawing.Size(949, 441);
             this.tabPage1.TabIndex = 3;
             this.tabPage1.Text = "Кореляційне поле";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(868, 70);
+            this.textBox12.Location = new System.Drawing.Point(889, 70);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(53, 20);
             this.textBox12.TabIndex = 7;
@@ -1961,7 +2001,7 @@ namespace thing_2._1
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(803, 73);
+            this.label12.Location = new System.Drawing.Point(827, 73);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(56, 13);
             this.label12.TabIndex = 6;
@@ -1969,7 +2009,7 @@ namespace thing_2._1
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(737, 70);
+            this.textBox11.Location = new System.Drawing.Point(753, 70);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(56, 20);
             this.textBox11.TabIndex = 5;
@@ -1977,7 +2017,7 @@ namespace thing_2._1
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(675, 73);
+            this.label11.Location = new System.Drawing.Point(698, 73);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 13);
             this.label11.TabIndex = 4;
@@ -1988,10 +2028,10 @@ namespace thing_2._1
             this.tabControl3.Controls.Add(this.tabPage8);
             this.tabControl3.Controls.Add(this.tabPage9);
             this.tabControl3.Controls.Add(this.tabPage10);
-            this.tabControl3.Location = new System.Drawing.Point(675, 96);
+            this.tabControl3.Location = new System.Drawing.Point(691, 96);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(271, 324);
+            this.tabControl3.Size = new System.Drawing.Size(255, 342);
             this.tabControl3.TabIndex = 2;
             // 
             // tabPage8
@@ -2008,16 +2048,16 @@ namespace thing_2._1
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(263, 298);
+            this.tabPage8.Size = new System.Drawing.Size(247, 316);
             this.tabPage8.TabIndex = 0;
             this.tabPage8.Text = "Лінійна регресія";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // button29
             // 
-            this.button29.Location = new System.Drawing.Point(6, 250);
+            this.button29.Location = new System.Drawing.Point(6, 268);
             this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(251, 42);
+            this.button29.Size = new System.Drawing.Size(235, 42);
             this.button29.TabIndex = 13;
             this.button29.Text = "Перевірити збіг поточної регресії з заданою користувачем";
             this.button29.UseVisualStyleBackColor = true;
@@ -2025,9 +2065,9 @@ namespace thing_2._1
             // 
             // button28
             // 
-            this.button28.Location = new System.Drawing.Point(6, 202);
+            this.button28.Location = new System.Drawing.Point(6, 220);
             this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(251, 42);
+            this.button28.Size = new System.Drawing.Size(235, 42);
             this.button28.TabIndex = 12;
             this.button28.Text = "Перевірити збіг регресій двох вибірок";
             this.button28.UseVisualStyleBackColor = true;
@@ -2063,7 +2103,7 @@ namespace thing_2._1
             // 
             this.button25.Location = new System.Drawing.Point(6, 56);
             this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(251, 45);
+            this.button25.Size = new System.Drawing.Size(235, 45);
             this.button25.TabIndex = 3;
             this.button25.Text = "Побудувати регресію";
             this.button25.UseVisualStyleBackColor = true;
@@ -2111,7 +2151,7 @@ namespace thing_2._1
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(263, 298);
+            this.tabPage9.Size = new System.Drawing.Size(247, 316);
             this.tabPage9.TabIndex = 1;
             this.tabPage9.Text = "Параболічна регресія";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -2172,7 +2212,7 @@ namespace thing_2._1
             // 
             this.button27.Location = new System.Drawing.Point(6, 52);
             this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(251, 45);
+            this.button27.Size = new System.Drawing.Size(235, 45);
             this.button27.TabIndex = 12;
             this.button27.Text = "Побудувати регресію";
             this.button27.UseVisualStyleBackColor = true;
@@ -2210,7 +2250,7 @@ namespace thing_2._1
             this.tabPage10.Controls.Add(this.radioButton4);
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(263, 298);
+            this.tabPage10.Size = new System.Drawing.Size(247, 316);
             this.tabPage10.TabIndex = 2;
             this.tabPage10.Text = "Квазилінійна регресія";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -2282,7 +2322,7 @@ namespace thing_2._1
             // 
             this.button26.Location = new System.Drawing.Point(3, 52);
             this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(251, 45);
+            this.button26.Size = new System.Drawing.Size(241, 45);
             this.button26.TabIndex = 14;
             this.button26.Text = "Побудувати регресію";
             this.button26.UseVisualStyleBackColor = true;
@@ -2300,9 +2340,9 @@ namespace thing_2._1
             // 
             // button24
             // 
-            this.button24.Location = new System.Drawing.Point(675, 8);
+            this.button24.Location = new System.Drawing.Point(691, 8);
             this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(267, 56);
+            this.button24.Size = new System.Drawing.Size(251, 56);
             this.button24.TabIndex = 0;
             this.button24.Text = "Перевірити початкові умови регресійного аналізу";
             this.button24.UseVisualStyleBackColor = true;
@@ -2382,19 +2422,30 @@ namespace thing_2._1
             this.chart1.Series.Add(series14);
             this.chart1.Series.Add(series15);
             this.chart1.Series.Add(series16);
-            this.chart1.Size = new System.Drawing.Size(673, 417);
+            this.chart1.Size = new System.Drawing.Size(689, 432);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.checkBox10);
             this.tabPage2.Controls.Add(this.chart2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(949, 423);
+            this.tabPage2.Size = new System.Drawing.Size(949, 441);
             this.tabPage2.TabIndex = 4;
             this.tabPage2.Text = "Гістограма двовимірної вибірки";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.Location = new System.Drawing.Point(6, 4);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(134, 17);
+            this.checkBox10.TabIndex = 1;
+            this.checkBox10.Text = "Показувати кор поле";
+            this.checkBox10.UseVisualStyleBackColor = true;
             // 
             // chart2
             // 
@@ -2414,7 +2465,7 @@ namespace thing_2._1
             this.chart2.ChartAreas.Add(chartArea4);
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(6, 3);
+            this.chart2.Location = new System.Drawing.Point(6, 27);
             this.chart2.Name = "chart2";
             series17.ChartArea = "ChartArea1";
             series17.Color = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
@@ -2474,7 +2525,7 @@ namespace thing_2._1
             this.chart2.Series.Add(series25);
             this.chart2.Series.Add(series26);
             this.chart2.Series.Add(series27);
-            this.chart2.Size = new System.Drawing.Size(940, 417);
+            this.chart2.Size = new System.Drawing.Size(940, 411);
             this.chart2.TabIndex = 0;
             this.chart2.Text = "chart2";
             // 
@@ -2486,14 +2537,14 @@ namespace thing_2._1
             this.tabPage3.Controls.Add(this.dataGridView1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(949, 423);
+            this.tabPage3.Size = new System.Drawing.Size(949, 441);
             this.tabPage3.TabIndex = 5;
             this.tabPage3.Text = "Статистики двовимірної вибірки";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(603, 391);
+            this.textBox4.Location = new System.Drawing.Point(604, 401);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 8;
@@ -2501,7 +2552,7 @@ namespace thing_2._1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(547, 394);
+            this.label2.Location = new System.Drawing.Point(548, 404);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 7;
@@ -2509,7 +2560,7 @@ namespace thing_2._1
             // 
             // button20
             // 
-            this.button20.Location = new System.Drawing.Point(332, 380);
+            this.button20.Location = new System.Drawing.Point(332, 391);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(209, 40);
             this.button20.TabIndex = 6;
@@ -2531,7 +2582,7 @@ namespace thing_2._1
             this.Column1});
             this.dataGridView1.Location = new System.Drawing.Point(3, 6);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(943, 368);
+            this.dataGridView1.Size = new System.Drawing.Size(943, 379);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             // 
@@ -2588,7 +2639,7 @@ namespace thing_2._1
             this.tabPage4.Controls.Add(this.label5);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(949, 423);
+            this.tabPage4.Size = new System.Drawing.Size(949, 441);
             this.tabPage4.TabIndex = 6;
             this.tabPage4.Text = "Таблиці сполучень 2 на 2";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -2615,7 +2666,7 @@ namespace thing_2._1
             this.Column5});
             this.dataGridView2.Location = new System.Drawing.Point(218, 6);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(728, 414);
+            this.dataGridView2.Size = new System.Drawing.Size(728, 432);
             this.dataGridView2.TabIndex = 4;
             this.dataGridView2.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEndEdit);
             // 
@@ -2686,7 +2737,7 @@ namespace thing_2._1
             this.tabPage5.Controls.Add(this.label8);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(949, 423);
+            this.tabPage5.Size = new System.Drawing.Size(949, 441);
             this.tabPage5.TabIndex = 7;
             this.tabPage5.Text = "Таблиці сполучень n на m";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -2727,7 +2778,7 @@ namespace thing_2._1
             this.Column7});
             this.dataGridView4.Location = new System.Drawing.Point(279, 8);
             this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(667, 258);
+            this.dataGridView4.Size = new System.Drawing.Size(667, 430);
             this.dataGridView4.TabIndex = 10;
             // 
             // Column6
@@ -2781,7 +2832,7 @@ namespace thing_2._1
             this.tabPage11.Controls.Add(this.dataGridView5);
             this.tabPage11.Location = new System.Drawing.Point(4, 22);
             this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Size = new System.Drawing.Size(949, 423);
+            this.tabPage11.Size = new System.Drawing.Size(949, 441);
             this.tabPage11.TabIndex = 8;
             this.tabPage11.Text = "Дисперсійно-коваріаційна матриця";
             this.tabPage11.UseVisualStyleBackColor = true;
@@ -2794,7 +2845,7 @@ namespace thing_2._1
             this.dataGridView5.Location = new System.Drawing.Point(6, 3);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.ReadOnly = true;
-            this.dataGridView5.Size = new System.Drawing.Size(940, 398);
+            this.dataGridView5.Size = new System.Drawing.Size(940, 435);
             this.dataGridView5.TabIndex = 0;
             // 
             // tabPage12
@@ -2802,7 +2853,7 @@ namespace thing_2._1
             this.tabPage12.Controls.Add(this.dataGridView6);
             this.tabPage12.Location = new System.Drawing.Point(4, 22);
             this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Size = new System.Drawing.Size(949, 423);
+            this.tabPage12.Size = new System.Drawing.Size(949, 441);
             this.tabPage12.TabIndex = 9;
             this.tabPage12.Text = "Кореляційна матриця";
             this.tabPage12.UseVisualStyleBackColor = true;
@@ -2815,7 +2866,7 @@ namespace thing_2._1
             this.dataGridView6.Location = new System.Drawing.Point(6, 3);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.ReadOnly = true;
-            this.dataGridView6.Size = new System.Drawing.Size(940, 397);
+            this.dataGridView6.Size = new System.Drawing.Size(940, 435);
             this.dataGridView6.TabIndex = 0;
             // 
             // tabPage13
@@ -2823,7 +2874,7 @@ namespace thing_2._1
             this.tabPage13.Controls.Add(this.dataGridView7);
             this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Size = new System.Drawing.Size(949, 423);
+            this.tabPage13.Size = new System.Drawing.Size(949, 441);
             this.tabPage13.TabIndex = 10;
             this.tabPage13.Text = "Статистики багатовимірної вибірки";
             this.tabPage13.UseVisualStyleBackColor = true;
@@ -2836,7 +2887,7 @@ namespace thing_2._1
             this.dataGridView7.Location = new System.Drawing.Point(6, 4);
             this.dataGridView7.Name = "dataGridView7";
             this.dataGridView7.ReadOnly = true;
-            this.dataGridView7.Size = new System.Drawing.Size(940, 388);
+            this.dataGridView7.Size = new System.Drawing.Size(940, 434);
             this.dataGridView7.TabIndex = 0;
             // 
             // tabPage14
@@ -2845,7 +2896,7 @@ namespace thing_2._1
             this.tabPage14.Controls.Add(this.tabControl4);
             this.tabPage14.Location = new System.Drawing.Point(4, 22);
             this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Size = new System.Drawing.Size(949, 423);
+            this.tabPage14.Size = new System.Drawing.Size(949, 441);
             this.tabPage14.TabIndex = 11;
             this.tabPage14.Text = "Візуалізація";
             // 
@@ -2858,7 +2909,7 @@ namespace thing_2._1
             this.tabControl4.Location = new System.Drawing.Point(3, 6);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(940, 414);
+            this.tabControl4.Size = new System.Drawing.Size(940, 432);
             this.tabControl4.TabIndex = 0;
             // 
             // tabPage16
@@ -2870,7 +2921,7 @@ namespace thing_2._1
             this.tabPage16.Location = new System.Drawing.Point(4, 22);
             this.tabPage16.Name = "tabPage16";
             this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage16.Size = new System.Drawing.Size(932, 388);
+            this.tabPage16.Size = new System.Drawing.Size(932, 406);
             this.tabPage16.TabIndex = 0;
             this.tabPage16.Text = "Матриця діаграм розкиду";
             this.tabPage16.UseVisualStyleBackColor = true;
@@ -2918,7 +2969,7 @@ namespace thing_2._1
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(919, 356);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(919, 374);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tabPage17
@@ -2935,7 +2986,7 @@ namespace thing_2._1
             this.tabPage17.Location = new System.Drawing.Point(4, 22);
             this.tabPage17.Name = "tabPage17";
             this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage17.Size = new System.Drawing.Size(932, 388);
+            this.tabPage17.Size = new System.Drawing.Size(932, 406);
             this.tabPage17.TabIndex = 1;
             this.tabPage17.Text = "Бульбашкова діаграма ";
             this.tabPage17.UseVisualStyleBackColor = true;
@@ -3038,7 +3089,7 @@ namespace thing_2._1
             this.tabPage18.Controls.Add(this.checkBox8);
             this.tabPage18.Location = new System.Drawing.Point(4, 22);
             this.tabPage18.Name = "tabPage18";
-            this.tabPage18.Size = new System.Drawing.Size(932, 388);
+            this.tabPage18.Size = new System.Drawing.Size(932, 406);
             this.tabPage18.TabIndex = 2;
             this.tabPage18.Text = "Теплова карта";
             this.tabPage18.UseVisualStyleBackColor = true;
@@ -3049,14 +3100,14 @@ namespace thing_2._1
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(4, 27);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(925, 350);
+            this.panel2.Size = new System.Drawing.Size(925, 363);
             this.panel2.TabIndex = 3;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(3, 15);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(919, 315);
+            this.pictureBox1.Size = new System.Drawing.Size(919, 333);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -3080,7 +3131,7 @@ namespace thing_2._1
             this.tabPage19.Controls.Add(this.chart4);
             this.tabPage19.Location = new System.Drawing.Point(4, 22);
             this.tabPage19.Name = "tabPage19";
-            this.tabPage19.Size = new System.Drawing.Size(932, 388);
+            this.tabPage19.Size = new System.Drawing.Size(932, 406);
             this.tabPage19.TabIndex = 3;
             this.tabPage19.Text = "Паралельні координати";
             this.tabPage19.UseVisualStyleBackColor = true;
@@ -3116,7 +3167,7 @@ namespace thing_2._1
             series29.ChartArea = "ChartArea1";
             series29.Name = "Series1";
             this.chart4.Series.Add(series29);
-            this.chart4.Size = new System.Drawing.Size(926, 355);
+            this.chart4.Size = new System.Drawing.Size(926, 373);
             this.chart4.TabIndex = 0;
             this.chart4.Text = "chart4";
             // 
@@ -3127,7 +3178,7 @@ namespace thing_2._1
             this.tabPage20.Controls.Add(this.groupBox9);
             this.tabPage20.Location = new System.Drawing.Point(4, 22);
             this.tabPage20.Name = "tabPage20";
-            this.tabPage20.Size = new System.Drawing.Size(949, 423);
+            this.tabPage20.Size = new System.Drawing.Size(949, 441);
             this.tabPage20.TabIndex = 12;
             this.tabPage20.Text = "Частинні коефіціенти корреляції";
             // 
@@ -3145,7 +3196,7 @@ namespace thing_2._1
             this.groupBox10.Controls.Add(this.label26);
             this.groupBox10.Location = new System.Drawing.Point(723, 3);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(223, 416);
+            this.groupBox10.Size = new System.Drawing.Size(223, 435);
             this.groupBox10.TabIndex = 1;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Вищих порядків";
@@ -3169,7 +3220,7 @@ namespace thing_2._1
             // 
             // button31
             // 
-            this.button31.Location = new System.Drawing.Point(10, 378);
+            this.button31.Location = new System.Drawing.Point(10, 397);
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(207, 32);
             this.button31.TabIndex = 7;
@@ -3186,7 +3237,7 @@ namespace thing_2._1
             this.Column14});
             this.dataGridView10.Location = new System.Drawing.Point(10, 180);
             this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.Size = new System.Drawing.Size(207, 192);
+            this.dataGridView10.Size = new System.Drawing.Size(207, 211);
             this.dataGridView10.TabIndex = 6;
             // 
             // Column14
@@ -3251,7 +3302,7 @@ namespace thing_2._1
             this.groupBox9.Controls.Add(this.comboBox4);
             this.groupBox9.Location = new System.Drawing.Point(4, 4);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(713, 416);
+            this.groupBox9.Size = new System.Drawing.Size(713, 434);
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Першого порядку";
@@ -3302,7 +3353,7 @@ namespace thing_2._1
             this.tabPage21.Controls.Add(this.dataGridView11);
             this.tabPage21.Location = new System.Drawing.Point(4, 22);
             this.tabPage21.Name = "tabPage21";
-            this.tabPage21.Size = new System.Drawing.Size(949, 423);
+            this.tabPage21.Size = new System.Drawing.Size(949, 441);
             this.tabPage21.TabIndex = 13;
             this.tabPage21.Text = "Множинні коефіціенти кореляції";
             this.tabPage21.UseVisualStyleBackColor = true;
@@ -3317,7 +3368,7 @@ namespace thing_2._1
             this.Column15});
             this.dataGridView11.Location = new System.Drawing.Point(6, 4);
             this.dataGridView11.Name = "dataGridView11";
-            this.dataGridView11.Size = new System.Drawing.Size(940, 416);
+            this.dataGridView11.Size = new System.Drawing.Size(940, 434);
             this.dataGridView11.TabIndex = 0;
             // 
             // Column13
@@ -3339,7 +3390,7 @@ namespace thing_2._1
             this.tabPage22.Controls.Add(this.tabControl5);
             this.tabPage22.Location = new System.Drawing.Point(4, 22);
             this.tabPage22.Name = "tabPage22";
-            this.tabPage22.Size = new System.Drawing.Size(949, 423);
+            this.tabPage22.Size = new System.Drawing.Size(949, 441);
             this.tabPage22.TabIndex = 14;
             this.tabPage22.Text = "Багатовимірна регрессія";
             this.tabPage22.UseVisualStyleBackColor = true;
@@ -3351,19 +3402,164 @@ namespace thing_2._1
             this.tabControl5.Location = new System.Drawing.Point(4, 4);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(942, 416);
+            this.tabControl5.Size = new System.Drawing.Size(942, 437);
             this.tabControl5.TabIndex = 0;
             // 
             // tabPage23
             // 
+            this.tabPage23.Controls.Add(this.tabControl6);
+            this.tabPage23.Controls.Add(this.groupBox11);
             this.tabPage23.Controls.Add(this.chart5);
             this.tabPage23.Location = new System.Drawing.Point(4, 22);
             this.tabPage23.Name = "tabPage23";
             this.tabPage23.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage23.Size = new System.Drawing.Size(934, 390);
+            this.tabPage23.Size = new System.Drawing.Size(934, 411);
             this.tabPage23.TabIndex = 0;
             this.tabPage23.Text = "tabPage23";
             this.tabPage23.UseVisualStyleBackColor = true;
+            // 
+            // tabControl6
+            // 
+            this.tabControl6.Controls.Add(this.tabPage25);
+            this.tabControl6.Controls.Add(this.tabPage26);
+            this.tabControl6.Location = new System.Drawing.Point(587, 226);
+            this.tabControl6.Name = "tabControl6";
+            this.tabControl6.SelectedIndex = 0;
+            this.tabControl6.Size = new System.Drawing.Size(341, 179);
+            this.tabControl6.TabIndex = 2;
+            // 
+            // tabPage25
+            // 
+            this.tabPage25.Controls.Add(this.dataGridView12);
+            this.tabPage25.Location = new System.Drawing.Point(4, 22);
+            this.tabPage25.Name = "tabPage25";
+            this.tabPage25.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage25.Size = new System.Drawing.Size(333, 153);
+            this.tabPage25.TabIndex = 0;
+            this.tabPage25.Text = "Звірка параметрів а";
+            this.tabPage25.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView12
+            // 
+            this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView12.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column16,
+            this.Column17});
+            this.dataGridView12.Location = new System.Drawing.Point(7, 7);
+            this.dataGridView12.Name = "dataGridView12";
+            this.dataGridView12.Size = new System.Drawing.Size(320, 140);
+            this.dataGridView12.TabIndex = 0;
+            // 
+            // tabPage26
+            // 
+            this.tabPage26.Controls.Add(this.dataGridView13);
+            this.tabPage26.Location = new System.Drawing.Point(4, 22);
+            this.tabPage26.Name = "tabPage26";
+            this.tabPage26.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage26.Size = new System.Drawing.Size(333, 153);
+            this.tabPage26.TabIndex = 1;
+            this.tabPage26.Text = "Довірчі інтервали";
+            this.tabPage26.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView13
+            // 
+            this.dataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView13.Location = new System.Drawing.Point(7, 7);
+            this.dataGridView13.Name = "dataGridView13";
+            this.dataGridView13.Size = new System.Drawing.Size(320, 140);
+            this.dataGridView13.TabIndex = 0;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.textBox29);
+            this.groupBox11.Controls.Add(this.label31);
+            this.groupBox11.Controls.Add(this.textBox28);
+            this.groupBox11.Controls.Add(this.label30);
+            this.groupBox11.Controls.Add(this.radioButton11);
+            this.groupBox11.Controls.Add(this.button35);
+            this.groupBox11.Controls.Add(this.radioButton10);
+            this.groupBox11.Controls.Add(this.radioButton9);
+            this.groupBox11.Location = new System.Drawing.Point(587, 7);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(341, 212);
+            this.groupBox11.TabIndex = 1;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Параметри регресії";
+            // 
+            // textBox29
+            // 
+            this.textBox29.Location = new System.Drawing.Point(9, 141);
+            this.textBox29.Name = "textBox29";
+            this.textBox29.Size = new System.Drawing.Size(114, 20);
+            this.textBox29.TabIndex = 7;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(6, 125);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(154, 13);
+            this.label31.TabIndex = 6;
+            this.label31.Text = "Критичний рівень значущості";
+            // 
+            // textBox28
+            // 
+            this.textBox28.Location = new System.Drawing.Point(9, 102);
+            this.textBox28.Name = "textBox28";
+            this.textBox28.Size = new System.Drawing.Size(114, 20);
+            this.textBox28.TabIndex = 5;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(6, 86);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(180, 13);
+            this.label30.TabIndex = 4;
+            this.label30.Text = "Виберіть номер залежного виміру";
+            // 
+            // radioButton11
+            // 
+            this.radioButton11.AutoSize = true;
+            this.radioButton11.Location = new System.Drawing.Point(7, 66);
+            this.radioButton11.Name = "radioButton11";
+            this.radioButton11.Size = new System.Drawing.Size(238, 17);
+            this.radioButton11.TabIndex = 3;
+            this.radioButton11.TabStop = true;
+            this.radioButton11.Text = "Багатовимірна регресія з вільним членом";
+            this.radioButton11.UseVisualStyleBackColor = true;
+            // 
+            // button35
+            // 
+            this.button35.Location = new System.Drawing.Point(73, 167);
+            this.button35.Name = "button35";
+            this.button35.Size = new System.Drawing.Size(198, 39);
+            this.button35.TabIndex = 2;
+            this.button35.Text = "Відтворити регресію";
+            this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.Location = new System.Drawing.Point(7, 43);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(245, 17);
+            this.radioButton10.TabIndex = 1;
+            this.radioButton10.TabStop = true;
+            this.radioButton10.Text = "Багатовимірна регресія без вільного члена";
+            this.radioButton10.UseVisualStyleBackColor = true;
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Location = new System.Drawing.Point(7, 20);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(130, 17);
+            this.radioButton9.TabIndex = 0;
+            this.radioButton9.TabStop = true;
+            this.radioButton9.Text = "Тривимірна регресія";
+            this.radioButton9.UseVisualStyleBackColor = true;
             // 
             // chart5
             // 
@@ -3375,9 +3571,9 @@ namespace thing_2._1
             this.chart5.Name = "chart5";
             series30.ChartArea = "ChartArea1";
             series30.Legend = "Legend1";
-            series30.Name = "Series1";
+            series30.Name = "Відхилення";
             this.chart5.Series.Add(series30);
-            this.chart5.Size = new System.Drawing.Size(806, 380);
+            this.chart5.Size = new System.Drawing.Size(574, 398);
             this.chart5.TabIndex = 0;
             this.chart5.Text = "chart5";
             // 
@@ -3386,16 +3582,27 @@ namespace thing_2._1
             this.tabPage24.Location = new System.Drawing.Point(4, 22);
             this.tabPage24.Name = "tabPage24";
             this.tabPage24.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage24.Size = new System.Drawing.Size(934, 390);
+            this.tabPage24.Size = new System.Drawing.Size(934, 411);
             this.tabPage24.TabIndex = 1;
             this.tabPage24.Text = "tabPage24";
             this.tabPage24.UseVisualStyleBackColor = true;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "Номер параметру";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "Значення";
+            this.Column17.Name = "Column17";
             // 
             // BodyOfForm
             // 
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1301, 742);
+            this.ClientSize = new System.Drawing.Size(1301, 762);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tabControl2);
             this.Controls.Add(this.tabControl1);
@@ -3449,6 +3656,7 @@ namespace thing_2._1
             this.tabPage10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -3491,6 +3699,13 @@ namespace thing_2._1
             this.tabPage22.ResumeLayout(false);
             this.tabControl5.ResumeLayout(false);
             this.tabPage23.ResumeLayout(false);
+            this.tabControl6.ResumeLayout(false);
+            this.tabPage25.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
+            this.tabPage26.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).EndInit();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -4279,6 +4494,9 @@ namespace thing_2._1
         {
             if (Data.MultiDemSamples.Count <= 0)
             {
+                dataGridView13.Rows.Clear();
+                dataGridView12.Rows.Clear();
+                dataGridView13.Columns.Clear();
                 dataGridView5.Rows.Clear();
                 dataGridView6.Rows.Clear();
                 dataGridView5.Columns.Clear();
@@ -4305,6 +4523,9 @@ namespace thing_2._1
             DataGridForChkk = null;
             pictureBox1.Image = null;
             dataGridView7.Rows.Clear();
+            dataGridView13.Rows.Clear();
+            dataGridView12.Rows.Clear();
+            dataGridView13.Columns.Clear();
             dataGridView7.Columns.Clear();
             int i, j, k;
             dataGridView7.Columns.Add(new DataGridViewTextBoxColumn());
@@ -4362,9 +4583,13 @@ namespace thing_2._1
             int DimNumber = Data.MultiDemSamples[Data.MultiDemCurrentSample].Length;
             for (i = 0; i < DimNumber; i++)
             {
-                dataGridView5.Columns.Add(new DataGridViewTextBoxColumn());
-                dataGridView6.Columns.Add(new DataGridViewTextBoxColumn());
+                dataGridView12.Rows.Add(""+(i+1),"");
             }
+                for (i = 0; i < DimNumber; i++)
+                {
+                    dataGridView5.Columns.Add(new DataGridViewTextBoxColumn());
+                    dataGridView6.Columns.Add(new DataGridViewTextBoxColumn());
+                }
             for (j = 0; j < DimNumber; j++)
             {
                 dataGridView5.Rows.Add();
@@ -5388,7 +5613,13 @@ namespace thing_2._1
             for (i = 0; i < Temp1.Count; i++)
             {
                 chart1.Series[0].Points.AddXY(Temp1[i], Temp2[i]);
-                chart2.Series[10].Points.AddXY(Temp1[i], Temp2[i]);
+            }
+            if (checkBox10.Checked)
+            {
+                for (i = 0; i < Temp1.Count; i++)
+                {
+                    chart2.Series[10].Points.AddXY(Temp1[i], Temp2[i]);
+                }
             }
             for (i = 0; i < CountX; i++)
             {
@@ -9659,10 +9890,6 @@ namespace thing_2._1
                 //this.ProgressBar.Value = 50;
                 Data.TwoDemCurrentSample.set(Data.TwoDemSamples.Count);
                 Data.CurrentSample.set(Data.DataForWork.Count);
-                for (int i = 0; i < 2; i++)
-                {
-                    Data.DataForWork.Add(new List<double>());
-                }
                 try
                 {
                     string[] FileLikeStrings = File.ReadAllLines(OpeningDialog.FileName);
@@ -9672,6 +9899,10 @@ namespace thing_2._1
                     {
                         LogOutputTextBox.Text += "Theres not enough columns on your file" + Environment.NewLine;
                         return;
+                    }
+                    for (int i = 0; i < 2; i++)
+                    {
+                        Data.DataForWork.Add(new List<double>());
                     }
                     int j;
                     for (int i = 0; i < FileLikeStrings.Length; i++)
@@ -13325,7 +13556,10 @@ namespace thing_2._1
                     dataGridView8.Rows.Clear();
                     dataGridView8.Columns.Clear();
                     dataGridView9.Rows.Clear();
-                    dataGridView9.Columns.Clear(); 
+                    dataGridView9.Columns.Clear();
+                    dataGridView13.Rows.Clear();
+                    dataGridView12.Rows.Clear();
+                    dataGridView13.Columns.Clear();
                     tableLayoutPanel1.ColumnStyles.Clear();
                     tableLayoutPanel1.RowStyles.Clear();
                     tableLayoutPanel1.Controls.Clear();
@@ -14838,6 +15072,172 @@ namespace thing_2._1
             if (Sum != NumOfPoints)
             {
                 LogOutputTextBox.Text += " Something bad happened. Weve counted only"+ Sum + " elements"+ Environment.NewLine;
+            }
+        }
+
+        private void button35_Click(object sender, EventArgs e)
+        {
+            if(Data.MultiDemSamples.Count==0)
+            {
+                LogOutputTextBox.Text += "Nothing to work with";
+                return;
+            }
+            int i, j,k;
+            int NumOfPoints = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count;
+            int DimNum = Data.MultiDemSamples[Data.MultiDemCurrentSample].Length;
+            int target;
+            if (!radioButton9.Checked && !radioButton10.Checked && !radioButton11.Checked)
+            {
+                LogOutputTextBox.Text += "Виберіть тип регрессії" + Environment.NewLine;
+                return;
+            }
+            try
+            {
+                target = Convert.ToInt32(textBox28.Text);
+                target--;
+                if (target < 0 || target >= Data.MultiDemSamples[Data.MultiDemCurrentSample].Length)
+                {
+                    throw new Exception();
+                }
+            }
+            catch
+            {
+                LogOutputTextBox.Text += "Номер залежного виміру введений невірно" + Environment.NewLine;
+                return;
+            }
+            double alfa;
+            try
+            {
+                alfa = Convert.ToDouble(textBox29.Text);
+            }
+            catch
+            {
+                textBox29.Text = "" + 0.05;
+                alfa = 0.05;
+            }
+            if (alfa <= 0 || alfa >= 1)
+            {
+                textBox29.Text = "" + 0.05;
+                alfa = 0.05;
+            }
+            double[] tempExp = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
+            double Summ, temp;
+            double[] Temps = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
+            double S2zal = 0, Szal;
+            double fval = 0;
+            double fstat = 0;
+            double R2;
+            double quan;
+            for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+            {
+                Summ = 0;
+                for (j = 0; j < NumOfPoints; j++)
+                {
+                    Summ += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][j];
+                }
+                tempExp[i] = Summ / NumOfPoints;
+                Temps[i] = 0;
+                for (j = 0; j < NumOfPoints; j++)
+                {
+                    Temps[i] += Math.Pow((Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][j] - tempExp[i]), 2);
+                }
+                Temps[i] *= (1.0) / (NumOfPoints - 1);
+                Temps[i] = (Math.Sqrt(Temps[i]));
+            }
+            /////
+            double[,] X = new double[NumOfPoints,DimNum], Xm1 = new double [DimNum,NumOfPoints];
+            for (i = 0; i < NumOfPoints; i++)
+            {
+                for (j = 0; j < DimNum; j++)
+                {
+                    X[i, j] = (Xm1[j, i] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][i]);
+                }
+            }
+            double[,] C = Matrixes.GetReverse(Matrixes.Multiply(Xm1,X,DimNum,DimNum,NumOfPoints),DimNum);
+            /////
+            if (radioButton9.Checked)
+            {
+                if (Data.MultiDemSamples[Data.MultiDemCurrentSample].Length != 3)
+                {
+                    LogOutputTextBox.Text += "Неможливо відтворити тривимірну регресію на цій виборці   " + Environment.NewLine;
+                    return;
+                }
+                double[] A = new double[DimNum];
+                int x1, x2, y;
+                y = target;
+                x1 = (y == 0) ? (1) : (0);
+                x2 = (y == 2) ? (1) : (2);
+                double x12 = 0, x22 = 0, yx1 = 0, yx2 = 0,x1x2=0;
+                for (i = 0; i < NumOfPoints; i++)
+                {
+                    x1x2 += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][x1]][i] * Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][x2]][i];
+                    yx1 += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][x1]][i] * Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i];
+                    yx2 += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][x2]][i] * Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i];
+                    x12 += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][x1]][i] * Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][x1]][i];
+                    x22 += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][x2]][i] * Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][x2]][i];
+                }
+                x1x2/=NumOfPoints;
+                yx1 /=NumOfPoints;
+                yx2 /=NumOfPoints;
+                x12 /=NumOfPoints;
+                x22 /= NumOfPoints;
+                double delta = x12 * x22 + 2 * tempExp[x1] * tempExp[x2] * x1x2 - x12 * tempExp[x2] * tempExp[x2] - x1x2 * x1x2 - x22 * tempExp[x1] * tempExp[x1];
+                A[0] =  (tempExp[y]*x12*x22+tempExp[x1]*x1x2*yx2+yx1*x1x2*tempExp[x2]-yx2*x12*tempExp[x2]-yx1*x22* tempExp[x1]-x1x2*x1x2*tempExp[y])/(delta);
+                A[1] =  (yx1*x22+tempExp[y]*x1x2*tempExp[x2]+yx2*tempExp[x1] * tempExp[x2]-tempExp[x2] * tempExp[x2]*yx1-x1x2*yx2-x22*tempExp[y] * tempExp[x1])/(delta);
+                A[2] = (x12 * yx2 + yx1 * tempExp[x1] * tempExp[x2] + x1x2 * tempExp[x1] * tempExp[y] - x12 * tempExp[x2] * tempExp[y] - x1x2 * yx1 - yx2 * tempExp[x1] * tempExp[x1]) / (delta);
+                    /////R2
+                    for (i = 0; i < NumOfPoints; i++)
+                    {
+                        fval = A[0];
+                        k = 1;
+                        for (j = 0; j < DimNum; j++)
+                        {
+                            if (j != y)
+                            {
+                                fval += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][i] * A[k];
+                                k++;
+                            }
+                        }
+                        S2zal += Math.Pow(fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i], 2);
+                    }
+                S2zal /= (NumOfPoints - DimNum);
+                Szal = Math.Sqrt(S2zal);
+                /////
+                for (i = 0; i < A.Length; i++)
+                {
+                    quan = Quantile.StudQuan(alfa, NumOfPoints - DimNum);
+                    if (A[i] / (Szal * Math.Sqrt(C[i, i])) > quan)
+                    {
+                        LogOutputTextBox.Text += "Коефіціент a" + (i) + " є значущим, інтервальна оцінка: " + (A[i] - quan * Szal * Math.Sqrt(C[i, i])) + "<=" + A[i] + "<=" + (A[i] + quan * Szal * Math.Sqrt(C[i, i])) + Environment.NewLine;
+                    }
+                    else
+                    {
+                        LogOutputTextBox.Text += "Коефіціент a" + (i) + " не  є значущим, інтервальна оцінка: " + (A[i] - quan * Szal * Math.Sqrt(C[i, i])) + "<=" + A[i] + "<=" + (A[i] + quan * Szal * Math.Sqrt(C[i, i])) + Environment.NewLine;
+                    }
+                }
+                ////
+                LogOutputTextBox.Text += "Коефіціент детермінацій = " + Math.Round((R2 = 1 - (S2zal / (Temps[y] * Temps[y]))) * 100, Data.NumberOfNum) + "%" + Environment.NewLine;
+                //Значущість регрессії
+                fstat = ((-1d + NumOfPoints - DimNum) / (DimNum)) * (((1d) / (1 - R2 * R2)) - 1);
+                quan = Quantile.FishQuan(1-alfa,DimNum,NumOfPoints-DimNum-1);
+                if (fstat > quan)
+                {
+                    LogOutputTextBox.Text += "Вітаємо! Доведено значущість відтвореної регрессії. Значення статистики - " + Math.Round(fstat, Data.NumberOfNum) + ", значення квантилю - " + Math.Round(quan, Data.NumberOfNum) + Environment.NewLine;
+                }
+                else
+                {
+                    LogOutputTextBox.Text += "На жаль, гапотеза про значущість регресії була спростована. Значення статистики - " + Math.Round(fstat, Data.NumberOfNum) + ", значення квантилю - " + Math.Round(quan, Data.NumberOfNum) + Environment.NewLine;
+                }
+                /////
+
+            }
+            if (radioButton10.Checked)
+            {
+                double[] A = new double[DimNum];
+            }
+            if (radioButton11.Checked)
+            {
+                double[] A = new double[DimNum+1];
             }
         }
     }
