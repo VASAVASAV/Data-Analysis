@@ -13,18 +13,18 @@ namespace thing_2._1
             {
                 Console.WriteLine("Shiet");
             }
-            if (Nu <= 60)
+            //if (Nu <= 60)
             {
-                double quan = StanQuanOdn(alfa);
+                double quan = StanQuanDv(alfa);
                 double g1 = 0.25 * (quan * quan * quan + quan);
                 double g2 = (1.0 / 96) * (5 * Math.Pow(quan, 5) + 16 * quan * quan * quan + 3 * quan);
                 double g3 = (1.0 / 384) * (3 * Math.Pow(quan, 7) + 19 * Math.Pow(quan, 5) + 17 * quan * quan * quan + 15 * quan);
                 double g4 = (1.0 / 92160) * (79 * Math.Pow(quan, 9) + 779 * Math.Pow(quan, 7) + 1482 * Math.Pow(quan, 5) - 1920 * quan * quan * quan - 945 * quan);
                 return quan + (1.0 / Nu) * g1 + (1.0 / (Nu * Nu)) * g2 + (1.0 / (Nu * Nu * Nu)) * g3 + (1.0 / (Nu * Nu * Nu * Nu)) * g4;
             }
-            else
+            //else
             {
-                return StanQuanOdn(alfa);
+            //    return StanQuanOdn(alfa);
             }
         }
         public static double HirsQuan(double alfa, int Nu)
@@ -64,7 +64,7 @@ namespace thing_2._1
             }
             if (alfa <= 0.5)
             {
-                return -1*StanQuanDv(alfa);
+                return StanQuanDv(alfa);//-1*????
             }
             else
             {

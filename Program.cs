@@ -269,10 +269,7 @@ namespace thing_2._1
         private CheckBox checkBox7;
         private Button button34;
         private TabPage tabPage22;
-        private TabControl tabControl5;
-        private TabPage tabPage23;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart5;
-        private TabPage tabPage24;
         private PictureBox pictureBox1;
         private CheckBox checkBox9;
         private CheckBox checkBox8;
@@ -294,6 +291,11 @@ namespace thing_2._1
         private DataGridView dataGridView13;
         private DataGridViewTextBoxColumn Column16;
         private DataGridViewTextBoxColumn Column17;
+        private DataGridViewTextBoxColumn Column18;
+        private DataGridViewTextBoxColumn Column19;
+        private DataGridViewTextBoxColumn Column20;
+        private DataGridViewTextBoxColumn Column21;
+        private DataGridViewTextBoxColumn Column22;
         private DataGridView[] DataGridForChkk;
     
         public BodyOfForm()
@@ -384,7 +386,6 @@ namespace thing_2._1
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series29 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series30 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -642,13 +643,18 @@ namespace thing_2._1
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage22 = new System.Windows.Forms.TabPage();
-            this.tabControl5 = new System.Windows.Forms.TabControl();
-            this.tabPage23 = new System.Windows.Forms.TabPage();
             this.tabControl6 = new System.Windows.Forms.TabControl();
             this.tabPage25 = new System.Windows.Forms.TabPage();
             this.dataGridView12 = new System.Windows.Forms.DataGridView();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage26 = new System.Windows.Forms.TabPage();
             this.dataGridView13 = new System.Windows.Forms.DataGridView();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.textBox29 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
@@ -659,9 +665,6 @@ namespace thing_2._1
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.chart5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.tabPage24 = new System.Windows.Forms.TabPage();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -727,8 +730,6 @@ namespace thing_2._1
             this.tabPage21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
             this.tabPage22.SuspendLayout();
-            this.tabControl5.SuspendLayout();
-            this.tabPage23.SuspendLayout();
             this.tabControl6.SuspendLayout();
             this.tabPage25.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
@@ -3387,7 +3388,9 @@ namespace thing_2._1
             // 
             // tabPage22
             // 
-            this.tabPage22.Controls.Add(this.tabControl5);
+            this.tabPage22.Controls.Add(this.tabControl6);
+            this.tabPage22.Controls.Add(this.groupBox11);
+            this.tabPage22.Controls.Add(this.chart5);
             this.tabPage22.Location = new System.Drawing.Point(4, 22);
             this.tabPage22.Name = "tabPage22";
             this.tabPage22.Size = new System.Drawing.Size(949, 441);
@@ -3395,37 +3398,14 @@ namespace thing_2._1
             this.tabPage22.Text = "Багатовимірна регрессія";
             this.tabPage22.UseVisualStyleBackColor = true;
             // 
-            // tabControl5
-            // 
-            this.tabControl5.Controls.Add(this.tabPage23);
-            this.tabControl5.Controls.Add(this.tabPage24);
-            this.tabControl5.Location = new System.Drawing.Point(4, 4);
-            this.tabControl5.Name = "tabControl5";
-            this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(942, 437);
-            this.tabControl5.TabIndex = 0;
-            // 
-            // tabPage23
-            // 
-            this.tabPage23.Controls.Add(this.tabControl6);
-            this.tabPage23.Controls.Add(this.groupBox11);
-            this.tabPage23.Controls.Add(this.chart5);
-            this.tabPage23.Location = new System.Drawing.Point(4, 22);
-            this.tabPage23.Name = "tabPage23";
-            this.tabPage23.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage23.Size = new System.Drawing.Size(934, 411);
-            this.tabPage23.TabIndex = 0;
-            this.tabPage23.Text = "tabPage23";
-            this.tabPage23.UseVisualStyleBackColor = true;
-            // 
             // tabControl6
             // 
             this.tabControl6.Controls.Add(this.tabPage25);
             this.tabControl6.Controls.Add(this.tabPage26);
-            this.tabControl6.Location = new System.Drawing.Point(587, 226);
+            this.tabControl6.Location = new System.Drawing.Point(571, 243);
             this.tabControl6.Name = "tabControl6";
             this.tabControl6.SelectedIndex = 0;
-            this.tabControl6.Size = new System.Drawing.Size(341, 179);
+            this.tabControl6.Size = new System.Drawing.Size(375, 195);
             this.tabControl6.TabIndex = 2;
             // 
             // tabPage25
@@ -3434,21 +3414,34 @@ namespace thing_2._1
             this.tabPage25.Location = new System.Drawing.Point(4, 22);
             this.tabPage25.Name = "tabPage25";
             this.tabPage25.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage25.Size = new System.Drawing.Size(333, 153);
+            this.tabPage25.Size = new System.Drawing.Size(367, 169);
             this.tabPage25.TabIndex = 0;
             this.tabPage25.Text = "Звірка параметрів а";
             this.tabPage25.UseVisualStyleBackColor = true;
             // 
             // dataGridView12
             // 
+            this.dataGridView12.AllowUserToAddRows = false;
+            this.dataGridView12.AllowUserToDeleteRows = false;
             this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView12.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column16,
             this.Column17});
             this.dataGridView12.Location = new System.Drawing.Point(7, 7);
             this.dataGridView12.Name = "dataGridView12";
-            this.dataGridView12.Size = new System.Drawing.Size(320, 140);
+            this.dataGridView12.Size = new System.Drawing.Size(354, 156);
             this.dataGridView12.TabIndex = 0;
+            // 
+            // Column16
+            // 
+            this.Column16.HeaderText = "Номер параметру";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "Значення";
+            this.Column17.Name = "Column17";
             // 
             // tabPage26
             // 
@@ -3456,18 +3449,61 @@ namespace thing_2._1
             this.tabPage26.Location = new System.Drawing.Point(4, 22);
             this.tabPage26.Name = "tabPage26";
             this.tabPage26.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage26.Size = new System.Drawing.Size(333, 153);
+            this.tabPage26.Size = new System.Drawing.Size(367, 169);
             this.tabPage26.TabIndex = 1;
             this.tabPage26.Text = "Довірчі інтервали";
             this.tabPage26.UseVisualStyleBackColor = true;
             // 
             // dataGridView13
             // 
+            this.dataGridView13.AllowUserToAddRows = false;
+            this.dataGridView13.AllowUserToDeleteRows = false;
             this.dataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView13.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column18,
+            this.Column19,
+            this.Column20,
+            this.Column21,
+            this.Column22});
             this.dataGridView13.Location = new System.Drawing.Point(7, 7);
             this.dataGridView13.Name = "dataGridView13";
-            this.dataGridView13.Size = new System.Drawing.Size(320, 140);
+            this.dataGridView13.Size = new System.Drawing.Size(357, 156);
             this.dataGridView13.TabIndex = 0;
+            // 
+            // Column18
+            // 
+            this.Column18.HeaderText = "Номер";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            this.Column18.Width = 40;
+            // 
+            // Column19
+            // 
+            this.Column19.HeaderText = "Нижня ДІ";
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            this.Column19.Width = 75;
+            // 
+            // Column20
+            // 
+            this.Column20.HeaderText = "Значення у";
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
+            this.Column20.Width = 75;
+            // 
+            // Column21
+            // 
+            this.Column21.HeaderText = "Верхній ДІ";
+            this.Column21.Name = "Column21";
+            this.Column21.ReadOnly = true;
+            this.Column21.Width = 75;
+            // 
+            // Column22
+            // 
+            this.Column22.HeaderText = "Перевірка збігу";
+            this.Column22.Name = "Column22";
+            this.Column22.ReadOnly = true;
+            this.Column22.Width = 40;
             // 
             // groupBox11
             // 
@@ -3479,9 +3515,9 @@ namespace thing_2._1
             this.groupBox11.Controls.Add(this.button35);
             this.groupBox11.Controls.Add(this.radioButton10);
             this.groupBox11.Controls.Add(this.radioButton9);
-            this.groupBox11.Location = new System.Drawing.Point(587, 7);
+            this.groupBox11.Location = new System.Drawing.Point(575, 3);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(341, 212);
+            this.groupBox11.Size = new System.Drawing.Size(371, 234);
             this.groupBox11.TabIndex = 1;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Параметри регресії";
@@ -3531,7 +3567,7 @@ namespace thing_2._1
             // 
             // button35
             // 
-            this.button35.Location = new System.Drawing.Point(73, 167);
+            this.button35.Location = new System.Drawing.Point(83, 167);
             this.button35.Name = "button35";
             this.button35.Size = new System.Drawing.Size(198, 39);
             this.button35.TabIndex = 2;
@@ -3565,38 +3601,15 @@ namespace thing_2._1
             // 
             chartArea7.Name = "ChartArea1";
             this.chart5.ChartAreas.Add(chartArea7);
-            legend3.Name = "Legend1";
-            this.chart5.Legends.Add(legend3);
-            this.chart5.Location = new System.Drawing.Point(7, 7);
+            this.chart5.Location = new System.Drawing.Point(6, 3);
             this.chart5.Name = "chart5";
             series30.ChartArea = "ChartArea1";
-            series30.Legend = "Legend1";
+            series30.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
             series30.Name = "Відхилення";
             this.chart5.Series.Add(series30);
-            this.chart5.Size = new System.Drawing.Size(574, 398);
+            this.chart5.Size = new System.Drawing.Size(559, 431);
             this.chart5.TabIndex = 0;
             this.chart5.Text = "chart5";
-            // 
-            // tabPage24
-            // 
-            this.tabPage24.Location = new System.Drawing.Point(4, 22);
-            this.tabPage24.Name = "tabPage24";
-            this.tabPage24.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage24.Size = new System.Drawing.Size(934, 411);
-            this.tabPage24.TabIndex = 1;
-            this.tabPage24.Text = "tabPage24";
-            this.tabPage24.UseVisualStyleBackColor = true;
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "Номер параметру";
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "Значення";
-            this.Column17.Name = "Column17";
             // 
             // BodyOfForm
             // 
@@ -3697,8 +3710,6 @@ namespace thing_2._1
             this.tabPage21.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
             this.tabPage22.ResumeLayout(false);
-            this.tabControl5.ResumeLayout(false);
-            this.tabPage23.ResumeLayout(false);
             this.tabControl6.ResumeLayout(false);
             this.tabPage25.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
@@ -4494,9 +4505,9 @@ namespace thing_2._1
         {
             if (Data.MultiDemSamples.Count <= 0)
             {
+                chart5.Series[0].Points.Clear();
                 dataGridView13.Rows.Clear();
                 dataGridView12.Rows.Clear();
-                dataGridView13.Columns.Clear();
                 dataGridView5.Rows.Clear();
                 dataGridView6.Rows.Clear();
                 dataGridView5.Columns.Clear();
@@ -4523,22 +4534,22 @@ namespace thing_2._1
             DataGridForChkk = null;
             pictureBox1.Image = null;
             dataGridView7.Rows.Clear();
+            chart5.Series[0].Points.Clear();
             dataGridView13.Rows.Clear();
             dataGridView12.Rows.Clear();
-            dataGridView13.Columns.Clear();
             dataGridView7.Columns.Clear();
             int i, j, k;
             dataGridView7.Columns.Add(new DataGridViewTextBoxColumn());
             dataGridView7.Columns.Add(new DataGridViewTextBoxColumn());
             dataGridView7.Columns[0].ReadOnly = true;
             dataGridView7.Columns[1].ReadOnly = true;
-            dataGridView7.Columns[0].HeaderText = "Expected values";
+            dataGridView7.Columns[0].HeaderText = "Math expectation";
             dataGridView7.Columns[1].HeaderText = "Standart deviation";
             dataGridView7.Columns.Add(new DataGridViewTextBoxColumn());
             dataGridView7.Columns.Add(new DataGridViewTextBoxColumn());
             dataGridView7.Columns[2].ReadOnly = true;
             dataGridView7.Columns[3].ReadOnly = true;
-            dataGridView7.Columns[2].HeaderText = "Standart deviation of expected value";
+            dataGridView7.Columns[2].HeaderText = "Standart deviation of math expectation";
             dataGridView7.Columns[3].HeaderText = "Standart deviation of standart deviation";
             double Summ;
             double[] tempExp = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
@@ -13557,9 +13568,9 @@ namespace thing_2._1
                     dataGridView8.Columns.Clear();
                     dataGridView9.Rows.Clear();
                     dataGridView9.Columns.Clear();
+                    chart5.Series[0].Points.Clear();
                     dataGridView13.Rows.Clear();
                     dataGridView12.Rows.Clear();
-                    dataGridView13.Columns.Clear();
                     tableLayoutPanel1.ColumnStyles.Clear();
                     tableLayoutPanel1.RowStyles.Clear();
                     tableLayoutPanel1.Controls.Clear();
@@ -15145,15 +15156,31 @@ namespace thing_2._1
                 Temps[i] = (Math.Sqrt(Temps[i]));
             }
             /////
-            double[,] X = new double[NumOfPoints,DimNum], Xm1 = new double [DimNum,NumOfPoints];
+            double[,] X = new double[NumOfPoints,DimNum-1], Xm1 = new double [DimNum-1,NumOfPoints];
+            double[,] Xv = new double[1,DimNum-1];
+            int y;
+            y = target;
             for (i = 0; i < NumOfPoints; i++)
             {
-                for (j = 0; j < DimNum; j++)
+                for (j = 0,k=0; k < DimNum; j++)
                 {
-                    X[i, j] = (Xm1[j, i] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][i]);
+                    if (k != y)
+                    {
+                        X[i, j] = (Xm1[j, i] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][i]);
+                        k++;
+                    }
+                    else
+                    {
+                        k++;
+                        j--;
+                    }
                 }
             }
-            double[,] C = Matrixes.GetReverse(Matrixes.Multiply(Xm1,X,DimNum,DimNum,NumOfPoints),DimNum);
+            double[,] Temp1Mat = Matrixes.Multiply(Xm1, X, DimNum - 1, DimNum - 1, NumOfPoints);
+            double[,] C = Matrixes.GetReverse(Temp1Mat, DimNum - 1);
+            double alfa1=1-alfa/2, alfa2=alfa/2;
+            double Multipl;
+            double[,] temp1;
             /////
             if (radioButton9.Checked)
             {
@@ -15163,8 +15190,7 @@ namespace thing_2._1
                     return;
                 }
                 double[] A = new double[DimNum];
-                int x1, x2, y;
-                y = target;
+                int x1, x2;
                 x1 = (y == 0) ? (1) : (0);
                 x2 = (y == 2) ? (1) : (2);
                 double x12 = 0, x22 = 0, yx1 = 0, yx2 = 0,x1x2=0;
@@ -15185,6 +15211,269 @@ namespace thing_2._1
                 A[0] =  (tempExp[y]*x12*x22+tempExp[x1]*x1x2*yx2+yx1*x1x2*tempExp[x2]-yx2*x12*tempExp[x2]-yx1*x22* tempExp[x1]-x1x2*x1x2*tempExp[y])/(delta);
                 A[1] =  (yx1*x22+tempExp[y]*x1x2*tempExp[x2]+yx2*tempExp[x1] * tempExp[x2]-tempExp[x2] * tempExp[x2]*yx1-x1x2*yx2-x22*tempExp[y] * tempExp[x1])/(delta);
                 A[2] = (x12 * yx2 + yx1 * tempExp[x1] * tempExp[x2] + x1x2 * tempExp[x1] * tempExp[y] - x12 * tempExp[x2] * tempExp[y] - x1x2 * yx1 - yx2 * tempExp[x1] * tempExp[x1]) / (delta);
+                /////R2
+                for (i = 0; i < NumOfPoints; i++)
+                {
+                    fval = A[0];
+                    k = 1;
+                    for (j = 0; j < DimNum; j++)
+                    {
+                        if (j != y)
+                        {
+                            fval += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][i] * A[k];
+                            k++;
+                        }
+                    }
+                    S2zal += Math.Pow(fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i], 2);
+                }
+                S2zal /= (NumOfPoints - DimNum);
+                Szal = Math.Sqrt(S2zal);
+                /////
+                LogOutputTextBox.Text += "Коефіціент a" + (0) + "=" + Math.Round(A[0], Data.NumberOfNum) + Environment.NewLine;
+                for (i = 1; i < A.Length; i++)
+                {
+                    quan = Quantile.StudQuan(alfa, NumOfPoints - DimNum);
+                    if (Math.Abs(A[i] / (Szal * Math.Sqrt(C[i-1, i-1]))) > quan)
+                    {
+                        LogOutputTextBox.Text += "Коефіціент a" + (i) + " є значущим, інтервальна оцінка: " + Math.Round((A[i] - quan * Szal * Math.Sqrt(C[i - 1, i - 1])), Data.NumberOfNum) + "<=" + Math.Round(A[i], Data.NumberOfNum) + "<=" + Math.Round((A[i] + quan * Szal * Math.Sqrt(C[i - 1, i - 1])), Data.NumberOfNum) + Environment.NewLine;
+                    }
+                    else
+                    {
+                        LogOutputTextBox.Text += "Коефіціент a" + (i) + " не  є значущим, інтервальна оцінка: " + Math.Round((A[i] - quan * Szal * Math.Sqrt(C[i - 1, i - 1])), Data.NumberOfNum) + "<=" + Math.Round(A[i], Data.NumberOfNum) + "<=" + Math.Round((A[i] + quan * Szal * Math.Sqrt(C[i - 1, i - 1])), Data.NumberOfNum) + Environment.NewLine;
+                    }
+                    try
+                    {
+                        temp = Convert.ToDouble(dataGridView12.Rows[i].Cells[1].Value);
+                        if (Math.Abs(A[i] - temp) / (Szal * Math.Sqrt(C[i - 1, i - 1])) > quan)
+                        {
+                            LogOutputTextBox.Text += "Коефіціент a не співпадає з заданим користувачем значенням" + Environment.NewLine;
+                        }
+                        else
+                        {
+                            LogOutputTextBox.Text += "Коефіціент a співпадає з заданим користувачем значенням" + Environment.NewLine;
+                        }
+                    }
+                    catch
+                    { 
+                    }
+                }
+                LogOutputTextBox.Text += "Стандартизовані оцінки параметрів :" + Environment.NewLine;
+               // for (i = 1; i < A.Length; i++)
+                {
+                    LogOutputTextBox.Text += "а1* = " + Math.Round(((A[1] * Temps[x1]) / Temps[y]), Data.NumberOfNum) + Environment.NewLine;
+                    LogOutputTextBox.Text += "а2* = " + Math.Round(((A[2] * Temps[x2]) / Temps[y]), Data.NumberOfNum) + Environment.NewLine;
+                }
+                ////
+                LogOutputTextBox.Text += "Коефіціент детермінацій = " + Math.Round((R2 = 1 - (S2zal / (Temps[y] * Temps[y]))) * 100, Data.NumberOfNum) + "%" + Environment.NewLine;
+                //Значущість регрессії
+                fstat = ((-1d + NumOfPoints - DimNum) / (DimNum)) * (((1d) / (1 - R2 * R2)) - 1);
+                quan = Quantile.FishQuan(1-alfa,DimNum,NumOfPoints-DimNum-1);
+                if (fstat > quan)
+                {
+                    LogOutputTextBox.Text += "Вітаємо! Доведено значущість відтвореної регрессії. Значення статистики - " + Math.Round(fstat, Data.NumberOfNum) + ", значення квантилю - " + Math.Round(quan, Data.NumberOfNum) + Environment.NewLine;
+                }
+                else
+                {
+                    LogOutputTextBox.Text += "На жаль, гапотеза про значущість регресії була спростована. Значення статистики - " + Math.Round(fstat, Data.NumberOfNum) + ", значення квантилю - " + Math.Round(quan, Data.NumberOfNum) + Environment.NewLine;
+                }
+                /////
+                LogOutputTextBox.Text += "Довірчі інтервали залишкової дисперсії: " + Math.Round((S2zal * (NumOfPoints - DimNum)) / (Quantile.HirsQuan(alfa2, NumOfPoints - DimNum)), Data.NumberOfNum) + "<=" + Math.Round(S2zal, Data.NumberOfNum) + "<=" + Math.Round((S2zal * (NumOfPoints - DimNum)) / (Quantile.HirsQuan(alfa1, NumOfPoints - DimNum)), Data.NumberOfNum) + Environment.NewLine;
+                ///////
+                dataGridView13.Rows.Clear();
+                chart5.Series[0].Points.Clear();
+                quan = Quantile.StudQuan(alfa, NumOfPoints - DimNum);
+                for (i = 0; i < NumOfPoints; i++)
+                {
+                    fval = A[0];
+                    k = 1;
+                    for (j = 0; j < DimNum; j++)
+                    {
+                        if (j != y)
+                        {
+                            fval += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][i] * A[k];
+                            k++;
+                        }
+                    }
+                    chart5.Series[0].Points.AddXY(Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i], Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i] - fval);
+                    for (j = 0,k = 0; j < DimNum-1; j++,k++)
+                    {
+                        if(k==y)
+                        {
+                            k++;
+                        }
+                        Xv[0,j] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][i];
+                    }
+                   // S2zal += Math.Pow(fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i], 2);
+                    temp = fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i];
+                    temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum-1, DimNum-1), Matrixes.GetTransp(Xv, 1, DimNum-1), 1, 1, DimNum-1);
+                    Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum-1, DimNum-1), Matrixes.GetTransp(Xv, 1, DimNum-1), 1, 1, DimNum-1)[0, 0]);
+                    temp/= (Multipl);
+                    dataGridView13.Rows.Add((i + 1), Math.Round(fval - quan * Multipl,Data.NumberOfNum), Math.Round(Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i],Data.NumberOfNum),Math.Round(fval + quan * Multipl,Data.NumberOfNum), (Math.Abs(temp) > quan) ? ("-") : ("+"));
+                    //'/не забудь что не нужно оценивать а0
+                }
+
+            }
+            if (radioButton10.Checked)
+            {
+                double[] A = new double[DimNum];
+                double[,] Y0 = new double[NumOfPoints, 1];
+                for (i = 0; i < NumOfPoints; i++)
+                {
+                    Y0[i, 0] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i];
+                }
+                Temp1Mat = Matrixes.Multiply(Xm1, Y0, DimNum - 1, 1, NumOfPoints);
+                Temp1Mat = Matrixes.Multiply(C, Temp1Mat, DimNum - 1, 1, DimNum-1);
+                for (i = 0; i < DimNum - 1; i++)
+                {
+                    A[i + 1] = Temp1Mat[i, 0];
+                }
+                /////R2
+                for (i = 0; i < NumOfPoints; i++)
+                {
+                    fval = 0;
+                    k = 1;
+                    for (j = 0; j < DimNum; j++)
+                    {
+                        if (j != y)
+                        {
+                            fval += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][i] * A[k];
+                            k++;
+                        }
+                    }
+                    S2zal += Math.Pow(fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i], 2);
+                }
+                S2zal /= (NumOfPoints - DimNum);
+                Szal = Math.Sqrt(S2zal);
+                /////
+                for (i = 1; i < A.Length; i++)
+                {
+                    quan = Quantile.StudQuan(alfa, NumOfPoints - DimNum);
+                    if (Math.Abs(A[i] / (Szal * Math.Sqrt(C[i - 1, i - 1]))) > quan)
+                    {
+                        LogOutputTextBox.Text += "Коефіціент a" + (i) + " є значущим, інтервальна оцінка: " + Math.Round((A[i] - quan * Szal * Math.Sqrt(C[i - 1, i - 1])), Data.NumberOfNum) + "<=" + Math.Round(A[i], Data.NumberOfNum) + "<=" + Math.Round((A[i] + quan * Szal * Math.Sqrt(C[i - 1, i - 1])), Data.NumberOfNum) + Environment.NewLine;
+                    }
+                    else
+                    {
+                        LogOutputTextBox.Text += "Коефіціент a" + (i) + " не  є значущим, інтервальна оцінка: " + Math.Round((A[i] - quan * Szal * Math.Sqrt(C[i - 1, i - 1])), Data.NumberOfNum) + "<=" + Math.Round(A[i], Data.NumberOfNum) + "<=" + Math.Round((A[i] + quan * Szal * Math.Sqrt(C[i - 1, i - 1])), Data.NumberOfNum) + Environment.NewLine;
+                    }
+                    try
+                    {
+                        temp = Convert.ToDouble(dataGridView12.Rows[i].Cells[1].Value);
+                        if (Math.Abs(A[i] - temp) / (Szal * Math.Sqrt(C[i - 1, i - 1])) > quan)
+                        {
+                            LogOutputTextBox.Text += "Коефіціент a не співпадає з заданим користувачем значенням" + Environment.NewLine;
+                        }
+                        else
+                        {
+                            LogOutputTextBox.Text += "Коефіціент a співпадає з заданим користувачем значенням" + Environment.NewLine;
+                        }
+                    }
+                    catch
+                    {
+                    }
+                }
+                k = 0;
+                LogOutputTextBox.Text += "Стандартизовані оцінки параметрів :" + Environment.NewLine;
+                for (i = 1; i < A.Length; i++)
+                {
+                    if (k == y)
+                    {
+                        k++;
+                    }
+                    LogOutputTextBox.Text += "а" + i + "* = " + Math.Round(((A[1] * Temps[k]) / Temps[y]), Data.NumberOfNum) + Environment.NewLine;
+                    k++;
+                }
+                ////
+                LogOutputTextBox.Text += "Коефіціент детермінацій = " + Math.Round((R2 = 1 - (S2zal / (Temps[y] * Temps[y]))) * 100, Data.NumberOfNum) + "%" + Environment.NewLine;
+                //Значущість регрессії
+                fstat = ((-1d + NumOfPoints - DimNum) / (DimNum)) * (((1d) / (1 - R2 * R2)) - 1);
+                quan = Quantile.FishQuan(1 - alfa, DimNum, NumOfPoints - DimNum - 1);
+                if (fstat > quan)
+                {
+                    LogOutputTextBox.Text += "Вітаємо! Доведено значущість відтвореної регрессії. Значення статистики - " + Math.Round(fstat, Data.NumberOfNum) + ", значення квантилю - " + Math.Round(quan, Data.NumberOfNum) + Environment.NewLine;
+                }
+                else
+                {
+                    LogOutputTextBox.Text += "На жаль, гапотеза про значущість регресії була спростована. Значення статистики - " + Math.Round(fstat, Data.NumberOfNum) + ", значення квантилю - " + Math.Round(quan, Data.NumberOfNum) + Environment.NewLine;
+                }
+                /////
+                LogOutputTextBox.Text += "Довірчі інтервали залишкової дисперсії: " + Math.Round((S2zal * (NumOfPoints - DimNum)) / (Quantile.HirsQuan(alfa2, NumOfPoints - DimNum)), Data.NumberOfNum) + "<=" + Math.Round(S2zal, Data.NumberOfNum) + "<=" + Math.Round((S2zal * (NumOfPoints - DimNum)) / (Quantile.HirsQuan(alfa1, NumOfPoints - DimNum)), Data.NumberOfNum) + Environment.NewLine;
+                ///////
+                dataGridView13.Rows.Clear();
+                chart5.Series[0].Points.Clear();
+                quan = Quantile.StudQuan(alfa, NumOfPoints - DimNum);
+                for (i = 0; i < NumOfPoints; i++)
+                {
+                    fval = 0;
+                    k = 1;
+                    for (j = 0; j < DimNum; j++)
+                    {
+                        if (j != y)
+                        {
+                            fval += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][i] * A[k];
+                            k++;
+                        }
+                    }
+                    chart5.Series[0].Points.AddXY(Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i], Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i] - fval);
+                    for (j = 0, k = 0; j < DimNum - 1; j++, k++)
+                    {
+                        if (k == y)
+                        {
+                            k++;
+                        }
+                        Xv[0, j] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][i];
+                    }
+                    // S2zal += Math.Pow(fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i], 2);
+                    temp = fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i];
+                    temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum - 1, DimNum - 1), Matrixes.GetTransp(Xv, 1, DimNum - 1), 1, 1, DimNum - 1);
+                    Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum - 1, DimNum - 1), Matrixes.GetTransp(Xv, 1, DimNum - 1), 1, 1, DimNum - 1)[0, 0]);
+                    temp /= (Multipl);
+                    dataGridView13.Rows.Add((i + 1), Math.Round(fval - quan * Multipl,Data.NumberOfNum), Math.Round(Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i],Data.NumberOfNum), Math.Round(fval + quan * Multipl,Data.NumberOfNum), (Math.Abs(temp) > quan) ? ("-") : ("+"));
+                    //'/не забудь что не нужно оценивать а0
+                }
+            }
+            if (radioButton11.Checked)
+            {
+                double[] A = new double[DimNum];
+                for (i = 0; i < NumOfPoints; i++)
+                {
+                    for (j = 0,k=0; j < DimNum; j++,k++)
+                    {
+                        if (j != y)
+                        {
+                            X[i, k] -= tempExp[j];
+                            Xm1[k, i] -= tempExp[j];
+                        }
+                        else
+                        {
+                            k--;
+                        }
+                    }
+                }
+                double[,] Y0 = new double[NumOfPoints, 1];
+                for (i = 0; i < NumOfPoints; i++)
+                {
+                    Y0[i,0] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i]-tempExp[y];
+                }
+                Temp1Mat = Matrixes.Multiply(Xm1,X,DimNum-1,DimNum-1,NumOfPoints);
+                Temp1Mat = Matrixes.GetReverse(Temp1Mat,DimNum-1);
+                Temp1Mat = Matrixes.Multiply(Temp1Mat, Xm1, DimNum - 1, NumOfPoints, DimNum-1);
+                Temp1Mat = Matrixes.Multiply(Temp1Mat, Y0, DimNum - 1, 1, NumOfPoints);
+                for (i = 0; i < DimNum - 1; i++)
+                {
+                    A[i + 1] = Temp1Mat[i, 0];
+                }
+                Summ =0;
+                k = 0;
+                for (i = 0; i < DimNum; i++)
+                {
+                    if (i != y)
+                    {
+                        Summ += A[k + 1] * tempExp[i];
+                        k++;
+                    }
+                }
+                A[0] = tempExp[y] - Summ;
                     /////R2
                     for (i = 0; i < NumOfPoints; i++)
                     {
@@ -15203,23 +15492,50 @@ namespace thing_2._1
                 S2zal /= (NumOfPoints - DimNum);
                 Szal = Math.Sqrt(S2zal);
                 /////
-                for (i = 0; i < A.Length; i++)
+                LogOutputTextBox.Text += "Коефіціент a" + (0) + "=" + Math.Round(A[0], Data.NumberOfNum) + Environment.NewLine;
+                for (i = 1; i < A.Length; i++)
                 {
                     quan = Quantile.StudQuan(alfa, NumOfPoints - DimNum);
-                    if (A[i] / (Szal * Math.Sqrt(C[i, i])) > quan)
+                    if (Math.Abs(A[i] / (Szal * Math.Sqrt(C[i - 1, i - 1]))) > quan)
                     {
-                        LogOutputTextBox.Text += "Коефіціент a" + (i) + " є значущим, інтервальна оцінка: " + (A[i] - quan * Szal * Math.Sqrt(C[i, i])) + "<=" + A[i] + "<=" + (A[i] + quan * Szal * Math.Sqrt(C[i, i])) + Environment.NewLine;
+                        LogOutputTextBox.Text += "Коефіціент a" + (i) + " є значущим, інтервальна оцінка: " + Math.Round((A[i] - quan * Szal * Math.Sqrt(C[i - 1, i - 1])), Data.NumberOfNum) + "<=" + Math.Round(A[i], Data.NumberOfNum) + "<=" + Math.Round((A[i] + quan * Szal * Math.Sqrt(C[i - 1, i - 1])), Data.NumberOfNum) + Environment.NewLine;
                     }
                     else
                     {
-                        LogOutputTextBox.Text += "Коефіціент a" + (i) + " не  є значущим, інтервальна оцінка: " + (A[i] - quan * Szal * Math.Sqrt(C[i, i])) + "<=" + A[i] + "<=" + (A[i] + quan * Szal * Math.Sqrt(C[i, i])) + Environment.NewLine;
+                        LogOutputTextBox.Text += "Коефіціент a" + (i) + " не  є значущим, інтервальна оцінка: " + Math.Round((A[i] - quan * Szal * Math.Sqrt(C[i - 1, i - 1])), Data.NumberOfNum) + "<=" + Math.Round(A[i], Data.NumberOfNum) + "<=" + Math.Round((A[i] + quan * Szal * Math.Sqrt(C[i - 1, i - 1])), Data.NumberOfNum) + Environment.NewLine;
                     }
+                    try
+                    {
+                        temp = Convert.ToDouble(dataGridView12.Rows[i].Cells[1].Value);
+                        if (Math.Abs(A[i] - temp) / (Szal * Math.Sqrt(C[i - 1, i - 1])) > quan)
+                        {
+                            LogOutputTextBox.Text += "Коефіціент a не співпадає з заданим користувачем значенням" + Environment.NewLine;
+                        }
+                        else
+                        {
+                            LogOutputTextBox.Text += "Коефіціент a співпадає з заданим користувачем значенням" + Environment.NewLine;
+                        }
+                    }
+                    catch
+                    {
+                    }
+                }
+                k = 0;
+                LogOutputTextBox.Text += "Стандартизовані оцінки параметрів :" + Environment.NewLine;
+                 for (i = 1; i < A.Length; i++)
+                {
+                    if (k == y)
+                    {
+                        k++;
+                    }
+                    LogOutputTextBox.Text += "а" + i + "* = " + Math.Round(((A[1] * Temps[k]) / Temps[y]), Data.NumberOfNum) + Environment.NewLine;
+                    k++;
                 }
                 ////
                 LogOutputTextBox.Text += "Коефіціент детермінацій = " + Math.Round((R2 = 1 - (S2zal / (Temps[y] * Temps[y]))) * 100, Data.NumberOfNum) + "%" + Environment.NewLine;
                 //Значущість регрессії
                 fstat = ((-1d + NumOfPoints - DimNum) / (DimNum)) * (((1d) / (1 - R2 * R2)) - 1);
-                quan = Quantile.FishQuan(1-alfa,DimNum,NumOfPoints-DimNum-1);
+                quan = Quantile.FishQuan(1 - alfa, DimNum, NumOfPoints - DimNum - 1);
                 if (fstat > quan)
                 {
                     LogOutputTextBox.Text += "Вітаємо! Доведено значущість відтвореної регрессії. Значення статистики - " + Math.Round(fstat, Data.NumberOfNum) + ", значення квантилю - " + Math.Round(quan, Data.NumberOfNum) + Environment.NewLine;
@@ -15229,15 +15545,40 @@ namespace thing_2._1
                     LogOutputTextBox.Text += "На жаль, гапотеза про значущість регресії була спростована. Значення статистики - " + Math.Round(fstat, Data.NumberOfNum) + ", значення квантилю - " + Math.Round(quan, Data.NumberOfNum) + Environment.NewLine;
                 }
                 /////
-
-            }
-            if (radioButton10.Checked)
-            {
-                double[] A = new double[DimNum];
-            }
-            if (radioButton11.Checked)
-            {
-                double[] A = new double[DimNum+1];
+                LogOutputTextBox.Text += "Довірчі інтервали залишкової дисперсії: " + Math.Round((S2zal * (NumOfPoints - DimNum)) / (Quantile.HirsQuan(alfa2, NumOfPoints - DimNum)), Data.NumberOfNum) + "<=" + Math.Round(S2zal, Data.NumberOfNum) + "<=" + Math.Round((S2zal * (NumOfPoints - DimNum)) / (Quantile.HirsQuan(alfa1, NumOfPoints - DimNum)), Data.NumberOfNum) + Environment.NewLine;
+                ///////
+                dataGridView13.Rows.Clear();
+                chart5.Series[0].Points.Clear();
+                quan = Quantile.StudQuan(alfa, NumOfPoints - DimNum);
+                for (i = 0; i < NumOfPoints; i++)
+                {
+                    fval = A[0];
+                    k = 1;
+                    for (j = 0; j < DimNum; j++)
+                    {
+                        if (j != y)
+                        {
+                            fval += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][i] * A[k];
+                            k++;
+                        }
+                    }
+                    chart5.Series[0].Points.AddXY(Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i],  Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i]- fval);
+                    for (j = 0, k = 0; j < DimNum - 1; j++, k++)
+                    {
+                        if (k == y)
+                        {
+                            k++;
+                        }
+                        Xv[0, j] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][i];
+                    }
+                    // S2zal += Math.Pow(fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i], 2);
+                    temp = fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i];
+                    temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum - 1, DimNum - 1), Matrixes.GetTransp(Xv, 1, DimNum - 1), 1, 1, DimNum - 1);
+                    Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum - 1, DimNum - 1), Matrixes.GetTransp(Xv, 1, DimNum - 1), 1, 1, DimNum - 1)[0, 0]);
+                    temp /= (Multipl);
+                    dataGridView13.Rows.Add((i + 1), Math.Round(fval - quan * Multipl,Data.NumberOfNum),Math.Round( Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i],Data.NumberOfNum), Math.Round(fval + quan * Multipl,Data.NumberOfNum), (Math.Abs(temp) > quan) ? ("-") : ("+"));
+                    //'/не забудь что не нужно оценивать а0
+                }
             }
         }
     }

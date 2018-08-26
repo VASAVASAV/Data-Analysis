@@ -89,7 +89,15 @@ namespace thing_2._1
             }
             return result;
         }
-
+        /// <summary>
+        /// Умножает две матрицы
+        /// </summary>
+        /// <param name="target1">Первая матрица, размер Size1хSize3</param>
+        /// <param name="target2">Втоаря матрица, размер Size3хSize2</param>
+        /// <param name="Size1">Высота первой матрицы</param>
+        /// <param name="Size2">Ширина второй матрицы</param>
+        /// <param name="Size3">Ширина первой матрицы = высота второй</param>
+        /// <returns></returns>
         public static double[,] Multiply(double[,] target1, double[,] target2, int Size1, int Size2, int Size3)
         {
             double sum = 0;
@@ -98,6 +106,7 @@ namespace thing_2._1
             {
                 for (int j = 0; j < Size2; j++)
                 {
+                    sum = 0;
                     for (int k = 0; k < Size3; k++)
                     {
                         sum += target1[i,k] * target2[k,j];
@@ -172,7 +181,7 @@ namespace thing_2._1
             {
                 for (int j = 0; j < matrix.Length; j++)
                 {
-                    result[i,j] = Math.Round(matrix[i][j + matrix.Length], 5);
+                    result[i,j] = matrix[i][j + matrix.Length];//Math.Round()???
                 }
             }
             return result;
@@ -223,6 +232,11 @@ namespace thing_2._1
                 }
             }
             return result;
+        }
+
+        internal static int Multiply(double[,] p, int p_2, int DimNum, int DimNum_2)
+        {
+            throw new NotImplementedException();
         }
     }
 }
