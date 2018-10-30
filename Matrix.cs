@@ -89,36 +89,39 @@ namespace thing_2._1
             }
             return result;
         }
-        /// <summary>
-        /// Умножает две матрицы
-        /// </summary>
-        /// <param name="target1">Первая матрица, размер Size1хSize3</param>
-        /// <param name="target2">Втоаря матрица, размер Size3хSize2</param>
-        /// <param name="Size1">Высота первой матрицы</param>
-        /// <param name="Size2">Ширина второй матрицы</param>
-        /// <param name="Size3">Ширина первой матрицы = высота второй</param>
-        /// <returns></returns>
-        public static double[,] Multiply(double[,] target1, double[,] target2, int Size1, int Size2, int Size3)
-        {
-            double sum = 0;
-            double[,] result = new double[Size1, Size2];
-            for (int i = 0; i < Size1; i++)
-            {
-                for (int j = 0; j < Size2; j++)
-                {
-                    sum = 0;
-                    for (int k = 0; k < Size3; k++)
-                    {
-                        sum += target1[i,k] * target2[k,j];
-                    }
-                    //result[i][j] = sum;
-                    result[i,j] = sum;
-                }
-            }
-            return result;
-        }
+		/// <summary>
+		/// Умножает две матрицы
+		/// </summary>
+		/// <param name="target1">Первая матрица, размер Size1хSize3</param>
+		/// <param name="target2">Втоаря матрица, размер Size3хSize2</param>
+		/// <param name="Size1">Высота первой матрицы</param>
+		/// <param name="Size2">Ширина второй матрицы</param>
+		/// <param name="Size3">Ширина первой матрицы = высота второй</param>
+		/// <returns></returns>
+		public static double[,] Multiply(double[,] target1, double[,] target2)
+		{
+			double sum = 0;
+			int Size3 = target2.GetUpperBound(0) + 1;
+			int Size1 = target1.GetUpperBound(0) + 1;
+			int Size2 = (int)(((double)target2.Length) / Size3);
+			double[,] result = new double[Size1, Size2];
+			for (int i = 0; i < Size1; i++)
+			{
+				for (int j = 0; j < Size2; j++)
+				{
+					sum = 0;
+					for (int k = 0; k < Size3; k++)
+					{
+						sum += target1[i, k] * target2[k, j];
+					}
+					//result[i][j] = sum;
+					result[i, j] = sum;
+				}
+			}
+			return result;
+		}
 
-        public static double[,] GetReverse(double[,] target, int Length)
+		public static double[,] GetReverse(double[,] target, int Length)
         {
             double[][] matrix = new double[Length][];
             for (int i = 0; i < Length; i++)
