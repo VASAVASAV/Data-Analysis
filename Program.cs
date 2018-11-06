@@ -304,7 +304,6 @@ namespace thing_2._1
         private Button button37;
 		private RadioButton radioButton13;
 		private RadioButton radioButton12;
-		private ToolStripMenuItem застосуватиМГКбагатовимірніToolStripMenuItem;
 		private DataGridView[] DataGridForChkk;
     
         public BodyOfForm()
@@ -529,8 +528,6 @@ namespace thing_2._1
 			this.Histogramme = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
-			this.radioButton13 = new System.Windows.Forms.RadioButton();
-			this.radioButton12 = new System.Windows.Forms.RadioButton();
 			this.textBox12 = new System.Windows.Forms.TextBox();
 			this.label12 = new System.Windows.Forms.Label();
 			this.textBox11 = new System.Windows.Forms.TextBox();
@@ -685,7 +682,8 @@ namespace thing_2._1
 			this.button37 = new System.Windows.Forms.Button();
 			this.button36 = new System.Windows.Forms.Button();
 			this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-			this.застосуватиМГКбагатовимірніToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.radioButton12 = new System.Windows.Forms.RadioButton();
+			this.radioButton13 = new System.Windows.Forms.RadioButton();
 			this.menuStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
 			this.tabControl2.SuspendLayout();
@@ -1085,8 +1083,7 @@ namespace thing_2._1
             this.включитивиключитиОбрахуавнняМедіаниСередніхToolStripMenuItem,
             this.задатиКількістьЗнаківПісляКомиДляІнтерфейсівToolStripMenuItem,
             this.оновитиToolStripMenuItem,
-            this.застосуватиМГКдвовимірніToolStripMenuItem,
-            this.застосуватиМГКбагатовимірніToolStripMenuItem});
+            this.застосуватиМГКдвовимірніToolStripMenuItem});
 			this.додатковоToolStripMenuItem.Name = "додатковоToolStripMenuItem";
 			this.додатковоToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
 			this.додатковоToolStripMenuItem.Text = "Додатково";
@@ -2026,28 +2023,6 @@ namespace thing_2._1
 			this.tabPage1.TabIndex = 3;
 			this.tabPage1.Text = "Кореляційне поле";
 			this.tabPage1.UseVisualStyleBackColor = true;
-			// 
-			// radioButton13
-			// 
-			this.radioButton13.AutoSize = true;
-			this.radioButton13.Location = new System.Drawing.Point(85, 8);
-			this.radioButton13.Name = "radioButton13";
-			this.radioButton13.Size = new System.Drawing.Size(82, 17);
-			this.radioButton13.TabIndex = 9;
-			this.radioButton13.Text = "Через МГК";
-			this.radioButton13.UseVisualStyleBackColor = true;
-			// 
-			// radioButton12
-			// 
-			this.radioButton12.AutoSize = true;
-			this.radioButton12.Checked = true;
-			this.radioButton12.Location = new System.Drawing.Point(6, 8);
-			this.radioButton12.Name = "radioButton12";
-			this.radioButton12.Size = new System.Drawing.Size(73, 17);
-			this.radioButton12.TabIndex = 8;
-			this.radioButton12.TabStop = true;
-			this.radioButton12.Text = "Звичайна";
-			this.radioButton12.UseVisualStyleBackColor = true;
 			// 
 			// textBox12
 			// 
@@ -3726,12 +3701,27 @@ namespace thing_2._1
 			this.chart6.TabIndex = 0;
 			this.chart6.Text = "chart6";
 			// 
-			// застосуватиМГКбагатовимірніToolStripMenuItem
+			// radioButton12
 			// 
-			this.застосуватиМГКбагатовимірніToolStripMenuItem.Name = "застосуватиМГКбагатовимірніToolStripMenuItem";
-			this.застосуватиМГКбагатовимірніToolStripMenuItem.Size = new System.Drawing.Size(366, 22);
-			this.застосуватиМГКбагатовимірніToolStripMenuItem.Text = "Застосувати МГК (багатовимірні)";
-			this.застосуватиМГКбагатовимірніToolStripMenuItem.Click += new System.EventHandler(this.застосуватиМГКбагатовимірніToolStripMenuItem_Click);
+			this.radioButton12.AutoSize = true;
+			this.radioButton12.Checked = true;
+			this.radioButton12.Location = new System.Drawing.Point(6, 8);
+			this.radioButton12.Name = "radioButton12";
+			this.radioButton12.Size = new System.Drawing.Size(73, 17);
+			this.radioButton12.TabIndex = 8;
+			this.radioButton12.TabStop = true;
+			this.radioButton12.Text = "Звичайна";
+			this.radioButton12.UseVisualStyleBackColor = true;
+			// 
+			// radioButton13
+			// 
+			this.radioButton13.AutoSize = true;
+			this.radioButton13.Location = new System.Drawing.Point(85, 8);
+			this.radioButton13.Name = "radioButton13";
+			this.radioButton13.Size = new System.Drawing.Size(82, 17);
+			this.radioButton13.TabIndex = 9;
+			this.radioButton13.Text = "Через МГК";
+			this.radioButton13.UseVisualStyleBackColor = true;
 			// 
 			// BodyOfForm
 			// 
@@ -5826,11 +5816,30 @@ namespace thing_2._1
 				alfaxy = -1 * Math.Sin(fi);
 				alfayx = Math.Sin(fi);
 				alfayy = Math.Cos(fi);
+                double RMaxy = double.MinValue, RMaxx = double.MinValue, RMiny = double.MaxValue, RMinx = double.MaxValue;
 				double Maxy = double.MinValue, Maxx = double.MinValue, Miny = double.MaxValue, Minx = double.MaxValue;
 				for (i = 0; i < Temp11.Count; i++)
 				{
 					t1 = alfaxx * Temp11[i] + alfayx * Temp12[i];
 					t2 = alfaxy * Temp11[i] + alfayy * Temp12[i];
+                    /////
+                    if (Temp11[i] < RMinx)
+                    {
+                        RMinx = Temp11[i];
+                    }
+                    if (Temp12[i] < RMiny)
+                    {
+                        RMiny = Temp12[i];
+                    }
+                    if (Temp11[i] > RMaxx)
+                    {
+                        RMaxx = Temp11[i];
+                    }
+                    if (Temp12[i] > RMaxy)
+                    {
+                        RMaxy = Temp12[i];
+                    }
+                    ////
 					if (t1 < Minx)
 					{
 						Minx = t1;
@@ -5873,13 +5882,31 @@ namespace thing_2._1
 
 					}
 				}
-				for (i = 0; i < CountX; i++)
+                Point[] TempArr;
+                BlackPen.Width = 3;
+                G.Clear(Color.White);
+				for (i = 0; i < CountX-1; i++)
 				{
-					for (j = 0; j < CountY; j++)
+					for (j = 0; j < CountY-1; j++)
 					{
 						TempRead = 255 - (int)((Ps[i, CountY - j - 1] * 255) / maxP);
+                        TempArr = new Point[] 
+                            {                                                                                                                                 
+                                new Point(-1*(int)(((( alfaxx * (Minx + i * ((Maxx - Minx) / CountX)) - alfayx * (Miny + (j) * ((Maxy - Miny) / CountY)))           - RMinx) * OuTwoDemGliph.Width)/ (RMaxx - RMinx)), 
+                                          (int)((((-alfaxy * (Minx + i * ((Maxx - Minx) / CountX)) + alfayy * (Miny + (j) * ((Maxy - Miny) / CountY)))           - RMiny) * OuTwoDemGliph.Height)/ (RMaxy - RMiny))), 
+                                new Point(-1*(int)(((( alfaxx * (Minx + (i + 1) * ((Maxx - Minx) / CountX)) - alfayx * (Miny + (j) * ((Maxy - Miny) / CountY)))     - RMinx) * OuTwoDemGliph.Width)/ (RMaxx - RMinx)), 
+                                          (int)((((-alfaxy * (Minx + (i + 1) * ((Maxx - Minx) / CountX)) + alfayy * (Miny + (j) * ((Maxy - Miny) / CountY)))     - RMiny) * OuTwoDemGliph.Height)/ (RMaxy - RMiny))), 
+                                new Point(-1*(int)(((( alfaxx * (Minx + (i + 1) * ((Maxx - Minx) / CountX)) - alfayx * (Miny + (j + 1) * ((Maxy - Miny) / CountY))) - RMinx) * OuTwoDemGliph.Width)/ (RMaxx - RMinx)), 
+                                          (int)((((-alfaxy * (Minx + (i + 1) * ((Maxx - Minx) / CountX)) + alfayy * (Miny + (j + 1) * ((Maxy - Miny) / CountY))) - RMiny) * OuTwoDemGliph.Height)/ (RMaxy - RMiny))), 
+                                new Point(-1*(int)(((( alfaxx * (Minx + i * ((Maxx - Minx) / CountX)) - alfayx * (Miny + (j + 1) * ((Maxy - Miny) / CountY)))       - RMinx) * OuTwoDemGliph.Width)/ (RMaxx - RMinx)), 
+                                          (int)((((-alfaxy * (Minx + i * ((Maxx - Minx) / CountX)) + alfayy * (Miny + (j + 1) * ((Maxy - Miny) / CountY)))       - RMiny) * OuTwoDemGliph.Height)/ (RMaxy - RMiny))), 
+
+                            };
+                         G.DrawPolygon(BlackPen, 
+                            TempArr);
 					}
 				}
+
 			}
 			//chart2  = OuTwoDemGliph;
 			//////ask lol
@@ -15379,9 +15406,8 @@ namespace thing_2._1
                     }
                 }
             }
-			// double[,] Temp1Mat = Matrixes.Multiply(Xm1, X, DimNum - 1, DimNum - 1, NumOfPoints);
-			double[,] Temp1Mat = Matrixes.Multiply(Xm1, X);
-			double[,] C = Matrixes.GetReverse(Temp1Mat, DimNum - 1);
+            double[,] Temp1Mat = Matrixes.Multiply(Xm1, X, DimNum - 1, DimNum - 1, NumOfPoints);
+            double[,] C = Matrixes.GetReverse(Temp1Mat, DimNum - 1);
             double alfa1=1-alfa/2, alfa2=alfa/2;
             double Multipl;
             double[,] temp1;
@@ -15509,12 +15535,9 @@ namespace thing_2._1
                     }
                    // S2zal += Math.Pow(fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i], 2);
                     temp = fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i];
-					// temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum-1, DimNum-1), Matrixes.GetTransp(Xv, 1, DimNum-1), 1, 1, DimNum-1);
-					//Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum-1, DimNum-1), Matrixes.GetTransp(Xv, 1, DimNum-1), 1, 1, DimNum-1)[0, 0]);
-					temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C), Matrixes.GetTransp(Xv, 1, DimNum - 1));
-					Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C), Matrixes.GetTransp(Xv, 1, DimNum-1))[0, 0]);
-
-					temp /= (Multipl);
+                    temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum-1, DimNum-1), Matrixes.GetTransp(Xv, 1, DimNum-1), 1, 1, DimNum-1);
+                    Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum-1, DimNum-1), Matrixes.GetTransp(Xv, 1, DimNum-1), 1, 1, DimNum-1)[0, 0]);
+                    temp/= (Multipl);
                     dataGridView13.Rows.Add((i + 1), Math.Round(fval - quan * Multipl,Data.NumberOfNum), Math.Round(Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i],Data.NumberOfNum),Math.Round(fval + quan * Multipl,Data.NumberOfNum), (Math.Abs(temp) > quan) ? ("-") : ("+"));
                     //'/не забудь что не нужно оценивать а0
                 }
@@ -15528,11 +15551,9 @@ namespace thing_2._1
                 {
                     Y0[i, 0] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i];
                 }
-				// Temp1Mat = Matrixes.Multiply(Xm1, Y0, DimNum - 1, 1, NumOfPoints);
-				//Temp1Mat = Matrixes.Multiply(C, Temp1Mat, DimNum - 1, 1, DimNum-1);
-				Temp1Mat = Matrixes.Multiply(Xm1, Y0);
-				Temp1Mat = Matrixes.Multiply(C, Temp1Mat);
-				for (i = 0; i < DimNum - 1; i++)
+                Temp1Mat = Matrixes.Multiply(Xm1, Y0, DimNum - 1, 1, NumOfPoints);
+                Temp1Mat = Matrixes.Multiply(C, Temp1Mat, DimNum - 1, 1, DimNum-1);
+                for (i = 0; i < DimNum - 1; i++)
                 {
                     A[i + 1] = Temp1Mat[i, 0];
                 }
@@ -15634,11 +15655,9 @@ namespace thing_2._1
                     }
                     // S2zal += Math.Pow(fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i], 2);
                     temp = fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i];
-					// temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum - 1, DimNum - 1), Matrixes.GetTransp(Xv, 1, DimNum - 1), 1, 1, DimNum - 1);
-					// Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum - 1, DimNum - 1), Matrixes.GetTransp(Xv, 1, DimNum - 1), 1, 1, DimNum - 1)[0, 0]);
-					temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C), Matrixes.GetTransp(Xv, 1, DimNum - 1));
-					Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C), Matrixes.GetTransp(Xv, 1, DimNum - 1))[0, 0]);
-					temp /= (Multipl);
+                    temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum - 1, DimNum - 1), Matrixes.GetTransp(Xv, 1, DimNum - 1), 1, 1, DimNum - 1);
+                    Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum - 1, DimNum - 1), Matrixes.GetTransp(Xv, 1, DimNum - 1), 1, 1, DimNum - 1)[0, 0]);
+                    temp /= (Multipl);
                     dataGridView13.Rows.Add((i + 1), Math.Round(fval - quan * Multipl,Data.NumberOfNum), Math.Round(Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i],Data.NumberOfNum), Math.Round(fval + quan * Multipl,Data.NumberOfNum), (Math.Abs(temp) > quan) ? ("-") : ("+"));
                     //'/не забудь что не нужно оценивать а0
                 }
@@ -15666,15 +15685,11 @@ namespace thing_2._1
                 {
                     Y0[i,0] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i]-tempExp[y];
                 }
-				/* Temp1Mat = Matrixes.Multiply(Xm1,X,DimNum-1,DimNum-1,NumOfPoints);
-				 Temp1Mat = Matrixes.GetReverse(Temp1Mat,DimNum-1);
-				 Temp1Mat = Matrixes.Multiply(Temp1Mat, Xm1, DimNum - 1, NumOfPoints, DimNum-1); // old matrixes multiplying
-				 Temp1Mat = Matrixes.Multiply(Temp1Mat, Y0, DimNum - 1, 1, NumOfPoints);*/
-				Temp1Mat = Matrixes.Multiply(Xm1, X);
-				Temp1Mat = Matrixes.GetReverse(Temp1Mat, DimNum - 1);
-				Temp1Mat = Matrixes.Multiply(Temp1Mat, Xm1); 
-				Temp1Mat = Matrixes.Multiply(Temp1Mat, Y0);
-				for (i = 0; i < DimNum - 1; i++)
+                Temp1Mat = Matrixes.Multiply(Xm1,X,DimNum-1,DimNum-1,NumOfPoints);
+                Temp1Mat = Matrixes.GetReverse(Temp1Mat,DimNum-1);
+                Temp1Mat = Matrixes.Multiply(Temp1Mat, Xm1, DimNum - 1, NumOfPoints, DimNum-1);
+                Temp1Mat = Matrixes.Multiply(Temp1Mat, Y0, DimNum - 1, 1, NumOfPoints);
+                for (i = 0; i < DimNum - 1; i++)
                 {
                     A[i + 1] = Temp1Mat[i, 0];
                 }
@@ -15788,11 +15803,9 @@ namespace thing_2._1
                     }
                     // S2zal += Math.Pow(fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i], 2);
                     temp = fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i];
-					// temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum - 1, DimNum - 1), Matrixes.GetTransp(Xv, 1, DimNum - 1), 1, 1, DimNum - 1);
-					//Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum - 1, DimNum - 1), Matrixes.GetTransp(Xv, 1, DimNum - 1), 1, 1, DimNum - 1)[0, 0]);
-					temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C), Matrixes.GetTransp(Xv, 1, DimNum - 1));
-					Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C), Matrixes.GetTransp(Xv, 1, DimNum - 1))[0, 0]);
-					temp /= (Multipl);
+                    temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum - 1, DimNum - 1), Matrixes.GetTransp(Xv, 1, DimNum - 1), 1, 1, DimNum - 1);
+                    Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum - 1, DimNum - 1), Matrixes.GetTransp(Xv, 1, DimNum - 1), 1, 1, DimNum - 1)[0, 0]);
+                    temp /= (Multipl);
                     dataGridView13.Rows.Add((i + 1), Math.Round(fval - quan * Multipl,Data.NumberOfNum),Math.Round( Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i],Data.NumberOfNum), Math.Round(fval + quan * Multipl,Data.NumberOfNum), (Math.Abs(temp) > quan) ? ("-") : ("+"));
                     //'/не забудь что не нужно оценивать а0
                 }
@@ -15954,14 +15967,9 @@ namespace thing_2._1
                 BuildTwoDem();
             }
         }
+    }
 
-		private void застосуватиМГКбагатовимірніToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-
-		}
-	}
-
-	class PointOfStart
+    class PointOfStart
     {
         [STAThread]
         static void Main(string[] args)
