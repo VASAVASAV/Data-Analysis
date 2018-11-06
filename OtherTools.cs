@@ -806,6 +806,7 @@ namespace thing_2._1
 			}
 
 		}
+
 		public static double[,,] GetEileganValues (double[,] TargMatr, double ep)
 		{
 			int i, j;
@@ -831,7 +832,7 @@ namespace thing_2._1
 			{
 				for (j = i + 1; j < Size; j++)
 				{
-					if (Math.Abs(TargMatr[i,j]) > Math.Abs(TargMatr[Numi,Numj]))
+                    if (Math.Abs(matrix[i, j]) > Math.Abs(matrix[Numi, Numj]))
 					{
 						Numi = i;
 						Numj = j;
@@ -839,9 +840,9 @@ namespace thing_2._1
 				}
 			}
 			int k = 0;
-			while (Math.Abs(TargMatr[Numi,Numj]) > ep )
+            while (Math.Abs(matrix[Numi, Numj]) > ep)//TargMatr
 			{
-				P = (2 * TargMatr[Numi,Numj]) / (TargMatr[Numi,Numi] - TargMatr[Numj,Numj]);
+                P = (2 * matrix[Numi, Numj]) / (matrix[Numi, Numi] - matrix[Numj, Numj]);
 				Fi = 0.5 * Math.Atan(P);
 				double[,] H = new double[Size,Size];
 				double[,] Ht = new double[Size,Size];
@@ -863,8 +864,7 @@ namespace thing_2._1
 				Ht[Numj,Numi] = -1 * MySin;
 				V = Matrixes.Multiply(V, H);
 
-				matrix = Matrixes.Multiply(Ht, matrix);
-				matrix = Matrixes.Multiply(matrix, H);
+				matrix = Matrixes.Multiply(Matrixes.Multiply(Ht, matrix),H);
 
 				for (i = 0; i < Size - 1; i++)
 				{
@@ -884,14 +884,14 @@ namespace thing_2._1
 			{
 				for (j = i + 1; j < Size; j++)
 				{
-					result[1, i, j] = matrix[i, j];
-					result[2, i, j] = V[i, j];
+					result[0, i, j] = matrix[i, j];
+					result[1, i, j] = V[i, j];
 
 				}	
 			}
 			return result;
 				
-				}
+		}
 
     }
 }

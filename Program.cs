@@ -4949,7 +4949,7 @@ namespace thing_2._1
                         }
                     }
                 }
-            }
+            }  
             ////////working with table for deliting data
             dataGridView8.Columns.Clear();
             dataGridView8.Rows.Clear();
@@ -5235,6 +5235,8 @@ namespace thing_2._1
                 pictureBox1.Image = MyMap;
 
             }
+            double[, ,] lil = ToolsForWork.GetEileganValues(Tempkk, 0.001);
+            Console.WriteLine();
         }
 
         double FindChkk(int r1, int r2, List<int> Vals)
@@ -6206,6 +6208,7 @@ namespace thing_2._1
             {
                 dataGridView1.Rows[9].Cells[2].Value = "Не обраховувалося - забагато елементів!";
             }
+            
         }
 
         private void Build()
@@ -15406,7 +15409,7 @@ namespace thing_2._1
                     }
                 }
             }
-            double[,] Temp1Mat = Matrixes.Multiply(Xm1, X, DimNum - 1, DimNum - 1, NumOfPoints);
+            double[,] Temp1Mat = Matrixes.Multiply(Xm1, X);
             double[,] C = Matrixes.GetReverse(Temp1Mat, DimNum - 1);
             double alfa1=1-alfa/2, alfa2=alfa/2;
             double Multipl;
@@ -15535,8 +15538,8 @@ namespace thing_2._1
                     }
                    // S2zal += Math.Pow(fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i], 2);
                     temp = fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i];
-                    temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum-1, DimNum-1), Matrixes.GetTransp(Xv, 1, DimNum-1), 1, 1, DimNum-1);
-                    Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum-1, DimNum-1), Matrixes.GetTransp(Xv, 1, DimNum-1), 1, 1, DimNum-1)[0, 0]);
+                    temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C), Matrixes.GetTransp(Xv, 1, DimNum-1));
+                    Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C), Matrixes.GetTransp(Xv, 1, DimNum-1))[0, 0]);
                     temp/= (Multipl);
                     dataGridView13.Rows.Add((i + 1), Math.Round(fval - quan * Multipl,Data.NumberOfNum), Math.Round(Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i],Data.NumberOfNum),Math.Round(fval + quan * Multipl,Data.NumberOfNum), (Math.Abs(temp) > quan) ? ("-") : ("+"));
                     //'/не забудь что не нужно оценивать а0
@@ -15551,8 +15554,8 @@ namespace thing_2._1
                 {
                     Y0[i, 0] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i];
                 }
-                Temp1Mat = Matrixes.Multiply(Xm1, Y0, DimNum - 1, 1, NumOfPoints);
-                Temp1Mat = Matrixes.Multiply(C, Temp1Mat, DimNum - 1, 1, DimNum-1);
+                Temp1Mat = Matrixes.Multiply(Xm1, Y0);
+                Temp1Mat = Matrixes.Multiply(C, Temp1Mat);
                 for (i = 0; i < DimNum - 1; i++)
                 {
                     A[i + 1] = Temp1Mat[i, 0];
@@ -15655,8 +15658,8 @@ namespace thing_2._1
                     }
                     // S2zal += Math.Pow(fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i], 2);
                     temp = fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i];
-                    temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum - 1, DimNum - 1), Matrixes.GetTransp(Xv, 1, DimNum - 1), 1, 1, DimNum - 1);
-                    Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum - 1, DimNum - 1), Matrixes.GetTransp(Xv, 1, DimNum - 1), 1, 1, DimNum - 1)[0, 0]);
+                    temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C), Matrixes.GetTransp(Xv, 1, DimNum - 1));
+                    Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C), Matrixes.GetTransp(Xv, 1, DimNum - 1))[0, 0]);
                     temp /= (Multipl);
                     dataGridView13.Rows.Add((i + 1), Math.Round(fval - quan * Multipl,Data.NumberOfNum), Math.Round(Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i],Data.NumberOfNum), Math.Round(fval + quan * Multipl,Data.NumberOfNum), (Math.Abs(temp) > quan) ? ("-") : ("+"));
                     //'/не забудь что не нужно оценивать а0
@@ -15685,10 +15688,10 @@ namespace thing_2._1
                 {
                     Y0[i,0] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i]-tempExp[y];
                 }
-                Temp1Mat = Matrixes.Multiply(Xm1,X,DimNum-1,DimNum-1,NumOfPoints);
+                Temp1Mat = Matrixes.Multiply(Xm1,X);
                 Temp1Mat = Matrixes.GetReverse(Temp1Mat,DimNum-1);
-                Temp1Mat = Matrixes.Multiply(Temp1Mat, Xm1, DimNum - 1, NumOfPoints, DimNum-1);
-                Temp1Mat = Matrixes.Multiply(Temp1Mat, Y0, DimNum - 1, 1, NumOfPoints);
+                Temp1Mat = Matrixes.Multiply(Temp1Mat, Xm1);
+                Temp1Mat = Matrixes.Multiply(Temp1Mat, Y0);
                 for (i = 0; i < DimNum - 1; i++)
                 {
                     A[i + 1] = Temp1Mat[i, 0];
@@ -15803,8 +15806,8 @@ namespace thing_2._1
                     }
                     // S2zal += Math.Pow(fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i], 2);
                     temp = fval - Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i];
-                    temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum - 1, DimNum - 1), Matrixes.GetTransp(Xv, 1, DimNum - 1), 1, 1, DimNum - 1);
-                    Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C, 1, DimNum - 1, DimNum - 1), Matrixes.GetTransp(Xv, 1, DimNum - 1), 1, 1, DimNum - 1)[0, 0]);
+                    temp1 = Matrixes.Multiply(Matrixes.Multiply(Xv, C), Matrixes.GetTransp(Xv, 1, DimNum - 1));
+                    Multipl = Szal * Math.Sqrt(1 + Matrixes.Multiply(Matrixes.Multiply(Xv, C), Matrixes.GetTransp(Xv, 1, DimNum - 1))[0, 0]);
                     temp /= (Multipl);
                     dataGridView13.Rows.Add((i + 1), Math.Round(fval - quan * Multipl,Data.NumberOfNum),Math.Round( Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][y]][i],Data.NumberOfNum), Math.Round(fval + quan * Multipl,Data.NumberOfNum), (Math.Abs(temp) > quan) ? ("-") : ("+"));
                     //'/не забудь что не нужно оценивать а0
