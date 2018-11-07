@@ -5777,7 +5777,7 @@ namespace thing_2._1
 			Graphics TempG = Graphics.FromImage(Temp);
 			Pen BlackPen = new Pen(Color.Black, 1);
 			int TempRead = 0;
-			if (radioButton12.Checked)
+			if (checkBox11.Checked)
 			{
 				for (i = 0; i < CountX; i++)
 				{
@@ -5800,6 +5800,7 @@ namespace thing_2._1
 			else
 			{
 				List<double> Temp11 = new List<double>(), Temp12 = new List<double>();
+
 				for (i = 0; i < Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]].Count; i++)
 				{
 					Temp11.Add(Data.DataForWork[Data.TwoDemSamples[Data.TwoDemCurrentSample][0]][i]);
@@ -5892,18 +5893,21 @@ namespace thing_2._1
 					for (j = 0; j < CountY-1; j++)
 					{
 						TempRead = 255 - (int)((Ps[i, CountY - j - 1] * 255) / maxP);
-                        TempArr = new Point[] 
-                            {                                                                                                                                 
-                                new Point(-1*(int)(((( alfaxx * (Minx + i * ((Maxx - Minx) / CountX)) - alfayx * (Miny + (j) * ((Maxy - Miny) / CountY)))           - RMinx) * OuTwoDemGliph.Width)/ (RMaxx - RMinx)), 
-                                          (int)((((-alfaxy * (Minx + i * ((Maxx - Minx) / CountX)) + alfayy * (Miny + (j) * ((Maxy - Miny) / CountY)))           - RMiny) * OuTwoDemGliph.Height)/ (RMaxy - RMiny))), 
-                                new Point(-1*(int)(((( alfaxx * (Minx + (i + 1) * ((Maxx - Minx) / CountX)) - alfayx * (Miny + (j) * ((Maxy - Miny) / CountY)))     - RMinx) * OuTwoDemGliph.Width)/ (RMaxx - RMinx)), 
-                                          (int)((((-alfaxy * (Minx + (i + 1) * ((Maxx - Minx) / CountX)) + alfayy * (Miny + (j) * ((Maxy - Miny) / CountY)))     - RMiny) * OuTwoDemGliph.Height)/ (RMaxy - RMiny))), 
-                                new Point(-1*(int)(((( alfaxx * (Minx + (i + 1) * ((Maxx - Minx) / CountX)) - alfayx * (Miny + (j + 1) * ((Maxy - Miny) / CountY))) - RMinx) * OuTwoDemGliph.Width)/ (RMaxx - RMinx)), 
-                                          (int)((((-alfaxy * (Minx + (i + 1) * ((Maxx - Minx) / CountX)) + alfayy * (Miny + (j + 1) * ((Maxy - Miny) / CountY))) - RMiny) * OuTwoDemGliph.Height)/ (RMaxy - RMiny))), 
-                                new Point(-1*(int)(((( alfaxx * (Minx + i * ((Maxx - Minx) / CountX)) - alfayx * (Miny + (j + 1) * ((Maxy - Miny) / CountY)))       - RMinx) * OuTwoDemGliph.Width)/ (RMaxx - RMinx)), 
-                                          (int)((((-alfaxy * (Minx + i * ((Maxx - Minx) / CountX)) + alfayy * (Miny + (j + 1) * ((Maxy - Miny) / CountY)))       - RMiny) * OuTwoDemGliph.Height)/ (RMaxy - RMiny))), 
-
-                            };
+						TempArr = new Point[]
+							{                                                                                                                                 
+                                //new Point(-1*(int)(((( alfaxx * (Minx + i * ((Maxx - Minx) / CountX)) - alfayx * (Miny + (j) * ((Maxy - Miny) / CountY)))           - RMinx) * OuTwoDemGliph.Width)/ (RMaxx - RMinx)), 
+                                //          (int)((((-alfaxy * (Minx + i * ((Maxx - Minx) / CountX)) + alfayy * (Miny + (j) * ((Maxy - Miny) / CountY)))           - RMiny) * OuTwoDemGliph.Height)/ (RMaxy - RMiny))), 
+                                //new Point(-1*(int)(((( alfaxx * (Minx + (i + 1) * ((Maxx - Minx) / CountX)) - alfayx * (Miny + (j) * ((Maxy - Miny) / CountY)))     - RMinx) * OuTwoDemGliph.Width)/ (RMaxx - RMinx)), 
+                                //          (int)((((-alfaxy * (Minx + (i + 1) * ((Maxx - Minx) / CountX)) + alfayy * (Miny + (j) * ((Maxy - Miny) / CountY)))     - RMiny) * OuTwoDemGliph.Height)/ (RMaxy - RMiny))), 
+                                //new Point(-1*(int)(((( alfaxx * (Minx + (i + 1) * ((Maxx - Minx) / CountX)) - alfayx * (Miny + (j + 1) * ((Maxy - Miny) / CountY))) - RMinx) * OuTwoDemGliph.Width)/ (RMaxx - RMinx)), 
+                                //          (int)((((-alfaxy * (Minx + (i + 1) * ((Maxx - Minx) / CountX)) + alfayy * (Miny + (j + 1) * ((Maxy - Miny) / CountY))) - RMiny) * OuTwoDemGliph.Height)/ (RMaxy - RMiny))), 
+                                //new Point(-1*(int)(((( alfaxx * (Minx + i * ((Maxx - Minx) / CountX)) - alfayx * (Miny + (j + 1) * ((Maxy - Miny) / CountY)))       - RMinx) * OuTwoDemGliph.Width)/ (RMaxx - RMinx)), 
+                                //          (int)((((-alfaxy * (Minx + i * ((Maxx - Minx) / CountX)) + alfayy * (Miny + (j + 1) * ((Maxy - Miny) / CountY)))       - RMiny) * OuTwoDemGliph.Height)/ (RMaxy - RMiny))), 
+								new Point((int)(Minx + i * ((Maxx - Minx) / CountX)),		(int)(Miny + (j) * ((Maxy - Miny) / CountY))),
+								new Point((int)(Minx + (i + 1) * ((Maxx - Minx) / CountX)), (int)(Miny + (j) * ((Maxy - Miny) / CountY))),
+								new Point((int)(Minx + (i + 1) * ((Maxx - Minx) / CountX)), (int)(Miny + (j + 1) * ((Maxy - Miny) / CountY))),
+								new Point((int)(Minx + i * ((Maxx - Minx) / CountX)),		(int)(Miny + (j + 1) * ((Maxy - Miny) / CountY)))
+							};
                          G.DrawPolygon(BlackPen, 
                             TempArr);
 					}
