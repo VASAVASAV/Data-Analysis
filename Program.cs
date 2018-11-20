@@ -5235,7 +5235,15 @@ namespace thing_2._1
                 pictureBox1.Image = MyMap;
 
             }
-            double[, ,] lil = ToolsForWork.GetEileganValues(Tempkk, 0.001);
+            double[,] TempDC = new double[Tempkk.GetLength(0), Tempkk.GetLength(0)];
+            for (i = 0; i < Tempkk.GetLength(0); i++ )
+            {
+                for (j = 0; j < Tempkk.GetLength(0);j++)
+                {
+                    TempDC[i, j] = Tempkk[i, j] * Temps[i] * Temps[j];
+                }
+            }
+            double[, ,] lil = ToolsForWork.GetEileganValues(TempDC, 0.001);
             Console.WriteLine();
         }
 
