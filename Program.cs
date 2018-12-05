@@ -304,6 +304,7 @@ namespace thing_2._1
         private Button button37;
 		private RadioButton radioButton13;
 		private RadioButton radioButton12;
+		private ToolStripMenuItem застосуватиМГКбагатовимірніToolStripMenuItem;
 		private DataGridView[] DataGridForChkk;
     
         public BodyOfForm()
@@ -356,48 +357,48 @@ namespace thing_2._1
 
         private void InitializeComponent()
         {
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series25 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series26 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.Series series27 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Series series28 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Series series29 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Series series30 = new System.Windows.Forms.DataVisualization.Charting.Series();
-			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-			System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-			System.Windows.Forms.DataVisualization.Charting.Series series31 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series32 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series33 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series34 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series35 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series36 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series37 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series38 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series39 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series40 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series41 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series42 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series43 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series44 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series45 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series46 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series47 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series48 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series49 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series50 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series51 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series52 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series53 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series54 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series55 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series56 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series57 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.Series series58 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series59 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series60 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Series series61 = new System.Windows.Forms.DataVisualization.Charting.Series();
+			System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+			System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+			System.Windows.Forms.DataVisualization.Charting.Series series62 = new System.Windows.Forms.DataVisualization.Charting.Series();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.створитиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -528,6 +529,8 @@ namespace thing_2._1
 			this.Histogramme = new System.Windows.Forms.DataVisualization.Charting.Chart();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.radioButton13 = new System.Windows.Forms.RadioButton();
+			this.radioButton12 = new System.Windows.Forms.RadioButton();
 			this.textBox12 = new System.Windows.Forms.TextBox();
 			this.label12 = new System.Windows.Forms.Label();
 			this.textBox11 = new System.Windows.Forms.TextBox();
@@ -682,8 +685,7 @@ namespace thing_2._1
 			this.button37 = new System.Windows.Forms.Button();
 			this.button36 = new System.Windows.Forms.Button();
 			this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-			this.radioButton12 = new System.Windows.Forms.RadioButton();
-			this.radioButton13 = new System.Windows.Forms.RadioButton();
+			this.застосуватиМГКбагатовимірніToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
 			this.tabControl2.SuspendLayout();
@@ -1083,7 +1085,8 @@ namespace thing_2._1
             this.включитивиключитиОбрахуавнняМедіаниСередніхToolStripMenuItem,
             this.задатиКількістьЗнаківПісляКомиДляІнтерфейсівToolStripMenuItem,
             this.оновитиToolStripMenuItem,
-            this.застосуватиМГКдвовимірніToolStripMenuItem});
+            this.застосуватиМГКдвовимірніToolStripMenuItem,
+            this.застосуватиМГКбагатовимірніToolStripMenuItem});
 			this.додатковоToolStripMenuItem.Name = "додатковоToolStripMenuItem";
 			this.додатковоToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
 			this.додатковоToolStripMenuItem.Text = "Додатково";
@@ -1904,35 +1907,35 @@ namespace thing_2._1
 			// 
 			// DistrFun
 			// 
-			chartArea1.Name = "ChartArea1";
-			this.DistrFun.ChartAreas.Add(chartArea1);
+			chartArea9.Name = "ChartArea1";
+			this.DistrFun.ChartAreas.Add(chartArea9);
 			this.DistrFun.Location = new System.Drawing.Point(6, 6);
 			this.DistrFun.Name = "DistrFun";
-			series1.ChartArea = "ChartArea1";
-			series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series1.Color = System.Drawing.Color.Black;
-			series1.CustomProperties = "LabelStyle=Top";
-			series1.Name = "EmpFuncWithClasses";
-			series2.ChartArea = "ChartArea1";
-			series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series2.Color = System.Drawing.Color.Red;
-			series2.Name = "EmpFuncWithoutClasses";
-			series3.ChartArea = "ChartArea1";
-			series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			series3.Name = "TopLimit";
-			series4.ChartArea = "ChartArea1";
-			series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-			series4.Name = "BotLimit";
-			series5.ChartArea = "ChartArea1";
-			series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series5.Name = "TheorDistrFun";
-			this.DistrFun.Series.Add(series1);
-			this.DistrFun.Series.Add(series2);
-			this.DistrFun.Series.Add(series3);
-			this.DistrFun.Series.Add(series4);
-			this.DistrFun.Series.Add(series5);
+			series32.ChartArea = "ChartArea1";
+			series32.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series32.Color = System.Drawing.Color.Black;
+			series32.CustomProperties = "LabelStyle=Top";
+			series32.Name = "EmpFuncWithClasses";
+			series33.ChartArea = "ChartArea1";
+			series33.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series33.Color = System.Drawing.Color.Red;
+			series33.Name = "EmpFuncWithoutClasses";
+			series34.ChartArea = "ChartArea1";
+			series34.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series34.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			series34.Name = "TopLimit";
+			series35.ChartArea = "ChartArea1";
+			series35.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series35.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			series35.Name = "BotLimit";
+			series36.ChartArea = "ChartArea1";
+			series36.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series36.Name = "TheorDistrFun";
+			this.DistrFun.Series.Add(series32);
+			this.DistrFun.Series.Add(series33);
+			this.DistrFun.Series.Add(series34);
+			this.DistrFun.Series.Add(series35);
+			this.DistrFun.Series.Add(series36);
 			this.DistrFun.Size = new System.Drawing.Size(937, 389);
 			this.DistrFun.TabIndex = 0;
 			this.DistrFun.Text = "chart2";
@@ -1961,23 +1964,23 @@ namespace thing_2._1
 			// 
 			// Histogramme
 			// 
-			chartArea2.AxisX.ScrollBar.Size = 10D;
-			chartArea2.Name = "ChartArea1";
-			this.Histogramme.ChartAreas.Add(chartArea2);
+			chartArea10.AxisX.ScrollBar.Size = 10D;
+			chartArea10.Name = "ChartArea1";
+			this.Histogramme.ChartAreas.Add(chartArea10);
 			this.Histogramme.Location = new System.Drawing.Point(9, -5);
 			this.Histogramme.Name = "Histogramme";
 			this.Histogramme.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-			series6.ChartArea = "ChartArea1";
-			series6.Color = System.Drawing.Color.Black;
-			series6.CustomProperties = "PointWidth=1";
-			series6.Name = "HistogrammeIns";
-			series7.ChartArea = "ChartArea1";
-			series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series7.Color = System.Drawing.Color.Red;
-			series7.MarkerSize = 3;
-			series7.Name = "DensFunc";
-			this.Histogramme.Series.Add(series6);
-			this.Histogramme.Series.Add(series7);
+			series37.ChartArea = "ChartArea1";
+			series37.Color = System.Drawing.Color.Black;
+			series37.CustomProperties = "PointWidth=1";
+			series37.Name = "HistogrammeIns";
+			series38.ChartArea = "ChartArea1";
+			series38.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series38.Color = System.Drawing.Color.Red;
+			series38.MarkerSize = 3;
+			series38.Name = "DensFunc";
+			this.Histogramme.Series.Add(series37);
+			this.Histogramme.Series.Add(series38);
 			this.Histogramme.Size = new System.Drawing.Size(937, 400);
 			this.Histogramme.TabIndex = 0;
 			this.Histogramme.Text = "chart1";
@@ -2023,6 +2026,28 @@ namespace thing_2._1
 			this.tabPage1.TabIndex = 3;
 			this.tabPage1.Text = "Кореляційне поле";
 			this.tabPage1.UseVisualStyleBackColor = true;
+			// 
+			// radioButton13
+			// 
+			this.radioButton13.AutoSize = true;
+			this.radioButton13.Location = new System.Drawing.Point(85, 8);
+			this.radioButton13.Name = "radioButton13";
+			this.radioButton13.Size = new System.Drawing.Size(82, 17);
+			this.radioButton13.TabIndex = 9;
+			this.radioButton13.Text = "Через МГК";
+			this.radioButton13.UseVisualStyleBackColor = true;
+			// 
+			// radioButton12
+			// 
+			this.radioButton12.AutoSize = true;
+			this.radioButton12.Checked = true;
+			this.radioButton12.Location = new System.Drawing.Point(6, 8);
+			this.radioButton12.Name = "radioButton12";
+			this.radioButton12.Size = new System.Drawing.Size(73, 17);
+			this.radioButton12.TabIndex = 8;
+			this.radioButton12.TabStop = true;
+			this.radioButton12.Text = "Звичайна";
+			this.radioButton12.UseVisualStyleBackColor = true;
 			// 
 			// textBox12
 			// 
@@ -2383,78 +2408,78 @@ namespace thing_2._1
 			// 
 			// chart1
 			// 
-			chartArea3.InnerPlotPosition.Auto = false;
-			chartArea3.InnerPlotPosition.Height = 87.98504F;
-			chartArea3.InnerPlotPosition.Width = 87.98504F;
-			chartArea3.InnerPlotPosition.X = 10.50909F;
-			chartArea3.InnerPlotPosition.Y = 2.23404F;
-			chartArea3.Name = "ChartArea1";
-			this.chart1.ChartAreas.Add(chartArea3);
-			legend1.Name = "Legend1";
-			this.chart1.Legends.Add(legend1);
+			chartArea11.InnerPlotPosition.Auto = false;
+			chartArea11.InnerPlotPosition.Height = 87.98504F;
+			chartArea11.InnerPlotPosition.Width = 87.98504F;
+			chartArea11.InnerPlotPosition.X = 10.50909F;
+			chartArea11.InnerPlotPosition.Y = 2.23404F;
+			chartArea11.Name = "ChartArea1";
+			this.chart1.ChartAreas.Add(chartArea11);
+			legend4.Name = "Legend1";
+			this.chart1.Legends.Add(legend4);
 			this.chart1.Location = new System.Drawing.Point(3, 23);
 			this.chart1.Name = "chart1";
-			series8.ChartArea = "ChartArea1";
-			series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series8.Legend = "Legend1";
-			series8.MarkerSize = 4;
-			series8.Name = "Елемент вибірки";
-			series9.ChartArea = "ChartArea1";
-			series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series9.Color = System.Drawing.Color.Red;
-			series9.Legend = "Legend1";
-			series9.MarkerSize = 4;
-			series9.Name = "Мат сподівання";
-			series10.ChartArea = "ChartArea1";
-			series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series10.Color = System.Drawing.Color.Black;
-			series10.Legend = "Legend1";
-			series10.Name = "Лінія регресії";
-			series11.ChartArea = "ChartArea1";
-			series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series11.Color = System.Drawing.Color.Lime;
-			series11.Legend = "Legend1";
-			series11.MarkerSize = 3;
-			series11.Name = "Верхня толерантна межа";
-			series12.ChartArea = "ChartArea1";
-			series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series12.Color = System.Drawing.Color.Green;
-			series12.Legend = "Legend1";
-			series12.MarkerSize = 3;
-			series12.Name = "Нижня толерантна межа";
-			series13.ChartArea = "ChartArea1";
-			series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series13.Color = System.Drawing.Color.Maroon;
-			series13.Legend = "Legend1";
-			series13.MarkerSize = 3;
-			series13.Name = "НДІ для прогнозу";
-			series14.ChartArea = "ChartArea1";
-			series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series14.Color = System.Drawing.Color.Red;
-			series14.Legend = "Legend1";
-			series14.MarkerSize = 3;
-			series14.Name = "ВДІ для прогнозу";
-			series15.ChartArea = "ChartArea1";
-			series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series15.Color = System.Drawing.Color.Blue;
-			series15.Legend = "Legend1";
-			series15.MarkerSize = 3;
-			series15.Name = "НДІ регресії";
-			series16.ChartArea = "ChartArea1";
-			series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series16.Color = System.Drawing.Color.Navy;
-			series16.Legend = "Legend1";
-			series16.MarkerSize = 3;
-			series16.Name = "ВДІ регресії";
-			this.chart1.Series.Add(series8);
-			this.chart1.Series.Add(series9);
-			this.chart1.Series.Add(series10);
-			this.chart1.Series.Add(series11);
-			this.chart1.Series.Add(series12);
-			this.chart1.Series.Add(series13);
-			this.chart1.Series.Add(series14);
-			this.chart1.Series.Add(series15);
-			this.chart1.Series.Add(series16);
+			series39.ChartArea = "ChartArea1";
+			series39.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series39.Legend = "Legend1";
+			series39.MarkerSize = 4;
+			series39.Name = "Елемент вибірки";
+			series40.ChartArea = "ChartArea1";
+			series40.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series40.Color = System.Drawing.Color.Red;
+			series40.Legend = "Legend1";
+			series40.MarkerSize = 4;
+			series40.Name = "Мат сподівання";
+			series41.ChartArea = "ChartArea1";
+			series41.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series41.Color = System.Drawing.Color.Black;
+			series41.Legend = "Legend1";
+			series41.Name = "Лінія регресії";
+			series42.ChartArea = "ChartArea1";
+			series42.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series42.Color = System.Drawing.Color.Lime;
+			series42.Legend = "Legend1";
+			series42.MarkerSize = 3;
+			series42.Name = "Верхня толерантна межа";
+			series43.ChartArea = "ChartArea1";
+			series43.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series43.Color = System.Drawing.Color.Green;
+			series43.Legend = "Legend1";
+			series43.MarkerSize = 3;
+			series43.Name = "Нижня толерантна межа";
+			series44.ChartArea = "ChartArea1";
+			series44.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series44.Color = System.Drawing.Color.Maroon;
+			series44.Legend = "Legend1";
+			series44.MarkerSize = 3;
+			series44.Name = "НДІ для прогнозу";
+			series45.ChartArea = "ChartArea1";
+			series45.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series45.Color = System.Drawing.Color.Red;
+			series45.Legend = "Legend1";
+			series45.MarkerSize = 3;
+			series45.Name = "ВДІ для прогнозу";
+			series46.ChartArea = "ChartArea1";
+			series46.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series46.Color = System.Drawing.Color.Blue;
+			series46.Legend = "Legend1";
+			series46.MarkerSize = 3;
+			series46.Name = "НДІ регресії";
+			series47.ChartArea = "ChartArea1";
+			series47.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series47.Color = System.Drawing.Color.Navy;
+			series47.Legend = "Legend1";
+			series47.MarkerSize = 3;
+			series47.Name = "ВДІ регресії";
+			this.chart1.Series.Add(series39);
+			this.chart1.Series.Add(series40);
+			this.chart1.Series.Add(series41);
+			this.chart1.Series.Add(series42);
+			this.chart1.Series.Add(series43);
+			this.chart1.Series.Add(series44);
+			this.chart1.Series.Add(series45);
+			this.chart1.Series.Add(series46);
+			this.chart1.Series.Add(series47);
 			this.chart1.Size = new System.Drawing.Size(682, 405);
 			this.chart1.TabIndex = 0;
 			this.chart1.Text = "chart1";
@@ -2493,82 +2518,82 @@ namespace thing_2._1
 			// 
 			// chart2
 			// 
-			chartArea4.AxisX.MajorGrid.Enabled = false;
-			chartArea4.AxisY.MajorGrid.Enabled = false;
-			chartArea4.InnerPlotPosition.Auto = false;
-			chartArea4.InnerPlotPosition.Height = 85F;
-			chartArea4.InnerPlotPosition.Width = 85F;
-			chartArea4.InnerPlotPosition.X = 12F;
-			chartArea4.InnerPlotPosition.Y = 3F;
-			chartArea4.Name = "ChartArea1";
-			chartArea4.Position.Auto = false;
-			chartArea4.Position.Height = 94F;
-			chartArea4.Position.Width = 72.0559F;
-			chartArea4.Position.X = 3F;
-			chartArea4.Position.Y = 3F;
-			this.chart2.ChartAreas.Add(chartArea4);
-			legend2.Name = "Legend1";
-			this.chart2.Legends.Add(legend2);
+			chartArea12.AxisX.MajorGrid.Enabled = false;
+			chartArea12.AxisY.MajorGrid.Enabled = false;
+			chartArea12.InnerPlotPosition.Auto = false;
+			chartArea12.InnerPlotPosition.Height = 85F;
+			chartArea12.InnerPlotPosition.Width = 85F;
+			chartArea12.InnerPlotPosition.X = 12F;
+			chartArea12.InnerPlotPosition.Y = 3F;
+			chartArea12.Name = "ChartArea1";
+			chartArea12.Position.Auto = false;
+			chartArea12.Position.Height = 94F;
+			chartArea12.Position.Width = 72.0559F;
+			chartArea12.Position.X = 3F;
+			chartArea12.Position.Y = 3F;
+			this.chart2.ChartAreas.Add(chartArea12);
+			legend5.Name = "Legend1";
+			this.chart2.Legends.Add(legend5);
 			this.chart2.Location = new System.Drawing.Point(6, 27);
 			this.chart2.Name = "chart2";
-			series17.ChartArea = "ChartArea1";
-			series17.Color = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-			series17.Legend = "Legend1";
-			series17.MarkerSize = 1;
-			series17.Name = "p(x) = 0,9...1";
-			series18.ChartArea = "ChartArea1";
-			series18.Color = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
-			series18.Legend = "Legend1";
-			series18.Name = "p(x) = 0,8...0,9";
-			series19.ChartArea = "ChartArea1";
-			series19.Color = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
-			series19.Legend = "Legend1";
-			series19.Name = "p(x) = 0,7...0,8";
-			series20.ChartArea = "ChartArea1";
-			series20.Color = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
-			series20.Legend = "Legend1";
-			series20.Name = "p(x) = 0,6...0,7";
-			series21.ChartArea = "ChartArea1";
-			series21.Color = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
-			series21.Legend = "Legend1";
-			series21.Name = "p(x) = 0,5...0,6";
-			series22.ChartArea = "ChartArea1";
-			series22.Color = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
-			series22.Legend = "Legend1";
-			series22.Name = "p(x) = 0,4...0,5";
-			series23.ChartArea = "ChartArea1";
-			series23.Color = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-			series23.Legend = "Legend1";
-			series23.Name = "p(x) = 0,3...0,4";
-			series24.ChartArea = "ChartArea1";
-			series24.Color = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
-			series24.Legend = "Legend1";
-			series24.Name = "p(x) = 0,2...0,3";
-			series25.ChartArea = "ChartArea1";
-			series25.Color = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-			series25.Legend = "Legend1";
-			series25.Name = "p(x) = 0,1...0,2";
-			series26.ChartArea = "ChartArea1";
-			series26.Color = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-			series26.Legend = "Legend1";
-			series26.Name = "p(x) = 0...0,1";
-			series27.ChartArea = "ChartArea1";
-			series27.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series27.Color = System.Drawing.Color.White;
-			series27.Legend = "Legend1";
-			series27.MarkerSize = 3;
-			series27.Name = "   ";
-			this.chart2.Series.Add(series17);
-			this.chart2.Series.Add(series18);
-			this.chart2.Series.Add(series19);
-			this.chart2.Series.Add(series20);
-			this.chart2.Series.Add(series21);
-			this.chart2.Series.Add(series22);
-			this.chart2.Series.Add(series23);
-			this.chart2.Series.Add(series24);
-			this.chart2.Series.Add(series25);
-			this.chart2.Series.Add(series26);
-			this.chart2.Series.Add(series27);
+			series48.ChartArea = "ChartArea1";
+			series48.Color = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+			series48.Legend = "Legend1";
+			series48.MarkerSize = 1;
+			series48.Name = "p(x) = 0,9...1";
+			series49.ChartArea = "ChartArea1";
+			series49.Color = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(228)))), ((int)(((byte)(228)))));
+			series49.Legend = "Legend1";
+			series49.Name = "p(x) = 0,8...0,9";
+			series50.ChartArea = "ChartArea1";
+			series50.Color = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+			series50.Legend = "Legend1";
+			series50.Name = "p(x) = 0,7...0,8";
+			series51.ChartArea = "ChartArea1";
+			series51.Color = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(175)))), ((int)(((byte)(175)))));
+			series51.Legend = "Legend1";
+			series51.Name = "p(x) = 0,6...0,7";
+			series52.ChartArea = "ChartArea1";
+			series52.Color = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+			series52.Legend = "Legend1";
+			series52.Name = "p(x) = 0,5...0,6";
+			series53.ChartArea = "ChartArea1";
+			series53.Color = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(125)))), ((int)(((byte)(125)))));
+			series53.Legend = "Legend1";
+			series53.Name = "p(x) = 0,4...0,5";
+			series54.ChartArea = "ChartArea1";
+			series54.Color = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+			series54.Legend = "Legend1";
+			series54.Name = "p(x) = 0,3...0,4";
+			series55.ChartArea = "ChartArea1";
+			series55.Color = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+			series55.Legend = "Legend1";
+			series55.Name = "p(x) = 0,2...0,3";
+			series56.ChartArea = "ChartArea1";
+			series56.Color = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+			series56.Legend = "Legend1";
+			series56.Name = "p(x) = 0,1...0,2";
+			series57.ChartArea = "ChartArea1";
+			series57.Color = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+			series57.Legend = "Legend1";
+			series57.Name = "p(x) = 0...0,1";
+			series58.ChartArea = "ChartArea1";
+			series58.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series58.Color = System.Drawing.Color.White;
+			series58.Legend = "Legend1";
+			series58.MarkerSize = 3;
+			series58.Name = "   ";
+			this.chart2.Series.Add(series48);
+			this.chart2.Series.Add(series49);
+			this.chart2.Series.Add(series50);
+			this.chart2.Series.Add(series51);
+			this.chart2.Series.Add(series52);
+			this.chart2.Series.Add(series53);
+			this.chart2.Series.Add(series54);
+			this.chart2.Series.Add(series55);
+			this.chart2.Series.Add(series56);
+			this.chart2.Series.Add(series57);
+			this.chart2.Series.Add(series58);
 			this.chart2.Size = new System.Drawing.Size(940, 411);
 			this.chart2.TabIndex = 0;
 			this.chart2.Text = "chart2";
@@ -3109,20 +3134,20 @@ namespace thing_2._1
 			// 
 			// chart3
 			// 
-			chartArea5.Name = "ChartArea1";
-			this.chart3.ChartAreas.Add(chartArea5);
+			chartArea13.Name = "ChartArea1";
+			this.chart3.ChartAreas.Add(chartArea13);
 			this.chart3.Location = new System.Drawing.Point(7, 29);
 			this.chart3.Name = "chart3";
-			series28.BorderColor = System.Drawing.Color.Black;
-			series28.BorderWidth = 3;
-			series28.ChartArea = "ChartArea1";
-			series28.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
-			series28.MarkerColor = System.Drawing.Color.Red;
-			series28.MarkerSize = 25;
-			series28.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-			series28.Name = "Series1";
-			series28.YValuesPerPoint = 2;
-			this.chart3.Series.Add(series28);
+			series59.BorderColor = System.Drawing.Color.Black;
+			series59.BorderWidth = 3;
+			series59.ChartArea = "ChartArea1";
+			series59.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
+			series59.MarkerColor = System.Drawing.Color.Red;
+			series59.MarkerSize = 25;
+			series59.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+			series59.Name = "Series1";
+			series59.YValuesPerPoint = 2;
+			this.chart3.Series.Add(series59);
 			this.chart3.Size = new System.Drawing.Size(750, 356);
 			this.chart3.TabIndex = 0;
 			this.chart3.Text = "chart3";
@@ -3204,13 +3229,13 @@ namespace thing_2._1
 			// 
 			// chart4
 			// 
-			chartArea6.Name = "ChartArea1";
-			this.chart4.ChartAreas.Add(chartArea6);
+			chartArea14.Name = "ChartArea1";
+			this.chart4.ChartAreas.Add(chartArea14);
 			this.chart4.Location = new System.Drawing.Point(3, 30);
 			this.chart4.Name = "chart4";
-			series29.ChartArea = "ChartArea1";
-			series29.Name = "Series1";
-			this.chart4.Series.Add(series29);
+			series60.ChartArea = "ChartArea1";
+			series60.Name = "Series1";
+			this.chart4.Series.Add(series60);
 			this.chart4.Size = new System.Drawing.Size(926, 373);
 			this.chart4.TabIndex = 0;
 			this.chart4.Text = "chart4";
@@ -3642,14 +3667,14 @@ namespace thing_2._1
 			// 
 			// chart5
 			// 
-			chartArea7.Name = "ChartArea1";
-			this.chart5.ChartAreas.Add(chartArea7);
+			chartArea15.Name = "ChartArea1";
+			this.chart5.ChartAreas.Add(chartArea15);
 			this.chart5.Location = new System.Drawing.Point(6, 3);
 			this.chart5.Name = "chart5";
-			series30.ChartArea = "ChartArea1";
-			series30.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-			series30.Name = "Відхилення";
-			this.chart5.Series.Add(series30);
+			series61.ChartArea = "ChartArea1";
+			series61.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+			series61.Name = "Відхилення";
+			this.chart5.Series.Add(series61);
 			this.chart5.Size = new System.Drawing.Size(559, 431);
 			this.chart5.TabIndex = 0;
 			this.chart5.Text = "chart5";
@@ -3686,42 +3711,27 @@ namespace thing_2._1
 			// 
 			// chart6
 			// 
-			chartArea8.BackImage = "H:\\photo_2018-09-21_09-26-16.jpg";
-			chartArea8.Name = "ChartArea1";
-			this.chart6.ChartAreas.Add(chartArea8);
-			legend3.Name = "Legend1";
-			this.chart6.Legends.Add(legend3);
+			chartArea16.BackImage = "H:\\photo_2018-09-21_09-26-16.jpg";
+			chartArea16.Name = "ChartArea1";
+			this.chart6.ChartAreas.Add(chartArea16);
+			legend6.Name = "Legend1";
+			this.chart6.Legends.Add(legend6);
 			this.chart6.Location = new System.Drawing.Point(6, 3);
 			this.chart6.Name = "chart6";
-			series31.ChartArea = "ChartArea1";
-			series31.Legend = "Legend1";
-			series31.Name = "Series1";
-			this.chart6.Series.Add(series31);
+			series62.ChartArea = "ChartArea1";
+			series62.Legend = "Legend1";
+			series62.Name = "Series1";
+			this.chart6.Series.Add(series62);
 			this.chart6.Size = new System.Drawing.Size(493, 402);
 			this.chart6.TabIndex = 0;
 			this.chart6.Text = "chart6";
 			// 
-			// radioButton12
+			// застосуватиМГКбагатовимірніToolStripMenuItem
 			// 
-			this.radioButton12.AutoSize = true;
-			this.radioButton12.Checked = true;
-			this.radioButton12.Location = new System.Drawing.Point(6, 8);
-			this.radioButton12.Name = "radioButton12";
-			this.radioButton12.Size = new System.Drawing.Size(73, 17);
-			this.radioButton12.TabIndex = 8;
-			this.radioButton12.TabStop = true;
-			this.radioButton12.Text = "Звичайна";
-			this.radioButton12.UseVisualStyleBackColor = true;
-			// 
-			// radioButton13
-			// 
-			this.radioButton13.AutoSize = true;
-			this.radioButton13.Location = new System.Drawing.Point(85, 8);
-			this.radioButton13.Name = "radioButton13";
-			this.radioButton13.Size = new System.Drawing.Size(82, 17);
-			this.radioButton13.TabIndex = 9;
-			this.radioButton13.Text = "Через МГК";
-			this.radioButton13.UseVisualStyleBackColor = true;
+			this.застосуватиМГКбагатовимірніToolStripMenuItem.Name = "застосуватиМГКбагатовимірніToolStripMenuItem";
+			this.застосуватиМГКбагатовимірніToolStripMenuItem.Size = new System.Drawing.Size(366, 22);
+			this.застосуватиМГКбагатовимірніToolStripMenuItem.Text = "Застосувати МГК (багатовимірні)";
+			this.застосуватиМГКбагатовимірніToolStripMenuItem.Click += new System.EventHandler(this.застосуватиМГКбагатовимірніToolStripMenuItem_Click);
 			// 
 			// BodyOfForm
 			// 
@@ -5235,9 +5245,29 @@ namespace thing_2._1
                 pictureBox1.Image = MyMap;
 
             }
-            double[, ,] lil = ToolsForWork.GetEileganValues(Tempkk, 0.001);
-            Console.WriteLine();
-        }
+			double[,] TempDC = new double[Tempkk.GetLength(0), Tempkk.GetLength(0)];
+			for (i = 0; i < Tempkk.GetLength(0); i++)
+			{
+				for (j = 0; j < Tempkk.GetLength(0); j++)
+				{
+					TempDC[i, j] = Tempkk[i, j] * Temps[i] * Temps[j];
+				}
+			}
+			double[,,] lil = ToolsForWork.GetEileganValues(TempDC, 0.001);
+			for (i = 0; i < Tempkk.GetLength(0); i++)
+			{
+				Console.WriteLine(lil[0, i, i]);
+			}
+			for (i = 0; i < Tempkk.GetLength(0); i++)
+			{
+				for (j = 0; j < Tempkk.GetLength(0); j++)
+				{
+					Console.Write(lil[1, i, j] + "  ");
+				}
+				Console.WriteLine();
+			}
+			Console.WriteLine();
+		}
 
         double FindChkk(int r1, int r2, List<int> Vals)
         {
@@ -5777,7 +5807,7 @@ namespace thing_2._1
 			Graphics TempG = Graphics.FromImage(Temp);
 			Pen BlackPen = new Pen(Color.Black, 1);
 			int TempRead = 0;
-			if (checkBox11.Checked)
+			if (!checkBox11.Checked)
 			{
 				for (i = 0; i < CountX; i++)
 				{
@@ -5885,15 +5915,21 @@ namespace thing_2._1
 
 					}
 				}
-                Point[] TempArr;
-                BlackPen.Width = 3;
+				double [][] TempArr1;
+				double[][] TempArr2;
+				Point[] TempArr3;
+				alfaxx = Math.Cos(fi);
+				alfaxy = -1 * Math.Sin(fi);
+				alfayx = -1* Math.Sin(fi);
+				alfayy = Math.Cos(fi);
+				BlackPen.Width = 3;
                 G.Clear(Color.White);
 				for (i = 0; i < CountX-1; i++)
 				{
-					for (j = 0; j < CountY-1; j++)
+					for (j = 0; j < CountY - 1; j++)
 					{
 						TempRead = 255 - (int)((Ps[i, CountY - j - 1] * 255) / maxP);
-						TempArr = new Point[]
+						TempArr1 = new double[][]
 							{                                                                                                                                 
                                 //new Point(-1*(int)(((( alfaxx * (Minx + i * ((Maxx - Minx) / CountX)) - alfayx * (Miny + (j) * ((Maxy - Miny) / CountY)))           - RMinx) * OuTwoDemGliph.Width)/ (RMaxx - RMinx)), 
                                 //          (int)((((-alfaxy * (Minx + i * ((Maxx - Minx) / CountX)) + alfayy * (Miny + (j) * ((Maxy - Miny) / CountY)))           - RMiny) * OuTwoDemGliph.Height)/ (RMaxy - RMiny))), 
@@ -5903,13 +5939,29 @@ namespace thing_2._1
                                 //          (int)((((-alfaxy * (Minx + (i + 1) * ((Maxx - Minx) / CountX)) + alfayy * (Miny + (j + 1) * ((Maxy - Miny) / CountY))) - RMiny) * OuTwoDemGliph.Height)/ (RMaxy - RMiny))), 
                                 //new Point(-1*(int)(((( alfaxx * (Minx + i * ((Maxx - Minx) / CountX)) - alfayx * (Miny + (j + 1) * ((Maxy - Miny) / CountY)))       - RMinx) * OuTwoDemGliph.Width)/ (RMaxx - RMinx)), 
                                 //          (int)((((-alfaxy * (Minx + i * ((Maxx - Minx) / CountX)) + alfayy * (Miny + (j + 1) * ((Maxy - Miny) / CountY)))       - RMiny) * OuTwoDemGliph.Height)/ (RMaxy - RMiny))), 
-								new Point((int)(Minx + i * ((Maxx - Minx) / CountX)),		(int)(Miny + (j) * ((Maxy - Miny) / CountY))),
-								new Point((int)(Minx + (i + 1) * ((Maxx - Minx) / CountX)), (int)(Miny + (j) * ((Maxy - Miny) / CountY))),
-								new Point((int)(Minx + (i + 1) * ((Maxx - Minx) / CountX)), (int)(Miny + (j + 1) * ((Maxy - Miny) / CountY))),
-								new Point((int)(Minx + i * ((Maxx - Minx) / CountX)),		(int)(Miny + (j + 1) * ((Maxy - Miny) / CountY)))
+								new double [] {(Minx + i * ((Maxx - Minx) / CountX))        , (Miny + (j) * ((Maxy - Miny) / CountY))},
+								new double [] {(Minx + (i + 1) * ((Maxx - Minx) / CountX))  , (Miny + (j) * ((Maxy - Miny) / CountY)) },
+								new double [] {(Minx + (i + 1) * ((Maxx - Minx) / CountX))  , (Miny + (j + 1) * ((Maxy - Miny) / CountY)) },
+								new double [] {(Minx + i * ((Maxx - Minx) / CountX))        , (Miny + (j + 1) * ((Maxy - Miny) / CountY))}
 							};
-                         G.DrawPolygon(BlackPen, 
-                            TempArr);
+						TempArr2 = new double[][]
+							{
+								new double [] {(TempArr1[0][0]*alfaxx + TempArr1[0][1]*alfayx),(TempArr1[0][0]*alfaxy + TempArr1[0][1]*alfayy) },
+								new double [] {(TempArr1[1][0]*alfaxx + TempArr1[1][1]*alfayx),(TempArr1[0][0]*alfaxy + TempArr1[1][1]*alfayy)},
+								new double [] {(TempArr1[2][0]*alfaxx + TempArr1[2][1]*alfayx),(TempArr1[0][0]*alfaxy + TempArr1[2][1]*alfayy)},
+								new double [] {(TempArr1[3][0] * alfaxx + TempArr1[3][1]*alfayx),(TempArr1[0][0]*alfaxy + TempArr1[3][1]*alfayy)},
+							};
+						TempArr3 = new Point[4];
+						TempArr3[0].X = (int)((OuTwoDemGliph.Width * (TempArr2[0][0] - RMinx)) / (RMaxx - RMinx));
+						TempArr3[1].X = (int)((OuTwoDemGliph.Width * (TempArr2[1][0] - RMinx)) / (RMaxx - RMinx));
+						TempArr3[2].X = (int)((OuTwoDemGliph.Width * (TempArr2[2][0] - RMinx)) / (RMaxx - RMinx));
+						TempArr3[3].X = (int)((OuTwoDemGliph.Width * (TempArr2[3][0] - RMinx)) / (RMaxx - RMinx));
+						TempArr3[0].Y = (int)((OuTwoDemGliph.Height * (TempArr2[0][1] - RMiny)) / (RMaxy - RMiny));
+						TempArr3[1].Y = (int)((OuTwoDemGliph.Height * (TempArr2[1][1] - RMiny)) / (RMaxy - RMiny));
+						TempArr3[2].Y = (int)((OuTwoDemGliph.Height * (TempArr2[2][1] - RMiny)) / (RMaxy - RMiny));
+						TempArr3[3].Y = (int)((OuTwoDemGliph.Height * (TempArr2[3][1] - RMiny)) / (RMaxy - RMiny));
+						G.DrawPolygon(BlackPen, 
+                            TempArr3);
 					}
 				}
 
@@ -15974,9 +16026,24 @@ namespace thing_2._1
                 BuildTwoDem();
             }
         }
-    }
 
-    class PointOfStart
+		private void застосуватиМГКбагатовимірніToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			if (Data.DataForWork.Count == 0)
+			{
+				LogOutputTextBox.Text += "Нема з чим працювати" + Environment.NewLine;
+				return;
+			}
+			if (Data.MultiDemSamples.Count == 0)
+			{
+				LogOutputTextBox.Text += "Нема з чим працювати - нема багатовимірних вибірок вибірок" + Environment.NewLine;
+				return;
+			}
+			int i, j, k;
+		}
+	}
+
+	class PointOfStart
     {
         [STAThread]
         static void Main(string[] args)
