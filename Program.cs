@@ -15943,7 +15943,7 @@ namespace thing_2._1
                 {
                     Sum1 += Temp1[i];
                     Sum2 += Temp2[i];
-                }
+                 }
                 Xexp = Sum1 / Temp1.Count;
                 Yexp = Sum2 / Temp1.Count;
             }
@@ -16039,7 +16039,116 @@ namespace thing_2._1
 				LogOutputTextBox.Text += "Нема з чим працювати - нема багатовимірних вибірок вибірок" + Environment.NewLine;
 				return;
 			}
-			int i, j, k;
+			ArgInt NumOfDimRet = new ArgInt(Data.MultiDemSamples[Data.MultiDemCurrentSample].Length, "s", "Кількість ГК, що залишатсья", "Кількість ГК, що залишатсья", "<Size>");
+			OkCancelDlg it = new OkCancelDlg("Виберіть кількість вимірів для повернення", null, NumOfDimRet);
+			DialogResult rc = it.ShowDialog();
+			if (rc == DialogResult.OK)
+			{
+				if (NumOfDimRet <= 0)
+				{
+					LogOutputTextBox.Text += "Безсенсно" + Environment.NewLine;
+					return;
+				}
+				if (NumOfDimRet > Data.MultiDemSamples[Data.MultiDemCurrentSample].Length)
+				{
+					LogOutputTextBox.Text += "Неможливо збільшити кількість вимірів" + Environment.NewLine;
+					return;
+				}
+				int i, j, k;
+				double Summ;
+				double[] tempExp = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
+				double[] Temps = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
+				double[,] Tempkk = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length, Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
+				int NumOfPoints = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count;//Number of points in each sample
+				for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+				{
+					Summ = 0;
+					for (j = 0; j < NumOfPoints; j++)
+					{
+						Summ += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][j];
+					}
+					tempExp[i] = Summ / NumOfPoints;
+					Temps[i] = 0;
+					for (j = 0; j < NumOfPoints; j++)
+					{
+						Temps[i] += Math.Pow((Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][j] - tempExp[i]), 2);
+					}
+					Temps[i] *= (1.0) / (NumOfPoints - 1);
+					Temps[i] = (Math.Sqrt(Temps[i]));
+				}
+				int DimNumber = Data.MultiDemSamples[Data.MultiDemCurrentSample].Length;
+				double TempSum = 0;
+				for (i = 0; i < DimNumber; i++)
+				{
+					for (j = 0; j < DimNumber; j++)
+					{
+						if (i == j)
+						{
+							Tempkk[i, j] = 1;
+							continue;
+						}
+						TempSum = 0;
+						for (k = 0; k < NumOfPoints; k++)
+						{
+							TempSum += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][k] * Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][k];
+						}
+						TempSum /= NumOfPoints;
+						Tempkk[i, j] = (NumOfPoints * (TempSum - tempExp[i] * tempExp[j])) / ((NumOfPoints - 1) * (Temps[i] * Temps[j]));
+					}
+				}
+				double[,] TempDC = new double[Tempkk.GetLength(0), Tempkk.GetLength(0)];
+				for (i = 0; i < Tempkk.GetLength(0); i++)
+				{
+					for (j = 0; j < Tempkk.GetLength(0); j++)
+					{
+						TempDC[i, j] = Tempkk[i, j] * Temps[i] * Temps[j];
+					}
+				}
+				double[,,] lil = ToolsForWork.GetEileganValues(TempDC, 0.001);
+				///
+				double[]
+				double[,] Points = new double[Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count,NumOfDimRet];
+				for (i = 0; i < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; i++)
+				{
+
+				}
+				int temp = (int)Data.CurrentSample;
+				for (Data.CurrentSample.set(Data.DataForWork.Count - 2); Data.CurrentSample < Data.DataForWork.Count; Data.CurrentSample.set(Data.CurrentSample + 1))
+				{
+					Data.NamesOfFiles.Add("Результат дії МГК на двовимірну вибірку, вимір номер " + Math.Abs(Data.DataForWork.Count - Data.CurrentSample - 1));
+					Data.StepBack.Add(new List<ToolsForWork.Changing>());
+					//Data.DataForWork[Data.CurrentSample].Sort();
+				}
+				for (Data.CurrentSample.set(Data.DataForWork.Count - 1); Data.CurrentSample > 0 && (Data.DataForWork.Count != 0); Data.CurrentSample.set(Data.CurrentSample - 1))
+				{
+					if (Data.DataForWork[Data.CurrentSample].Count == 0)
+					{
+						// LogOutputTextBox.Text += "File is empty" + Environment.NewLine;
+						//Data.DataForWork.RemoveAt(Data.CurrentSample);
+						//Data.StepBacTwoDemCurrentSample.RemoveAt(Data.CurrentSample);
+						//Data.NamesOfFiles.RemoveAt(Data.CurrentSample);
+					}
+				}
+				Data.CurrentSample.set(temp);
+				//this thing is needed but later
+				//Data.DataForWork[Data.CurrentSample].Sort();
+				//Data.NamesOfFiles.Add(OpeningDialog.FileName);
+				Data.TwoDemStepBack.Add(new List<ToolsForWork.Changing>());
+				StatusLabelNameOfFile.Text = Data.NamesOfFiles[Data.CurrentSample];
+				HistData.NumberOfClassesChangedByUser = false;
+				DistrFuncData.NumberOfClassesChangedByUser = false;
+				Data.DistrCreated = false;
+				Data.TwoDemDistrCreated = false;
+				Data.TwoDemNamesOfFiles.Add("Результат дії МГК на вібирку " + Data.TwoDemNamesOfFiles[Data.TwoDemCurrentSample]);
+				if (Data.DataForWork.Count != 0)
+				{
+					Data.TwoDemSamples.Add(new int[] { Data.DataForWork.Count - 2, Data.DataForWork.Count - 1 });
+					//  Data.CurrentSample.set(0);
+					Data.TwoDemCurrentSample.set(Data.TwoDemSamples.Count - 1);
+					Build();
+					BuildTwoDem();
+				}
+			}
 		}
 	}
 
