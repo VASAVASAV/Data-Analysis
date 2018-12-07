@@ -861,7 +861,7 @@ namespace thing_2._1
 				H[Numi,Numj] = -1 * MySin;
 				H[Numj,Numi] = MySin;
 				Ht[Numi,Numj] = MySin;
-				Ht[Numj,Numi] = -1 * MySin;
+				Ht[Numj, Numi] = -1 * MySin;
 				V = Matrixes.Multiply(V, H);
 
 				matrix = Matrixes.Multiply(Matrixes.Multiply(Ht, matrix),H);
@@ -879,14 +879,31 @@ namespace thing_2._1
 				}
 				k++;
 			}
-			double[,,] result = new double[2, Size, Size];
-			for (i = 0; i < Size - 1; i++)
+			for (i = 0; i < Size-1; i++)
 			{
-				for (j = i + 1; j < Size; j++)
+				for (j = i+1; j < Size; j++)
+				{
+					if (matrix[j, j] > matrix[i, i])
+					{
+						double temp = matrix[j, j];
+						matrix[j, j] = matrix[i, i];
+						matrix[i, i] = temp;
+						for (k = 0; k < Size; k++)
+						{
+							temp = V[j, k];
+							V[j, k] = V[i, k];
+							V[i, k] = temp;
+						}
+					}
+				}
+			}
+			double[,,] result = new double[2, Size, Size];
+			for (i = 0; i < Size; i++)
+			{
+				for (j = 0; j < Size; j++)
 				{
 					result[0, i, j] = matrix[i, j];
 					result[1, i, j] = V[i, j];
-
 				}	
 			}
 			return result;
