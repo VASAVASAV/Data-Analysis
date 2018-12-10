@@ -879,13 +879,14 @@ namespace thing_2._1
 				}
 				k++;
 			}
+			double temp;
 			for (i = 0; i < Size-1; i++)
 			{
 				for (j = i+1; j < Size; j++)
 				{
 					if (matrix[j, j] > matrix[i, i])
 					{
-						double temp = matrix[j, j];
+						temp = matrix[j, j];
 						matrix[j, j] = matrix[i, i];
 						matrix[i, i] = temp;
 						for (k = 0; k < Size; k++)
@@ -905,6 +906,24 @@ namespace thing_2._1
 					result[0, i, j] = matrix[i, j];
 					result[1, i, j] = V[i, j];
 				}	
+			}
+			for (i = 0; i < Size-1; i++)
+			{
+				for (j = i+1; j < Size; j++)
+				{
+					if (result[0, i, i] < result[0, j, j])
+					{
+						temp = result[0, i, i];
+						result[0, i, i] = result[0, j, j];
+						result[0, j, j] = temp;
+						for (k = 0; k < Size; k++)
+						{
+							temp = result[1, k, i];
+							result[1, k, i] = result[1, k, j];
+							result[1, k, j] = temp;
+						}
+					}
+				}
 			}
 			return result;
 				
