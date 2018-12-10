@@ -16106,16 +16106,37 @@ namespace thing_2._1
 				}
 				double[,,] lil = ToolsForWork.GetEileganValues(TempDC, 0.001);
 				///
-				double[]
+				double[,] EigenVectors = new double[Tempkk.GetLength(0), Tempkk.GetLength(0)];
+				for (i = 0; i < Tempkk.GetLength(0); i++)
+				{
+					for (j = 0; j < Tempkk.GetLength(0); j++)
+					{
+						EigenVectors[i, j] = lil[1, i, j];
+					}
+				}
 				double[,] Points = new double[Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count,NumOfDimRet];
 				for (i = 0; i < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; i++)
 				{
-
+					for (j = 0; j < NumOfDimRet; j++)
+					{
+						Points[i, j] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][i];
+					}
 				}
+				Points = Matrixes.Multiply(Points,EigenVectors);
 				int temp = (int)Data.CurrentSample;
-				for (Data.CurrentSample.set(Data.DataForWork.Count - 2); Data.CurrentSample < Data.DataForWork.Count; Data.CurrentSample.set(Data.CurrentSample + 1))
+				List<double> temparr;
+				for (i=0; i < NumOfDimRet; i++)
 				{
-					Data.NamesOfFiles.Add("Результат дії МГК на двовимірну вибірку, вимір номер " + Math.Abs(Data.DataForWork.Count - Data.CurrentSample - 1));
+					temparr = new List<double>();
+					for (j = 0; j < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; j++)
+					{
+						temparr.Add(Points[j, i]);
+					}
+					Data.DataForWork.Add(temparr);
+				}
+				for (Data.CurrentSample.set(Data.DataForWork.Count - NumOfDimRet); Data.CurrentSample < Data.DataForWork.Count; Data.CurrentSample.set(Data.CurrentSample + 1))
+				{
+					Data.NamesOfFiles.Add("Результат дії МГК на багатовимірну вибірку");
 					Data.StepBack.Add(new List<ToolsForWork.Changing>());
 					//Data.DataForWork[Data.CurrentSample].Sort();
 				}
@@ -16133,20 +16154,23 @@ namespace thing_2._1
 				//this thing is needed but later
 				//Data.DataForWork[Data.CurrentSample].Sort();
 				//Data.NamesOfFiles.Add(OpeningDialog.FileName);
-				Data.TwoDemStepBack.Add(new List<ToolsForWork.Changing>());
+				Data.MultiDemStepBack.Add(new List<ToolsForWork.Changing>());
 				StatusLabelNameOfFile.Text = Data.NamesOfFiles[Data.CurrentSample];
 				HistData.NumberOfClassesChangedByUser = false;
 				DistrFuncData.NumberOfClassesChangedByUser = false;
 				Data.DistrCreated = false;
-				Data.TwoDemDistrCreated = false;
-				Data.TwoDemNamesOfFiles.Add("Результат дії МГК на вібирку " + Data.TwoDemNamesOfFiles[Data.TwoDemCurrentSample]);
+				//Data.MultiNamesOfFiles.Add("Результат дії МГК на вібирку " + Data.MultiDemCurrentSample);
 				if (Data.DataForWork.Count != 0)
 				{
-					Data.TwoDemSamples.Add(new int[] { Data.DataForWork.Count - 2, Data.DataForWork.Count - 1 });
-					//  Data.CurrentSample.set(0);
-					Data.TwoDemCurrentSample.set(Data.TwoDemSamples.Count - 1);
+					int[] temp2 = new int[NumOfDimRet];
+					for (j = 0; j < NumOfDimRet; j++)
+					{
+						temp2[j] = Data.DataForWork.Count - NumOfDimRet + j;
+					}
+					Data.MultiDemSamples.Add(temp2);
+					Data.MultiDemCurrentSample.set(Data.MultiDemSamples.Count - 1);
 					Build();
-					BuildTwoDem();
+					BuildMultiDem();
 				}
 			}
 		}
