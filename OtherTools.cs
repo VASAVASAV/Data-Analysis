@@ -879,6 +879,7 @@ namespace thing_2._1
 				}
 				k++;
 			}
+			V = Matrixes.GetTransp(V, Size, Size);
 			double temp;
 			for (i = 0; i < Size-1; i++)
 			{

@@ -5253,7 +5253,7 @@ namespace thing_2._1
 					TempDC[i, j] = Tempkk[i, j] * Temps[i] * Temps[j];
 				}
 			}
-			double[,,] lil = ToolsForWork.GetEileganValues(TempDC, 0.001);
+			/*double[,,] lil = ToolsForWork.GetEileganValues(TempDC, 0.001);
 			for (i = 0; i < Tempkk.GetLength(0); i++)
 			{
 				Console.WriteLine(lil[0, i, i]);
@@ -5266,7 +5266,7 @@ namespace thing_2._1
 				}
 				Console.WriteLine();
 			}
-			Console.WriteLine();
+			Console.WriteLine();*/
 		}
 
         double FindChkk(int r1, int r2, List<int> Vals)
@@ -16104,7 +16104,7 @@ namespace thing_2._1
 						TempDC[i, j] = Tempkk[i, j] * Temps[i] * Temps[j];
 					}
 				}
-				double[,,] lil = ToolsForWork.GetEileganValues(TempDC, 0.001);
+				double[,,] lil = ToolsForWork.GetEileganValues(Tempkk, 0.0000001);
 				///
 				double[,] EigenVectors = new double[Tempkk.GetLength(0), Tempkk.GetLength(0)];
 				for (i = 0; i < Tempkk.GetLength(0); i++)
@@ -16122,7 +16122,7 @@ namespace thing_2._1
 						Points[i, j] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][i];
 					}
 				}
-				Points = Matrixes.Multiply(Points,EigenVectors);
+				Points = Matrixes.Multiply(Points,Matrixes.GetTransp(EigenVectors,NumOfDimRet, Tempkk.GetLength(0)));
 				int temp = (int)Data.CurrentSample;
 				List<double> temparr;
 				for (i=0; i < NumOfDimRet; i++)
