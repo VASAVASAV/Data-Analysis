@@ -930,5 +930,105 @@ namespace thing_2._1
 				
 		}
 
-    }
+		double ComputeMetricEuclidian(double[,] FirstPoint, double[,] SecondPoint)
+		{
+			if (FirstPoint.GetLength(0) != 1|| SecondPoint.GetLength(0) != 1|| SecondPoint.GetLength(0)!= FirstPoint.GetLength(0))
+			{
+				return -1;
+			}
+			double sum = 0;
+			for (int i = 0; i < FirstPoint.GetLength(0); i++)
+			{
+				sum += Math.Pow(FirstPoint[0, i] - SecondPoint[0, i],2);
+			}
+			return Math.Sqrt(sum);
+		}
+
+		double ComputeMetricWeightedEuclidian(double[,] FirstPoint, double[,] SecondPoint, object Param)
+		{
+			if (FirstPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != FirstPoint.GetLength(0)|| !(Param is double[]))
+			{
+				return -1;
+			}
+			double sum = 0;
+			for (int i = 0; i < FirstPoint.GetLength(0); i++)
+			{
+				sum += Math.Pow((FirstPoint[0, i] - SecondPoint[0, i]),2)* (Param as double[])[i];
+			}
+			return Math.Sqrt(sum);
+		}
+
+		double ComputeMetricTaxicab(double[,] FirstPoint, double[,] SecondPoint)
+		{
+			if (FirstPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != FirstPoint.GetLength(0))
+			{
+				return -1;
+			}
+			double sum = 0;
+			for (int i = 0; i < FirstPoint.GetLength(0); i++)
+			{
+				sum += Math.Abs((FirstPoint[0, i] - SecondPoint[0, i]));
+			}
+			return Math.Sqrt(sum);
+		}
+
+		double ComputeMetricChebichev(double[,] FirstPoint, double[,] SecondPoint)
+		{
+			if (FirstPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != FirstPoint.GetLength(0))
+			{
+				return -1;
+			}
+			double result = Math.Abs(FirstPoint[0, 0] - SecondPoint[0, 0]);
+			for (int i = 1; i < FirstPoint.GetLength(0); i++)
+			{
+				if (Math.Abs(FirstPoint[0, i] - SecondPoint[0, i]) > result)
+					result = Math.Abs(FirstPoint[0, 0] - SecondPoint[0, 0]);
+			}
+			return Math.Sqrt(result);
+
+		}
+
+		double ComputeMetricEuclidianMinkovskii(double[,] FirstPoint, double[,] SecondPoint, object Param)
+		{
+			if (FirstPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != FirstPoint.GetLength(0)|| !(Param is int))
+			{
+				return -1;
+			}
+			double sum = 0;
+			if ((Param as double?) == null)
+			{
+				return -1;
+			}
+			for (int i = 0; i < FirstPoint.GetLength(0); i++)
+			{
+				sum += Math.Pow(FirstPoint[0, i] - SecondPoint[0, i], (double)Param );
+			}
+			return Math.Pow(sum,1.0/ ((double)Param));
+
+		}
+
+		double ComputeMetricMahalanobis(double[,] FirstPoint, double[,] SecondPoint, object Param)
+		{
+			if (FirstPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != FirstPoint.GetLength(0)||!(Param is double[,]))
+			{
+				return -1;
+			}
+			if ((Param as double[,]) == null)
+			{
+				return -1;
+			}
+			double[,] DifVector = new double[0,FirstPoint.GetLength(0)];
+			for (int i = 0; i < FirstPoint.GetLength(0); i++)
+			{
+				DifVector[0, i] = FirstPoint[0, i] - SecondPoint[0, i];
+			}
+			return Math.Sqrt(Matrixes.Multiply(DifVector,Matrixes.Multiply((double[,])Param,Matrixes.GetTransp(DifVector,1, FirstPoint.GetLength(0))))[0,0]) ;
+		}
+
+		double ComputeMetricClosestNeigh(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[,], double[,], object,double> metric)
+		{
+			return -1;//заглушка
+		}
+
+	}
 }

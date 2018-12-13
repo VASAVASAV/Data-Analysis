@@ -7,7 +7,7 @@ namespace thing_2._1
 {
 	class ComputingTools
 	{
-		double FindStandDev(List<double> target)
+		double FindStandDev(List<double> target, bool type)
 		{
 			double ExpectedVal = 0;
 			int i = 0;
