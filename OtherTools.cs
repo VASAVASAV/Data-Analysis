@@ -845,25 +845,25 @@ namespace thing_2._1
                 P = (2 * matrix[Numi, Numj]) / (matrix[Numi, Numi] - matrix[Numj, Numj]);
 				Fi = 0.5 * Math.Atan(P);
 				double[,] H = new double[Size,Size];
-				double[,] Ht = new double[Size,Size];
+				double[,] Ht;// = new double[Size,Size];
 				for (i = 0; i < Size; i++)
 				{
 					H[i,i] = 1;
-					Ht[i,i] = 1;
+					//Ht[i,i] = 1;
 				}
 				double MyCos = Math.Cos(Fi);
 				double MySin = Math.Sin(Fi);
 				H[Numi,Numi] = MyCos;
 				H[Numj,Numj] = MyCos;
-				Ht[Numi,Numi] = MyCos;
-				Ht[Numj,Numj] = MyCos;
+				//Ht[Numi,Numi] = MyCos;
+				//Ht[Numj,Numj] = MyCos;
 
 				H[Numi,Numj] = -1 * MySin;
 				H[Numj,Numi] = MySin;
-				Ht[Numi,Numj] = MySin;
-				Ht[Numj, Numi] = -1 * MySin;
+				//Ht[Numi,Numj] = MySin;
+				//Ht[Numj, Numi] = -1 * MySin;
 				V = Matrixes.Multiply(V, H);
-
+                Ht = Matrixes.GetTransp(H,Size,Size);
 				matrix = Matrixes.Multiply(Matrixes.Multiply(Ht, matrix),H);
 
 				for (i = 0; i < Size - 1; i++)
