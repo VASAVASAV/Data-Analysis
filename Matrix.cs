@@ -238,5 +238,18 @@ namespace thing_2._1
         {
             throw new NotImplementedException();
         }
+
+        public static double[,] CutMatrix(double[,] target, int Size1, int Size2)
+        {
+            double[,] result = new double[Size1, Size2];
+            for (int i = 0; i < Math.Min(target.GetLength(0), Size1); i++)
+            {
+                for (int j = 0; j < Math.Min(target.GetLength(1), Size2);j++)
+                {
+                    result[i, j] = target[i, j];
+                }
+            }
+            return result;
+        }
     }
 }
