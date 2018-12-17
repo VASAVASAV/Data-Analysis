@@ -5476,8 +5476,8 @@ namespace thing_2._1
                 dataGridView14.Columns[i].HeaderText = "F(" + (i + 1) + ")";
                 dataGridView14.Columns[i].ReadOnly = true;
             }
-            dataGridView14.Columns.Add(new DataGridViewTextBoxColumn());
-            dataGridView14.Columns[trackBar1.Value].ReadOnly = true;
+             dataGridView14.Columns.Add(new DataGridViewTextBoxColumn());
+             dataGridView14.Columns[trackBar1.Value].ReadOnly = true;
              dataGridView14.Columns[trackBar1.Value].HeaderText = "δ";
              for (i = 0; i < Tempkk.GetLength(0); i++)
             {
@@ -5555,7 +5555,10 @@ namespace thing_2._1
                 }
             }
             wstart = w;
-            double[, ,] TempRh = new double[6, Tempkk.GetLength(0), Tempkk.GetLength(0)];
+			double[,] Vectors;
+			double[,] A= new double[1,1];
+			lil = ToolsForWork.GetEileganValues(Tempkk, 0.001);
+			double[, ,] TempRh = new double[6, Tempkk.GetLength(0), Tempkk.GetLength(0)];
             double[,] Rh = new double[ Tempkk.GetLength(0), Tempkk.GetLength(0)];
             for (i = 0; i < Tempkk.GetLength(0); i++)
             {
@@ -5664,9 +5667,9 @@ namespace thing_2._1
                     locsum = 0;
                     for (j = 0; j < Tempkk.GetLength(0); j++)
                     {
-                        locsum += Math.Pow(Rh[i, j],2);
+                        locsum += Math.Abs(Rh[i, j]);
                     }
-                    Rh[i, j] = locsum/sum;
+                    Rh[i, i] = (locsum*locsum)/sum;
                 }
             }
             if (radioButton20.Checked)
@@ -5689,9 +5692,9 @@ namespace thing_2._1
                     {
                         if (i == j)
                             continue;
-                        locsum += Math.Pow(Rh[i, j], 2);
+                        locsum += Math.Abs(Rh[i, j]);
                     }
-                    Rh[i, j] = (locsum * Tempkk.GetLength(0)) / ((Tempkk.GetLength(0)-1)*sum);
+                    Rh[i, i] = (locsum*locsum * Tempkk.GetLength(0)) / ((Tempkk.GetLength(0)-1)*sum);
                 }
             }
             if (radioButton21.Checked)
@@ -5702,11 +5705,9 @@ namespace thing_2._1
                     locsum = 0;
                     for (j = 0; j < w; j++)
                     {
-                        if (i == j)
-                            continue;
-                        locsum += Math.Pow(lil[1,i, j], 2);
+                        locsum += Math.Pow(lil[1,i ,j], 2);
                     }
-                    Rh[i, j] = locsum;
+                    Rh[i, i] = locsum;
                 }
             }
             if (!checkBox12.Checked)
@@ -5786,7 +5787,7 @@ namespace thing_2._1
                 {
                     for (j = 0; j < Tempkk.GetLength(0); j++)
                     {
-                        sum += Math.Abs(Rh[i, j]);
+                        sum += Math.Abs(TempRh[3,i, j]);
                     }
                 }
                 double locsum;
@@ -5795,9 +5796,9 @@ namespace thing_2._1
                     locsum = 0;
                     for (j = 0; j < Tempkk.GetLength(0); j++)
                     {
-                        locsum += Math.Pow(TempRh[3, i, j], 2);
+                        locsum += Math.Abs(TempRh[3, i, j]);
                     }
-                    TempRh[3, i, i] = locsum / sum;
+                    TempRh[3, i, i] = (locsum*locsum) / sum;
                 }
 
                 sum = 0;
@@ -5819,7 +5820,7 @@ namespace thing_2._1
                             continue;
                         locsum += Math.Pow(Rh[i, j], 2);
                     }
-                    TempRh[4, i, i] = (locsum * Tempkk.GetLength(0)) / ((Tempkk.GetLength(0) - 1) * sum);
+                    TempRh[4, i, i] = (locsum * locsum * Tempkk.GetLength(0)) / ((Tempkk.GetLength(0) - 1) * sum);
                 }
 
                 for (i = 0; i < Tempkk.GetLength(0); i++)
@@ -5827,9 +5828,7 @@ namespace thing_2._1
                     locsum = 0;
                     for (j = 0; j < w; j++)
                     {
-                        if (i == j)
-                            continue;
-                        locsum += Math.Pow(lil[1, i, j], 2);
+                        locsum += Math.Pow(lil[1, j, i], 2);
                     }
                     TempRh[5, i, i] = locsum;
                 }
@@ -5844,12 +5843,12 @@ namespace thing_2._1
                 farr = new double[6];
                 for (k = 0; k < 6; k++)
                 {
-                    double[,] Vectors = new double[Tempkk.GetLength(0), Tempkk.GetLength(0)];
+                    Vectors = new double[Tempkk.GetLength(0), Tempkk.GetLength(0)];
                     for (j = 0; j < Tempkk.GetLength(0); j++)
                     {
                         for (i = 0; i < Tempkk.GetLength(0); i++)
                         {
-                            Vectors[i, j] = TempRh[k, i, j];
+                            Vectors[i, j] = TempRh[k, j, i];
                         }
                     }
                     lil = ToolsForWork.GetEileganValues(Vectors, 0.0000001);
@@ -5861,23 +5860,23 @@ namespace thing_2._1
                         }
                     }
                     Rzag = new double[Tempkk.GetLength(0), Tempkk.GetLength(0)];
-                    AAT = Matrixes.Multiply(Matrixes.CutMatrix(Vectors, Tempkk.GetLength(0), w), Matrixes.GetTransp(Matrixes.CutMatrix(Vectors, Tempkk.GetLength(0), w), Tempkk.GetLength(0), w));
+					A = Matrixes.CutMatrix(Vectors, Tempkk.GetLength(0), w);
+					AAT = Matrixes.Multiply(A, Matrixes.GetTransp(A, Tempkk.GetLength(0), w));
                     farr[k] = 0;
                     for (j = 0; j < Tempkk.GetLength(0); j++)
                     {
                         for (i = 0; i < Tempkk.GetLength(0); i++)
                         {
-                            farr[k] += Math.Pow(Rzag[i, j] - AAT[i, j], 2);
+                            farr[k] += Math.Pow(Rh[i, j] - AAT[i, j], 2);
                         }
                     }
-                }
-                                    
+                }       
                 fnum = 0;
                 for (k = 1; k < 6; k++)
                 {
-                    if (farr[i] > farr[fnum])
+                    if (farr[k] < farr[fnum])
                     {
-                        fnum = i;
+                        fnum = k;
                     }
                 }
                 for (j = 0; j < Tempkk.GetLength(0); j++)
@@ -5892,31 +5891,83 @@ namespace thing_2._1
             else
             {
                 lil = ToolsForWork.GetEileganValues(Rh,0.0000001);
-                double[,] Vectors = new double[Tempkk.GetLength(0), Tempkk.GetLength(0)];
+                Vectors = new double[Tempkk.GetLength(0), Tempkk.GetLength(0)];
                 for (j = 0; j < Tempkk.GetLength(0); j++)
                 {
                     for (i = 0; i < Tempkk.GetLength(0); i++)
                     {
-                        Vectors[i,j] = lil[1,i,j];
+                        Vectors[i,j] = lil[1,j,i];
                     }
                 }
                 Rzag = new double[Tempkk.GetLength(0), Tempkk.GetLength(0)];
-                AAT = Matrixes.Multiply(Matrixes.CutMatrix(Vectors, Tempkk.GetLength(0), w), Matrixes.GetTransp(Matrixes.CutMatrix(Vectors, Tempkk.GetLength(0), w), Tempkk.GetLength(0), w));
+				A = Matrixes.CutMatrix(Vectors, Tempkk.GetLength(0), w);
+				AAT = Matrixes.Multiply(A, Matrixes.GetTransp(A, Tempkk.GetLength(0), w));
                 f = 0;
                 for (j = 0; j < Tempkk.GetLength(0); j++)
                 {
                     for (i = 0; i < Tempkk.GetLength(0); i++)
                     {
-                        f += Math.Pow(Rzag[i, j] - AAT[i, j], 2);
+                        f += Math.Pow(Rh[i, j] - AAT[i, j], 2);
                     }
                 }
             }
             double prevf = double.MaxValue;
             realeps = double.MaxValue;
+			double[,] Apref = A;
             while ((f < prevf) && (realeps > epsilon))
             {
-                //maincycle
-            }
+				prevf = f;
+				lil = ToolsForWork.GetEileganValues(Rh, 0.0000001);
+				lamsum = 0;
+				for (k = 0; k < Tempkk.GetLength(0); k++)
+				{
+					lamsum += lil[0, k, k];
+				}
+				double Aver = lamsum / Tempkk.GetLength(0);
+				for (w = 0; w < Tempkk.GetLength(0); w++)
+				{
+					if (lil[0, w, w] < Aver)
+						break;
+				}
+				w = (w < wstart) ? (wstart) : (w);
+				Vectors = new double[Tempkk.GetLength(0), Tempkk.GetLength(0)];
+				for (j = 0; j < Tempkk.GetLength(0); j++)
+				{
+					for (i = 0; i < Tempkk.GetLength(0); i++)
+					{
+						Vectors[i, j] = lil[1, j, i];
+					}
+				}
+				A = Matrixes.CutMatrix(Vectors, Tempkk.GetLength(0), w);
+				for (i = 0; i <= Tempkk.GetLength(0); i++)
+				{
+					sum = 0;
+					for (k = 0; k < w; k++)
+					{
+						sum += Math.Pow(A[i,k], 2);
+					}
+					Rh[i, i] = sum;
+				}
+				////
+				AAT = Matrixes.Multiply(A, Matrixes.GetTransp(A, Tempkk.GetLength(0), w));
+				f = 0;
+				for (j = 0; j < Tempkk.GetLength(0); j++)
+				{
+					for (i = 0; i < Tempkk.GetLength(0); i++)
+					{
+						f += Math.Pow(Rh[i, j] - AAT[i, j], 2);
+					}
+				}
+				realeps = 0;
+				for (i = 0; i <= Tempkk.GetLength(0); i++)
+				{
+					for (k = 0; k < w; k++)
+					{
+						realeps+=Math.Pow(Apref[i,k]-A[i,k],2);
+					}
+				}
+				Apref = A;
+			}
 
 		}
 
@@ -17129,7 +17180,7 @@ namespace thing_2._1
 			Data.StepBack.Add(new List<ToolsForWork.Changing>());
 			Data.StepBack.Add(new List<ToolsForWork.Changing>());
 			Data.TwoDemStepBack.Add(new List<ToolsForWork.Changing>());
-			StatusLabelNameOfFile.Text = Data.NamesOfFiles[Data.CurrentSample];
+			//StatusLabelNameOfFile.Text = Data.NamesOfFiles[Data.CurrentSample];
 			HistData.NumberOfClassesChangedByUser = false;
 			DistrFuncData.NumberOfClassesChangedByUser = false;
 			Data.DistrCreated = false;
