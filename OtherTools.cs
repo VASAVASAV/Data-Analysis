@@ -1025,10 +1025,80 @@ namespace thing_2._1
 			return Math.Sqrt(Matrixes.Multiply(DifVector,Matrixes.Multiply((double[,])Param,Matrixes.GetTransp(DifVector,1, FirstPoint.GetLength(0))))[0,0]) ;
 		}
 
-		double ComputeMetricClosestNeigh(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[,], double[,], object,double> metric)
+		double ComputeMetricClosestNeigh(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[], double[], object,double> metric, object param)
 		{
-			return -1;//заглушка
+			//return -1;//заглушка
+			int i,j,k;
+			int Length1 = FirstClas.Count;
+			int Length2 = SecondClas.Count;
+			double result = metric(FirstClas[0], SecondClas[0], param);
+			double length;
+			for (i = 0; i < Length1; i++)
+			{
+				for (j = 0; j < Length2; j++)
+				{
+					length = metric(FirstClas[i],SecondClas[j],param);
+					if (length < result)
+						result = length;
+
+				}
+			}
+			return result;
 		}
 
+		double ComputeMetricFarestNeigh(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[], double[], object, double> metric, object param)
+		{
+			//return -1;//заглушка
+			int i, j, k;
+			int Length1 = FirstClas.Count;
+			int Length2 = SecondClas.Count;
+			double result = metric(FirstClas[0], SecondClas[0], param);
+			double length;
+			for (i = 0; i < Length1; i++)
+			{
+				for (j = 0; j < Length2; j++)
+				{
+					length = metric(FirstClas[i], SecondClas[j], param);
+					if (length > result)
+						result = length;
+
+				}
+			}
+			return result;
+		}
+
+		double ComputeMetricAverageWeigthed(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[], double[], object, double> metric, object param)
+		{
+			//return -1;//заглушка
+			int i, j, k;
+			int Length1 = FirstClas.Count;
+			int Length2 = SecondClas.Count;
+			double sum = 0;
+			for (i = 0; i < Length1; i++)
+			{
+				for (j = 0; j < Length2; j++)
+				{
+					sum+= metric(FirstClas[i], SecondClas[j], param);
+				}
+			}
+			return sum / (Length1 * Length2);
+		}
+
+		double ComputeMetricAverageNotWeigthed(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[], double[], object, double> metric, object param)
+		{
+			//return -1;//заглушка
+			int i, j, k;
+			int Length1 = FirstClas.Count;
+			int Length2 = SecondClas.Count;
+			double sum = 0;
+			for (i = 0; i < Length1; i++)
+			{
+				for (j = 0; j < Length2; j++)
+				{
+					sum += metric(FirstClas[i], SecondClas[j], param);
+				}
+			}
+			return sum / 4;
+		}
 	}
 }
