@@ -705,6 +705,7 @@ namespace thing_2._1
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.dataGridView14 = new System.Windows.Forms.DataGridView();
             this.tabPage24 = new System.Windows.Forms.TabPage();
+            this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.button36 = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.radioButton21 = new System.Windows.Forms.RadioButton();
@@ -720,7 +721,6 @@ namespace thing_2._1
             this.textBox30 = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.dataGridView15 = new System.Windows.Forms.DataGridView();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -3803,6 +3803,15 @@ namespace thing_2._1
             this.tabPage24.Text = "РФА";
             this.tabPage24.UseVisualStyleBackColor = true;
             // 
+            // checkBox12
+            // 
+            this.checkBox12.AutoSize = true;
+            this.checkBox12.Location = new System.Drawing.Point(827, 174);
+            this.checkBox12.Name = "checkBox12";
+            this.checkBox12.Size = new System.Drawing.Size(15, 14);
+            this.checkBox12.TabIndex = 9;
+            this.checkBox12.UseVisualStyleBackColor = true;
+            // 
             // button36
             // 
             this.button36.Location = new System.Drawing.Point(827, 388);
@@ -3944,20 +3953,13 @@ namespace thing_2._1
             // 
             // dataGridView15
             // 
+            this.dataGridView15.AllowUserToAddRows = false;
+            this.dataGridView15.AllowUserToDeleteRows = false;
             this.dataGridView15.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView15.Location = new System.Drawing.Point(6, 4);
             this.dataGridView15.Name = "dataGridView15";
             this.dataGridView15.Size = new System.Drawing.Size(815, 434);
             this.dataGridView15.TabIndex = 0;
-            // 
-            // checkBox12
-            // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(827, 174);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(15, 14);
-            this.checkBox12.TabIndex = 9;
-            this.checkBox12.UseVisualStyleBackColor = true;
             // 
             // BodyOfForm
             // 
@@ -5848,7 +5850,7 @@ namespace thing_2._1
                     {
                         for (i = 0; i < Tempkk.GetLength(0); i++)
                         {
-                            Vectors[i, j] = TempRh[k, j, i];
+                            Vectors[i, j] = TempRh[k, i, j];
                         }
                     }
                     lil = ToolsForWork.GetEileganValues(Vectors, 0.0000001);
@@ -5856,7 +5858,7 @@ namespace thing_2._1
                     {
                         for (i = 0; i < Tempkk.GetLength(0); i++)
                         {
-                            Vectors[i, j] = lil[1, i, j];
+                            Vectors[i, j] = lil[1, j, i];
                         }
                     }
                     Rzag = new double[Tempkk.GetLength(0), Tempkk.GetLength(0)];
@@ -5914,7 +5916,8 @@ namespace thing_2._1
             double prevf = double.MaxValue;
             realeps = double.MaxValue;
 			double[,] Apref = A;
-            while ((f < prevf) && (realeps > epsilon))
+            int lastw = w;
+            while ((f < prevf) && ((w!=lastw)||realeps > epsilon))
             {
 				prevf = f;
 				lil = ToolsForWork.GetEileganValues(Rh, 0.0000001);
@@ -5929,6 +5932,7 @@ namespace thing_2._1
 					if (lil[0, w, w] < Aver)
 						break;
 				}
+                lastw = w;
 				w = (w < wstart) ? (wstart) : (w);
 				Vectors = new double[Tempkk.GetLength(0), Tempkk.GetLength(0)];
 				for (j = 0; j < Tempkk.GetLength(0); j++)
@@ -5939,7 +5943,7 @@ namespace thing_2._1
 					}
 				}
 				A = Matrixes.CutMatrix(Vectors, Tempkk.GetLength(0), w);
-				for (i = 0; i <= Tempkk.GetLength(0); i++)
+				for (i = 0; i < Tempkk.GetLength(0); i++)
 				{
 					sum = 0;
 					for (k = 0; k < w; k++)
@@ -5959,7 +5963,7 @@ namespace thing_2._1
 					}
 				}
 				realeps = 0;
-				for (i = 0; i <= Tempkk.GetLength(0); i++)
+				for (i = 0; i < Tempkk.GetLength(0); i++)
 				{
 					for (k = 0; k < w; k++)
 					{
@@ -5968,7 +5972,43 @@ namespace thing_2._1
 				}
 				Apref = A;
 			}
-
+            dataGridView15.Rows.Clear();
+            dataGridView15.Columns.Clear();
+            for (i = 0; i < w; i++)
+            {
+                dataGridView15.Columns.Add(new DataGridViewTextBoxColumn());
+                dataGridView15.Columns[i].HeaderText = "F" + (i + 1);
+                dataGridView15.Columns[i].ReadOnly = true;
+            }
+            dataGridView15.Columns.Add(new DataGridViewTextBoxColumn());
+            dataGridView15.Columns[i].HeaderText = "h2";
+            dataGridView15.Columns[i].ReadOnly = true;
+            dataGridView15.Columns.Add(new DataGridViewTextBoxColumn());
+            dataGridView15.Columns[i+1].HeaderText = "d2";
+            dataGridView15.Columns[i+1].ReadOnly = true;
+            double[] V = new double[w];
+            for (i = 0; i < Tempkk.GetLength(0); i++)
+            {
+                dataGridView15.Rows.Add(new DataGridViewRow());
+                sum = 0;
+                for (j = 0; j < w; j++)
+                {
+                    dataGridView15.Rows[i].Cells[j].Value = Math.Round(A[i, j],Data.NumberOfNum);
+                    V[j] += Math.Pow(A[i, j], 2);
+                    sum += Math.Pow(A[i, j], 2);
+                }
+                dataGridView15.Rows[i].Cells[w].Value = Math.Round(sum,Data.NumberOfNum);
+                dataGridView15.Rows[i].Cells[w+1].Value = Math.Round(1-sum,Data.NumberOfNum);
+            }
+            dataGridView15.Rows.Add(new DataGridViewRow());
+            dataGridView15.Rows.Add(new DataGridViewRow());
+            sum=0;
+            for (j = 0; j < w; j++)
+            {
+                dataGridView15.Rows[Tempkk.GetLength(0)].Cells[j].Value = Math.Round(V[j],Data.NumberOfNum);
+                sum += V[j];
+                dataGridView15.Rows[Tempkk.GetLength(0)+1].Cells[j].Value = Math.Round(sum,Data.NumberOfNum); 
+            }
 		}
 
         double FindChkk(int r1, int r2, List<int> Vals)
