@@ -930,89 +930,65 @@ namespace thing_2._1
 				
 		}
 
-		public static double ComputeMetricEuclidian(double[,] FirstPoint, double[,] SecondPoint, double [,] Param)
+		public static double ComputeMetricEuclidian(double[] FirstPoint, double[] SecondPoint, double [,] Param)
 		{
-			if (FirstPoint.GetLength(0) != 1|| SecondPoint.GetLength(0) != 1|| SecondPoint.GetLength(0)!= FirstPoint.GetLength(0))
-			{
-				return -1;
-			}
 			double sum = 0;
 			for (int i = 0; i < FirstPoint.GetLength(0); i++)
 			{
-				sum += Math.Pow(FirstPoint[0, i] - SecondPoint[0, i],2);
+				sum += Math.Pow(FirstPoint[i] - SecondPoint[i],2);
 			}
 			return Math.Sqrt(sum);
 		}
 
-		public static double ComputeMetricWeightedEuclidian(double[,] FirstPoint, double[,] SecondPoint, double[,] Param)
+		public static double ComputeMetricWeightedEuclidian(double[] FirstPoint, double[] SecondPoint, double[,] Param)
 		{
-			if (FirstPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != FirstPoint.GetLength(0))
-			{
-				return -1;
-			}
 			double sum = 0;
 			for (int i = 0; i < FirstPoint.GetLength(0); i++)
 			{
-				sum += Math.Pow((FirstPoint[0, i] - SecondPoint[0, i]),2)* Param[0,i];
+				sum += Math.Pow((FirstPoint[ i] - SecondPoint[i]),2)* Param[0,i];
 			}
 			return Math.Sqrt(sum);
 		}
 
-		public static double ComputeMetricTaxicab(double[,] FirstPoint, double[,] SecondPoint, double[,] Param)
+		public static double ComputeMetricTaxicab(double[] FirstPoint, double[] SecondPoint, double[,] Param)
 		{
-			if (FirstPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != FirstPoint.GetLength(0))
-			{
-				return -1;
-			}
 			double sum = 0;
 			for (int i = 0; i < FirstPoint.GetLength(0); i++)
 			{
-				sum += Math.Abs((FirstPoint[0, i] - SecondPoint[0, i]));
+				sum += Math.Abs((FirstPoint[i] - SecondPoint[i]));
 			}
 			return Math.Sqrt(sum);
 		}
 
-		public static double ComputeMetricChebichev(double[,] FirstPoint, double[,] SecondPoint,double[,] Param)
+		public static double ComputeMetricChebichev(double[] FirstPoint, double[] SecondPoint,double[,] Param)
 		{
-			if (FirstPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != FirstPoint.GetLength(0))
-			{
-				return -1;
-			}
-			double result = Math.Abs(FirstPoint[0, 0] - SecondPoint[0, 0]);
+			double result = Math.Abs(FirstPoint[ 0] - SecondPoint[ 0]);
 			for (int i = 1; i < FirstPoint.GetLength(0); i++)
 			{
-				if (Math.Abs(FirstPoint[0, i] - SecondPoint[0, i]) > result)
-					result = Math.Abs(FirstPoint[0, 0] - SecondPoint[0, 0]);
+				if (Math.Abs(FirstPoint[i] - SecondPoint[i]) > result)
+					result = Math.Abs(FirstPoint[0] - SecondPoint[0]);
 			}
 			return Math.Sqrt(result);
 
 		}
 
-		public static double ComputeMetricMinkovskii(double[,] FirstPoint, double[,] SecondPoint, double[,] Param)
+		public static double ComputeMetricMinkovskii(double[] FirstPoint, double[] SecondPoint, double[,] Param)
 		{
-			if (FirstPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != FirstPoint.GetLength(0)|| !(Param is int))
-			{
-				return -1;
-			}
 			double sum = 0;
 			for (int i = 0; i < FirstPoint.GetLength(0); i++)
 			{
-				sum += Math.Pow(FirstPoint[0, i] - SecondPoint[0, i], Param[0,0] );
+				sum += Math.Pow(FirstPoint[i] - SecondPoint[i], Param[0,0] );
 			}
 			return Math.Pow(sum,1.0/ (Param[0,0]));
 
 		}
 
-		public static double ComputeMetricMahalanobis(double[,] FirstPoint, double[,] SecondPoint, double[,] Param)
+		public static double ComputeMetricMahalanobis(double[] FirstPoint, double[] SecondPoint, double[,] Param)
 		{
-			if (FirstPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != FirstPoint.GetLength(0)||!(Param is double[,]))
-			{
-				return -1;
-			}
-			double[,] DifVector = new double[0,FirstPoint.GetLength(0)];
+			double[,] DifVector = new double[1,FirstPoint.GetLength(0)];
 			for (int i = 0; i < FirstPoint.GetLength(0); i++)
 			{
-				DifVector[0, i] = FirstPoint[0, i] - SecondPoint[0, i];
+				DifVector[0, i] = FirstPoint[i] - SecondPoint[i];
 			}
 			return Math.Sqrt(Matrixes.Multiply(DifVector,Matrixes.Multiply(Param,Matrixes.GetTransp(DifVector,1, FirstPoint.GetLength(0))))[0,0]) ;
 		}

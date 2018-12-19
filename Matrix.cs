@@ -252,22 +252,52 @@ namespace thing_2._1
             return result;
 		}
 
-		public static double CutRowsColumns(double[,] target, int ColumnNumber, int RowNumber)
+		public static double[,] CutRowsColumns(double[,] target, int ColumnNumber, int RowNumber)
 		{
-			int i, j, k;
-			double[,] result = new double[(RowNumber < 0 || RowNumber > target.GetLength(0)) ? (target.GetLength(0)) : (target.GetLength(0) - 1), (ColumnNumber < 0 || ColumnNumber > target.GetLength(1)) ? (target.GetLength(1)) : (target.GetLength(1) - 1)];
-			for (i = 0; i < RowNumber; i++)
-			{
-				for (j = 0; j < ColumnNumber; j++)
-				{
-					result[i, j] = target[i, j];
-				}
-				j = (ColumnNumber < 0 || ColumnNumber > target.GetLength(1)) ? (j) : (j + 1);
-				
-			}
-			return -1;
+            return CutColumns(CutRows(target,RowNumber),ColumnNumber);
 		}
 
+        public static double[,] CutRows(double[,] target, int RowNumber)
+        {
+            int i, j, k;
+            if(RowNumber < 0 || RowNumber > target.GetLength(0))
+                return target;
+            double[,] result = new double[target.GetLength(0)-1, target.GetLength(1)];
+            for (i = 0; i < RowNumber; i++)
+            {
+                for (j = 0; j <  target.GetLength(1); j++)
+                {
+                    result[i, j] = target[i, j];
+                }
+            }
+            for (; i < target.GetLength(0)-1; i++)
+            {
+                for (j = 0; j < target.GetLength(1); j++)
+                {
+                    result[i, j] = target[i+1, j];
+                }
+            }
+            return result; 
+        }
 
+        public static double[,] CutColumns(double[,] target, int ColumnNumber)
+        {
+            int i, j, k;
+            if (ColumnNumber < 0 || ColumnNumber > target.GetLength(1))
+                return target;
+            double[,] result = new double[target.GetLength(0), target.GetLength(1)-1];
+            for (j = 0; j < target.GetLength(0); j++)
+            {
+                for (i = 0; i < ColumnNumber; i++)
+                {
+                    result[j, i] = target[j, i];
+                }
+                for (; i < target.GetLength(0) - 1; i++)
+                {
+                    result[j, i] = target[j, i+1];
+                }
+            }
+            return result;
+        }
     }
 }
