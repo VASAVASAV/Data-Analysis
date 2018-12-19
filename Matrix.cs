@@ -250,6 +250,24 @@ namespace thing_2._1
                 }
             }
             return result;
-        }
+		}
+
+		public static double CutRowsColumns(double[,] target, int ColumnNumber, int RowNumber)
+		{
+			int i, j, k;
+			double[,] result = new double[(RowNumber < 0 || RowNumber > target.GetLength(0)) ? (target.GetLength(0)) : (target.GetLength(0) - 1), (ColumnNumber < 0 || ColumnNumber > target.GetLength(1)) ? (target.GetLength(1)) : (target.GetLength(1) - 1)];
+			for (i = 0; i < RowNumber; i++)
+			{
+				for (j = 0; j < ColumnNumber; j++)
+				{
+					result[i, j] = target[i, j];
+				}
+				j = (ColumnNumber < 0 || ColumnNumber > target.GetLength(1)) ? (j) : (j + 1);
+				
+			}
+			return -1;
+		}
+
+
     }
 }

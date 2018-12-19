@@ -346,6 +346,18 @@ namespace thing_2._1
 		private RadioButton radioButton23;
 		private RadioButton radioButton22;
 		private TableLayoutPanel tableLayoutPanel2;
+		private CheckBox checkBox13;
+		private TextBox textBox32;
+		private Label label35;
+		private TextBox textBox33;
+		private Label label36;
+		private TextBox textBox34;
+		private Label label37;
+		private GroupBox groupBox16;
+		private RadioButton radioButton41;
+		private RadioButton radioButton39;
+		private RadioButton radioButton40;
+		private RadioButton radioButton38;
 		private DataGridView[] DataGridForChkk;
     
         public BodyOfForm()
@@ -744,27 +756,39 @@ namespace thing_2._1
 			this.label33 = new System.Windows.Forms.Label();
 			this.dataGridView15 = new System.Windows.Forms.DataGridView();
 			this.tabPage27 = new System.Windows.Forms.TabPage();
-			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-			this.groupBox13 = new System.Windows.Forms.GroupBox();
-			this.radioButton22 = new System.Windows.Forms.RadioButton();
-			this.radioButton23 = new System.Windows.Forms.RadioButton();
-			this.radioButton24 = new System.Windows.Forms.RadioButton();
-			this.radioButton25 = new System.Windows.Forms.RadioButton();
-			this.radioButton26 = new System.Windows.Forms.RadioButton();
-			this.radioButton27 = new System.Windows.Forms.RadioButton();
+			this.textBox34 = new System.Windows.Forms.TextBox();
+			this.label37 = new System.Windows.Forms.Label();
+			this.groupBox16 = new System.Windows.Forms.GroupBox();
+			this.radioButton41 = new System.Windows.Forms.RadioButton();
+			this.radioButton39 = new System.Windows.Forms.RadioButton();
+			this.radioButton40 = new System.Windows.Forms.RadioButton();
+			this.radioButton38 = new System.Windows.Forms.RadioButton();
+			this.checkBox13 = new System.Windows.Forms.CheckBox();
+			this.textBox33 = new System.Windows.Forms.TextBox();
+			this.label36 = new System.Windows.Forms.Label();
+			this.textBox32 = new System.Windows.Forms.TextBox();
+			this.label35 = new System.Windows.Forms.Label();
+			this.groupBox15 = new System.Windows.Forms.GroupBox();
+			this.radioButton37 = new System.Windows.Forms.RadioButton();
+			this.radioButton36 = new System.Windows.Forms.RadioButton();
+			this.radioButton35 = new System.Windows.Forms.RadioButton();
+			this.button37 = new System.Windows.Forms.Button();
 			this.groupBox14 = new System.Windows.Forms.GroupBox();
+			this.radioButton34 = new System.Windows.Forms.RadioButton();
+			this.radioButton32 = new System.Windows.Forms.RadioButton();
 			this.radioButton28 = new System.Windows.Forms.RadioButton();
 			this.radioButton29 = new System.Windows.Forms.RadioButton();
 			this.radioButton30 = new System.Windows.Forms.RadioButton();
 			this.radioButton31 = new System.Windows.Forms.RadioButton();
 			this.radioButton33 = new System.Windows.Forms.RadioButton();
-			this.radioButton32 = new System.Windows.Forms.RadioButton();
-			this.radioButton34 = new System.Windows.Forms.RadioButton();
-			this.groupBox15 = new System.Windows.Forms.GroupBox();
-			this.radioButton35 = new System.Windows.Forms.RadioButton();
-			this.radioButton36 = new System.Windows.Forms.RadioButton();
-			this.radioButton37 = new System.Windows.Forms.RadioButton();
-			this.button37 = new System.Windows.Forms.Button();
+			this.groupBox13 = new System.Windows.Forms.GroupBox();
+			this.radioButton27 = new System.Windows.Forms.RadioButton();
+			this.radioButton26 = new System.Windows.Forms.RadioButton();
+			this.radioButton25 = new System.Windows.Forms.RadioButton();
+			this.radioButton24 = new System.Windows.Forms.RadioButton();
+			this.radioButton23 = new System.Windows.Forms.RadioButton();
+			this.radioButton22 = new System.Windows.Forms.RadioButton();
+			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
 			this.menuStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
 			this.tabControl2.SuspendLayout();
@@ -844,9 +868,10 @@ namespace thing_2._1
 			this.groupBox12.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
 			this.tabPage27.SuspendLayout();
-			this.groupBox13.SuspendLayout();
-			this.groupBox14.SuspendLayout();
+			this.groupBox16.SuspendLayout();
 			this.groupBox15.SuspendLayout();
+			this.groupBox14.SuspendLayout();
+			this.groupBox13.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// menuStrip1
@@ -4012,7 +4037,16 @@ namespace thing_2._1
 			// 
 			// tabPage27
 			// 
+			this.tabPage27.Controls.Add(this.textBox34);
+			this.tabPage27.Controls.Add(this.label37);
+			this.tabPage27.Controls.Add(this.groupBox16);
+			this.tabPage27.Controls.Add(this.checkBox13);
+			this.tabPage27.Controls.Add(this.textBox33);
+			this.tabPage27.Controls.Add(this.label36);
+			this.tabPage27.Controls.Add(this.textBox32);
+			this.tabPage27.Controls.Add(this.label35);
 			this.tabPage27.Controls.Add(this.groupBox15);
+			this.tabPage27.Controls.Add(this.button37);
 			this.tabPage27.Controls.Add(this.groupBox14);
 			this.tabPage27.Controls.Add(this.groupBox13);
 			this.tabPage27.Controls.Add(this.tableLayoutPanel2);
@@ -4023,205 +4057,154 @@ namespace thing_2._1
 			this.tabPage27.Text = "Кластеризація";
 			this.tabPage27.UseVisualStyleBackColor = true;
 			// 
-			// tableLayoutPanel2
+			// textBox34
 			// 
-			this.tableLayoutPanel2.ColumnCount = 2;
-			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-			this.tableLayoutPanel2.RowCount = 2;
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel2.Size = new System.Drawing.Size(764, 434);
-			this.tableLayoutPanel2.TabIndex = 0;
+			this.textBox34.Location = new System.Drawing.Point(899, 375);
+			this.textBox34.Name = "textBox34";
+			this.textBox34.Size = new System.Drawing.Size(75, 20);
+			this.textBox34.TabIndex = 18;
 			// 
-			// groupBox13
+			// label37
 			// 
-			this.groupBox13.Controls.Add(this.radioButton27);
-			this.groupBox13.Controls.Add(this.radioButton26);
-			this.groupBox13.Controls.Add(this.radioButton25);
-			this.groupBox13.Controls.Add(this.radioButton24);
-			this.groupBox13.Controls.Add(this.radioButton23);
-			this.groupBox13.Controls.Add(this.radioButton22);
-			this.groupBox13.Location = new System.Drawing.Point(774, 4);
-			this.groupBox13.Name = "groupBox13";
-			this.groupBox13.Size = new System.Drawing.Size(200, 136);
-			this.groupBox13.TabIndex = 1;
-			this.groupBox13.TabStop = false;
-			this.groupBox13.Text = "Виберіть метрику";
+			this.label37.AutoSize = true;
+			this.label37.Location = new System.Drawing.Point(896, 359);
+			this.label37.Name = "label37";
+			this.label37.Size = new System.Drawing.Size(50, 13);
+			this.label37.TabIndex = 17;
+			this.label37.Text = "Точність";
 			// 
-			// radioButton22
+			// groupBox16
 			// 
-			this.radioButton22.AutoSize = true;
-			this.radioButton22.Location = new System.Drawing.Point(6, 19);
-			this.radioButton22.Name = "radioButton22";
-			this.radioButton22.Size = new System.Drawing.Size(76, 17);
-			this.radioButton22.TabIndex = 0;
-			this.radioButton22.TabStop = true;
-			this.radioButton22.Text = "Евклідова";
-			this.radioButton22.UseVisualStyleBackColor = true;
+			this.groupBox16.Controls.Add(this.radioButton41);
+			this.groupBox16.Controls.Add(this.radioButton39);
+			this.groupBox16.Controls.Add(this.radioButton40);
+			this.groupBox16.Controls.Add(this.radioButton38);
+			this.groupBox16.Location = new System.Drawing.Point(685, 245);
+			this.groupBox16.Name = "groupBox16";
+			this.groupBox16.Size = new System.Drawing.Size(297, 110);
+			this.groupBox16.TabIndex = 16;
+			this.groupBox16.TabStop = false;
+			this.groupBox16.Text = "Метод оцінки якості";
 			// 
-			// radioButton23
+			// radioButton41
 			// 
-			this.radioButton23.AutoSize = true;
-			this.radioButton23.Location = new System.Drawing.Point(88, 20);
-			this.radioButton23.Name = "radioButton23";
-			this.radioButton23.Size = new System.Drawing.Size(81, 17);
-			this.radioButton23.TabIndex = 1;
-			this.radioButton23.TabStop = true;
-			this.radioButton23.Text = "... зважена";
-			this.radioButton23.UseVisualStyleBackColor = true;
+			this.radioButton41.AutoSize = true;
+			this.radioButton41.Location = new System.Drawing.Point(7, 87);
+			this.radioButton41.Name = "radioButton41";
+			this.radioButton41.Size = new System.Drawing.Size(163, 17);
+			this.radioButton41.TabIndex = 11;
+			this.radioButton41.TabStop = true;
+			this.radioButton41.Text = "Відношення функціоналів Q";
+			this.radioButton41.UseVisualStyleBackColor = true;
 			// 
-			// radioButton24
+			// radioButton39
 			// 
-			this.radioButton24.AutoSize = true;
-			this.radioButton24.Location = new System.Drawing.Point(6, 43);
-			this.radioButton24.Name = "radioButton24";
-			this.radioButton24.Size = new System.Drawing.Size(98, 17);
-			this.radioButton24.TabIndex = 2;
-			this.radioButton24.TabStop = true;
-			this.radioButton24.Text = "Манхетеньска";
-			this.radioButton24.UseVisualStyleBackColor = true;
+			this.radioButton39.AutoSize = true;
+			this.radioButton39.Location = new System.Drawing.Point(7, 65);
+			this.radioButton39.Name = "radioButton39";
+			this.radioButton39.Size = new System.Drawing.Size(231, 17);
+			this.radioButton39.TabIndex = 9;
+			this.radioButton39.TabStop = true;
+			this.radioButton39.Text = "Загальна внутрішньокластерна відстань";
+			this.radioButton39.UseVisualStyleBackColor = true;
 			// 
-			// radioButton25
+			// radioButton40
 			// 
-			this.radioButton25.AutoSize = true;
-			this.radioButton25.Location = new System.Drawing.Point(6, 66);
-			this.radioButton25.Name = "radioButton25";
-			this.radioButton25.Size = new System.Drawing.Size(77, 17);
-			this.radioButton25.TabIndex = 3;
-			this.radioButton25.TabStop = true;
-			this.radioButton25.Text = "Чебишева";
-			this.radioButton25.UseVisualStyleBackColor = true;
+			this.radioButton40.AutoSize = true;
+			this.radioButton40.Location = new System.Drawing.Point(7, 19);
+			this.radioButton40.Name = "radioButton40";
+			this.radioButton40.Size = new System.Drawing.Size(221, 17);
+			this.radioButton40.TabIndex = 8;
+			this.radioButton40.TabStop = true;
+			this.radioButton40.Text = "Сума внутрішньокластерних дисперсій";
+			this.radioButton40.UseVisualStyleBackColor = true;
 			// 
-			// radioButton26
+			// radioButton38
 			// 
-			this.radioButton26.AutoSize = true;
-			this.radioButton26.Location = new System.Drawing.Point(6, 89);
-			this.radioButton26.Name = "radioButton26";
-			this.radioButton26.Size = new System.Drawing.Size(95, 17);
-			this.radioButton26.TabIndex = 4;
-			this.radioButton26.TabStop = true;
-			this.radioButton26.Text = "Мінковського";
-			this.radioButton26.UseVisualStyleBackColor = true;
+			this.radioButton38.AutoSize = true;
+			this.radioButton38.Location = new System.Drawing.Point(7, 42);
+			this.radioButton38.Name = "radioButton38";
+			this.radioButton38.Size = new System.Drawing.Size(271, 17);
+			this.radioButton38.TabIndex = 10;
+			this.radioButton38.TabStop = true;
+			this.radioButton38.Text = "Сума попарних внутрішньокластерних дисперсій";
+			this.radioButton38.UseVisualStyleBackColor = true;
 			// 
-			// radioButton27
+			// checkBox13
 			// 
-			this.radioButton27.AutoSize = true;
-			this.radioButton27.Location = new System.Drawing.Point(6, 112);
-			this.radioButton27.Name = "radioButton27";
-			this.radioButton27.Size = new System.Drawing.Size(95, 17);
-			this.radioButton27.TabIndex = 5;
-			this.radioButton27.TabStop = true;
-			this.radioButton27.Text = "Махаланобіса";
-			this.radioButton27.UseVisualStyleBackColor = true;
+			this.checkBox13.AutoSize = true;
+			this.checkBox13.Location = new System.Drawing.Point(885, 412);
+			this.checkBox13.Name = "checkBox13";
+			this.checkBox13.Size = new System.Drawing.Size(94, 17);
+			this.checkBox13.TabIndex = 12;
+			this.checkBox13.Text = "У просторі гк";
+			this.checkBox13.UseVisualStyleBackColor = true;
 			// 
-			// groupBox14
+			// textBox33
 			// 
-			this.groupBox14.Controls.Add(this.radioButton34);
-			this.groupBox14.Controls.Add(this.radioButton32);
-			this.groupBox14.Controls.Add(this.radioButton28);
-			this.groupBox14.Controls.Add(this.radioButton29);
-			this.groupBox14.Controls.Add(this.radioButton30);
-			this.groupBox14.Controls.Add(this.radioButton31);
-			this.groupBox14.Controls.Add(this.radioButton33);
-			this.groupBox14.Location = new System.Drawing.Point(774, 146);
-			this.groupBox14.Name = "groupBox14";
-			this.groupBox14.Size = new System.Drawing.Size(200, 169);
-			this.groupBox14.TabIndex = 2;
-			this.groupBox14.TabStop = false;
-			this.groupBox14.Text = "Виберіть тип відстані між кластерами";
+			this.textBox33.Location = new System.Drawing.Point(791, 375);
+			this.textBox33.Name = "textBox33";
+			this.textBox33.Size = new System.Drawing.Size(100, 20);
+			this.textBox33.TabIndex = 15;
 			// 
-			// radioButton28
+			// label36
 			// 
-			this.radioButton28.AutoSize = true;
-			this.radioButton28.Location = new System.Drawing.Point(6, 101);
-			this.radioButton28.Name = "radioButton28";
-			this.radioButton28.Size = new System.Drawing.Size(161, 17);
-			this.radioButton28.TabIndex = 5;
-			this.radioButton28.TabStop = true;
-			this.radioButton28.Text = "Зважена середня відстань";
-			this.radioButton28.UseVisualStyleBackColor = true;
+			this.label36.AutoSize = true;
+			this.label36.Location = new System.Drawing.Point(788, 358);
+			this.label36.Name = "label36";
+			this.label36.Size = new System.Drawing.Size(109, 13);
+			this.label36.TabIndex = 14;
+			this.label36.Text = "Обмеження ітерацій";
 			// 
-			// radioButton29
+			// textBox32
 			// 
-			this.radioButton29.AutoSize = true;
-			this.radioButton29.Location = new System.Drawing.Point(85, 78);
-			this.radioButton29.Name = "radioButton29";
-			this.radioButton29.Size = new System.Drawing.Size(83, 17);
-			this.radioButton29.TabIndex = 4;
-			this.radioButton29.TabStop = true;
-			this.radioButton29.Text = "Центроїдна";
-			this.radioButton29.UseVisualStyleBackColor = true;
+			this.textBox32.Location = new System.Drawing.Point(678, 375);
+			this.textBox32.Name = "textBox32";
+			this.textBox32.Size = new System.Drawing.Size(100, 20);
+			this.textBox32.TabIndex = 13;
 			// 
-			// radioButton30
+			// label35
 			// 
-			this.radioButton30.AutoSize = true;
-			this.radioButton30.Location = new System.Drawing.Point(7, 78);
-			this.radioButton30.Name = "radioButton30";
-			this.radioButton30.Size = new System.Drawing.Size(72, 17);
-			this.radioButton30.TabIndex = 3;
-			this.radioButton30.TabStop = true;
-			this.radioButton30.Text = "Медіанна";
-			this.radioButton30.UseVisualStyleBackColor = true;
-			// 
-			// radioButton31
-			// 
-			this.radioButton31.AutoSize = true;
-			this.radioButton31.Location = new System.Drawing.Point(7, 55);
-			this.radioButton31.Name = "radioButton31";
-			this.radioButton31.Size = new System.Drawing.Size(150, 17);
-			this.radioButton31.TabIndex = 2;
-			this.radioButton31.TabStop = true;
-			this.radioButton31.Text = "Найвіддаленішого сусіда";
-			this.radioButton31.UseVisualStyleBackColor = true;
-			// 
-			// radioButton33
-			// 
-			this.radioButton33.AutoSize = true;
-			this.radioButton33.Location = new System.Drawing.Point(7, 32);
-			this.radioButton33.Name = "radioButton33";
-			this.radioButton33.Size = new System.Drawing.Size(127, 17);
-			this.radioButton33.TabIndex = 0;
-			this.radioButton33.TabStop = true;
-			this.radioButton33.Text = "Найближчого сусіда";
-			this.radioButton33.UseVisualStyleBackColor = true;
-			// 
-			// radioButton32
-			// 
-			this.radioButton32.AutoSize = true;
-			this.radioButton32.Location = new System.Drawing.Point(6, 124);
-			this.radioButton32.Name = "radioButton32";
-			this.radioButton32.Size = new System.Drawing.Size(114, 17);
-			this.radioButton32.TabIndex = 6;
-			this.radioButton32.TabStop = true;
-			this.radioButton32.Text = "Середня відстань";
-			this.radioButton32.UseVisualStyleBackColor = true;
-			// 
-			// radioButton34
-			// 
-			this.radioButton34.AutoSize = true;
-			this.radioButton34.Location = new System.Drawing.Point(6, 147);
-			this.radioButton34.Name = "radioButton34";
-			this.radioButton34.Size = new System.Drawing.Size(57, 17);
-			this.radioButton34.TabIndex = 7;
-			this.radioButton34.TabStop = true;
-			this.radioButton34.Text = "Уорда";
-			this.radioButton34.UseVisualStyleBackColor = true;
+			this.label35.AutoSize = true;
+			this.label35.Location = new System.Drawing.Point(679, 358);
+			this.label35.Name = "label35";
+			this.label35.Size = new System.Drawing.Size(105, 13);
+			this.label35.TabIndex = 12;
+			this.label35.Text = "Кількість кластерів";
 			// 
 			// groupBox15
 			// 
-			this.groupBox15.Controls.Add(this.button37);
 			this.groupBox15.Controls.Add(this.radioButton37);
 			this.groupBox15.Controls.Add(this.radioButton36);
 			this.groupBox15.Controls.Add(this.radioButton35);
-			this.groupBox15.Location = new System.Drawing.Point(774, 321);
+			this.groupBox15.Location = new System.Drawing.Point(682, 172);
 			this.groupBox15.Name = "groupBox15";
-			this.groupBox15.Size = new System.Drawing.Size(200, 117);
+			this.groupBox15.Size = new System.Drawing.Size(297, 67);
 			this.groupBox15.TabIndex = 3;
 			this.groupBox15.TabStop = false;
 			this.groupBox15.Text = "Метод";
+			// 
+			// radioButton37
+			// 
+			this.radioButton37.AutoSize = true;
+			this.radioButton37.Location = new System.Drawing.Point(6, 42);
+			this.radioButton37.Name = "radioButton37";
+			this.radioButton37.Size = new System.Drawing.Size(146, 17);
+			this.radioButton37.TabIndex = 10;
+			this.radioButton37.TabStop = true;
+			this.radioButton37.Text = "К-середніх Болла-Холла";
+			this.radioButton37.UseVisualStyleBackColor = true;
+			// 
+			// radioButton36
+			// 
+			this.radioButton36.AutoSize = true;
+			this.radioButton36.Location = new System.Drawing.Point(123, 19);
+			this.radioButton36.Name = "radioButton36";
+			this.radioButton36.Size = new System.Drawing.Size(128, 17);
+			this.radioButton36.TabIndex = 9;
+			this.radioButton36.TabStop = true;
+			this.radioButton36.Text = "К-середніх МакКуіна";
+			this.radioButton36.UseVisualStyleBackColor = true;
 			// 
 			// radioButton35
 			// 
@@ -4234,37 +4217,202 @@ namespace thing_2._1
 			this.radioButton35.Text = "Агломеративний";
 			this.radioButton35.UseVisualStyleBackColor = true;
 			// 
-			// radioButton36
-			// 
-			this.radioButton36.AutoSize = true;
-			this.radioButton36.Location = new System.Drawing.Point(6, 42);
-			this.radioButton36.Name = "radioButton36";
-			this.radioButton36.Size = new System.Drawing.Size(128, 17);
-			this.radioButton36.TabIndex = 9;
-			this.radioButton36.TabStop = true;
-			this.radioButton36.Text = "К-середніх МакКуіна";
-			this.radioButton36.UseVisualStyleBackColor = true;
-			// 
-			// radioButton37
-			// 
-			this.radioButton37.AutoSize = true;
-			this.radioButton37.Location = new System.Drawing.Point(7, 65);
-			this.radioButton37.Name = "radioButton37";
-			this.radioButton37.Size = new System.Drawing.Size(146, 17);
-			this.radioButton37.TabIndex = 10;
-			this.radioButton37.TabStop = true;
-			this.radioButton37.Text = "К-середніх Болла-Холла";
-			this.radioButton37.UseVisualStyleBackColor = true;
-			// 
 			// button37
 			// 
-			this.button37.Location = new System.Drawing.Point(7, 88);
+			this.button37.Location = new System.Drawing.Point(678, 401);
 			this.button37.Name = "button37";
-			this.button37.Size = new System.Drawing.Size(187, 23);
+			this.button37.Size = new System.Drawing.Size(201, 37);
 			this.button37.TabIndex = 11;
 			this.button37.Text = "Кластеризувати";
 			this.button37.UseVisualStyleBackColor = true;
 			this.button37.Click += new System.EventHandler(this.button37_Click);
+			// 
+			// groupBox14
+			// 
+			this.groupBox14.Controls.Add(this.radioButton34);
+			this.groupBox14.Controls.Add(this.radioButton32);
+			this.groupBox14.Controls.Add(this.radioButton28);
+			this.groupBox14.Controls.Add(this.radioButton29);
+			this.groupBox14.Controls.Add(this.radioButton30);
+			this.groupBox14.Controls.Add(this.radioButton31);
+			this.groupBox14.Controls.Add(this.radioButton33);
+			this.groupBox14.Location = new System.Drawing.Point(682, 77);
+			this.groupBox14.Name = "groupBox14";
+			this.groupBox14.Size = new System.Drawing.Size(297, 89);
+			this.groupBox14.TabIndex = 2;
+			this.groupBox14.TabStop = false;
+			this.groupBox14.Text = "Виберіть тип відстані між кластерами";
+			// 
+			// radioButton34
+			// 
+			this.radioButton34.AutoSize = true;
+			this.radioButton34.Location = new System.Drawing.Point(213, 19);
+			this.radioButton34.Name = "radioButton34";
+			this.radioButton34.Size = new System.Drawing.Size(57, 17);
+			this.radioButton34.TabIndex = 7;
+			this.radioButton34.TabStop = true;
+			this.radioButton34.Text = "Уорда";
+			this.radioButton34.UseVisualStyleBackColor = true;
+			// 
+			// radioButton32
+			// 
+			this.radioButton32.AutoSize = true;
+			this.radioButton32.Location = new System.Drawing.Point(156, 42);
+			this.radioButton32.Name = "radioButton32";
+			this.radioButton32.Size = new System.Drawing.Size(114, 17);
+			this.radioButton32.TabIndex = 6;
+			this.radioButton32.TabStop = true;
+			this.radioButton32.Text = "Середня відстань";
+			this.radioButton32.UseVisualStyleBackColor = true;
+			// 
+			// radioButton28
+			// 
+			this.radioButton28.AutoSize = true;
+			this.radioButton28.Location = new System.Drawing.Point(77, 65);
+			this.radioButton28.Name = "radioButton28";
+			this.radioButton28.Size = new System.Drawing.Size(161, 17);
+			this.radioButton28.TabIndex = 5;
+			this.radioButton28.TabStop = true;
+			this.radioButton28.Text = "Зважена середня відстань";
+			this.radioButton28.UseVisualStyleBackColor = true;
+			// 
+			// radioButton29
+			// 
+			this.radioButton29.AutoSize = true;
+			this.radioButton29.Location = new System.Drawing.Point(132, 19);
+			this.radioButton29.Name = "radioButton29";
+			this.radioButton29.Size = new System.Drawing.Size(83, 17);
+			this.radioButton29.TabIndex = 4;
+			this.radioButton29.TabStop = true;
+			this.radioButton29.Text = "Центроїдна";
+			this.radioButton29.UseVisualStyleBackColor = true;
+			// 
+			// radioButton30
+			// 
+			this.radioButton30.AutoSize = true;
+			this.radioButton30.Location = new System.Drawing.Point(7, 65);
+			this.radioButton30.Name = "radioButton30";
+			this.radioButton30.Size = new System.Drawing.Size(72, 17);
+			this.radioButton30.TabIndex = 3;
+			this.radioButton30.TabStop = true;
+			this.radioButton30.Text = "Медіанна";
+			this.radioButton30.UseVisualStyleBackColor = true;
+			// 
+			// radioButton31
+			// 
+			this.radioButton31.AutoSize = true;
+			this.radioButton31.Location = new System.Drawing.Point(7, 42);
+			this.radioButton31.Name = "radioButton31";
+			this.radioButton31.Size = new System.Drawing.Size(150, 17);
+			this.radioButton31.TabIndex = 2;
+			this.radioButton31.TabStop = true;
+			this.radioButton31.Text = "Найвіддаленішого сусіда";
+			this.radioButton31.UseVisualStyleBackColor = true;
+			// 
+			// radioButton33
+			// 
+			this.radioButton33.AutoSize = true;
+			this.radioButton33.Location = new System.Drawing.Point(7, 19);
+			this.radioButton33.Name = "radioButton33";
+			this.radioButton33.Size = new System.Drawing.Size(127, 17);
+			this.radioButton33.TabIndex = 0;
+			this.radioButton33.TabStop = true;
+			this.radioButton33.Text = "Найближчого сусіда";
+			this.radioButton33.UseVisualStyleBackColor = true;
+			// 
+			// groupBox13
+			// 
+			this.groupBox13.Controls.Add(this.radioButton27);
+			this.groupBox13.Controls.Add(this.radioButton26);
+			this.groupBox13.Controls.Add(this.radioButton25);
+			this.groupBox13.Controls.Add(this.radioButton24);
+			this.groupBox13.Controls.Add(this.radioButton23);
+			this.groupBox13.Controls.Add(this.radioButton22);
+			this.groupBox13.Location = new System.Drawing.Point(682, 4);
+			this.groupBox13.Name = "groupBox13";
+			this.groupBox13.Size = new System.Drawing.Size(297, 67);
+			this.groupBox13.TabIndex = 1;
+			this.groupBox13.TabStop = false;
+			this.groupBox13.Text = "Виберіть метрику";
+			// 
+			// radioButton27
+			// 
+			this.radioButton27.AutoSize = true;
+			this.radioButton27.Location = new System.Drawing.Point(109, 43);
+			this.radioButton27.Name = "radioButton27";
+			this.radioButton27.Size = new System.Drawing.Size(95, 17);
+			this.radioButton27.TabIndex = 5;
+			this.radioButton27.TabStop = true;
+			this.radioButton27.Text = "Махаланобіса";
+			this.radioButton27.UseVisualStyleBackColor = true;
+			// 
+			// radioButton26
+			// 
+			this.radioButton26.AutoSize = true;
+			this.radioButton26.Location = new System.Drawing.Point(175, 20);
+			this.radioButton26.Name = "radioButton26";
+			this.radioButton26.Size = new System.Drawing.Size(95, 17);
+			this.radioButton26.TabIndex = 4;
+			this.radioButton26.TabStop = true;
+			this.radioButton26.Text = "Мінковського";
+			this.radioButton26.UseVisualStyleBackColor = true;
+			// 
+			// radioButton25
+			// 
+			this.radioButton25.AutoSize = true;
+			this.radioButton25.Location = new System.Drawing.Point(203, 43);
+			this.radioButton25.Name = "radioButton25";
+			this.radioButton25.Size = new System.Drawing.Size(77, 17);
+			this.radioButton25.TabIndex = 3;
+			this.radioButton25.TabStop = true;
+			this.radioButton25.Text = "Чебишева";
+			this.radioButton25.UseVisualStyleBackColor = true;
+			// 
+			// radioButton24
+			// 
+			this.radioButton24.AutoSize = true;
+			this.radioButton24.Location = new System.Drawing.Point(6, 43);
+			this.radioButton24.Name = "radioButton24";
+			this.radioButton24.Size = new System.Drawing.Size(98, 17);
+			this.radioButton24.TabIndex = 2;
+			this.radioButton24.TabStop = true;
+			this.radioButton24.Text = "Манхетеньска";
+			this.radioButton24.UseVisualStyleBackColor = true;
+			// 
+			// radioButton23
+			// 
+			this.radioButton23.AutoSize = true;
+			this.radioButton23.Location = new System.Drawing.Point(88, 20);
+			this.radioButton23.Name = "radioButton23";
+			this.radioButton23.Size = new System.Drawing.Size(81, 17);
+			this.radioButton23.TabIndex = 1;
+			this.radioButton23.TabStop = true;
+			this.radioButton23.Text = "... зважена";
+			this.radioButton23.UseVisualStyleBackColor = true;
+			// 
+			// radioButton22
+			// 
+			this.radioButton22.AutoSize = true;
+			this.radioButton22.Location = new System.Drawing.Point(6, 19);
+			this.radioButton22.Name = "radioButton22";
+			this.radioButton22.Size = new System.Drawing.Size(76, 17);
+			this.radioButton22.TabIndex = 0;
+			this.radioButton22.TabStop = true;
+			this.radioButton22.Text = "Евклідова";
+			this.radioButton22.UseVisualStyleBackColor = true;
+			// 
+			// tableLayoutPanel2
+			// 
+			this.tableLayoutPanel2.ColumnCount = 2;
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
+			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+			this.tableLayoutPanel2.RowCount = 2;
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tableLayoutPanel2.Size = new System.Drawing.Size(668, 434);
+			this.tableLayoutPanel2.TabIndex = 0;
 			// 
 			// BodyOfForm
 			// 
@@ -4383,12 +4531,15 @@ namespace thing_2._1
 			this.groupBox12.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
 			this.tabPage27.ResumeLayout(false);
-			this.groupBox13.ResumeLayout(false);
-			this.groupBox13.PerformLayout();
-			this.groupBox14.ResumeLayout(false);
-			this.groupBox14.PerformLayout();
+			this.tabPage27.PerformLayout();
+			this.groupBox16.ResumeLayout(false);
+			this.groupBox16.PerformLayout();
 			this.groupBox15.ResumeLayout(false);
 			this.groupBox15.PerformLayout();
+			this.groupBox14.ResumeLayout(false);
+			this.groupBox14.PerformLayout();
+			this.groupBox13.ResumeLayout(false);
+			this.groupBox13.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -6324,8 +6475,8 @@ namespace thing_2._1
             sum=0;
             for (j = 0; j < w; j++)
             {
-                dataGridView15.Rows[Tempkk.GetLength(0)].Cells[j].Value = Math.Round(V[j],Data.NumberOfNum);
-                sum += V[j];
+                dataGridView15.Rows[Tempkk.GetLength(0)].Cells[j].Value = Math.Round(lil[0,j,j],Data.NumberOfNum);
+                sum += lil[0, j, j];
                 dataGridView15.Rows[Tempkk.GetLength(0)+1].Cells[j].Value = Math.Round(sum,Data.NumberOfNum); 
             }
 		}
@@ -15264,136 +15415,146 @@ namespace thing_2._1
 
         private void button30_Click(object sender, EventArgs e)
         {
-            if (Data.DataForWork.Count == 0 || Data.MultiDemSamples.Count == 0)
-            {
-                LogOutputTextBox.Text += "Nothing to work with" + Environment.NewLine;
-                return;
-            }
-            int i, j, k;
-            double[] ExpVals = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
-            double Alfa;
-            try
-            {
-                Alfa = Convert.ToDouble(textBox20.Text);
-            }
-            catch
-            {
-                Alfa = 0.05;
-                textBox20.Text = "0,01";
-            }
-            if (Alfa <= 0 || Alfa >= 1)
-            {
-                Alfa = 0.05;
-                textBox20.Text = "0,01";
-            }
-            /////
-            int DimNum = Data.MultiDemSamples[Data.MultiDemCurrentSample].Length;
-            int[] temp = new int[DimNum];
-            int NumberOfPoints = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count;
-            int ClassNumber = ToolsForWork.CompNumOfClasses(NumberOfPoints);
-            for (i = 0; i < DimNum; i++)
-            {
-                temp[i] = ClassNumber;
-            }
-            var VarR = Array.CreateInstance(typeof(int), temp);
-            ////
-            int Sum = 0;
-            i = 0;
-            string temps;
-            double[] Maxs = new double[DimNum];
-            double[] Mins = new double[DimNum];
-            for (j = 0; j < DimNum; j++)
-            {
-                Maxs[j] = double.MinValue;
-                Mins[j] = double.MaxValue;
-            }
-            for (j = 0; j < NumberOfPoints; j++)
-            {
-                for (k = 0; k < DimNum; k++)
-                {
-                    if (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] > Maxs[k])
-                    {
-                        Maxs[k] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j];
-                    }
-                    if (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] < Mins[k])
-                    {
-                        Mins[k] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j];
-                    }
-                }
-            }
-            for (k = 0; k < DimNum; k++)
-            {
-                Maxs[k] += ((double)Maxs[k] - Mins[k]) / 10000;
-            }
-            List<int> ToDelete = new List<int>();
-            int Counter;
-            int Deleted = 0;
-            foreach (int item in VarR)
-            {
-                int[] coor = ComputeIndex(i++, VarR);
-                temps = "";
-                for (j = coor.Length - 1; j > 0; j--)
-                {
-                    temps += coor[j] + "|";
-                }
-                temps += coor[0];
-                VarR.SetValue(0, coor);
-                for (j = 0; j < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; j++)
-                {
-                    Counter = 0;
-                    for (k = 0; k < DimNum; k++)
-                    {
-                        if ((Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] >= (Mins[k] + ((Maxs[k] - Mins[k]) / ClassNumber) * coor[k])) && (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] < (Mins[k] + ((Maxs[k] - Mins[k]) / ClassNumber) * (coor[k] + 1))))
-                        {
-                            Counter++;
-                        }
-                    }
-                    if (Counter == DimNum)
-                    {
-                        Sum++;
-                        VarR.SetValue(1 + Convert.ToInt32(VarR.GetValue(coor)), coor);
-                    }
-                }
-                if ((Convert.ToDouble(VarR.GetValue(coor)) / NumberOfPoints) < Alfa)
-                {
-                    for (j = 0; j < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; j++)
-                    {
-                        Counter = 0;
-                        for (k = 0; k < DimNum; k++)
-                        {
-                            if ((Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] >= (Mins[k] + ((Maxs[k] - Mins[k]) / ClassNumber) * coor[k])) && (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] < (Mins[k] + ((Maxs[k] - Mins[k]) / ClassNumber) * (coor[k] + 1))))
-                            {
-                                Counter++;
-                            }
-                        }
-                        if (Counter == DimNum)
-                        {
-                            ToDelete.Add(j);
-                        }
-                    }
-                }
-                //////////
-                for (k = ToDelete.Count - 1; k >= 0; k--)
-                {
-                    double[] FW = new double[DimNum];
-                    for (j = 0; j < DimNum; j++)
-                    {
-                        FW[j] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][ToDelete[k]];
-                        Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]].RemoveAt(ToDelete[k]);
-                    }
-                    ToDelete.RemoveAt(k);
-                    Deleted++;
-                    Data.MultiDemStepBack[Data.MultiDemCurrentSample].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.multidemdeleted, FW));
-                }
-                //////////
-            }
-            if (Sum != NumberOfPoints)
-            {
-                LogOutputTextBox.Text += " Something bad happned. Weve counted only" + Sum + " elements" +Environment.NewLine;
-            }
-            LogOutputTextBox.Text+=  "Успішно відилалено " + Deleted + " елементів" +Environment.NewLine;
-            ////
-            UpdateForm();
+			try
+			{
+				if (Data.DataForWork.Count == 0 || Data.MultiDemSamples.Count == 0)
+				{
+					LogOutputTextBox.Text += "Nothing to work with" + Environment.NewLine;
+					return;
+				}
+				int i, j, k;
+				double[] ExpVals = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
+				double Alfa;
+				try
+				{
+					Alfa = Convert.ToDouble(textBox20.Text);
+				}
+				catch
+				{
+					Alfa = 0.05;
+					textBox20.Text = "0,01";
+				}
+				if (Alfa <= 0 || Alfa >= 1)
+				{
+					Alfa = 0.05;
+					textBox20.Text = "0,01";
+				}
+				/////
+				int DimNum = Data.MultiDemSamples[Data.MultiDemCurrentSample].Length;
+				int[] temp = new int[DimNum];
+				int NumberOfPoints = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count;
+				int ClassNumber = ToolsForWork.CompNumOfClasses(NumberOfPoints);
+				for (i = 0; i < DimNum; i++)
+				{
+					temp[i] = ClassNumber;
+				}
+				var VarR = Array.CreateInstance(typeof(int), temp);
+
+				////
+				int Sum = 0;
+				i = 0;
+				string temps;
+				double[] Maxs = new double[DimNum];
+				double[] Mins = new double[DimNum];
+				for (j = 0; j < DimNum; j++)
+				{
+					Maxs[j] = double.MinValue;
+					Mins[j] = double.MaxValue;
+				}
+				for (j = 0; j < NumberOfPoints; j++)
+				{
+					for (k = 0; k < DimNum; k++)
+					{
+						if (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] > Maxs[k])
+						{
+							Maxs[k] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j];
+						}
+						if (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] < Mins[k])
+						{
+							Mins[k] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j];
+						}
+					}
+				}
+				for (k = 0; k < DimNum; k++)
+				{
+					Maxs[k] += ((double)Maxs[k] - Mins[k]) / 10000;
+				}
+				List<int> ToDelete = new List<int>();
+				int Counter;
+				int Deleted = 0;
+				foreach (int item in VarR)
+				{
+					int[] coor = ComputeIndex(i++, VarR);
+					temps = "";
+					for (j = coor.Length - 1; j > 0; j--)
+					{
+						temps += coor[j] + "|";
+					}
+					temps += coor[0];
+					VarR.SetValue(0, coor);
+					for (j = 0; j < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; j++)
+					{
+						Counter = 0;
+						for (k = 0; k < DimNum; k++)
+						{
+							if ((Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] >= (Mins[k] + ((Maxs[k] - Mins[k]) / ClassNumber) * coor[k])) && (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] < (Mins[k] + ((Maxs[k] - Mins[k]) / ClassNumber) * (coor[k] + 1))))
+							{
+								Counter++;
+							}
+						}
+						if (Counter == DimNum)
+						{
+							Sum++;
+							VarR.SetValue(1 + Convert.ToInt32(VarR.GetValue(coor)), coor);
+						}
+					}
+					if ((Convert.ToDouble(VarR.GetValue(coor)) / NumberOfPoints) < Alfa)
+					{
+						for (j = 0; j < Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count; j++)
+						{
+							Counter = 0;
+							for (k = 0; k < DimNum; k++)
+							{
+								if ((Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] >= (Mins[k] + ((Maxs[k] - Mins[k]) / ClassNumber) * coor[k])) && (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][k]][j] < (Mins[k] + ((Maxs[k] - Mins[k]) / ClassNumber) * (coor[k] + 1))))
+								{
+									Counter++;
+								}
+							}
+							if (Counter == DimNum)
+							{
+								ToDelete.Add(j);
+							}
+						}
+					}
+					//////////
+					for (k = ToDelete.Count - 1; k >= 0; k--)
+					{
+						double[] FW = new double[DimNum];
+						for (j = 0; j < DimNum; j++)
+						{
+							FW[j] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][ToDelete[k]];
+							Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]].RemoveAt(ToDelete[k]);
+						}
+						ToDelete.RemoveAt(k);
+						Deleted++;
+						Data.MultiDemStepBack[Data.MultiDemCurrentSample].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.multidemdeleted, FW));
+					}
+					//////////
+				}
+				if (Sum != NumberOfPoints)
+				{
+					LogOutputTextBox.Text += " Something bad happned. Weve counted only" + Sum + " elements" + Environment.NewLine;
+				}
+				LogOutputTextBox.Text += "Успішно відилалено " + Deleted + " елементів" + Environment.NewLine;
+			}
+			catch
+			{
+				LogOutputTextBox.Text += "Неможливо видалити аномалії через те, що варіаційний ряд занадто великий" + Environment.NewLine;
+				return;
+			}
+			////
+			UpdateForm();
+
         }
 
         private void button32_Click(object sender, EventArgs e)
@@ -17563,8 +17724,191 @@ namespace thing_2._1
 
 		private void button37_Click(object sender, EventArgs e)
 		{
-
+			int i, j, k;
+			int DimNumber = Data.MultiDemSamples[Data.MultiDemCurrentSample].Length;
+			int NumOfPoints = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count;
+			Func<double[,], double[,], double[,], double> Metrics = (x, y, z) => -1;
+			double[,] Param = null;
+			if (radioButton22.Checked)
+			{
+				Metrics = ToolsForWork.ComputeMetricEuclidian;
+			}
+			if (radioButton23.Checked)
+			{
+				Metrics = ToolsForWork.ComputeMetricWeightedEuclidian;
+				Arg[] ArrayOfWeights = new Arg[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
+				for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+				{
+					ArrayOfWeights[i] = new ArgFloat(1, "", "Вага для евклідової відстані", "Введіть вагу для евклідової відстані по " + (i + 1) + "-ому виміру", "<Size>");
+				}
+				OkCancelDlg it = new OkCancelDlg("Введіть ваги для зваженої евклідової відстані", null, ArrayOfWeights);
+				DialogResult rc = it.ShowDialog();
+				Param = new double[1, Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
+				bool Interrupted = false;
+				if (rc == DialogResult.OK)
+				{
+					for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+					{
+						if ((ArrayOfWeights[i] as ArgFloat) <= 0)
+						{
+							Interrupted = true;
+							break;
+						}
+						Param[0, i] = (double)(ArrayOfWeights[i] as ArgFloat);
+					}
+				}
+				else
+				{
+					Interrupted = true;
+				}
+				if (Interrupted)
+				{
+					LogOutputTextBox.Text += "Виконання кластеризації перервано у звязку з некорректним вводом вагів для метрики" + Environment.NewLine;
+					return;
+				}
+			}
+			if (radioButton24.Checked)
+			{
+				Metrics = ToolsForWork.ComputeMetricTaxicab;
+			}
+			if (radioButton25.Checked)
+			{
+				Metrics = ToolsForWork.ComputeMetricChebichev;
+			}
+			if (radioButton26.Checked)
+			{
+				Metrics = ToolsForWork.ComputeMetricMinkovskii;
+				ArgFloat MinkParam = new ArgFloat(2, "", "Параметр метрики мінковського", "Введіть параметр метрики Мінковського, 0<p<Infinty", "<Size>");
+				OkCancelDlg it = new OkCancelDlg("Введіть ваги для зваженої евклідової відстані", null, MinkParam);
+				DialogResult rc = it.ShowDialog();
+				Param = new double[1, 1];
+				bool Interrupted = false;
+				if (rc == DialogResult.OK)
+				{
+					if (MinkParam <= 0)
+					{
+						Interrupted = true;
+					}
+					Param[0, 0] = MinkParam;
+				}
+				else
+				{
+					Interrupted = true;
+				}
+				if (Interrupted)
+				{
+					LogOutputTextBox.Text += "Виконання кластеризації перервано у звязку з некорректним вводом параметра для метрики Мінковського" + Environment.NewLine;
+					return;
+				}
+			}
+			if (radioButton27.Checked)
+			{
+				Metrics = ToolsForWork.ComputeMetricMahalanobis;
+				double Summ;
+				double[] tempExp = new double[Data.MultiDemSamples[Data.MultiDemCurrentSample].Length];
+				for (i = 0; i < Data.MultiDemSamples[Data.MultiDemCurrentSample].Length; i++)
+				{
+					Summ = 0;
+					for (j = 0; j < NumOfPoints; j++)
+					{
+						Summ += Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][j];
+					}
+					tempExp[i] = Summ / NumOfPoints;
+				}
+				Param = new double[DimNumber, DimNumber];
+				for (i = 0; i < DimNumber; i++)
+				{
+					for (j = 0; j < NumOfPoints; j++)
+					{
+						Summ = 0;
+						for (k = 0; k < NumOfPoints; k++)
+						{
+							Summ += (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][k] - tempExp[i]) * (Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][j]][k] - tempExp[j]);
+						}
+						Param[i, j] = Summ;
+					}
+				}
+			}
+			int ClasNumber;
+			try
+			{
+				ClasNumber = Convert.ToInt32(textBox32.Text);
+				if (ClasNumber < 0 || ClasNumber >= Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count)
+				{
+					throw new Exception();
+				}
+			}
+			catch
+			{
+				LogOutputTextBox.Text += "Невірно задана кількість кластерів" + Environment.NewLine;
+				return;
+			}
+			double epsilon;
+			try
+			{
+				epsilon = Convert.ToDouble(textBox34.Text);
+			}
+			catch
+			{
+				LogOutputTextBox.Text += "Невірно задана точність для кластеризації. Значення встановлено як 0.00001" + Environment.NewLine;
+				epsilon = 0.00001;
+			}
+			Func<List<double[]>, List<double[]>, Func<double[], double[], double[,], double>, double[,], double> ClasMetric;
+			if (radioButton28.Checked)
+			{
+				ClasMetric = ToolsForWork.ComputeMetricAverageWeigthed;
+			}
+			if (radioButton29.Checked)
+			{
+				ClasMetric = ToolsForWork.ComputeMetricCenter;
+			}
+			if (radioButton30.Checked)
+			{
+				ClasMetric = ToolsForWork.ComputeMetricMedian;
+			}
+			if (radioButton31.Checked)
+			{
+				ClasMetric = ToolsForWork.ComputeMetricFarestNeigh;
+			}
+			if (radioButton32.Checked)
+			{
+				ClasMetric = ToolsForWork.ComputeMetricAverageNotWeigthed;
+			}
+			if (radioButton33.Checked)
+			{
+				ClasMetric = ToolsForWork.ComputeMetricClosestNeigh;
+			}
+			if (radioButton34.Checked)
+			{
+				ClasMetric = ToolsForWork.ComputeMetricWard;
+			}
+			double[,] Points = new double[NumOfPoints,DimNumber];
+			for (i = 0; i < DimNumber; i++)
+			{
+				for (j = 0; j < NumOfPoints; j++)
+				{
+					Points[j,i] = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][i]][j];
+				}
+			}
+			List<List<double[]>> Clusters = new List<List<double[]>>();
+			if (checkBox13.Checked)
+			{
+				//transform points with PCA
+			}
+			if (radioButton35.Checked)
+			{
+				for (i = 0; i < NumOfPoints; i++)
+				{
+					Clusters.Add(new List<double[]>());
+					Clusters[i].Add();
+				}
+			}
+			else
+			{
+				//kmeans
+			}
 		}
+
 	}
 
 	class PointOfStart

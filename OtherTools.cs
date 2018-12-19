@@ -930,7 +930,7 @@ namespace thing_2._1
 				
 		}
 
-		double ComputeMetricEuclidian(double[,] FirstPoint, double[,] SecondPoint)
+		public static double ComputeMetricEuclidian(double[,] FirstPoint, double[,] SecondPoint, double [,] Param)
 		{
 			if (FirstPoint.GetLength(0) != 1|| SecondPoint.GetLength(0) != 1|| SecondPoint.GetLength(0)!= FirstPoint.GetLength(0))
 			{
@@ -944,21 +944,21 @@ namespace thing_2._1
 			return Math.Sqrt(sum);
 		}
 
-		double ComputeMetricWeightedEuclidian(double[,] FirstPoint, double[,] SecondPoint, object Param)
+		public static double ComputeMetricWeightedEuclidian(double[,] FirstPoint, double[,] SecondPoint, double[,] Param)
 		{
-			if (FirstPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != FirstPoint.GetLength(0)|| !(Param is double[]))
+			if (FirstPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != FirstPoint.GetLength(0))
 			{
 				return -1;
 			}
 			double sum = 0;
 			for (int i = 0; i < FirstPoint.GetLength(0); i++)
 			{
-				sum += Math.Pow((FirstPoint[0, i] - SecondPoint[0, i]),2)* (Param as double[])[i];
+				sum += Math.Pow((FirstPoint[0, i] - SecondPoint[0, i]),2)* Param[0,i];
 			}
 			return Math.Sqrt(sum);
 		}
 
-		double ComputeMetricTaxicab(double[,] FirstPoint, double[,] SecondPoint)
+		public static double ComputeMetricTaxicab(double[,] FirstPoint, double[,] SecondPoint, double[,] Param)
 		{
 			if (FirstPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != FirstPoint.GetLength(0))
 			{
@@ -972,7 +972,7 @@ namespace thing_2._1
 			return Math.Sqrt(sum);
 		}
 
-		double ComputeMetricChebichev(double[,] FirstPoint, double[,] SecondPoint)
+		public static double ComputeMetricChebichev(double[,] FirstPoint, double[,] SecondPoint,double[,] Param)
 		{
 			if (FirstPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != FirstPoint.GetLength(0))
 			{
@@ -988,32 +988,24 @@ namespace thing_2._1
 
 		}
 
-		double ComputeMetricEuclidianMinkovskii(double[,] FirstPoint, double[,] SecondPoint, object Param)
+		public static double ComputeMetricMinkovskii(double[,] FirstPoint, double[,] SecondPoint, double[,] Param)
 		{
 			if (FirstPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != FirstPoint.GetLength(0)|| !(Param is int))
 			{
 				return -1;
 			}
 			double sum = 0;
-			if ((Param as double?) == null)
-			{
-				return -1;
-			}
 			for (int i = 0; i < FirstPoint.GetLength(0); i++)
 			{
-				sum += Math.Pow(FirstPoint[0, i] - SecondPoint[0, i], (double)Param );
+				sum += Math.Pow(FirstPoint[0, i] - SecondPoint[0, i], Param[0,0] );
 			}
-			return Math.Pow(sum,1.0/ ((double)Param));
+			return Math.Pow(sum,1.0/ (Param[0,0]));
 
 		}
 
-		double ComputeMetricMahalanobis(double[,] FirstPoint, double[,] SecondPoint, object Param)
+		public static double ComputeMetricMahalanobis(double[,] FirstPoint, double[,] SecondPoint, double[,] Param)
 		{
 			if (FirstPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != 1 || SecondPoint.GetLength(0) != FirstPoint.GetLength(0)||!(Param is double[,]))
-			{
-				return -1;
-			}
-			if ((Param as double[,]) == null)
 			{
 				return -1;
 			}
@@ -1022,10 +1014,10 @@ namespace thing_2._1
 			{
 				DifVector[0, i] = FirstPoint[0, i] - SecondPoint[0, i];
 			}
-			return Math.Sqrt(Matrixes.Multiply(DifVector,Matrixes.Multiply((double[,])Param,Matrixes.GetTransp(DifVector,1, FirstPoint.GetLength(0))))[0,0]) ;
+			return Math.Sqrt(Matrixes.Multiply(DifVector,Matrixes.Multiply(Param,Matrixes.GetTransp(DifVector,1, FirstPoint.GetLength(0))))[0,0]) ;
 		}
 
-		double ComputeMetricClosestNeigh(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[], double[], object,double> metric, object param)
+		public static double ComputeMetricClosestNeigh(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[], double[], double[,],double> metric, double[,] param)
 		{
 			//return -1;//заглушка
 			int i,j,k;
@@ -1046,7 +1038,7 @@ namespace thing_2._1
 			return result;
 		}
 
-		double ComputeMetricFarestNeigh(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[], double[], object, double> metric, object param)
+		public static double ComputeMetricFarestNeigh(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[], double[], double[,], double> metric, double[,] param)
 		{
 			//return -1;//заглушка
 			int i, j, k;
@@ -1067,7 +1059,7 @@ namespace thing_2._1
 			return result;
 		}
 
-		double ComputeMetricAverageWeigthed(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[], double[], object, double> metric, object param)
+		public static double ComputeMetricAverageWeigthed(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[], double[], double[,], double> metric, double[,] param)
 		{
 			//return -1;//заглушка
 			int i, j, k;
@@ -1084,7 +1076,7 @@ namespace thing_2._1
 			return sum / (Length1 * Length2);
 		}
 
-		double ComputeMetricAverageNotWeigthed(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[], double[], object, double> metric, object param)
+		public static double ComputeMetricAverageNotWeigthed(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[], double[], double[,], double> metric, double[,] param)
 		{
 			//return -1;//заглушка
 			int i, j, k;
@@ -1099,6 +1091,98 @@ namespace thing_2._1
 				}
 			}
 			return sum / 4;
+		}
+
+		public static double ComputeMetricMedian(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[], double[], double[,], double> metric, double[,] param)
+		{
+			int i, j, k;
+			int Length1 = FirstClas.Count;
+			int Length2 = SecondClas.Count;
+			double sum = 0;
+			List<double>[] FirstClasList = new List<double>[FirstClas[0].Length];
+			List<double>[] SecondClasList = new List<double>[FirstClas[0].Length];
+			for (i = 0; i < Length1; i++)
+			{
+				for (k = 0; k < FirstClas[0].Length; k++)
+				{
+					FirstClasList[k].Add(FirstClas[i][k]);
+				}
+			}
+			for (i = 0; i < Length2; i++)
+			{
+				for (k = 0; k < FirstClas[0].Length; k++)
+				{
+					SecondClasList[k].Add(SecondClas[i][k]);
+				}
+			}
+			double[] FirstMedians = new double[FirstClas[0].Length], SecondMedians = new double[FirstClas[0].Length];
+			for (k = 0; k < FirstClas[0].Length; k++)
+			{
+				FirstMedians[k] = ComputeMediana(FirstClasList[k]);
+				SecondMedians[k] = ComputeMediana(SecondClasList[k]);
+			}
+			return metric(FirstMedians,SecondMedians,param);
+		}
+
+		public static double ComputeMetricCenter(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[], double[], double[,], double> metric, double[,] param)
+		{
+			int i, j, k;
+			int Length1 = FirstClas.Count;
+			int Length2 = SecondClas.Count;
+			double[] FirstAverage = new double[FirstClas[0].Length], SecondAverage = new double[FirstClas[0].Length];
+			for (i = 0; i < Length1; i++)
+			{
+				for (k = 0; k < FirstClas[0].Length; k++)
+				{
+					FirstAverage[k] +=FirstClas[i][k];
+				}
+			}
+			for (i = 0; i < Length2; i++)
+			{
+				for (k = 0; k < FirstClas[0].Length; k++)
+				{
+					SecondAverage[k] += SecondClas[i][k] ;
+				}
+			}
+			for (k = 0; k < FirstClas[0].Length; k++)
+			{
+				FirstAverage[k] /= Length1;
+				SecondAverage[k] /= Length2;
+			}
+			return metric(FirstAverage, SecondAverage, param);
+		}
+
+		public static double ComputeMetricWard(List<double[]> FirstClas, List<double[]> SecondClas, Func<double[], double[], double[,], double> metric, double[,] param)
+		{
+			int i, j, k;
+			int Length1 = FirstClas.Count;
+			int Length2 = SecondClas.Count;
+			double[] FirstAverage = new double[FirstClas[0].Length], SecondAverage = new double[FirstClas[0].Length];
+			for (i = 0; i < Length1; i++)
+			{
+				for (k = 0; k < FirstClas[0].Length; k++)
+				{
+					FirstAverage[k] += FirstClas[i][k];
+				}
+			}
+			for (i = 0; i < Length2; i++)
+			{
+				for (k = 0; k < FirstClas[0].Length; k++)
+				{
+					SecondAverage[k] += SecondClas[i][k];
+				}
+			}
+			for (k = 0; k < FirstClas[0].Length; k++)
+			{
+				FirstAverage[k] /= Length1;
+				SecondAverage[k] /= Length2;
+			}
+			return ((Length1*Length2)/(Length1+Length2))*metric(FirstAverage, SecondAverage, param);
+		}
+
+		public static double[,] PCATransform(double[,] target)
+		{
+			return null;
 		}
 	}
 }
