@@ -200,6 +200,7 @@ namespace thing_2._1
         public int PictureNumber;
         public List<int[]> TwoDemSamples;
         public List<int[]> MultiDemSamples;
+        public List<int> TimeSerieses;
         public ArgIntMM NumberOfNum;
         public double[] Parameters;
         public double[] TwoDemPars;
@@ -231,6 +232,7 @@ namespace thing_2._1
             PictureNumber = 0;
             MultiDemSamples = new List<int[]>();
             TwoDemSamples = new List<int[]>();
+            TimeSerieses = new List<int>();
             Parameters = new double[] {0,0};
             TwoDemPars = new double[] { 0, 0,0,0 };
             VarNeeded = true;

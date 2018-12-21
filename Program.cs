@@ -363,6 +363,8 @@ namespace thing_2._1
         private CheckBox checkBox15;
         private CheckBox checkBox16;
         private ToolStripMenuItem тестиToolStripMenuItem;
+        private TabPage tabPage28;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart6;
 		private DataGridView[] DataGridForChkk;
     
         public BodyOfForm()
@@ -454,6 +456,9 @@ namespace thing_2._1
             System.Windows.Forms.DataVisualization.Charting.Series series29 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series30 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series31 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.створитиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -798,6 +803,8 @@ namespace thing_2._1
             this.radioButton23 = new System.Windows.Forms.RadioButton();
             this.radioButton22 = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tabPage28 = new System.Windows.Forms.TabPage();
+            this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -881,6 +888,8 @@ namespace thing_2._1
             this.groupBox15.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox13.SuspendLayout();
+            this.tabPage28.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart6)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -2157,6 +2166,7 @@ namespace thing_2._1
             this.tabControl1.Controls.Add(this.tabPage23);
             this.tabControl1.Controls.Add(this.tabPage24);
             this.tabControl1.Controls.Add(this.tabPage27);
+            this.tabControl1.Controls.Add(this.tabPage28);
             this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -4458,6 +4468,35 @@ namespace thing_2._1
             this.tableLayoutPanel2.Size = new System.Drawing.Size(717, 428);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // tabPage28
+            // 
+            this.tabPage28.Controls.Add(this.chart6);
+            this.tabPage28.Location = new System.Drawing.Point(4, 22);
+            this.tabPage28.Name = "tabPage28";
+            this.tabPage28.Size = new System.Drawing.Size(1018, 454);
+            this.tabPage28.TabIndex = 18;
+            this.tabPage28.Text = "Часові ряди";
+            this.tabPage28.UseVisualStyleBackColor = true;
+            // 
+            // chart6
+            // 
+            chartArea8.Name = "ChartArea1";
+            this.chart6.ChartAreas.Add(chartArea8);
+            legend3.Name = "Legend1";
+            this.chart6.Legends.Add(legend3);
+            this.chart6.Location = new System.Drawing.Point(6, 4);
+            this.chart6.Name = "chart6";
+            series31.ChartArea = "ChartArea1";
+            series31.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series31.CustomProperties = "IsXAxisQuantitative=False";
+            series31.IsXValueIndexed = true;
+            series31.Legend = "Legend1";
+            series31.Name = "Часовий ряд";
+            this.chart6.Series.Add(series31);
+            this.chart6.Size = new System.Drawing.Size(747, 447);
+            this.chart6.TabIndex = 0;
+            this.chart6.Text = "chart6";
+            // 
             // BodyOfForm
             // 
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -4584,6 +4623,8 @@ namespace thing_2._1
             this.groupBox14.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
+            this.tabPage28.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5499,10 +5540,14 @@ namespace thing_2._1
                 {
                     tableLayoutPanel1.RowCount = DimNumber;
                     tableLayoutPanel1.ColumnCount = DimNumber;
+                    tableLayoutPanel2.RowCount = DimNumber;
+                    tableLayoutPanel2.ColumnCount = DimNumber;
                     for (i = 0; i < DimNumber; i++)
                     {
                         tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f / (DimNumber)));
                         tableLayoutPanel1.RowStyles.Add(new ColumnStyle(SizeType.Percent, 100f / (DimNumber)));
+                        tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100f / (DimNumber)));
+                        tableLayoutPanel2.RowStyles.Add(new ColumnStyle(SizeType.Percent, 100f / (DimNumber)));
                     }
                     for (i = 0; i < DimNumber; i++)
                     {
@@ -5684,6 +5729,10 @@ namespace thing_2._1
 
                             }
                             tableLayoutPanel1.Controls.Add(TempChart, i, j);
+                            if (i != j)
+                            {
+                                tableLayoutPanel2.Controls.Add(TempChart, i, j);
+                            }
                         }
                     }
                 }
