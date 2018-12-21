@@ -456,6 +456,15 @@ namespace thing_2._1
             crit = new string[] { "критерій Бартлетта", "Однофакторний дисперсійний аналіз" };//"Н-критерій"
         }
     }
+
+    class KMenasStart
+    {
+        public static string[] vars;
+        static KMenasStart()
+        {
+            vars = new string[] { "Перші точки", "Випадково", "З умови максимуму відстані"};//, 
+        }
+    }
 	/// 
 	/// 
 	///
@@ -1077,6 +1086,14 @@ namespace thing_2._1
 			double sum = 0;
 			List<double>[] FirstClasList = new List<double>[FirstClas[0].Length];
 			List<double>[] SecondClasList = new List<double>[FirstClas[0].Length];
+            for (i = 0; i < FirstClas[0].Length; i++)
+            {
+                FirstClasList[i] = new List<double>();
+            }
+            for (i = 0; i < FirstClas[0].Length; i++)
+            {
+                SecondClasList[i] = new List<double>();
+            }
 			for (i = 0; i < Length1; i++)
 			{
 				for (k = 0; k < FirstClas[0].Length; k++)

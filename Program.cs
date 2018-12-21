@@ -10,6 +10,7 @@ using Args;
 using wnd;
 using Logger;
 using MathParserNet;
+using System.Numerics;
 
 namespace thing_2._1
 {
@@ -361,6 +362,7 @@ namespace thing_2._1
         private CheckBox checkBox14;
         private CheckBox checkBox15;
         private CheckBox checkBox16;
+        private ToolStripMenuItem тестиToolStripMenuItem;
 		private DataGridView[] DataGridForChkk;
     
         public BodyOfForm()
@@ -502,6 +504,7 @@ namespace thing_2._1
             this.застосуватиМГКдвовимірніТаПовернутисяНазадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.застосуватиМГКбагатовимірніТаПовернутисяНазадToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.довідкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.тестиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.StatusLabelForFreeSpace = new System.Windows.Forms.ToolStripStatusLabel();
@@ -887,7 +890,8 @@ namespace thing_2._1
             this.вибіркиToolStripMenuItem,
             this.відмінитиToolStripMenuItem,
             this.додатковоToolStripMenuItem,
-            this.довідкаToolStripMenuItem});
+            this.довідкаToolStripMenuItem,
+            this.тестиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1350, 24);
@@ -1280,6 +1284,13 @@ namespace thing_2._1
             this.довідкаToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.довідкаToolStripMenuItem.Text = "Довідка";
             this.довідкаToolStripMenuItem.Click += new System.EventHandler(this.довідкаToolStripMenuItem_Click);
+            // 
+            // тестиToolStripMenuItem
+            // 
+            this.тестиToolStripMenuItem.Name = "тестиToolStripMenuItem";
+            this.тестиToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.тестиToolStripMenuItem.Text = "Тести";
+            this.тестиToolStripMenuItem.Click += new System.EventHandler(this.тестиToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -4106,6 +4117,7 @@ namespace thing_2._1
             this.textBox34.Name = "textBox34";
             this.textBox34.Size = new System.Drawing.Size(59, 20);
             this.textBox34.TabIndex = 18;
+            this.textBox34.Text = "0,0001";
             // 
             // label37
             // 
@@ -4136,7 +4148,6 @@ namespace thing_2._1
             this.radioButton41.Name = "radioButton41";
             this.radioButton41.Size = new System.Drawing.Size(163, 17);
             this.radioButton41.TabIndex = 11;
-            this.radioButton41.TabStop = true;
             this.radioButton41.Text = "Відношення функціоналів Q";
             this.radioButton41.UseVisualStyleBackColor = true;
             // 
@@ -4147,13 +4158,13 @@ namespace thing_2._1
             this.radioButton39.Name = "radioButton39";
             this.radioButton39.Size = new System.Drawing.Size(231, 17);
             this.radioButton39.TabIndex = 9;
-            this.radioButton39.TabStop = true;
             this.radioButton39.Text = "Загальна внутрішньокластерна відстань";
             this.radioButton39.UseVisualStyleBackColor = true;
             // 
             // radioButton40
             // 
             this.radioButton40.AutoSize = true;
+            this.radioButton40.Checked = true;
             this.radioButton40.Location = new System.Drawing.Point(7, 19);
             this.radioButton40.Name = "radioButton40";
             this.radioButton40.Size = new System.Drawing.Size(221, 17);
@@ -4169,7 +4180,6 @@ namespace thing_2._1
             this.radioButton38.Name = "radioButton38";
             this.radioButton38.Size = new System.Drawing.Size(271, 17);
             this.radioButton38.TabIndex = 10;
-            this.radioButton38.TabStop = true;
             this.radioButton38.Text = "Сума попарних внутрішньокластерних дисперсій";
             this.radioButton38.UseVisualStyleBackColor = true;
             // 
@@ -5780,21 +5790,17 @@ namespace thing_2._1
             this.Invalidate();
             /////// MKK
             dataGridView11.Rows.Clear();
-            double[][] TempR = new double[DimNumber][];
-            for (i = 0; i < DimNumber; i++)
-            {
-                TempR[i] = new double[DimNumber];
-            }
-            for (i = 0; i < DimNumber; i++)
+            //double[,] TempR = new double[DimNumber, DimNumber];
+            /*for (i = 0; i < DimNumber; i++)//delete this
             {
                 for (j = 0; j < DimNumber; j++)
                 {
                     TempR[i][j] = Tempkk[i, j];
                 }
-            }
+            }*/
             for (i = 0; i < DimNumber; i++)
             {
-                result = Math.Sqrt(1 - Matrixes.GetDet(TempR) / Matrixes.GetDet(Matrixes.GetMinor(TempR, i, i)));
+                result = Math.Sqrt(1 - Matrixes.GetDet(Tempkk) / Matrixes.GetDet(Matrixes.GetMinor(Tempkk, i, i)));//changed
                 dataGridView11.Rows.Add();
                 dataGridView11.Rows[i].Cells[0].Value = "" + Math.Round(result, Data.NumberOfNum);
                 result = (result > 1) ? (1) : (result);
@@ -15628,17 +15634,16 @@ namespace thing_2._1
             /////////////////
            // LogOutputTextBox.Text += "This part is currently unaviable. Please try later" + Environment.NewLine;
             //return;
-            double[][] R = new double[dataGridView6.Rows.Count][];
+            double[,] R = new double[dataGridView6.Rows.Count, dataGridView6.Rows.Count];
             for (i = 0; i < dataGridView6.Rows.Count; i++)
             {
                 ExpVals[i] = Convert.ToDouble(dataGridView7.Rows[i].Cells[0].Value);
-                R[i] = new double[dataGridView6.Rows.Count];
             }
             for (i = 0; i < dataGridView6.Rows.Count; i++)
             {
                 for (j = 0; j < dataGridView6.Rows.Count; j++)
                 {
-                    R[i][j] = Convert.ToDouble(dataGridView6.Rows[i].Cells[j].Value);
+                    R[i,j] = Convert.ToDouble(dataGridView6.Rows[i].Cells[j].Value);
                 }
             }
             double det = Matrixes.GetDet(R);
@@ -15647,7 +15652,7 @@ namespace thing_2._1
             {
                 for (j = 0; j < dataGridView6.Rows.Count; j++)
                 {
-                    RT[i,j] = R[i][j];
+                    RT[i,j] = R[i,j];
                 }
             }
             if (Math.Abs(det) < 0.005)
@@ -15920,18 +15925,13 @@ namespace thing_2._1
 
                     }
                 }
-                double [][] Temp1 = new double[Data.MultiDemSamples[Number1].Length][], Temp2 = new double[Data.MultiDemSamples[Number1].Length][]; 
-                for(i=0; i < Data.MultiDemSamples[Number1].Length;i++)
-                {
-                    Temp1[i] = new double[Data.MultiDemSamples[Number1].Length];
-                    Temp2[i] = new double[Data.MultiDemSamples[Number1].Length];
-                }
+                double[,] Temp1 = new double[Data.MultiDemSamples[Number1].Length, Data.MultiDemSamples[Number1].Length], Temp2 = new double[Data.MultiDemSamples[Number1].Length, Data.MultiDemSamples[Number1].Length]; 
                 for (i = 0; i < Data.MultiDemSamples[Number1].Length; i++)
                 {
                     for (j = 0; j < Data.MultiDemSamples[Number1].Length; j++)
                     {
-                        Temp1[i][j] = S0[i,j];
-                        Temp2[i][j] = S1[i,j];
+                        Temp1[i,j] = S0[i,j];
+                        Temp2[i,j] = S1[i,j];
                     }
                 }
                 double det1 = Matrixes.GetDet(Temp2), det2 = Matrixes.GetDet(Temp1);
@@ -17767,6 +17767,7 @@ namespace thing_2._1
 
 		private void button37_Click(object sender, EventArgs e)
 		{
+            double sum;
 			int i, j, k;
 			int DimNumber = Data.MultiDemSamples[Data.MultiDemCurrentSample].Length;
 			int NumOfPoints = Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count;
@@ -17872,11 +17873,11 @@ namespace thing_2._1
 					}
 				}
 			}
-			int ClasNumber;
+			int ClusNumber;
 			try
 			{
-				ClasNumber = Convert.ToInt32(textBox32.Text);
-				if (ClasNumber < 0 || ClasNumber >= Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count)
+				ClusNumber = Convert.ToInt32(textBox32.Text);
+				if (ClusNumber < 0 || ClusNumber >= Data.DataForWork[Data.MultiDemSamples[Data.MultiDemCurrentSample][0]].Count)
 				{
 					throw new Exception();
 				}
@@ -17886,6 +17887,22 @@ namespace thing_2._1
 				LogOutputTextBox.Text += "Невірно задана кількість кластерів" + Environment.NewLine;
 				return;
 			}
+            ////
+            int Iterations;
+            try
+            {
+                Iterations = Convert.ToInt32(textBox33.Text);
+                if (Iterations < 0 || Iterations >=1000)
+                {
+                    throw new Exception();
+                }
+            }
+            catch
+            {
+                LogOutputTextBox.Text += "Невірно задана кількість ітерацій. Значення встановлено як 100" + Environment.NewLine;
+                Iterations = 100;
+            }
+            ////
 			double epsilon;
 			try
 			{
@@ -17893,37 +17910,37 @@ namespace thing_2._1
 			}
 			catch
 			{
-				LogOutputTextBox.Text += "Невірно задана точність для кластеризації. Значення встановлено як 0.00001" + Environment.NewLine;
-				epsilon = 0.00001;
+				LogOutputTextBox.Text += "Невірно задана точність для кластеризації. Значення встановлено як 0.001" + Environment.NewLine;
+				epsilon = 0.001;
 			}
-			Func<List<double[]>, List<double[]>, Func<double[], double[], double[,], double>, double[,], double> ClasMetric = null;
+			Func<List<double[]>, List<double[]>, Func<double[], double[], double[,], double>, double[,], double> ClusMetric = null;
 			if (radioButton28.Checked)
 			{
-				ClasMetric = ToolsForWork.ComputeMetricAverageWeigthed;
+				ClusMetric = ToolsForWork.ComputeMetricAverageWeigthed;
 			}
 			if (radioButton29.Checked)
 			{
-				ClasMetric = ToolsForWork.ComputeMetricCenter;
+				ClusMetric = ToolsForWork.ComputeMetricCenter;
 			}
 			if (radioButton30.Checked)
 			{
-				ClasMetric = ToolsForWork.ComputeMetricMedian;
+				ClusMetric = ToolsForWork.ComputeMetricMedian;
 			}
 			if (radioButton31.Checked)
 			{
-				ClasMetric = ToolsForWork.ComputeMetricFarestNeigh;
+				ClusMetric = ToolsForWork.ComputeMetricFarestNeigh;
 			}
 			if (radioButton32.Checked)
 			{
-				ClasMetric = ToolsForWork.ComputeMetricAverageNotWeigthed;
+				ClusMetric = ToolsForWork.ComputeMetricAverageNotWeigthed;
 			}
 			if (radioButton33.Checked)
 			{
-				ClasMetric = ToolsForWork.ComputeMetricClosestNeigh;
+				ClusMetric = ToolsForWork.ComputeMetricClosestNeigh;
 			}
 			if (radioButton34.Checked)
 			{
-				ClasMetric = ToolsForWork.ComputeMetricWard;
+				ClusMetric = ToolsForWork.ComputeMetricWard;
 			}
 			double[,] Points = new double[NumOfPoints,DimNumber];
 			for (i = 0; i < DimNumber; i++)
@@ -18024,17 +18041,17 @@ namespace thing_2._1
                 {
                     for (j = 0; j < NumOfPoints; j++)
                     {
-                        DistanceMatrix[i, j] = (i==j)?(0):(ClasMetric(Clusters[i],Clusters[j],Metrics,Param ));
+                        DistanceMatrix[i, j] = (i==j)?(0):(ClusMetric(Clusters[i],Clusters[j],Metrics,Param ));
                     }
                 }
                 double alfa1=0, beta=0, gamma=0, alfa2=0;
                 if (radioButton28.Checked)
                 {
-                   // ClasMetric = ToolsForWork.ComputeMetricAverageWeigthed;
+                   // ClusMetric = ToolsForWork.ComputeMetricAverageWeigthed;
                 }
                 if (radioButton29.Checked)
                 {
-                    //ClasMetric = ToolsForWork.ComputeMetricCenter;
+                    //ClusMetric = ToolsForWork.ComputeMetricCenter;
                 }
                 if (radioButton30.Checked)
                 {
@@ -18061,19 +18078,17 @@ namespace thing_2._1
                 }
                 if (radioButton34.Checked)
                 {
-                   // ClasMetric = ToolsForWork.ComputeMetricWard;
+                   // ClusMetric = ToolsForWork.ComputeMetricWard;
                 }
                 int Mini=0, Minj = 0;
-                while (DistanceMatrix.GetLength(0) > ClasNumber)
+                while (DistanceMatrix.GetLength(0) > ClusNumber)
                 {
                     Mini=0;
                     Minj = 1;
                     for(i=0; i < DistanceMatrix.GetLength(0); i++)
                     {
-                        for(j=0; j < DistanceMatrix.GetLength(0); j++)
+                        for(j=i+1; j < DistanceMatrix.GetLength(0); j++)
                         {
-                            if(i==j)
-                                continue;
                             if (DistanceMatrix[i, j] < DistanceMatrix[Mini, Minj])
                             {
                                 Mini = i;
@@ -18115,14 +18130,271 @@ namespace thing_2._1
 			}
 			else
 			{
-				//kmeans
+                double[][] Centers = new double[ClusNumber][];
+                //"Перші точки", "Випадково", "З умови максимуму відстані"
+                ArgStr Variant = new ArgStr("Перші точки", "p", "Вибір початкових центрів", "Виберіть спосіб, у якій буде визначено початкові точки для методу К-средніх", "<color>", KMenasStart.vars);
+                OkCancelDlg it = new OkCancelDlg("Перевірка вибірок на однорідність", null,Variant);
+                DialogResult rc = it.ShowDialog();
+                if (rc == DialogResult.OK)
+                {
+                    switch (Variant)
+                    {
+                        case "Перші точки":
+                        {
+                            for (i = 0; i < ClusNumber; i++)
+                            {
+                                Centers[i] = new double[Points.GetLength(1)];
+                                for (j = 0; j < Points.GetLength(1); j++)
+                                {
+                                    Centers[i][j] = Points[i,j];
+                                }
+                            }
+                            break;
+                        }
+                        case "Випадково":
+                        {
+                            List<int> Taken = new List<int>();
+                            Random a = new Random();
+                            int temp;
+                            for (i = 0; i < ClusNumber; i++)
+                            {
+                                temp = a.Next(0, Points.GetLength(0));
+                                while (Taken.Contains(temp))
+                                {
+                                    temp = a.Next(0, Points.GetLength(0));
+                                }
+                                Taken.Add(temp);
+                                Centers[i] = new double[Points.GetLength(1)];
+                                for (j = 0; j < Points.GetLength(1); j++)
+                                {
+                                    Centers[i][j] = Points[temp, j];
+                                }
+                            }
+                            break;
+                        }
+                        case "З умови максимуму відстані":
+                        {
+                            /////
+                            double[] temparr;
+                            for (i = 0; i < NumOfPoints; i++)
+                            {
+                                Clusters.Add(new List<double[]>());
+                                temparr = new double[DimNumber];
+                                for (j = 0; j < DimNumber; j++)
+                                {
+                                    temparr[j] = Points[i, j];
+                                }
+                                Clusters[i].Add(temparr);
+                            }
+                            double[,] DistanceMatrix = null;
+                            int Maxind;
+                            try
+                            {
+                                DistanceMatrix = new double[NumOfPoints, NumOfPoints];
+                            }
+                            catch
+                            {
+                                LogOutputTextBox.Text += "Кількість даних занадто велика" + Environment.NewLine;
+                                return;
+                            }
+                            for (i = 0; i < NumOfPoints; i++)
+                            {
+                                for (j = 0; j < NumOfPoints; j++)
+                                {
+                                    DistanceMatrix[i, j] = (i==j)?(0):(ClusMetric(Clusters[i],Clusters[j],Metrics,Param ));
+                                }
+                            }
+                            Clusters.Clear();
+                            ////
+                            Centers[0] = new double[Points.GetLength(1)];
+                            List<int> Taken = new List<int>();
+                            Taken.Add(0);
+                            for (j = 0; j < Points.GetLength(1); j++)
+                            {
+                                Centers[0][j] = Points[0, j];
+                            }
+                            for (i = 1; i < ClusNumber; i++)
+                            {
+                                Centers[i]=new double[Points.GetLength(1)];
+                                double prevsum = 0;
+                                Maxind = 1;
+                                for (j = 0; j < NumOfPoints; j++)
+                                {
+                                    if (Taken.Contains(j))
+                                        continue;
+                                    sum = 0;
+                                    for (k = 0; k < Taken.Count; k++)
+                                    {
+                                        sum += DistanceMatrix[j, Taken[k]];
+                                    }
+                                    sum /= Taken.Count;
+                                    if (sum >= prevsum)
+                                    {
+                                        Maxind = j;
+                                        prevsum = sum;
+                                    }
+                                }
+                                Taken.Add(Maxind);
+                                for (j = 0; j < Points.GetLength(1); j++)
+                                {
+                                    Centers[i][j] = Points[Maxind, j];
+                                }
+                            }
+                            break;
+                        }
+                        default:
+                        {
+                            LogOutputTextBox.Text += "Невірний ввід " + Environment.NewLine;
+                            return;
+                        }
+                    }
+                    double CurEps = double.MaxValue;
+                    double IterationNumber = 0;
+                    double[] CurPoint;
+                    double MinDidstance;
+                    int MinNum;
+                    double Met;
+                    Clusters = new List<List<double[]>>();
+                    if (radioButton36.Checked)
+                    {
+                        while ((IterationNumber < Iterations) && (CurEps > epsilon))
+                        {
+                            CurEps = 0;
+                            IterationNumber++;
+                            Clusters.Clear();
+                            for (k = 0; k < Centers.Length; k++)
+                            {
+                                Clusters.Add(new List<double[]>());
+                            }
+                            for (i = 0; i < Points.GetLength(0); i++)
+                            {
+                                MinDidstance = double.MaxValue;
+                                MinNum = -1;
+                                CurPoint = new double[Points.GetLength(1)];
+                                for (j = 0; j < Points.GetLength(1); j++)
+                                {
+                                    CurPoint[j] = Points[i, j];
+                                }
+                                for (k = 0; k < Centers.Length; k++)
+                                {
+                                    Met = Metrics(Centers[k], CurPoint, Param);
+                                    if (Met < MinDidstance)
+                                    {
+                                        MinDidstance = Met;
+                                        MinNum = k;
+                                    }
+                                }
+                                Clusters[MinNum].Add(CurPoint);
+                                for (j = 0; j < Points.GetLength(1); j++)
+                                {
+                                    sum = 0;
+                                    for (i = 0; i < Clusters[MinNum].Count; i++)
+                                    {
+                                        sum += Clusters[MinNum][i][j];
+                                    }
+                                    CurEps = Math.Max(CurEps, Math.Abs(Centers[MinNum][j] - sum / Clusters[MinNum].Count));
+                                    Centers[MinNum][j] = sum / Clusters[MinNum].Count;
+                                }
+                            }
+                            for (k = 0; k < Centers.Length; k++)
+                            {
+                                if(Clusters[k].Count==0)
+                                {
+                                    continue;
+                                }
+                                for (j = 0; j < Points.GetLength(1); j++)
+                                {
+                                    sum = 0;
+                                    for (i = 0; i <  Clusters[k].Count; i++)
+                                    {
+                                        sum += Clusters[k][i][j];
+                                    }
+                                    CurEps = Math.Max(CurEps, Math.Abs(Centers[k][j] - sum / Clusters[k].Count));
+                                    Centers[k][j] = sum / Clusters[k].Count;
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        while ((IterationNumber < Iterations) && (CurEps > epsilon))
+                        {
+                            CurEps = 0;
+                            IterationNumber++;
+                            Clusters.Clear();
+                            for (k = 0; k < Centers.Length; k++)
+                            {
+                                Clusters.Add(new List<double[]>());
+                            }
+                            for (i = 0; i < Points.GetLength(0); i++)
+                            {
+                                MinDidstance = double.MaxValue;
+                                MinNum = -1;
+                                CurPoint = new double[Points.GetLength(1)];
+                                for (j = 0; j < Points.GetLength(1); j++)
+                                {
+                                    CurPoint[j] = Points[i, j];
+                                    for (k = 0; k < Centers.Length; k++)
+                                    {
+                                        Met = Metrics(Centers[k], CurPoint, Param);
+                                        if (Met < MinDidstance)
+                                        {
+                                            MinDidstance = Met;
+                                            MinNum = k;
+                                        }
+                                    }
+                                }
+                                Clusters[MinNum].Add(CurPoint);
+                            }
+                            for (k = 0; k < Centers.Length; k++)
+                            {
+                                if (Clusters[k].Count == 0)
+                                {
+                                    continue;
+                                }
+                                for (j = 0; j < Points.GetLength(1); j++)
+                                {
+                                    sum = 0;
+                                    for (i = 0; i < Clusters[k].Count; i++)
+                                    {
+                                        sum += Clusters[k][i][j];
+                                    }
+                                    CurEps = Math.Max(CurEps, Math.Abs(Centers[k][j] - sum / Clusters[k].Count));
+                                    Centers[k][j] = sum / Clusters[k].Count;
+                                }
+                            }
+                        }
+                    }
+                    LogOutputTextBox.Text += "Кількість ітерацій - " + IterationNumber + Environment.NewLine;
+                }
+                else
+                {
+                    return;
+                }
 			}
 
-
+            double[,] Temp;
             if (checkBox13.Checked)
             {
                 //turn back!
-                Points = Matrixes.Multiply(Points, Matrixes.GetTransp(EigenVectors, DimNumber, DimNumber));
+                EigenVectors = Matrixes.GetTransp(EigenVectors, DimNumber, DimNumber);
+                Points = Matrixes.Multiply(Points, EigenVectors);
+                for (i = 0; i < Clusters.Count; i++)
+                {
+                    for (j = 0; j < Clusters[i].Count; j++)
+                    {
+                        Temp = new double[1, Clusters[i][0].Length];
+                        for (k = 0; k < Clusters[i][0].Length; k++)
+                        {
+                            Temp[0, k] = Clusters[i][j][k];
+                        }
+                        Temp = Matrixes.Multiply(Temp, EigenVectors);
+                        for (k = 0; k < Clusters[i][0].Length; k++)
+                        {
+                            Clusters[i][j][k] = Temp[0, k];
+                        }
+                    }
+                }
             }
             tableLayoutPanel2.RowStyles.Clear();
             tableLayoutPanel2.ColumnStyles.Clear();
@@ -18167,6 +18439,7 @@ namespace thing_2._1
                                     TempSer[k].BorderColor = Color.Black;
                                     TempSer[k].MarkerSize = 4;
                                     TempSer[k].Color = ClusterColors[k];
+                                    TempSer[k].MarkerSize = 5;
                                 }
                                 System.Windows.Forms.DataVisualization.Charting.ChartArea TempCA = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
                                 if (checkBox16.Checked == false)
@@ -18237,9 +18510,165 @@ namespace thing_2._1
                 }
             }
             this.Invalidate();
+            double func = 0;
+            if (radioButton38.Checked)
+            {
+                for (i = 0; i < Clusters.Count; i++)
+                {
+                    for (j = 0; j < Clusters[i].Count-1; j++)
+                    {
+                        for (k = j; k < Clusters[i].Count; k++)
+                        {
+                            func += Metrics(Clusters[i][j], Clusters[i][k], Param);
+                        }
+                    }
+                }
+                LogOutputTextBox.Text += "Функціонал Q2=" + Math.Round(func, Data.NumberOfNum) + Environment.NewLine;
+            }
+            if (radioButton39.Checked)
+            {
+                double Summ;
+                double[][] ClusExp = new double[Clusters.Count][];
+                for (i = 0; i < Clusters.Count; i++)
+                {
+                    ClusExp[i] = new double[Clusters[i][0].Length];
+                    for (j = 0; j < Clusters[i][0].Length; j++)
+                    {
+                        sum = 0;
+                        for (k = 0; k < Clusters[i].Count; k++)
+                        {
+                            sum += Clusters[i][k][j];
+                        }
+                        ClusExp[i][j] = sum / Clusters[i].Count;
+                    }
+                }
+                double[][,] V = new double[Clusters.Count][,];
+                /////
+                int l;
+                for (l = 0; l < Clusters.Count;l++)
+                {
+                    V[l] = new double[DimNumber, DimNumber];
+                    for (i = 0; i < DimNumber; i++)
+                    {
+                        for (j = 0; j < DimNumber; j++)
+                        {
+                            Summ = 0;
+                            for (k = 0; k < Clusters[l].Count; k++)
+                            {
+                                Summ += (Clusters[l][k][i] - ClusExp[l][i]) * (Clusters[l][k][j] - ClusExp[l][j]);
+                            }
+                            V[l][i, j] = Summ / (Clusters[l].Count);//check it
+                        }
+                    }
+                }
+                double Qsh = 1;
+                for (l = 0; l < Clusters.Count; l++)
+                {
+                    sum = Matrixes.GetDet(V[l]);
+                    Qsh = Qsh * Math.Pow(sum, Clusters[l].Count);
+                }
+                double Q;
+                Temp = new double[DimNumber, DimNumber];
+                for (i = 0; i < DimNumber; i++)
+                {
+                    for (j = 0; j < DimNumber; j++)
+                    {
+                        for (l = 0; l < Clusters.Count; l++)
+                        {
+                            Temp[i, j] += Clusters[l].Count * V[l][i, j];
+                        }
+                    }
+                }
+                Q = Matrixes.GetDet(Temp);
+                LogOutputTextBox.Text += "Функціонал Q3=" + Math.Round(Q, Data.NumberOfNum) + Environment.NewLine;//+ ",Функціонал Q'=" + Math.Round(Qsh, Data.NumberOfNum)
+            }
+            if (radioButton40.Checked)
+            {
+                double[][] ClusExp = new double[Clusters.Count][];
+                for (i = 0; i < Clusters.Count;i++ )
+                {
+                    ClusExp[i] = new double[DimNumber];
+                    for (j = 0; j < DimNumber; j++)
+                    {
+                        sum = 0;
+                        for (k = 0; k < Clusters[i].Count; k++)
+                        {
+                            sum += Clusters[i][k][j];
+                        }
+                        ClusExp[i][j] = sum / Clusters[i].Count;
+                    }
+                }
+                for (i = 0; i < Clusters.Count; i++)
+                {
+                    for (j = 0; j < Clusters[i].Count; j++)
+                    {
+                        func += Metrics(Clusters[i][j],ClusExp[i],Param);
+                    }
+                }
+                LogOutputTextBox.Text += "Функціонал Q1=" + Math.Round(func,Data.NumberOfNum) + Environment.NewLine;
+            }
+            if (radioButton41.Checked)
+            {
+                double Qsh=0, Q = 0,divider =0;
+                int l;
+                for (l = 0; l < Clusters.Count; l++)
+                {
+                    divider += ((Clusters[l].Count-1) * Clusters[l].Count) / 2;
+                    for (i = 0; i < Clusters[l].Count - 1; i++)
+                    {
+                        for (j = i+1; j < Clusters[l].Count; j++)
+                        {
+                            Q += Metrics(Clusters[l][i], Clusters[l][j],Param);
+                        }
+                    }
+                }
+                Q = Q / divider;
+                divider = 1;
+                for (l = 0; l < Clusters.Count; l++)
+                {
+                    divider *= Clusters[l].Count;
+                    for (i = 0; i < Clusters[l].Count - 1; i++)
+                    {
+                        for (k = l+1; k < Clusters.Count; k++)
+                        {
+                            for (j = 0; j < Clusters[k].Count - 1; j++)
+                            {
+                                Qsh += Metrics(Clusters[l][i], Clusters[k][j], Param);
+                            }
+                        }
+                    }
+                }
+                Qsh = Qsh / divider;
+                LogOutputTextBox.Text += "Функціонал Q4=" + Math.Round(Q/Qsh, Data.NumberOfNum) + Environment.NewLine;
+            }
             ///////
             //compute result
 		}
+
+        private void тестиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            double[,] lol = new double[3, 3];
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    lol[i, j] = i + j;
+                }
+            }
+            double[,] lul = new double[3, 3];
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    lul[i, j] = i + j+(i*j)%3;
+                }
+            }
+           // lul[0, 0] = 7;
+            Console.WriteLine();
+            double lil = Matrixes.GetDet(lul);
+            var ah = Matrixes.Multiply(lul,lol);
+            Console.WriteLine();
+        }
 
 	}
 
