@@ -217,7 +217,8 @@ namespace thing_2._1
         public ArgIntMM CurrentSample;
         public ArgIntMM TwoDemCurrentSample;
         public ArgIntMM MultiDemCurrentSample;
-        public List<List<double>> DataForWork;
+		public ArgIntMM CurrentTimeSeries;
+		public List<List<double>> DataForWork;
         //public List<List<double[]>> TwoDemDataForWork;
         public List<string> NamesOfFiles;
         public List<string> TwoDemNamesOfFiles;
@@ -246,8 +247,9 @@ namespace thing_2._1
             CurrentSample = new ArgIntMM(0, "s", "Поточна вибірка", "Виберіть вибірку, з якою будете працювати", "<Size>");
             TwoDemCurrentSample = new ArgIntMM(0, "s", "Поточна двовимірна вибірка ", "Виберіть двовимірну вибірку, з якою будете працювати", "<Size>");
             MultiDemCurrentSample = new ArgIntMM(0, "s", "Поточна багатовимірна вибірка ", "Виберіть багатовимірну вибірку, з якою будете працювати", "<Size>");
-            //CurrentSample.setMin(0);  //CurrentSample.setMax(0);
-            NameOfFile = null;
+			CurrentTimeSeries = new ArgIntMM(0, "s", "Поточний часовий ряд", "Виберіть часовий ряд, з яким будете працювати", "<Size>");
+			//CurrentSample.setMin(0);  //CurrentSample.setMax(0);
+			NameOfFile = null;
             DataForWork = new List<List<double>>();
             //TwoDemDataForWork = new List<List<double[]>>();
             NamesOfFiles =  new List<string>();
