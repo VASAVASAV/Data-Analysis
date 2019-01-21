@@ -19971,6 +19971,7 @@ namespace thing_2._1
                     }
                 }
             }
+            SSA();
 		}
 
 		private void вибратиЧасовийРядToolStripMenuItem_Click(object sender, EventArgs e)
@@ -21089,7 +21090,89 @@ namespace thing_2._1
 
         private void SSA()
         {
- 
+            if (Data.DataForWork.Count == 0 || Data.TimeSerieses.Count == 0)
+            {
+                return;
+            }
+            int Length;
+            int i, j, k;
+            try
+            {
+                Length = Convert.ToInt32(textBox49.Text);
+            }
+            catch
+            {
+                LogOutputTextBox.Text += "Довжина траекторії задана невірно"+ Environment.NewLine;
+                return;
+            }
+            List<double> Temp = new List<double>();
+            for (i = 0; i < Data.DataForWork[Data.TimeSerieses[Data.CurrentTimeSeries]].Count; i++)
+            {
+                Temp.Add(Data.DataForWork[Data.TimeSerieses[Data.CurrentTimeSeries]][i]);
+            }
+            int PointCount = Data.DataForWork[Data.TimeSerieses[Data.CurrentTimeSeries]].Count;
+            double[,] A = new double[Length, PointCount-Length+1];
+            for (j = 0; j < PointCount-Length+1; j++)
+            {
+                for (i = 0; i < Length; i++)
+                {
+                    A[i, j] = Data.DataForWork[Data.TimeSerieses[Data.CurrentTimeSeries]][j+i];
+                }
+            }
+            double[,] DC = Matrixes.Multiply(A,Matrixes.GetTransp(A,Length,Length));
+            ///////////////
+            double[,,] lil = ToolsForWork.GetEileganValues(DC, 0.001);
+            dataGridView17.Rows.Clear();
+            dataGridView17.Columns.Clear();
+            double[] deltas = new double[DC.GetLength(0)];
+            double[] deltasum = new double[DC.GetLength(0)];
+            double lamsum = 0, procent = 0, sum = 0;
+            for (i = 0; i < Length; i++)
+            {
+                dataGridView17.Columns.Add(new DataGridViewTextBoxColumn());
+                dataGridView17.Columns[i].HeaderText = "F(" + (i + 1) + ")";
+                dataGridView17.Columns[i].ReadOnly = true;
+            }
+            dataGridView17.Columns.Add(new DataGridViewTextBoxColumn());
+            dataGridView17.Columns[Length].ReadOnly = true;
+            dataGridView17.Columns[Length].HeaderText = "δ";
+            for (i = 0; i < DC.GetLength(0); i++)
+            {
+                dataGridView14.Rows.Add(new DataGridViewRow());
+                for (j = 0; j < DC.GetLength(0); j++)
+                {
+                    deltas[i] += Math.Pow(lil[1, j, i], 2);
+                }
+                for (j = 0; j < Length; j++)
+                {
+                    dataGridView17.Rows[i].Cells[j].Value = Math.Round(lil[1, j, i], Data.NumberOfNum);
+                    deltasum[i] += Math.Pow(lil[1, j, i], 2);
+                }
+                dataGridView17.Rows[i].Cells[Length].Value = Math.Round((deltasum[i] / deltas[i]) * 100, Data.NumberOfNum) + "%";
+                dataGridView17.Rows[i].HeaderCell.Value = "X" + (i + 1);
+            }
+            for (j = 0; j < Tempkk.GetLength(0); j++)
+            {
+                lamsum += lil[0, j, j];
+            }
+            dataGridView14.Rows.Add(new DataGridViewRow());
+            dataGridView14.Rows[Tempkk.GetLength(0)].HeaderCell.Value = "λ";
+            dataGridView14.Rows.Add(new DataGridViewRow());
+            dataGridView14.Rows[Tempkk.GetLength(0) + 1].HeaderCell.Value = "λ%";
+            dataGridView14.Rows.Add(new DataGridViewRow());
+            dataGridView14.Rows[Tempkk.GetLength(0) + 2].HeaderCell.Value = "Σλ";
+            dataGridView14.Rows.Add(new DataGridViewRow());
+            dataGridView14.Rows[Tempkk.GetLength(0) + 3].HeaderCell.Value = "Σλ%";
+            for (j = 0; j < trackBar1.Value; j++)
+            {
+                dataGridView14.Rows[Tempkk.GetLength(0)].Cells[j].Value = Math.Round(lil[0, j, j], Data.NumberOfNum);
+                sum += lil[0, j, j];
+                dataGridView14.Rows[Tempkk.GetLength(0) + 2].Cells[j].Value = Math.Round(sum, Data.NumberOfNum);
+                dataGridView14.Rows[Tempkk.GetLength(0) + 1].Cells[j].Value = Math.Round(100 * (lil[0, j, j] / lamsum), Data.NumberOfNum);
+                procent += 100 * (lil[0, j, j] / lamsum);
+                dataGridView14.Rows[Tempkk.GetLength(0) + 3].Cells[j].Value = Math.Round(procent, Data.NumberOfNum);
+            }
+
         }
 	}
 
