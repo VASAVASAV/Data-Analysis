@@ -226,6 +226,7 @@ namespace thing_2._1
         public List<List<ToolsForWork.Changing>> StepBack;
         public List<List<ToolsForWork.Changing>> TwoDemStepBack;
         public List<List<ToolsForWork.Changing>> MultiDemStepBack;
+        public List<List<ToolsForWork.Changing>> TimeSeriesStepBack;
         //public List<List<ToolsForWork.Changing>> 
         public string NameOfFile;
         public DataOfForm()
@@ -259,6 +260,7 @@ namespace thing_2._1
             TDEvalData = new TwoDemEvaletions();
             TwoDemStepBack = new List<List<ToolsForWork.Changing>>();
             MultiDemStepBack = new List<List<ToolsForWork.Changing>>();
+            TimeSeriesStepBack = new List<List<ToolsForWork.Changing>>();
         }
     }
     /// 
@@ -487,7 +489,9 @@ namespace thing_2._1
 			added,
 			twodemdeleted,
 			multidemdeleted,
-			multidemstand
+			multidemstand,
+            tschanged,
+            tsmultichanged
 		}
 		public class Changing
 		{
