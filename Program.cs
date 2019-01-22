@@ -434,6 +434,7 @@ namespace thing_2._1
         private TextBox textBox49;
         private Label label53;
         private DataGridView dataGridView17;
+        private Button button41;
 		private DataGridView[] DataGridForChkk;
     
         public BodyOfForm()
@@ -945,9 +946,10 @@ namespace thing_2._1
             this.label38 = new System.Windows.Forms.Label();
             this.chart6 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage30 = new System.Windows.Forms.TabPage();
-            this.dataGridView17 = new System.Windows.Forms.DataGridView();
-            this.label53 = new System.Windows.Forms.Label();
             this.textBox49 = new System.Windows.Forms.TextBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.dataGridView17 = new System.Windows.Forms.DataGridView();
+            this.button41 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -5325,6 +5327,7 @@ namespace thing_2._1
             // 
             // tabPage30
             // 
+            this.tabPage30.Controls.Add(this.button41);
             this.tabPage30.Controls.Add(this.textBox49);
             this.tabPage30.Controls.Add(this.label53);
             this.tabPage30.Controls.Add(this.dataGridView17);
@@ -5335,13 +5338,14 @@ namespace thing_2._1
             this.tabPage30.Text = "Метод Гусені";
             this.tabPage30.UseVisualStyleBackColor = true;
             // 
-            // dataGridView17
+            // textBox49
             // 
-            this.dataGridView17.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView17.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView17.Name = "dataGridView17";
-            this.dataGridView17.Size = new System.Drawing.Size(796, 448);
-            this.dataGridView17.TabIndex = 0;
+            this.textBox49.Location = new System.Drawing.Point(862, 23);
+            this.textBox49.Name = "textBox49";
+            this.textBox49.Size = new System.Drawing.Size(100, 20);
+            this.textBox49.TabIndex = 2;
+            this.textBox49.Text = "3";
+            this.textBox49.TextChanged += new System.EventHandler(this.textBox49_TextChanged);
             // 
             // label53
             // 
@@ -5352,13 +5356,25 @@ namespace thing_2._1
             this.label53.TabIndex = 1;
             this.label53.Text = "Довжина траекторій";
             // 
-            // textBox49
+            // dataGridView17
             // 
-            this.textBox49.Location = new System.Drawing.Point(862, 23);
-            this.textBox49.Name = "textBox49";
-            this.textBox49.Size = new System.Drawing.Size(100, 20);
-            this.textBox49.TabIndex = 2;
-            this.textBox49.Text = "3";
+            this.dataGridView17.AllowUserToAddRows = false;
+            this.dataGridView17.AllowUserToDeleteRows = false;
+            this.dataGridView17.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView17.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView17.Name = "dataGridView17";
+            this.dataGridView17.Size = new System.Drawing.Size(796, 448);
+            this.dataGridView17.TabIndex = 0;
+            // 
+            // button41
+            // 
+            this.button41.Location = new System.Drawing.Point(805, 106);
+            this.button41.Name = "button41";
+            this.button41.Size = new System.Drawing.Size(210, 65);
+            this.button41.TabIndex = 3;
+            this.button41.Text = "Реконструкція";
+            this.button41.UseVisualStyleBackColor = true;
+            this.button41.Click += new System.EventHandler(this.button41_Click);
             // 
             // BodyOfForm
             // 
@@ -21138,7 +21154,7 @@ namespace thing_2._1
             dataGridView17.Columns[Length].HeaderText = "δ";
             for (i = 0; i < DC.GetLength(0); i++)
             {
-                dataGridView14.Rows.Add(new DataGridViewRow());
+                dataGridView17.Rows.Add(new DataGridViewRow());
                 for (j = 0; j < DC.GetLength(0); j++)
                 {
                     deltas[i] += Math.Pow(lil[1, j, i], 2);
@@ -21151,28 +21167,177 @@ namespace thing_2._1
                 dataGridView17.Rows[i].Cells[Length].Value = Math.Round((deltasum[i] / deltas[i]) * 100, Data.NumberOfNum) + "%";
                 dataGridView17.Rows[i].HeaderCell.Value = "X" + (i + 1);
             }
-            for (j = 0; j < Tempkk.GetLength(0); j++)
+            for (j = 0; j < DC.GetLength(0); j++)
             {
                 lamsum += lil[0, j, j];
             }
-            dataGridView14.Rows.Add(new DataGridViewRow());
-            dataGridView14.Rows[Tempkk.GetLength(0)].HeaderCell.Value = "λ";
-            dataGridView14.Rows.Add(new DataGridViewRow());
-            dataGridView14.Rows[Tempkk.GetLength(0) + 1].HeaderCell.Value = "λ%";
-            dataGridView14.Rows.Add(new DataGridViewRow());
-            dataGridView14.Rows[Tempkk.GetLength(0) + 2].HeaderCell.Value = "Σλ";
-            dataGridView14.Rows.Add(new DataGridViewRow());
-            dataGridView14.Rows[Tempkk.GetLength(0) + 3].HeaderCell.Value = "Σλ%";
-            for (j = 0; j < trackBar1.Value; j++)
+            dataGridView17.Rows.Add(new DataGridViewRow());
+            dataGridView17.Rows[DC.GetLength(0)].HeaderCell.Value = "λ";
+            dataGridView17.Rows.Add(new DataGridViewRow());
+            dataGridView17.Rows[DC.GetLength(0) + 1].HeaderCell.Value = "λ%";
+            dataGridView17.Rows.Add(new DataGridViewRow());
+            dataGridView17.Rows[DC.GetLength(0) + 2].HeaderCell.Value = "Σλ";
+            dataGridView17.Rows.Add(new DataGridViewRow());
+            dataGridView17.Rows[DC.GetLength(0) + 3].HeaderCell.Value = "Σλ%";
+            for (j = 0; j < Length; j++)
             {
-                dataGridView14.Rows[Tempkk.GetLength(0)].Cells[j].Value = Math.Round(lil[0, j, j], Data.NumberOfNum);
+                dataGridView17.Rows[DC.GetLength(0)].Cells[j].Value = Math.Round(lil[0, j, j], Data.NumberOfNum);
                 sum += lil[0, j, j];
-                dataGridView14.Rows[Tempkk.GetLength(0) + 2].Cells[j].Value = Math.Round(sum, Data.NumberOfNum);
-                dataGridView14.Rows[Tempkk.GetLength(0) + 1].Cells[j].Value = Math.Round(100 * (lil[0, j, j] / lamsum), Data.NumberOfNum);
+                dataGridView17.Rows[DC.GetLength(0) + 2].Cells[j].Value = Math.Round(sum, Data.NumberOfNum);
+                dataGridView17.Rows[DC.GetLength(0) + 1].Cells[j].Value = Math.Round(100 * (lil[0, j, j] / lamsum), Data.NumberOfNum);
                 procent += 100 * (lil[0, j, j] / lamsum);
-                dataGridView14.Rows[Tempkk.GetLength(0) + 3].Cells[j].Value = Math.Round(procent, Data.NumberOfNum);
+                dataGridView17.Rows[DC.GetLength(0) + 3].Cells[j].Value = Math.Round(procent, Data.NumberOfNum);
             }
 
+        }
+
+        private void textBox49_TextChanged(object sender, EventArgs e)
+        {
+            SSA();
+        }
+
+        private void button41_Click(object sender, EventArgs e)
+        {
+            if (Data.DataForWork.Count == 0 || Data.TimeSerieses.Count == 0)
+            {
+                return;
+            }
+            int Length;
+            int i, j, k;
+            try
+            {
+                Length = Convert.ToInt32(textBox49.Text);
+            }
+            catch
+            {
+                LogOutputTextBox.Text += "Довжина траекторії задана невірно" + Environment.NewLine;
+                return;
+            }
+            List<double> Temp = new List<double>();
+            for (i = 0; i < Data.DataForWork[Data.TimeSerieses[Data.CurrentTimeSeries]].Count; i++)
+            {
+                Temp.Add(Data.DataForWork[Data.TimeSerieses[Data.CurrentTimeSeries]][i]);
+            }
+            ArgInt Number = new ArgInt(2, "", "Кількість компонент", "Кількість компонент для повернення", "<Size>");
+            OkCancelDlg it = new OkCancelDlg("Реконструкція", null,Number);
+            DialogResult rc = it.ShowDialog();
+            if (rc == DialogResult.OK)
+            {
+                if (Number < 1 || Number > Length)
+                {
+                    LogOutputTextBox.Text += "Кількість компонент для повернення задана невірно" + Environment.NewLine;
+                    return;
+                }
+                Arg[] ArrayOfNumbers = new Arg[Number];
+                for (i = 0; i < Number; i++)
+                {
+                    ArrayOfNumbers[i] = new ArgInt(i+1, "", "Номер компоненти", "Номер компоненти, яку буде використано при поверненні", "<Size>");
+                }
+                it = new OkCancelDlg("Виберіть критерій та вибірки для порівняння", null,  ArrayOfNumbers);
+                rc = it.ShowDialog();
+                if (rc == DialogResult.OK)
+                {
+                    List<int> Comps = new List<int>();
+                    try
+                    {
+                        for (i = 0; i < Number; i++)
+                        {
+                            Comps.Add(ArrayOfNumbers[i] as ArgInt);
+                            if (Comps[i] < 1 || Comps[i] > Length) 
+                            {
+                                LogOutputTextBox.Text += "Номер компонент для повернення задана невірно" + Environment.NewLine;
+                                return;
+                            }
+                        }
+                    }
+                    catch
+                    {
+                        return;
+                    }
+                    int PointCount = Data.DataForWork[Data.TimeSerieses[Data.CurrentTimeSeries]].Count;
+                    ///////////////////
+                    double[,] A = new double[Length, PointCount - Length + 1];
+                    for (j = 0; j < PointCount - Length + 1; j++)
+                    {
+                        for (i = 0; i < Length; i++)
+                        {
+                            A[i, j] = Data.DataForWork[Data.TimeSerieses[Data.CurrentTimeSeries]][j + i];
+                        }
+                    }
+                    double[,] DC = Matrixes.Multiply(A, Matrixes.GetTransp(A, Length, Length));
+                    double[, ,] lil = ToolsForWork.GetEileganValues(DC, 0.001);
+                    ////////////////////
+                    double[,] EigenVectors = new double[DC.GetLength(0), DC.GetLength(0)];
+                    for (i = 0; i < DC.GetLength(0); i++)
+                    {
+                        for (j = 0; j < DC.GetLength(0); j++)
+                        {
+                            EigenVectors[i, j] = lil[1, i, j];
+                        }
+                    }
+                    double[,] Points = new double[Temp.Count - DC.GetLength(0)+1, DC.GetLength(0)];
+                    for (i = 0; i < Temp.Count - DC.GetLength(0)+1; i++)
+                    {
+                        for (j = 0; j < DC.GetLength(0); j++)
+                        {
+                            Points[i, j] = A[j, i];///// -tempExp[j];
+                        }
+                    }
+                   // EigenVectors = Matrixes.GetTransp(EigenVectors, Comps.Count, DC.GetLength(0));
+                    double[,] TempM = new double[DC.GetLength(0), Comps.Count];
+                    k = 0;
+                    for (i = 0; i < DC.GetLength(0); i++)
+                    {
+                        if (Comps.Contains(i + 1))
+                        {
+                            for (j = 0; j < DC.GetLength(0); j++)
+                            {
+                                TempM[j, k] = EigenVectors[i,j];///// -tempExp[j];
+                            }
+                            k++;
+                        }
+                    }
+                    EigenVectors = Matrixes.GetTransp(EigenVectors, Comps.Count, DC.GetLength(0));
+                    for (i = 0; i < DC.GetLength(0); i++)
+                    {
+                         for (j = 0; j < Comps.Count; j++)
+                         {
+                             EigenVectors[i, j] = TempM[i,j];///// -tempExp[j];
+                         }
+                    }
+                    Points = Matrixes.Multiply(Points, EigenVectors);
+                    Points = Matrixes.Multiply(Points, Matrixes.GetTransp(EigenVectors, DC.GetLength(0), Comps.Count));
+                    int[] Counter = new int[PointCount];
+                    for (i = 0; i < PointCount; i++) 
+                    {
+                        Temp[i] = 0;
+                    }
+                    for (j = 0; j < PointCount - Length + 1; j++)
+                    {
+                        for (i = 0; i < Length; i++)
+                        {
+                            Temp[j + i] += Points[j, i];
+                            Counter[i + j]++;
+                        }
+                    }
+                    List<double> ToDelete = new List<double>();
+                    for (i = 0; i < PointCount; i++)
+                    {
+                        Temp[i] /= Counter[i];
+                        ToDelete.Add(i);
+                        ToDelete.Add(Data.DataForWork[Data.TimeSerieses[Data.CurrentTimeSeries]][i]);
+                        Data.DataForWork[Data.TimeSerieses[Data.CurrentTimeSeries]][i] = Temp[i];
+                    }
+                    double[] FW = new double[ToDelete.Count];
+                    for (i = 0; i < ToDelete.Count; i++)
+                    {
+                        FW[i] = ToDelete[i];
+                    }
+                    Data.TimeSeriesStepBack[Data.CurrentTimeSeries].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.tsmultichanged, FW));
+                    Data.DistrCreated = false;
+                    UpdateForm();
+                }
+            }
         }
 	}
 
