@@ -491,7 +491,8 @@ namespace thing_2._1
 			multidemdeleted,
 			multidemstand,
             tschanged,
-            tsmultichanged
+            tsmultichanged,
+            tsadded
 		}
 		public class Changing
 		{

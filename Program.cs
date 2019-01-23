@@ -17478,6 +17478,15 @@ namespace thing_2._1
                     //Data.DataForWork[Data.CurrentSample].Sort();
                     break;
                 }
+                case (ToolsForWork.TypeOfCHange.tsadded):
+                {
+                    ////
+                    double[] Param = FW.paramsOfChange;
+                    //Console.WriteLine("" + FW.paramsOfChange[0] );
+                    Data.DataForWork[Data.TimeSerieses[Data.CurrentTimeSeries]].RemoveAt(Data.DataForWork[Data.TimeSerieses[Data.CurrentTimeSeries]].Count-1);
+                    //Data.DataForWork[Data.CurrentSample].Sort();
+                    break;
+                }
             }
         }
 
@@ -21409,16 +21418,29 @@ namespace thing_2._1
                 }
             }
             double[,] VectorsCut = Matrixes.CutMatrix(EigenVectors,Length-1,Length-1);
+            VectorsCut = Matrixes.GetTransp(VectorsCut,Length-1,Length-1);
             double[,] PreVector = new double[1, Length - 1];
             for (i = 0; i < Length - 1; i++)
             {
                 PreVector[0,i] = VectorsCut[i, Length - 2];
             }
-            double[,] B = new double[1,Length-1];
+            double[,] B = new double[Length - 1, 1];
             for (i = 0; i < Length - 1; i++)
             {
-                B[0, i] =Temp[PointCount+i-Length-2];
+                B[i, 0] =Temp[PointCount+i-Length-2];
             }
+            double[,] X = Matrixes.Multiply(Matrixes.GetReverse(VectorsCut,Length-1),B);
+            double Sum = 0;
+            for (i = 0; i < Length - 1; i++)
+            {
+                Sum += PreVector[0, i] + X[i, 0];
+            }
+            Data.DataForWork[Data.TimeSerieses[Data.CurrentTimeSeries]].Add(Sum/(Math.Sqrt(Length)));
+            //////////////
+            double[] FW = new double[2];
+            Data.TimeSeriesStepBack[Data.CurrentTimeSeries].Add(new ToolsForWork.Changing(ToolsForWork.TypeOfCHange.tsadded,FW));
+            ///////////////
+            UpdateForm();
         }
     }
 
