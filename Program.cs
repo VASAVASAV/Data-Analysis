@@ -20841,16 +20841,16 @@ namespace thing_2._1
             double alfa;
             try
             {
-                alfa = Convert.ToDouble(textBox44.Text);
+                alfa = Convert.ToDouble(textBox46.Text);
             }
             catch
             {
-                textBox44.Text = "" + Math.Round(2d / (n + 1), Data.NumberOfNum);
+                textBox46.Text = "" + Math.Round(2d / (n + 1), Data.NumberOfNum);
                 alfa = 2d / (n + 1);
             }
             if (alfa <= 0 || alfa >= 1)
             {
-                textBox44.Text = "" + Math.Round(2d / (n + 1), Data.NumberOfNum);
+                textBox46.Text = "" + Math.Round(2d / (n + 1), Data.NumberOfNum);
                 alfa = 2d / (n + 1);
             } 
             if (n < 1 || n > Data.DataForWork[Data.TimeSerieses[Data.CurrentTimeSeries]].Count - 5)
@@ -21003,16 +21003,16 @@ namespace thing_2._1
             double alfa;
             try
             {
-                alfa = Convert.ToDouble(textBox44.Text);
+                alfa = Convert.ToDouble(textBox46.Text);
             }
             catch
             {
-                textBox44.Text = "" + Math.Round(2d / (n + 1), Data.NumberOfNum);
+                textBox46.Text = "" + Math.Round(2d / (n + 1), Data.NumberOfNum);
                 alfa = 2d / (n + 1);
             }
             if (alfa <= 0 || alfa >= 1)
             {
-                textBox44.Text = "" + Math.Round(2d / (n + 1), Data.NumberOfNum);
+                textBox46.Text = "" + Math.Round(2d / (n + 1), Data.NumberOfNum);
                 alfa = 2d / (n + 1);
             }
             if (n < 1 || n > Data.DataForWork[Data.TimeSerieses[Data.CurrentTimeSeries]].Count - 5)
